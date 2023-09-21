@@ -1,0 +1,89 @@
+Synthesizing 9/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    sum = 0
+    for i in str1:
+        sum += ord(i)
+    return chr((sum % 64) + 32)
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    sum = 0
+    for i in str1:
+        sum += ord(i)
+    return chr(sum % 64 + ord(' '))
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    sum = 0
+    for i in str1:
+        sum += ord(i)
+    sum %= 64
+    sum += ord(' ')
+    return chr(sum)
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    # Your code here
+    return 0
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    # Your code here
+    sum = 0
+    for i in str1:
+        sum += ord(i)
+    sum %= 64
+    sum += ord(' ')
+    return chr(sum)
+    pass
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    # Your code here
+    # sum the ASCII values of the characters in the string
+    # take the sum modulo 64
+    # add the integer value of the space character
+    # convert that integer back into its corresponding character
+    # return the checksum character
+    return chr(sum([ord(c) for c in str1]) % 64 + ord(' '))
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    total = 0
+    for i in str1:
+        total += ord(i)
+    return chr(total % 64 + 32)
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    sum = 0
+    for i in range(len(str1)):
+        sum += ord(str1[i])
+    sum %= 64
+    sum += ord(' ')
+    return chr(sum)
+
+=======
+Suggestion 9
+
+def myfunc(str1: str):
+    # Your code here
+    return None

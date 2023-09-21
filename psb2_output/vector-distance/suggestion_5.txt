@@ -1,0 +1,98 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(list1: list, list2: list):
+    if len(list1) != len(list2):
+        return None
+    else:
+        return sum([(list1[i] - list2[i]) ** 2 for i in range(len(list1))]) ** 0.5
+
+=======
+Suggestion 2
+
+def myfunc(list1: list, list2: list):
+    sum = 0
+    for i in range(len(list1)):
+        sum += (list1[i] - list2[i])**2
+    return sum**0.5
+
+=======
+Suggestion 3
+
+def myfunc(list1: list, list2: list):
+    # your code here
+    return 0.0
+
+=======
+Suggestion 4
+
+def myfunc(list1: list, list2: list):
+    """
+    >>> myfunc([0.0, 0.0], [1.0, 1.0])
+    1.4142135623730951
+    >>> myfunc([1.0, 2.0, 3.0], [4.0, 5.0, 6.0])
+    5.196152422706632
+    """
+    return 0.0
+
+=======
+Suggestion 5
+
+def myfunc(list1: list, list2: list):
+    # your code here
+    return 0
+
+=======
+Suggestion 6
+
+def myfunc(list1: list, list2: list):
+    if len(list1) != len(list2):
+        return -1
+    else:
+        sum = 0
+        for i in range(len(list1)):
+            sum += (list1[i] - list2[i]) ** 2
+        return sum ** 0.5
+
+=======
+Suggestion 7
+
+def myfunc(list1: list, list2: list):
+    if len(list1) == len(list2):
+        sum = 0
+        for i in range(len(list1)):
+            sum += (list1[i] - list2[i])**2
+        return sum**(1/2)
+    else:
+        return "Error: lists are not the same length"
+
+=======
+Suggestion 8
+
+def myfunc(list1: list, list2: list):
+    if len(list1) != len(list2):
+        raise ValueError("Input lists must be of equal length")
+    else:
+        dist = 0
+        for i in range(len(list1)):
+            dist += (list1[i] - list2[i])**2
+        return dist**0.5
+
+=======
+Suggestion 9
+
+def myfunc(list1: list, list2: list):
+    # Your code here
+    return 0
+
+=======
+Suggestion 10
+
+def myfunc(list1: list, list2: list):
+    import math
+    sum = 0
+    for i in range(len(list1)):
+        sum += (list1[i] - list2[i])**2
+    return math.sqrt(sum)

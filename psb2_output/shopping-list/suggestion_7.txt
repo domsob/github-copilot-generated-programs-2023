@@ -1,0 +1,44 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(list1: list, list2: list):
+    total = 0
+    for i in range(len(list1)):
+        total += list1[i] * (1 - list2[i] / 100)
+    return total
+
+=======
+Suggestion 2
+
+def myfunc(list1: list, list2: list):
+    total = 0
+    for i in range(0, len(list1)):
+        total += list1[i] * (1 - list2[i] / 100)
+    return total
+
+=======
+Suggestion 3
+
+def myfunc(list1: list, list2: list):
+    if len(list1) != len(list2):
+        raise Exception("Length of lists must be equal")
+    return sum([list1[i] * (1 - list2[i] / 100) for i in range(len(list1))])
+
+=======
+Suggestion 4
+
+def myfunc(list1: list, list2: list):
+    if len(list1) != len(list2):
+        raise Exception("Lists must be same length")
+    for i in range(len(list1)):
+        list1[i] = list1[i] * (1 - list2[i] / 100)
+    return sum(list1)
+
+=======
+Suggestion 5
+
+def myfunc(list1: list, list2: list):
+    # Write your code here
+    return 0

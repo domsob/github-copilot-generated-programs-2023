@@ -1,0 +1,77 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    x = 0
+    for i in range(1, int1 + 1):
+        x += i ** 2
+    return x
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    # Your code goes here
+
+    return 0
+
+=======
+Suggestion 3
+
+def myfunc(int1: int):
+    # initialize sum
+    sum = 0
+    # loop through range [1, n]
+    for i in range(1, int1 + 1):
+        # add i^2 to sum
+        sum += i ** 2
+    return sum
+
+=======
+Suggestion 4
+
+def myfunc(int1: int):
+    return sum([i*i for i in range(1, int1+1)])
+
+=======
+Suggestion 5
+
+def myfunc(int1: int):
+    sum = 0
+    for i in range(1, int1 + 1):
+        sum += i ** 2
+    return sum
+
+=======
+Suggestion 6
+
+def myfunc(int1: int):
+    return sum([x**2 for x in range(1,int1+1)])
+
+=======
+Suggestion 7
+
+def myfunc(int1: int):
+    result = 0
+    for i in range(1, int1 + 1):
+        result += i * i
+    return result
+
+=======
+Suggestion 8
+
+def myfunc(int1: int):
+    if int1 < 1:
+        return 0
+    return int1 ** 2 + myfunc(int1 - 1)
+
+=======
+Suggestion 9
+
+def myfunc(int1: int):
+    sum = 0
+    for i in range(int1+1):
+        sum += i**2
+    return sum

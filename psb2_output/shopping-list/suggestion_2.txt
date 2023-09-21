@@ -1,0 +1,82 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(list1: list, list2: list):
+    return sum([x[0] - x[0] * x[1] / 100 for x in zip(list1, list2)])
+
+=======
+Suggestion 2
+
+def myfunc(list1: list, list2: list):
+    return sum([list1[i] * (1 - list2[i]/100) for i in range(len(list1))])
+
+=======
+Suggestion 3
+
+def myfunc(list1: list, list2: list):
+    total = 0
+    for i in range(len(list1)):
+        total += list1[i] * (1 - list2[i] / 100)
+    return total
+
+=======
+Suggestion 4
+
+def myfunc(list1: list, list2: list):
+    if len(list1) != len(list2):
+        return -1
+    else:
+        total = 0
+        for i in range(len(list1)):
+            total += list1[i] * (1 - list2[i] / 100)
+        return total
+
+=======
+Suggestion 5
+
+def myfunc(list1: list, list2: list):
+    # Write your code here
+    return sum(list1[i] * (100 - list2[i]) / 100 for i in range(len(list1)))
+
+=======
+Suggestion 6
+
+def myfunc(list1: list, list2: list):
+    """
+    >>> myfunc([1, 2, 3], [0.2, 0.3, 0.4])
+    3.0
+    >>> myfunc([1, 2, 3], [0.1, 0.2, 0.3])
+    3.9
+    >>> myfunc([1, 2, 3], [0.1, 0.1, 0.1])
+    4.5
+    """
+    total = 0
+    for i in range(0, len(list1)):
+        total += (list1[i] * (1 - list2[i]))
+    return total
+
+=======
+Suggestion 7
+
+def myfunc(list1: list, list2: list):
+    # Write your code here
+    total = 0
+    for i in range(len(list1)):
+        total += list1[i] * (1 - list2[i] / 100)
+    return total
+
+=======
+Suggestion 8
+
+def myfunc(list1: list, list2: list):
+    # list1 = [1,2,3,4]
+    # list2 = [0.1, 0.2, 0.3, 0.4]
+    # list1 = [1,2,3,4,5]
+    # list2 = [0.1, 0.2, 0.3, 0.4, 0.5]
+    # if len(list1) != len(list2):
+    #     return None
+    # else:
+    #     return sum([x*(1-y) for x,y in zip(list1, list2)])
+    return sum([x*(1-y) for x,y in zip(list1, list2)]) if len(list1) == len(list2) else None

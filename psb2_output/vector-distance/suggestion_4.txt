@@ -1,0 +1,47 @@
+Synthesizing 9/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(list1: list, list2: list):
+    return sum((a - b) ** 2 for a, b in zip(list1, list2)) ** 0.5
+
+=======
+Suggestion 2
+
+def myfunc(list1: list, list2: list):
+    sum = 0
+    for i in range(len(list1)):
+        sum += (list1[i] - list2[i]) ** 2
+    return sum ** 0.5
+
+=======
+Suggestion 3
+
+def myfunc(list1: list, list2: list):
+    return (sum([(list1[i] - list2[i])**2 for i in range(len(list1))]))**0.5
+
+=======
+Suggestion 4
+
+def myfunc(list1: list, list2: list):
+    # Write your code here
+    pass
+
+=======
+Suggestion 5
+
+def myfunc(list1: list, list2: list):
+    # your code here
+    return 0.0
+
+=======
+Suggestion 6
+
+def myfunc(list1: list, list2: list):
+    if len(list1) != len(list2):
+        return -1
+    sum = 0
+    for i in range(len(list1)):
+        sum += (list1[i] - list2[i]) ** 2
+    return sum ** 0.5

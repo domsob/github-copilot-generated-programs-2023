@@ -1,0 +1,103 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str, str2: str):
+    if len(str1) < len(str2):
+        shorter = str1
+    else:
+        shorter = str2
+    for i in range(len(shorter)):
+        if str1[i] != str2[i]:
+            print(i, str1[i], str2[i], sep=" ")
+
+=======
+Suggestion 2
+
+def myfunc(str1: str, str2: str):
+    if len(str1) > len(str2):
+        longer = str1
+        shorter = str2
+    else:
+        longer = str2
+        shorter = str1
+    for i in range(len(shorter)):
+        if shorter[i] != longer[i]:
+            print(i, shorter[i], longer[i])
+
+=======
+Suggestion 3
+
+def myfunc(str1: str, str2: str):
+    # Your code here
+    return 0
+
+=======
+Suggestion 4
+
+def myfunc(str1: str, str2: str):
+    """Compare two strings and return a line containing the index as well as the character in each string"""
+    if len(str1) < len(str2):
+        len_str = len(str1)
+    else:
+        len_str = len(str2)
+    for i in range(len_str):
+        if str1[i] != str2[i]:
+            print(f"{i} {str1[i]} {str2[i]}")
+
+=======
+Suggestion 5
+
+def myfunc(str1: str, str2: str):
+    # your code here
+    pass
+
+=======
+Suggestion 6
+
+def myfunc(str1: str, str2: str):
+    output = ""
+    for i in range(min(len(str1), len(str2))):
+        if str1[i] != str2[i]:
+            output += f"{i} {str1[i]} {str2[i]}\n"
+    return output
+
+=======
+Suggestion 7
+
+def myfunc(str1: str, str2: str):
+    idx = 0
+    while idx < len(str1) and idx < len(str2):
+        if str1[idx] != str2[idx]:
+            print(f"{idx} {str1[idx]} {str2[idx]}")
+        idx += 1
+
+=======
+Suggestion 8
+
+def myfunc(str1: str, str2: str):
+    result = []
+    for i in range(min(len(str1), len(str2))):
+        if str1[i] != str2[i]:
+            result.append(f"{i} {str1[i]} {str2[i]}")
+    return "\n".join(result)
+
+=======
+Suggestion 9
+
+def myfunc(str1: str, str2: str):
+    # Write your code here
+    shorter = str1 if len(str1) < len(str2) else str2
+    longer = str1 if len(str1) >= len(str2) else str2
+    for i in range(len(shorter)):
+        if shorter[i] != longer[i]:
+            print(f"{i} {shorter[i]} {longer[i]}")
+
+=======
+Suggestion 10
+
+def myfunc(str1: str, str2: str):
+    if len(str1) > len(str2):
+        str1, str2 = str2, str1
+    return '\n'.join(f'{i} {str1[i]} {str2[i]}' for i in range(len(str1)) if str1[i] != str2[i])

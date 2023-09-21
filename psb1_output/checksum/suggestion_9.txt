@@ -1,0 +1,64 @@
+Synthesizing 9/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    sum = 0
+    for i in str1:
+        sum += ord(i)
+    sum = sum % 64
+    sum += ord(' ')
+    return chr(sum)
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    sum = 0
+    for i in str1:
+        sum += ord(i)
+    sum %= 64
+    sum += ord(' ')
+    return chr(sum)
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    sum = 0
+    for i in range(len(str1)):
+        sum += ord(str1[i])
+    sum = sum % 64
+    sum += ord(' ')
+    return chr(sum)
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    # Your code goes here
+    pass
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    """
+    >>> myfunc("Hello World")
+    'f'
+    >>> myfunc("Jai")
+    ' '
+    >>> myfunc("Jai Narayan")
+    ' '
+    """
+    return chr(sum([ord(i) for i in str1]) % 64 + ord(" "))
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    sum = 0
+    for c in str1:
+        sum += ord(c)
+    return chr((sum % 64) + ord(' '))

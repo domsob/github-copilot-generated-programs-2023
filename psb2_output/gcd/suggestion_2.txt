@@ -1,0 +1,135 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, int2: int):
+    if int1 > int2:
+        int1, int2 = int2, int1
+    for i in range(int1, 0, -1):
+        if int1 % i == 0 and int2 % i == 0:
+            return i
+    return 1
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, int2: int):
+    if int1 > int2:
+        smaller = int2
+    else:
+        smaller = int1
+    for i in range(1, smaller+1):
+        if((int1 % i == 0) and (int2 % i == 0)):
+            mygcd = i
+    return mygcd
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, int2: int):
+    # Divide the larger number by the smaller number
+    if int1 > int2:
+        div = int1 // int2
+    else:
+        div = int2 // int1
+    # Return the smaller number
+    return div
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, int2: int):
+    '''This function takes two integers and returns 
+    the largest integer that divides each of the 
+    integers evenly.'''
+    if int1 < int2:
+        smaller = int1
+    else:
+        smaller = int2
+    for i in range(1, smaller+1):
+        if((int1 % i == 0) and (int2 % i == 0)):
+            gcd = i
+    return gcd
+
+=======
+Suggestion 5
+
+def myfunc(int1: int, int2: int):
+    if int1 > int2:
+        int1, int2 = int2, int1
+    for i in range(int1, 0, -1):
+        if int1 % i == 0 and int2 % i == 0:
+            return i
+
+=======
+Suggestion 6
+
+def myfunc(int1: int, int2: int):
+    # check if int1 is smaller than int2
+    if int1 < int2:
+        # if so, swap them
+        int1, int2 = int2, int1
+    # find the remainder of int1 / int2
+    remainder = int1 % int2
+    # if there is no remainder
+    if remainder == 0:
+        # return int2
+        return int2
+    # else
+    else:
+        # run function again with int2 and remainder
+        return myfunc(int2, remainder)
+
+=======
+Suggestion 7
+
+def myfunc(int1: int, int2: int):
+    # Get the smaller integer
+    smaller = min(int1, int2)
+    # Loop through the smaller integer
+    for i in range(smaller, 0, -1):
+        # Check if the integer divides both numbers
+        if int1 % i == 0 and int2 % i == 0:
+            # Return the integer
+            return i
+    # Return 1 if none found
+    return 1
+
+=======
+Suggestion 8
+
+def myfunc(int1: int, int2: int):
+    if int1 > int2:
+        big = int1
+        small = int2
+    else:
+        big = int2
+        small = int1
+    for i in range(small, 0, -1):
+        if big % i == 0 and small % i == 0:
+            return i
+
+=======
+Suggestion 9
+
+def myfunc(int1: int, int2: int):
+    if int1 > int2:
+        small = int2
+    else:
+        small = int1
+    for i in range(1, small + 1):
+        if((int1 % i == 0) and (int2 % i == 0)):
+            gcd = i
+    return gcd
+
+=======
+Suggestion 10
+
+def myfunc(int1: int, int2: int):
+    if int1 < int2:
+        int1, int2 = int2, int1
+    for i in range(1, int2+1):
+        if int1 % i == 0 and int2 % i == 0:
+            gcd = i
+    return gcd

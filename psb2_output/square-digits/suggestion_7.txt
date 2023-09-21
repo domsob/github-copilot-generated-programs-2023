@@ -1,0 +1,99 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    # convert int to string
+    int1 = str(int1)
+    # initialize empty string
+    string1 = ""
+    # loop through each number in string
+    for i in int1:
+        # square each number and convert back to string
+        string1 += str(int(i)**2)
+    # return concatenated string
+    return string1
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    return int(''.join(str(int(i)**2) for i in str(int1)))
+
+=======
+Suggestion 3
+
+def myfunc(int1: int):
+    str1 = str(int1)
+    str2 = ""
+    for i in str1:
+        str2 += str(int(i) ** 2)
+    return int(str2)
+
+=======
+Suggestion 4
+
+def myfunc(int1: int):
+    return str(int1)
+
+=======
+Suggestion 5
+
+def myfunc(int1: int):
+    return "".join([str(int(i)**2) for i in str(int1)])
+
+=======
+Suggestion 6
+
+def myfunc(int1: int):
+    """
+    >>> myfunc(9119)
+    '811181'
+    >>> myfunc(0)
+    '0'
+    >>> myfunc(1)
+    '1'
+    """
+    if int1 == 0:
+        return '0'
+    else:
+        return ''.join([str(int(x)**2) for x in str(int1)])
+
+=======
+Suggestion 7
+
+def myfunc(int1: int):
+    return ''.join([str(int(i)**2) for i in str(int1)])
+
+=======
+Suggestion 8
+
+def myfunc(int1: int):
+    if int1 < 0:
+        return "Invalid input"
+    else:
+        return "".join([str(int(x)**2) for x in str(int1)])
+
+=======
+Suggestion 9
+
+def myfunc(int1: int):
+    if int1 < 0:
+        raise ValueError("The input must be a positive integer.")
+    if int1 == 0:
+        return 0
+    res = ''
+    for i in str(int1):
+        res += str(int(i) ** 2)
+    return int(res)
+
+=======
+Suggestion 10
+
+def myfunc(int1: int):
+    int1 = str(int1)
+    temp = ''
+    for i in int1:
+        temp += str(int(i) ** 2)
+    return int(temp)

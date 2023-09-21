@@ -1,0 +1,2 @@
+# Given an integer, find the number of terms in the Collatz (hailstone) sequence starting from that integer.
+def myfunc(int1: int):

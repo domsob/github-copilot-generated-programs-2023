@@ -1,0 +1,2 @@
+# Given an integer and a float, return their sum.
+def myfunc(int1: int, float1: float):

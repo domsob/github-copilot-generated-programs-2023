@@ -1,0 +1,107 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    str1 = str1.split(" ")
+    for i in range(len(str1)):
+        str1[i] = str1[i].split("-")
+        for j in range(len(str1[i])):
+            if j != 0:
+                str1[i][j] = str1[i][j].capitalize()
+        str1[i] = "".join(str1[i])
+    return " ".join(str1)
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    str1 = str1.split()
+    for i in range(1, len(str1)):
+        str1[i] = str1[i].capitalize()
+    return "".join(str1)
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    str1 = str1.split("-")
+    result = ""
+    for i in str1:
+        result += i.capitalize()
+    return result
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    return ''.join([str1[i].upper() if str1[i-1] == '-' else str1[i] for i in range(len(str1)) if str1[i] != '-'])
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    str1 = str1.split(" ")
+    str1 = [i.split("-") for i in str1]
+    str1 = [j for i in str1 for j in i]
+    str1 = [str1[0]] + [i.title() for i in str1[1:]]
+    str1 = "".join(str1)
+    return str1
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    str1 = str1.split('-')
+    print(str1)
+    for i in range(len(str1)):
+        if i == 0:
+            str1[i] = str1[i].lower()
+        else:
+            str1[i] = str1[i].capitalize()
+    return ''.join(str1)
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    str1 = str1.split(' ')
+    for i in range(len(str1)):
+        str1[i] = str1[i].replace('-', ' ')
+        str1[i] = str1[i].title()
+        str1[i] = str1[i].replace(' ', '')
+    return ' '.join(str1)
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    str1 = str1.replace('-', ' ')
+    str1 = str1.split(' ')
+    str1 = [str1[0]] + [e.title() for e in str1[1:]]
+    return ''.join(str1)
+
+=======
+Suggestion 9
+
+def myfunc(str1: str):
+    str2 = str1.split()
+    str3 = [str2[0]]
+    for i in range(1, len(str2)):
+        str3.append(str2[i].capitalize())
+    str4 = "".join(str3)
+    return str4
+
+=======
+Suggestion 10
+
+def myfunc(str1: str):
+    words = str1.split(" ")
+    for i in range(len(words)):
+        words[i] = words[i].split("-")
+        for j in range(len(words[i])):
+            if j > 0:
+                words[i][j] = words[i][j][0].upper() + words[i][j][1:]
+        words[i] = "".join(words[i])
+    return " ".join(words)

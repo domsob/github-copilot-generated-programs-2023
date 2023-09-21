@@ -1,0 +1,93 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(list1: list):
+    if list1[len(list1)-1] == 0:
+        return len(list1)-1
+    else:
+        return myfunc(list1[:-1])
+
+=======
+Suggestion 2
+
+def myfunc(list1: list):
+    for i in range(len(list1)-1,-1,-1):
+        if list1[i] == 0:
+            return i
+
+=======
+Suggestion 3
+
+def myfunc(list1: list):
+    for i in range(len(list1)):
+        if list1[i] == 0:
+            return i
+
+=======
+Suggestion 4
+
+def myfunc(list1: list):
+    """Returns the index of the last occurrence of 0 in the list."""
+    return list1[::-1].index(0)
+
+=======
+Suggestion 5
+
+def myfunc(list1: list):
+    for i in range(len(list1)):
+        if list1[len(list1) - 1 - i] == 0:
+            return len(list1) - 1 - i
+    return -1
+
+=======
+Suggestion 6
+
+def myfunc(list1: list):
+    for i in range(len(list1)-1, 0, -1):
+        if list1[i] == 0:
+            return i
+    return -1
+
+=======
+Suggestion 7
+
+def myfunc(list1: list):
+    for i in range(len(list1)-1, -1, -1):
+        if list1[i] == 0:
+            return i
+    return -1
+
+=======
+Suggestion 8
+
+def myfunc(list1: list):
+    # Write your code here
+    # To print results to the standard output you can use print()
+    # Example: print("Hello world!")
+    index = 0
+    for i in range(len(list1)):
+        if list1[i] == 0:
+            index = i
+    return index
+
+=======
+Suggestion 9
+
+def myfunc(list1: list):
+    for i in range(len(list1)):
+        if list1[i] == 0:
+            return i
+    return -1
+
+=======
+Suggestion 10
+
+def myfunc(list1: list):
+    if len(list1) == 0:
+        return -1
+    for i in range(len(list1)):
+        if list1[i] == 0:
+            return i
+    return -1

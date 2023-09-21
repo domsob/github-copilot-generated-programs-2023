@@ -1,0 +1,84 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(list1: list):
+    list2 = []
+    for i in range(len(list1)):
+        if i == len(list1)-1:
+            list2.append(list1[i])
+        else:
+            if list1[i] >= max(list1[i+1:]):
+                list2.append(list1[i])
+    return list2
+
+=======
+Suggestion 2
+
+def myfunc(list1: list):
+    list2 = []
+    for i in range(len(list1)):
+        if i == len(list1) - 1:
+            list2.append(list1[i])
+            break
+        if list1[i] >= max(list1[i+1:len(list1)]):
+            list2.append(list1[i])
+    return list2
+
+=======
+Suggestion 3
+
+def myfunc(list1: list):
+    list2 = []
+    for i in range(len(list1)-1):
+        if list1[i] >= max(list1[i+1:]):
+            list2.append(list1[i])
+    list2.append(list1[-1])
+    return list2
+
+=======
+Suggestion 4
+
+def myfunc(list1: list):
+    if not list1:
+        return []
+    max_num = list1[-1]
+    result = [max_num]
+    for i in range(len(list1)-2, -1, -1):
+        if max_num <= list1[i]:
+            max_num = list1[i]
+            result.append(max_num)
+    return result[::-1]
+
+=======
+Suggestion 5
+
+def myfunc(list1: list):
+    list2 = []
+    for i in range(len(list1)):
+        if i == len(list1) - 1:
+            list2.append(list1[i])
+        elif list1[i] >= max(list1[i+1:]):
+            list2.append(list1[i])
+    return list2
+
+=======
+Suggestion 6
+
+def myfunc(list1: list):
+    # your code here
+    return list1
+
+=======
+Suggestion 7
+
+def myfunc(list1: list):
+    leader = []
+    for i in range(len(list1)):
+        try:
+            if list1[i] >= max(list1[i+1:]):
+                leader.append(list1[i])
+        except:
+            leader.append(list1[i])
+    return leader

@@ -1,0 +1,34 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    if int1 < 1000:
+        return "small"
+    elif int1 >= 2000:
+        return "large"
+    else:
+        return ""
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    if int1 < 1000:
+        return "small"
+    elif int1 >= 2000:
+        return "large"
+    else:
+        return None
+
+=======
+Suggestion 3
+
+def myfunc(int1: int):
+    if int1 < 1000:
+        return 'small'
+    elif int1 >= 2000:
+        return 'large'
+    else:
+        return ''

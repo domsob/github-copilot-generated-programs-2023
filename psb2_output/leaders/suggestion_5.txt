@@ -1,0 +1,96 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(list1: list):
+    list2 = []
+    for i in range(len(list1)):
+        if i == len(list1)-1:
+            list2.append(list1[i])
+        elif list1[i] >= max(list1[i+1:]):
+            list2.append(list1[i])
+    return list2
+
+=======
+Suggestion 2
+
+def myfunc(list1: list):
+    new_list = []
+    for i in range(len(list1) - 1):
+        if list1[i] >= max(list1[i+1:]):
+            new_list.append(list1[i])
+    new_list.append(list1[len(list1)-1])
+    return new_list
+
+=======
+Suggestion 3
+
+def myfunc(list1: list):
+    list1.reverse()
+    list2 = []
+    for i in range(len(list1)):
+        if list1[i] == max(list1[i:]):
+            list2.append(list1[i])
+    list2.reverse()
+    return list2
+
+=======
+Suggestion 4
+
+def myfunc(list1: list):
+    max = 0
+    for i in range(len(list1)-1, -1, -1):
+        if list1[i] > max:
+            max = list1[i]
+            list1[i] = 0
+        else:
+            list1[i] = 0
+    return max
+
+=======
+Suggestion 5
+
+def myfunc(list1: list):
+    list2 = []
+    for i in range(len(list1)):
+        if i == len(list1)-1:
+            list2.append(list1[i])
+            break
+        if list1[i] >= max(list1[i+1:]):
+            list2.append(list1[i])
+    return list2
+
+=======
+Suggestion 6
+
+def myfunc(list1: list):
+    list2 = []
+    for i in range(len(list1)):
+        if list1[i] >= max(list1[i+1:]):
+            list2.append(list1[i])
+    return list2
+
+=======
+Suggestion 7
+
+def myfunc(list1: list):
+    list2 = []
+    for i in range(0, len(list1)):
+        if list1[i] >= max(list1[i:]):
+            list2.append(list1[i])
+    return list2
+
+=======
+Suggestion 8
+
+def myfunc(list1: list):
+    leader = []
+    for i in range(0, len(list1)):
+        isLeader = True
+        for j in range(i+1, len(list1)):
+            if list1[i] < list1[j]:
+                isLeader = False
+        if isLeader:
+            leader.append(list1[i])
+    return leader

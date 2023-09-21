@@ -1,0 +1,111 @@
+Synthesizing 8/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    result = ''
+    for c in str1:
+        if c.isalpha():
+            result += c * 2
+        elif c == '!':
+            result += c * 3
+        else:
+            result += c
+    return result
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    new_str = ''
+    for char in str1:
+        if char.isalpha() or char == '!':
+            new_str += char * 2
+        else:
+            new_str += char
+    return new_str
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    result = ""
+    for i in str1:
+        if (i.isalpha() or i == "!"):
+            if (i == "!"):
+                result += i * 3
+            else:
+                result += i * 2
+        else:
+            result += i
+    return result
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    str2 = ""
+    for i in range(len(str1)):
+        if str1[i].isalpha():
+            str2 += str1[i] * 2
+        elif str1[i] == "!":
+            str2 += str1[i] * 3
+        else:
+            str2 += str1[i]
+    return str2
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    result = ''
+    for char in str1:
+        if char.isalpha() or char == '!':
+            if char.isupper():
+                result += char * 2
+            else:
+                result += char * 3
+        else:
+            result += char
+    return result
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    str2 = ''
+    for i in str1:
+        if i.isalpha():
+            str2 += i*2
+        elif i == '!':
+            str2 += i*3
+        else:
+            str2 += i
+    return str2
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    res = ""
+    for i in str1:
+        if i.isalpha() or i == "!":
+            res = res + i + i
+            if i == "!":
+                res = res + i
+    return res
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    result = ''
+    for i in str1:
+        if i.isalpha():
+            result += i*2
+        elif i == '!':
+            result += i*3
+        else:
+            result += i
+    return result

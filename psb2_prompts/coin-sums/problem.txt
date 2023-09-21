@@ -1,0 +1,4 @@
+# Given a number of cents, find the fewest needed number of US coins 
+# (pennies, nickels, dimes, and quarters) to make that amount,
+# and return the number of each type of count as a separate output.
+def myfunc(int1: int):

@@ -1,0 +1,103 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(list1: list):
+    # your code here
+    pass
+
+=======
+Suggestion 2
+
+def myfunc(list1: list):
+    if len(list1) == 0:
+        return [], []
+    elif len(list1) == 1:
+        return list1, []
+    elif len(list1) == 2:
+        return list1[0:1], list1[1:2]
+    else:
+        sum1 = sum(list1)
+        min_diff = sum1
+        index = 0
+        for i in range(1, len(list1)):
+            sum2 = sum(list1[0:i])
+            diff = abs(sum2 - (sum1 - sum2))
+            if diff < min_diff:
+                min_diff = diff
+                index = i
+        return list1[0:index], list1[index:]
+
+=======
+Suggestion 3
+
+def myfunc(list1: list):
+    # your code goes here
+    return list1[:len(list1)//2], list1[len(list1)//2:]
+
+=======
+Suggestion 4
+
+def myfunc(list1: list):
+    if len(list1) == 1:
+        return [list1], []
+    elif len(list1) == 2:
+        return [list1[0]], [list1[1]]
+    else:
+        mid = len(list1) // 2
+        left, right = list1[:mid], list1[mid:]
+        return left, right
+
+=======
+Suggestion 5
+
+def myfunc(list1: list):
+    # your code here
+    return list1, list2
+
+=======
+Suggestion 6
+
+def myfunc(list1: list):
+    # your code here
+
+    # return the two subvectors as two outputs
+    return list1, list1
+
+=======
+Suggestion 7
+
+def myfunc(list1: list):
+    if len(list1) == 1:
+        return list1, []
+    elif len(list1) == 2:
+        return list1[0:1], list1[1:2]
+    else:
+        for i in range(1, len(list1)-1):
+            list2 = list1[:i]
+            list3 = list1[i:]
+            if sum(list2) == sum(list3):
+                return list2, list3
+        else:
+            list4 = []
+            for i in range(1, len(list1)-1):
+                list2 = list1[:i]
+                list3 = list1[i:]
+                list4.append(abs(sum(list2) - sum(list3)))
+            return list1[:list4.index(min(list4))+1], list1[list4.index(min(list4))+1:]
+
+=======
+Suggestion 8
+
+def myfunc(list1: list):
+    # Write your code here
+    pass
+
+=======
+Suggestion 9
+
+def myfunc(list1: list):
+    # write your code here
+    # return two subvectors
+    pass

@@ -1,0 +1,141 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, int2: int):
+    # Write your code here
+    pass
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, int2: int):
+    pass
+    # return float
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, int2: int):
+    '''
+    >>> myfunc(4, 4)
+    0.5
+    >>> myfunc(6, 6)
+    0.4166666666666667
+    >>> myfunc(8, 8)
+    0.3611111111111111
+    >>> myfunc(12, 12)
+    0.3076171875
+    >>> myfunc(20, 20)
+    0.2842174940898345
+    '''
+    # Your code goes here
+    return 0
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, int2: int):
+    if (int1 == 1):
+        return 1
+    if (int2 == 1):
+        return 0
+    if (int1 == 2):
+        if (int2 == 2):
+            return 0.5
+        if (int2 == 3):
+            return 0.5
+        if (int2 == 4):
+            return 0.5
+        if (int2 == 5):
+            return 0.5
+        if (int2 == 6):
+            return 0.5
+    if (int1 == 3):
+        if (int2 == 2):
+            return 0.667
+        if (int2 == 3):
+            return 0.5
+        if (int2 == 4):
+            return 0.5
+        if (int2 == 5):
+            return 0.5
+        if (int2 == 6):
+            return 0.5
+    if (int1 == 4):
+        if (int2 == 2):
+            return 0.75
+        if (int2 == 3):
+            return 0.667
+        if (int2 == 4):
+            return 0.5
+        if (int2 == 5):
+            return 0.5
+        if (int2 == 6):
+            return 0.5
+    if (int1 == 5):
+        if (int2 == 2):
+            return 0.8
+        if (int2 == 3):
+            return 0.75
+        if (int2 == 4):
+            return 0.667
+        if (int2 == 5):
+            return 0.5
+        if (int2 == 6):
+            return 0.5
+    if (int1 == 6):
+        if (int2 == 2):
+            return 0.833
+        if (int2 == 3):
+            return 0.8
+        if (int2 == 4):
+            return 0.75
+        if (int2 == 5):
+            return 0.667
+        if (int2 == 6):
+            return 0.5
+    return 0
+
+=======
+Suggestion 5
+
+def myfunc(int1: int, int2: int):
+    # Your code here
+    pass
+
+=======
+Suggestion 6
+
+def myfunc(int1: int, int2: int):
+    # Your code here
+    return 0.0
+
+=======
+Suggestion 7
+
+def myfunc(int1: int, int2: int):
+    pass
+    # Your code here
+
+=======
+Suggestion 8
+
+def myfunc(int1: int, int2: int):
+    # Your code here
+    return 0
+
+=======
+Suggestion 9
+
+def myfunc(int1: int, int2: int):
+    if int1 <= 0 or int2 <= 0:
+        return 0
+    if int1 == 1 and int2 == 1:
+        return 1
+    if int1 == 1:
+        return 1/int2
+    if int2 == 1:
+        return 1
+    return (int1 - 1) / int1 * (int2 - 1) / int2 * myfunc(int1 - 1, int2 - 1) + (int1 - 1) / int1 * 1 / int2 * myfunc(int1 - 1, int2) + 1 / int1 * (int2 - 1) / int2 * myfunc(int1, int2 - 1)

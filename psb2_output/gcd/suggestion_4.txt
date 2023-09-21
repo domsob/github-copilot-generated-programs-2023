@@ -1,0 +1,146 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, int2: int):
+    # Find the smaller integer
+    if int1 >= int2:
+        smaller = int2
+    else:
+        smaller = int1
+
+    # Find the greatest common divisor
+    for i in range(1, smaller+1):
+        if (int1 % i == 0) and (int2 % i == 0):
+            gcd = i
+
+    return gcd
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, int2: int):
+    # Find the smaller integer
+    if int1 < int2:
+        smaller = int1
+    else:
+        smaller = int2
+    # Find the greatest common divisor
+    gcd = 1
+    for i in range(1, smaller + 1):
+        if int1 % i == 0 and int2 % i == 0:
+            gcd = i
+    # Return the gcd
+    return gcd
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, int2: int):
+    # Find the minimum of the two integers
+    min_int = min(int1, int2)
+    # For each integer between 1 and the minimum integer
+    for i in range(1, min_int + 1):
+        # If both integers are divisible by i
+        if int1 % i == 0 and int2 % i == 0:
+            # Set the return value to i
+            return i
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, int2: int):
+    # Find the smaller of the two integers
+    if int1 > int2:
+        smaller = int2
+    else:
+        smaller = int1
+
+    # Find the largest integer that divides both integers
+    for i in range(1, smaller + 1):
+        if (int1 % i == 0) and (int2 % i == 0):
+            largest_divisor = i
+
+    # Return the largest divisor
+    return largest_divisor
+
+=======
+Suggestion 5
+
+def myfunc(int1: int, int2: int):
+    if int1 > int2:
+        num = int2
+    else:
+        num = int1
+    for i in range(1,num+1):
+        if int1 % i == 0 and int2 % i == 0:
+            num = i
+    return num
+
+=======
+Suggestion 6
+
+def myfunc(int1: int, int2: int):
+    # Find the smaller integer
+    if int1 < int2:
+        smaller = int1
+    else:
+        smaller = int2
+
+    # Find the largest divisor
+    for i in range(1, smaller+1):
+        if (int1 % i == 0) and (int2 % i == 0):
+            largest_divisor = i
+
+    return largest_divisor
+
+=======
+Suggestion 7
+
+def myfunc(int1: int, int2: int):
+    result = 0
+    for i in range(1, min(int1, int2)+1):
+        if int1 % i == 0 and int2 % i == 0:
+            result = i
+    return result
+
+=======
+Suggestion 8
+
+def myfunc(int1: int, int2: int):
+    if int1 > int2:
+        small = int2
+    else:
+        small = int1
+    for i in range(1, small+1):
+        if ((int1 % i == 0) and (int2 % i == 0)):
+            gcd = i
+    return gcd
+
+=======
+Suggestion 9
+
+def myfunc(int1: int, int2: int):
+    if int1 > int2:
+        num = int2
+    else:
+        num = int1
+    for i in range(1, num + 1):
+        if int1 % i == 0 and int2 % i == 0:
+            return i
+
+=======
+Suggestion 10
+
+def myfunc(int1: int, int2: int):
+    # Get the smaller integer
+    if int1 > int2:
+        small = int2
+    else:
+        small = int1
+    # Find the largest common factor
+    for i in range(1, small+1):
+        if int1 % i == 0 and int2 % i == 0:
+            large = i
+    return large

@@ -1,0 +1,132 @@
+Synthesizing 7/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    # Create a list of the bowls
+    lst = list(str1)
+    # Set the initial score
+    score = 0
+    # Set the initial frame
+    frame = 1
+    # Set the initial bowl
+    bowl = 1
+    # Set the initial pins
+    pins = 10
+    # Loop through the bowls
+    for i in lst:
+        # If the bowl is a strike
+        if i == 'X':
+            # Add 10 to the score
+            score += 10
+            # If the frame is less than 10
+            if frame < 10:
+                # Add 10 to the score
+                score += 10
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    # print(str1)
+    str1 = str1.replace(' ', '')
+    str1 = str1.replace('X', 'X ')
+    str1 = str1.replace('/', '/ ')
+    str1 = str1.replace('--', '- -')
+    str1 = str1.replace('---', '- - -')
+    str1 = str1.replace('----', '- - - -')
+    str1 = str1.replace('-----', '- - - - -')
+    str1 = str1.replace('------', '- - - - - -')
+    str1 = str1.replace('-------', '- - - - - - -')
+    str1 = str1.replace('--------', '- - - - - - - -')
+    str1 = str1.replace('---------', '- - - - - - - - -')
+    str1 = str1.replace('----------', '- - - - - - - - - -')
+    str1 = str1.replace('-------
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    # YOUR CODE HERE
+    return 0
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    total = 0
+    i = 0
+    while i < len(str1):
+        if str1[i] == 'X':
+            total += 10
+            i += 1
+        elif str1[i] == '/':
+            total += 10 - int(str1[i - 1])
+            i += 1
+        else:
+            total += int(str1[i])
+        i += 1
+    return total
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    score = 0
+    for i in range(len(str1)):
+        if str1[i] == 'X':
+            score += 10
+            if i < 8:
+                if str1[i + 2] == '/':
+                    score += 10
+                else:
+                    score += int(str1[i + 1]) + int(str1[i + 2])
+            elif i == 8:
+                if str1[i + 1] == '/':
+                    score += 10
+                else:
+                    score += int(str1[i + 1])
+            else:
+                score += 10
+        elif str1[i] == '/':
+            score += 10 - int(str1[i - 1])
+            if i < 8:
+                score += int(str1[i + 1])
+            else:
+                score += 10
+        else:
+            score += int(str1[i])
+    return score
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    # Your code here
+    pass
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    score = 0
+    for i in range(len(str1)):
+        if str1[i] == 'X':
+            score += 10
+            if i < len(str1) - 2:
+                if str1[i + 2] == '/':
+                    score += 10
+                else:
+                    score += int(str1[i + 1]) + int(str1[i + 2])
+            elif i == len(str1) - 2:
+                score += int(str1[i + 1])
+        elif str1[i] == '/':
+            score += 10
+            if i < len(str1) - 2:
+                score += int(str1[i + 1])
+            elif i == len(str1) - 2:
+                score += int(str1[i + 1])
+        else:
+            score += int(str1[i])
+    return score

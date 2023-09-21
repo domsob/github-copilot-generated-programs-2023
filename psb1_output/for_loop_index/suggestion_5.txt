@@ -1,0 +1,121 @@
+Synthesizing 9/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, int2: int, int3: int):
+    return list(range(int1, int2, int3))
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, int2: int, int3: int):
+    result = []
+    while int1 < int2:
+        result.append(int1)
+        int1 += int3
+    return result
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, int2: int, int3: int):
+    print(int1)
+    while int1 < int2:
+        int1 = int1 + int3
+        print(int1)
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, int2: int, int3: int):
+    # initialize list
+    mylist = []
+    # initialize counter
+    i = 0
+    # initialize first value
+    n = int1
+    # while n < int2
+    while n < int2:
+        # append n to mylist
+        mylist.append(n)
+        # increase counter
+        i += 1
+        # increase n
+        n = int1 + (i * int3)
+    # return mylist
+    return mylist
+
+=======
+Suggestion 5
+
+def myfunc(int1: int, int2: int, int3: int):
+    result = []
+    i = 0
+    while int1 + int3 * i < int2:
+        result.append(int1 + int3 * i)
+        i += 1
+    return result
+
+=======
+Suggestion 6
+
+def myfunc(int1: int, int2: int, int3: int):
+    # Create an empty list
+    mylist = []
+
+    # Set the first element to int1
+    mylist.append(int1)
+
+    # Set the next element to the previous element + int3
+    # Stop when the next element is greater than or equal to int2
+    while mylist[-1] < int2:
+        mylist.append(mylist[-1] + int3)
+
+    # Return the list
+    return mylist
+
+=======
+Suggestion 7
+
+def myfunc(int1: int, int2: int, int3: int):
+    result = []
+    result.append(int1)
+    while int1 < int2:
+        int1 += int3
+        result.append(int1)
+    return result
+
+=======
+Suggestion 8
+
+def myfunc(int1: int, int2: int, int3: int):
+    # initialize the list to be returned
+    return_list = []
+    # initialize the return variable
+    return_value = 0
+
+    # check if the input is valid
+    if int1 < int2 and int3 > 0:
+        # loop the sequence
+        for i in range(int1, int2, int3):
+            # append the sequence to the list
+            return_list.append(i)
+        # set the return value to the list
+        return_value = return_list
+    else:
+        # set the return value to None
+        return_value = None
+
+    # return the return value
+    return return_value
+
+=======
+Suggestion 9
+
+def myfunc(int1: int, int2: int, int3: int):
+    mylist = []
+    while int1 < int2:
+        mylist.append(int1)
+        int1 += int3
+    return mylist

@@ -1,0 +1,191 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str, str2: str):
+    result = []
+    if len(str2) > len(str1):
+        return result
+    for i in range(len(str1)):
+        if str1[i] == str2[0]:
+            if len(str2) == 1:
+                result.append(i)
+            else:
+                j = 1
+                while j < len(str2):
+                    if str1[i+j] == str2[j]:
+                        j += 1
+                    else:
+                        break
+                if j == len(str2):
+                    result.append(i)
+    return result
+
+=======
+Suggestion 2
+
+def myfunc(str1: str, str2: str):
+    result = []
+    for i in range(len(str1)):
+        if str1[i:].startswith(str2):
+            result.append(i)
+    return result
+
+=======
+Suggestion 3
+
+def myfunc(str1: str, str2: str):
+    res = []
+    for i in range(len(str1)):
+        if str1[i] == str2[0]:
+            if str1[i:i+len(str2)] == str2:
+                res.append(i)
+    return res
+
+=======
+Suggestion 4
+
+def myfunc(str1: str, str2: str):
+    if not str1 or not str2:
+        return []
+    if len(str1) < len(str2):
+        return []
+    
+    def get_next_arr(target: str):
+        next_arr = [0] * len(target)
+        i = 1
+        j = 0
+        while i < len(target):
+            if target[i] == target[j]:
+                next_arr[i] = j + 1
+                i += 1
+                j += 1
+            else:
+                if j > 0:
+                    j = next_arr[j - 1]
+                else:
+                    next_arr[i] = 0
+                    i += 1
+        return next_arr
+    
+    def kmp(text: str, target: str):
+        next_arr = get_next_arr(target)
+        i = 0
+        j = 0
+        res = []
+        while i < len(text):
+            if text[i] == target[j]:
+                i += 1
+                j += 1
+            else:
+                if j > 0:
+                    j = next_arr[j - 1]
+                else:
+                    i += 1
+            if j == len(target):
+                res.append(i - j)
+                j = 0
+        return res
+    
+    return kmp(str1, str2)
+
+=======
+Suggestion 5
+
+def myfunc(str1: str, str2: str):
+    if len(str1) < len(str2):
+        return []
+    result = []
+    for i in range(len(str1) - len(str2) + 1):
+        for j in range(len(str2)):
+            if str1[i + j] != str2[j]:
+                break
+        else:
+            result.append(i)
+    return result
+
+=======
+Suggestion 6
+
+def myfunc(str1: str, str2: str):
+    if str1 == str2:
+        return [0]
+    if len(str1) < len(str2):
+        return []
+    if len(str1) == len(str2):
+        if str1 == str2:
+            return [0]
+        else:
+            return []
+    if len(str1) > len(str2):
+        result = []
+        for i in range(len(str1) - len(str2) + 1):
+            if str1[i:i+len(str2)] == str2:
+                result.append(i)
+        return result
+
+=======
+Suggestion 7
+
+def myfunc(str1: str, str2: str):
+    if len(str2) > len(str1):
+        return []
+    if len(str2) == 0:
+        return []
+    if len(str1) == 0:
+        return []
+    ret = []
+    for i in range(len(str1)):
+        if str1[i] == str2[0]:
+            if len(str2) == 1:
+                ret.append(i)
+            else:
+                if len(str1) - i >= len(str2):
+                    if str1[i:i+len(str2)] == str2:
+                        ret.append(i)
+    return ret
+
+=======
+Suggestion 8
+
+def myfunc(str1: str, str2: str):
+    result = []
+    for i in range(len(str1)):
+        if str1[i] == str2[0] and str1[i:i+len(str2)] == str2:
+            result.append(i)
+    return result
+
+=======
+Suggestion 9
+
+def myfunc(str1: str, str2: str):
+    l1 = len(str1)
+    l2 = len(str2)
+    if l2 == 0:
+        return []
+    if l1 == 0:
+        return []
+    if l1 < l2:
+        return []
+    if str1 == str2:
+        return [0]
+    ans = []
+    for i in range(0, l1-l2+1):
+        if str1[i:i+l2] == str2:
+            ans.append(i)
+    return ans
+
+=======
+Suggestion 10
+
+def myfunc(str1: str, str2: str):
+    if len(str1) < len(str2):
+        return []
+    if str1 == str2:
+        return [0]
+    result = []
+    for i in range(len(str1) - len(str2) + 1):
+        if str1[i:i + len(str2)] == str2:
+            result.append(i)
+    return result

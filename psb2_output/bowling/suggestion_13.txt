@@ -1,0 +1,194 @@
+Synthesizing 7/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    score = 0
+    for i in range(0, len(str1)):
+        if str1[i] == 'X':
+            score += 10
+        elif str1[i] == '/':
+            score += 10 - int(str1[i-1])
+        else:
+            score += int(str1[i])
+    return score
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    score = 0
+    for i in range(len(str1)):
+        if str1[i] == 'X':
+            score += 10
+            if i < 18:
+                if str1[i + 2] == '/':
+                    score += 10
+                else:
+                    score += int(str1[i + 1]) + int(str1[i + 2])
+        elif str1[i] == '/':
+            score += 10 - int(str1[i - 1])
+            if i < 18:
+                if str1[i + 1] == 'X':
+                    score += 10
+                else:
+                    score += int(str1[i + 1])
+        else:
+            score += int(str1[i])
+    return score
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    total = 0
+    frame = 0
+    in_first_half = True
+    for i in range(len(str1)):
+        if frame == 10:
+            break
+        c = str1[i]
+        if c == 'X':
+            total += 10
+            total += get_value(str1[i+1])
+            total += get_value(str1[i+2])
+            frame += 1
+        elif c == '/':
+            total += get_value(str1[i+1])
+            total += 10 - get_value(str1[i-1])
+            in_first_half = True
+            frame += 1
+        else:
+            total += get_value(c)
+            in_first_half = not in_first_half
+            if not in_first_half:
+                frame += 1
+    return total
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    """
+    >>> myfunc('X|7/|9-|X|-8|8/|-6|X|X|X||81')
+    167
+    >>> myfunc('X|X|X|X|X|X|X|X|X|X||XX')
+    300
+    >>> myfunc('X|7/|9-|X|-8|8/|-6|X|X|X||')
+    167
+    >>> myfunc('X|7/|9-|X|-8|8/|-6|X|X|X')
+    167
+    >>> myfunc('X|7/|9-|X|-8|8/|-6|X|X|X|')
+    167
+    >>> myfunc('X|7/|9-|X|-8|8/|-6|X|X|X|X')
+    167
+    >>> myfunc('X|7/|9-|X|-8|8/|-6|X|X|X|X|')
+    167
+    >>> myfunc('X|7/|9-|X|-8|8/|-6|X|X|X|X|X')
+    167
+    >>> myfunc('X|7/|9-|X|-8|8/|-6|X|X|X|X|X|')
+    167
+    >>> myfunc('X|7/|9-|X|-8|8/|-6|X|X|X|X|X|X')
+    167
+    >>> myfunc('X|7/|9-|X|-8|8/|-6|X|X|X|X|X|X|')
+    167
+    >>> myfunc('X|7/|9-|X|-8|8/|-6|X|X|X|X|X|X|X')
+    167
+    >>> myfunc('X|7/|9-|X|-8|8/|-6|X|X|X|X|X|X|X|')
+    167
+    >>> myfunc('X|7/|9-|X|-8|8/|-6|X|X|X|X|X|X|
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    score = 0
+    for i in range(len(str1)):
+        if str1[i] == 'X':
+            score += 10
+            if i + 1 < len(str1):
+                if str1[i + 1] == 'X':
+                    score += 10
+                elif str1[i + 1] == '/':
+                    score += 10 - int(str1[i + 2])
+                else:
+                    score += int(str1[i + 1])
+            if i + 2 < len(str1):
+                if str1[i + 2] == 'X':
+                    score += 10
+                elif str1[i + 2] == '/':
+                    score += 10 - int(str1[i + 3])
+                else:
+                    score += int(str1[i + 2])
+        elif str1[i] == '/':
+            score += 10 - int(str1[i - 1])
+            if i + 1 < len(str1):
+                if str1[i + 1] == 'X':
+                    score += 10
+                elif str1[i + 1] == '/':
+                    score += 10 - int(str1[i + 2])
+                else:
+                    score += int(str1[i + 1])
+        else:
+            score += int(str1[i])
+    return score
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    # Write your code here
+    score = 0
+    for i in range(len(str1)):
+        if str1[i] == 'X':
+            score += 10
+            if i < len(str1) - 2:
+                if str1[i + 2] == '/':
+                    score += 10
+                else:
+                    score += int(str1[i + 2])
+            if i < len(str1) - 1:
+                if str1[i + 1] == 'X':
+                    score += 10
+                elif str1[i + 1] == '/':
+                    score += 10 - int(str1[i + 2])
+                else:
+                    score += int(str1[i + 1])
+        elif str1[i] == '/':
+            score += 10 - int(str1[i - 1])
+            if i < len(str1) - 1:
+                if str1[i + 1] == 'X':
+                    score += 10
+                else:
+                    score += int(str1[i + 1])
+        else:
+            score += int(str1[i])
+    return score
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    score = 0
+    frame = 1
+    in_first_half = True
+    for i in range(len(str1)):
+        if str1[i] == '/':
+            score += 10 - last
+        else:
+            score += get_value(str1[i])
+        if frame < 10 and get_value(str1[i]) == 10:
+            if in_first_half:
+                score += get_value(str1[i+1])
+                score += get_value(str1[i+2])
+            else:
+                score += get_value(str1[i+1])
+            in_first_half = True
+            frame += 1
+        else:
+            if not in_first_half:
+                frame += 1
+            in_first_half = not in_first_half
+        last = get_value(str1[i])
+    return score

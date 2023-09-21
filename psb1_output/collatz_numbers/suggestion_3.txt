@@ -1,0 +1,208 @@
+Synthesizing 9/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    count = 1
+    while int1 != 1:
+        if int1 % 2 == 0:
+            int1 = int1 / 2
+            count += 1
+        else:
+            int1 = 3 * int1 + 1
+            count += 1
+    return count
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    count = 0
+    while int1 > 1:
+        if int1 % 2 == 0:
+            int1 /= 2
+        else:
+            int1 = int1 * 3 + 1
+        count += 1
+    return count
+
+=======
+Suggestion 3
+
+def myfunc(int1: int):
+    count = 0
+    while int1 != 1:
+        if int1 % 2 == 0:
+            int1 = int1 / 2
+            count += 1
+        else:
+            int1 = 3 * int1 + 1
+            count += 1
+    return count + 1
+
+=======
+Suggestion 4
+
+def myfunc(int1: int):
+    count = 0
+    if int1 <= 0:
+        return count
+    while int1 != 1:
+        if int1 % 2 == 0:
+            int1 = int1 / 2
+            count += 1
+        else:
+            int1 = (int1 * 3) + 1
+            count += 1
+    return count
+
+=======
+Suggestion 5
+
+def myfunc(int1: int):
+    count = 0
+    while int1 != 1:
+        if int1 % 2 == 0:
+            int1 = int1 / 2
+            count += 1
+        else:
+            int1 = int1 * 3 + 1
+            count += 1
+    return count
+
+=======
+Suggestion 6
+
+def myfunc(int1: int):
+    count = 0
+    while int1 != 1:
+        if int1 % 2 == 0:
+            int1 = int1 // 2
+        else:
+            int1 = int1 * 3 + 1
+        count += 1
+    return count
+
+=======
+Suggestion 7
+
+def myfunc(int1: int):
+    count = 1
+    while int1 != 1:
+        if int1 % 2 == 0:
+            int1 = int1 // 2
+        else:
+            int1 = int1 * 3 + 1
+        count += 1
+    return count
+
+=======
+Suggestion 8
+
+def myfunc(int1: int):
+    '''
+    >>> myfunc(3)
+    8
+    >>> myfunc(5)
+    6
+    >>> myfunc(6)
+    9
+    >>> myfunc(7)
+    17
+    >>> myfunc(8)
+    4
+    >>> myfunc(9)
+    20
+    >>> myfunc(10)
+    7
+    >>> myfunc(11)
+    15
+    >>> myfunc(12)
+    10
+    >>> myfunc(13)
+    10
+    >>> myfunc(14)
+    18
+    >>> myfunc(15)
+    18
+    >>> myfunc(16)
+    5
+    >>> myfunc(17)
+    13
+    >>> myfunc(18)
+    21
+    >>> myfunc(19)
+    21
+    >>> myfunc(20)
+    8
+    >>> myfunc(21)
+    8
+    >>> myfunc(22)
+    16
+    >>> myfunc(23)
+    16
+    >>> myfunc(24)
+    11
+    >>> myfunc(25)
+    24
+    >>> myfunc(26)
+    11
+    >>> myfunc(27)
+    112
+    >>> myfunc(28)
+    19
+    >>> myfunc(29)
+    19
+    >>> myfunc(30)
+    19
+    >>> myfunc(31)
+    107
+    >>> myfunc(32)
+    6
+    >>> myfunc(33)
+    27
+    >>> myfunc(34)
+    14
+    >>> myfunc(35)
+    14
+    >>> myfunc(36)
+    22
+    >>> myfunc(37)
+    22
+    >>> myfunc(38)
+    22
+    >>> myfunc(39)
+    35
+    >>> myfunc(40)
+    9
+    >>> myfunc(41)
+    110
+    >>> myfunc(42)
+    9
+    >>> myfunc(43)
+    30
+    >>> myfunc(44)
+    17
+    >>> myfunc(45)
+    17
+    >>> myfunc(46)
+    17
+    >>> myfunc(47)
+    105
+    >>> myfunc(48)
+    12
+    >>>
+
+=======
+Suggestion 9
+
+def myfunc(int1: int):
+    count = 0
+    while int1 != 1:
+        if int1 % 2 == 0:
+            int1 = int1/2
+        else:
+            int1 = int1*3+1
+        count += 1
+    return count+1

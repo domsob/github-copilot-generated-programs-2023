@@ -1,0 +1,66 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(list1: list):
+    sum = 0
+    for i in range(len(list1)):
+        sum += list1[i]
+        if sum < 0:
+            return i
+    return -1
+
+=======
+Suggestion 2
+
+def myfunc(list1: list):
+    for i in range(len(list1)):
+        if sum(list1[:i+1]) < 0:
+            return i
+    return -1
+
+=======
+Suggestion 3
+
+def myfunc(list1: list):
+    for i in range(0, len(list1)):
+        if sum(list1[0:i+1]) < 0:
+            return i
+    return -1
+
+=======
+Suggestion 4
+
+def myfunc(list1: list):
+    sum = 0
+    for i in range(len(list1)):
+        sum += list1[i]
+        if sum < 0:
+            return i
+    return -1
+
+    # Write your code here
+    # To debug: print("Debug messages...", file=sys.stderr, flush=True)
+
+=======
+Suggestion 5
+
+def myfunc(list1: list):
+    sum = 0
+    for i in range(len(list1)):
+        sum = sum + list1[i]
+        if sum < 0:
+            return i
+    return -1
+
+=======
+Suggestion 6
+
+def myfunc(list1: list):
+    sum = 0
+    for i in range(len(list1)):
+        sum += list1[i]
+        if sum < 0:
+            return i
+    return len(list1)

@@ -1,0 +1,63 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(list1: list, list2: list):
+    for i in range(len(list1)):
+        list1[i] = list1[i] * (1 - list2[i])
+    return sum(list1)
+
+=======
+Suggestion 2
+
+def myfunc(list1: list, list2: list):
+    total = 0
+    for i in range(len(list1)):
+        total += list1[i] * (1 - list2[i]/100)
+    return total
+
+=======
+Suggestion 3
+
+def myfunc(list1: list, list2: list):
+    return sum([list1[i] * (1 - list2[i] / 100) for i in range(len(list1))])
+
+=======
+Suggestion 4
+
+def myfunc(list1: list, list2: list):
+    total = 0
+    for i in range(len(list1)):
+        total += list1[i] * (1 - list2[i])
+    return total
+
+=======
+Suggestion 5
+
+def myfunc(list1: list, list2: list):
+    list3 = [list1[i] - (list1[i] * list2[i]) for i in range(len(list1))]
+    return sum(list3)
+
+=======
+Suggestion 6
+
+def myfunc(list1: list, list2: list):
+    total = 0
+    for i in range(len(list1)):
+        total += list1[i] * (100 - list2[i]) / 100
+    return total
+
+=======
+Suggestion 7
+
+def myfunc(list1: list, list2: list):
+    return sum([list1[i] * (1 - list2[i]) for i in range(len(list1))])
+
+=======
+Suggestion 8
+
+def myfunc(list1: list, list2: list):
+    if len(list1) != len(list2):
+        return 0
+    return sum(map(lambda x, y: x * (1 - y / 100), list1, list2))

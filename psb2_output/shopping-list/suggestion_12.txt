@@ -1,0 +1,85 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(list1: list, list2: list):
+    return sum([x * (1 - y/100) for x, y in zip(list1, list2)])
+
+=======
+Suggestion 2
+
+def myfunc(list1: list, list2: list):
+    if len(list1) != len(list2):
+        return "The length of the two lists must be the same"
+    else:
+        total = 0
+        for i in range(len(list1)):
+            total += list1[i] * (1 - list2[i]/100)
+        return total
+
+=======
+Suggestion 3
+
+def myfunc(list1: list, list2: list):
+    total = 0
+    for i in range(len(list1)):
+        total += list1[i] * (1 - list2[i] / 100)
+    return total
+
+=======
+Suggestion 4
+
+def myfunc(list1: list, list2: list):
+    result = 0
+    for i in range(len(list1)):
+        result += list1[i] * (1 - list2[i] / 100)
+    return result
+
+=======
+Suggestion 5
+
+def myfunc(list1: list, list2: list):
+    # your code here
+    return sum([a*(1-b/100) for a,b in zip(list1,list2)])
+
+=======
+Suggestion 6
+
+def myfunc(list1: list, list2: list):
+    if len(list1) != len(list2):
+        return "Error: lists are not of equal length"
+    else:
+        total = 0
+        for i in range(len(list1)):
+            total += list1[i] * (1 - list2[i]/100)
+        return total
+
+=======
+Suggestion 7
+
+def myfunc(list1: list, list2: list):
+    total = 0
+    for x in range(len(list1)):
+        total += list1[x] * (1 - list2[x]/100)
+    return total
+
+=======
+Suggestion 8
+
+def myfunc(list1: list, list2: list):
+    if len(list1) != len(list2):
+        return -1
+    total = 0
+    for i in range(len(list1)):
+        total += list1[i] * (1 - list2[i])
+    return total
+
+=======
+Suggestion 9
+
+def myfunc(list1: list, list2: list):
+    total = 0
+    for i in range(0, len(list1)):
+        total += list1[i] - list1[i] * list2[i] / 100
+    return total

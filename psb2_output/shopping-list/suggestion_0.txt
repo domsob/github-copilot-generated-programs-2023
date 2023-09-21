@@ -1,0 +1,89 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(list1: list, list2: list):
+    total = 0
+    for i in range(len(list1)):
+        total += list1[i] - list1[i] * (list2[i] / 100)
+    return total
+
+=======
+Suggestion 2
+
+def myfunc(list1: list, list2: list):
+    # list1 is the list of prices
+    # list2 is the list of discounts
+    # list1 and list2 are assumed to be the same length
+    # returns the total price after discount
+    total = 0
+    for i in range(len(list1)):
+        total += list1[i]*(1-list2[i]/100)
+    return total
+
+=======
+Suggestion 3
+
+def myfunc(list1: list, list2: list):
+    if len(list1) != len(list2):
+        return "Invalid input"
+    else:
+        total = 0
+        for i in range(len(list1)):
+            total += list1[i] * (1 - list2[i]/100)
+        return total
+
+=======
+Suggestion 4
+
+def myfunc(list1: list, list2: list):
+    # Your code here
+    return 0
+
+=======
+Suggestion 5
+
+def myfunc(list1: list, list2: list):
+    total = 0
+    for i in range(len(list1)):
+        total += list1[i] * (1 - list2[i] / 100)
+    return total
+
+=======
+Suggestion 6
+
+def myfunc(list1: list, list2: list):
+    return sum([(1 - (list2[i] / 100)) * list1[i] for i in range(len(list1))])
+
+=======
+Suggestion 7
+
+def myfunc(list1: list, list2: list):
+    if len(list1) != len(list2):
+        return -1
+    else:
+        total = 0
+        for i in range(len(list1)):
+            total += list1[i] * (1 - list2[i])
+        return total
+
+=======
+Suggestion 8
+
+def myfunc(list1: list, list2: list):
+    if len(list1) != len(list2):
+        raise ValueError('lists must be of same length')
+    return sum([(list1[i] * (1 - list2[i] / 100)) for i in range(len(list1))])
+
+=======
+Suggestion 9
+
+def myfunc(list1: list, list2: list):
+    return sum([list1[i] * (100 - list2[i]) / 100 for i in range(len(list1))])
+
+=======
+Suggestion 10
+
+def myfunc(list1: list, list2: list):
+    return sum([list1[i] * (1 - list2[i] / 100) for i in range(len(list1))])

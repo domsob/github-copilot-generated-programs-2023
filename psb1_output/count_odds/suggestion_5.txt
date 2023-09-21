@@ -1,0 +1,36 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(list1: list):
+    count = 0
+    for i in list1:
+        if i % 2 == 1:
+            count += 1
+    return count
+
+=======
+Suggestion 2
+
+def myfunc(list1: list):
+    count = 0
+    for i in list1:
+        if i % 2 != 0:
+            count += 1
+    return count
+
+=======
+Suggestion 3
+
+def myfunc(list1: list):
+    return len(list(filter(lambda x: x % 2, list1)))
+
+=======
+Suggestion 4
+
+def myfunc(list1: list):
+    count = 0
+    for i in list1:
+        count += i % 2
+    return count

@@ -1,0 +1,108 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, int2: int, int3: int):
+    # Initialize the output list
+    output_list = []
+    # Loop through the sequence
+    for i in range(int1, int2, int3):
+        # Append the current integer to the output list
+        output_list.append(i)
+    # Return the output list
+    return output_list
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, int2: int, int3: int):
+    out = []
+    for i in range(int1, int2, int3):
+        out.append(i)
+    return out
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, int2: int, int3: int):
+    result = []
+    for i in range(int1, int2, int3):
+        result.append(i)
+    return result
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, int2: int, int3: int):
+    if int1 > int2:
+        return "start must be less than end"
+    if int3 < 1:
+        return "step must be greater than 0"
+    mylist = []
+    for i in range(int1,int2,int3):
+        mylist.append(i)
+    return mylist
+
+=======
+Suggestion 5
+
+def myfunc(int1: int, int2: int, int3: int):
+    # The list of results to be returned
+    result = []
+
+    # The first number in the sequence
+    n = int1
+
+    # While the next number in the sequence is less than the end
+    while n < int2:
+        # Add the current number to the result list
+        result.append(n)
+        # Increment the number by the step
+        n += int3
+
+    # Return the result
+    return result
+
+=======
+Suggestion 6
+
+def myfunc(int1: int, int2: int, int3: int):
+    # Return a list of integers
+    # YOUR CODE HERE
+    list1 = []
+    if int1 < int2:
+        for i in range(int1, int2, int3):
+            list1.append(i)
+    else:
+        for i in range(int1, int2, -int3):
+            list1.append(i)
+    return list1
+
+=======
+Suggestion 7
+
+def myfunc(int1: int, int2: int, int3: int):
+    # Your code here
+    return
+
+=======
+Suggestion 8
+
+def myfunc(int1: int, int2: int, int3: int):
+    # YOUR CODE HERE
+    return []
+
+=======
+Suggestion 9
+
+def myfunc(int1: int, int2: int, int3: int):
+    """Given 3 integer inputs
+    start, end, and step, return the integers in the sequence
+    n_0 = start
+    n_i = n_i-1 + step
+    for each n_i < end."""
+    if int1 < int2:
+        return [i for i in range(int1, int2, int3)]
+    else:
+        return [i for i in range(int2, int1, int3)]

@@ -1,0 +1,142 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str, str2: str):
+    for i in str1:
+        if i not in str2:
+            return False
+        else:
+            str2 = str2.replace(i, "", 1)
+    return True
+
+=======
+Suggestion 2
+
+def myfunc(str1: str, str2: str):
+    # Write your code here
+    x = list(str1)
+    y = list(str2)
+    x.sort()
+    y.sort()
+    if len(x) > len(y):
+        return False
+    else:
+        for i in x:
+            if i not in y:
+                return False
+            elif x.count(i) > y.count(i):
+                return False
+            else:
+                continue
+        return True
+
+=======
+Suggestion 3
+
+def myfunc(str1: str, str2: str):
+    # Write your code here
+    str1 = str1.lower()
+    str2 = str2.lower()
+    if len(str1) > len(str2):
+        return False
+    for i in str1:
+        if i not in str2:
+            return False
+        else:
+            str2 = str2.replace(i, '', 1)
+    return True
+
+=======
+Suggestion 4
+
+def myfunc(str1: str, str2: str):
+    if len(str1) > len(str2):
+        return False
+    for char in str1:
+        if str1.count(char) > str2.count(char):
+            return False
+    return True
+
+=======
+Suggestion 5
+
+def myfunc(str1: str, str2: str):
+    # convert to list
+    list1 = list(str1)
+    list2 = list(str2)
+    # sort both lists
+    list1.sort()
+    list2.sort()
+    # compare lists
+    return list1 == list2
+
+=======
+Suggestion 6
+
+def myfunc(str1: str, str2: str):
+    if len(str1) > len(str2):
+        return False
+    else:
+        for i in str1:
+            if i in str2:
+                str2 = str2.replace(i, '', 1)
+            else:
+                return False
+        return True
+
+=======
+Suggestion 7
+
+def myfunc(str1: str, str2: str):
+    # YOUR CODE HERE
+    return True
+
+=======
+Suggestion 8
+
+def myfunc(str1: str, str2: str):
+    d1 = {}
+    d2 = {}
+    for i in str1:
+        if i not in d1:
+            d1[i] = 1
+        else:
+            d1[i] += 1
+    for i in str2:
+        if i not in d2:
+            d2[i] = 1
+        else:
+            d2[i] += 1
+    for key in d1:
+        if key not in d2:
+            return False
+        else:
+            if d1[key] > d2[key]:
+                return False
+    return True
+
+=======
+Suggestion 9
+
+def myfunc(str1: str, str2: str):
+    for i in str1:
+        if i not in str2:
+            return False
+        if str1.count(i) > str2.count(i):
+            return False
+    return True
+
+=======
+Suggestion 10
+
+def myfunc(str1: str, str2: str):
+    if len(str1) > len(str2):
+        return False
+    for letter in str1:
+        if letter not in str2:
+            return False
+        if str1.count(letter) > str2.count(letter):
+            return False
+    return True

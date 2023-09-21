@@ -1,0 +1,79 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(list1: list, list2: list):
+    if len(list1) != len(list2):
+        return False
+    for i in range(len(list1)):
+        if list1[i] != list2[len(list2) - 1 - i]:
+            return False
+    return True
+
+=======
+Suggestion 2
+
+def myfunc(list1: list, list2: list):
+    if list1 == list2[::-1]:
+        return True
+    else:
+        return False
+
+=======
+Suggestion 3
+
+def myfunc(list1: list, list2: list):
+    # Your code here
+    return False
+
+=======
+Suggestion 4
+
+def myfunc(list1: list, list2: list):
+    if len(list1) != len(list2):
+        return False
+    for i in range(len(list1)):
+        if list1[i] != list2[len(list1) - i - 1]:
+            return False
+    return True
+
+=======
+Suggestion 5
+
+def myfunc(list1: list, list2: list):
+    if len(list1) != len(list2):
+        return False
+    else:
+        for i in range(len(list1)):
+            if list1[i] != list2[len(list2) - 1 - i]:
+                return False
+        return True
+
+=======
+Suggestion 6
+
+def myfunc(list1: list, list2: list):
+    # Your code goes here
+    return False
+
+=======
+Suggestion 7
+
+def myfunc(list1: list, list2: list):
+    list2.reverse()
+    if list1 == list2:
+        return True
+    else:
+        return False
+
+=======
+Suggestion 8
+
+def myfunc(list1: list, list2: list):
+    if len(list1) != len(list2):
+        return False
+    for i in range(len(list1)):
+        if list1[i] != list2[len(list2) - i - 1]:
+            return False
+    return True

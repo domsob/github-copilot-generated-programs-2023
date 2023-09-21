@@ -1,0 +1,104 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    return [i*i for i in range(1, int1) if i*i % 2 == 0]
+    # return [i*i for i in range(1, int1) if i*i % 2 == 0]
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    return [i**2 for i in range(1, int1) if i % 2 == 0]
+
+=======
+Suggestion 3
+
+def myfunc(int1: int):
+    lst = []
+    for i in range(1, int1):
+        if i % 2 == 0:
+            lst.append(i ** 2)
+    return lst
+
+=======
+Suggestion 4
+
+def myfunc(int1: int):
+    # initialize empty list
+    even_squares = []
+    # iterate through range of 0 to n
+    for i in range(int1):
+        # if i is even and a perfect square
+        if i % 2 == 0 and (i ** 0.5) % 1 == 0:
+            # append to list
+            even_squares.append(i)
+    # return list
+    return even_squares
+
+=======
+Suggestion 5
+
+def myfunc(int1: int):
+    return [i ** 2 for i in range(1, int1) if i ** 2 % 2 == 0]
+
+=======
+Suggestion 6
+
+def myfunc(int1: int):
+    # Write your code here
+    result = []
+    for i in range(1, int1):
+        if i % 2 == 0:
+            result.append(i * i)
+    return result
+
+=======
+Suggestion 7
+
+def myfunc(int1: int):
+    i = 0
+    while i < int1:
+        if i % 2 == 0:
+            print(i)
+        i += 1
+    return
+
+=======
+Suggestion 8
+
+def myfunc(int1: int):
+    result = []
+    for i in range(1, int1):
+        if i % 2 == 0 and i ** 2 < int1:
+            result.append(i ** 2)
+    return result
+
+=======
+Suggestion 9
+
+def myfunc(int1: int):
+    # Create a list to hold the perfect squares
+    perfect_squares = []
+    # Create a list to hold the even perfect squares
+    even_perfect_squares = []
+    # Create a list to hold the odd perfect squares
+    odd_perfect_squares = []
+    # Iterate through all integers less than n
+    for i in range(1, int1):
+        # Check if the integer is a perfect square
+        if i**2 == int1:
+            # Add the perfect square to the list
+            perfect_squares.append(i)
+        # Check if the integer is an even perfect square
+        if i**2 == int1 and i % 2 == 0:
+            # Add the even perfect square to the list
+            even_perfect_squares.append(i)
+        # Check if the integer is an odd perfect square
+        if i**2 == int1 and i % 2 == 1:
+            # Add the odd perfect square to the list
+            odd_perfect_squares.append(i)
+    # Return the list of even perfect squares
+    return even_perfect_squares

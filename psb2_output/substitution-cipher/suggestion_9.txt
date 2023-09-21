@@ -1,0 +1,62 @@
+Synthesizing 6/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str, str2: str, str3: str):
+    '''
+    >>> myfunc('abcd','efgh','dbce')
+    'hefg'
+    >>> myfunc('abcd','efgh','dbce')
+    'hefg'
+    '''
+    res = ''
+    for i in str3:
+        res += str2[str1.index(i)]
+    return res
+
+=======
+Suggestion 2
+
+def myfunc(str1: str, str2: str, str3: str):
+    cipher = dict(zip(str1, str2))
+    return ''.join(cipher.get(c, c) for c in str3)
+
+=======
+Suggestion 3
+
+def myfunc(str1: str, str2: str, str3: str):
+    res = ""
+    for i in str3:
+        res += str2[str1.index(i)]
+    return res
+
+=======
+Suggestion 4
+
+def myfunc(str1: str, str2: str, str3: str):
+    return ''.join([str2[str1.index(c)] for c in str3])
+
+=======
+Suggestion 5
+
+def myfunc(str1: str, str2: str, str3: str):
+    res = ""
+    for i in str3:
+        if i in str1:
+            res += str2[str1.index(i)]
+        else:
+            res += i
+    return res
+
+=======
+Suggestion 6
+
+def myfunc(str1: str, str2: str, str3: str):
+    d = {}
+    for i in range(len(str1)):
+        d[str1[i]] = str2[i]
+    res = ''
+    for ch in str3:
+        res += d[ch]
+    return res

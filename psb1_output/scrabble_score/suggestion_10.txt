@@ -1,0 +1,190 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    return sum([1 if i.lower() in 'aeioulnstr' else 2 if i.lower() in 'dg' else 3 if i.lower() in 'bcmp' else 4 if i.lower() in 'fhvwy' else 5 if i.lower() in 'k' else 8 if i.lower() in 'jx' else 10 for i in str1])
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    # YOUR CODE HERE
+    pass
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    print(str1)
+    str1 = str1.lower()
+    score = 0
+    for i in range(len(str1)):
+        if str1[i] == 'a' or str1[i] == 'e' or str1[i] == 'i' or str1[i] == 'o' or str1[i] == 'u' or str1[i] == 'l' or str1[i] == 'n' or str1[i] == 'r' or str1[i] == 's' or str1[i] == 't':
+            score += 1
+        elif str1[i] == 'd' or str1[i] == 'g':
+            score += 2
+        elif str1[i] == 'b' or str1[i] == 'c' or str1[i] == 'm' or str1[i] == 'p':
+            score += 3
+        elif str1[i] == 'f' or str1[i] == 'h' or str1[i] == 'v' or str1[i] == 'w' or str1[i] == 'y':
+            score += 4
+        elif str1[i] == 'k':
+            score += 5
+        elif str1[i] == 'j' or str1[i] == 'x':
+            score += 8
+        elif str1[i] == 'q' or str1[i] == 'z':
+            score += 10
+    return score
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    score = 0
+    for i in str1:
+        if i == 'a' or i == 'e' or i == 'i' or i == 'o' or i == 'u' or i == 'l' or i == 'n' or i == 's' or i == 't' or i == 'r':
+            score += 1
+        elif i == 'd' or i == 'g':
+            score += 2
+        elif i == 'b' or i == 'c' or i == 'm' or i == 'p':
+            score += 3
+        elif i == 'f' or i == 'h' or i == 'v' or i == 'w' or i == 'y':
+            score += 4
+        elif i == 'k':
+            score += 5
+        elif i == 'j' or i == 'x':
+            score += 8
+        elif i == 'q' or i == 'z':
+            score += 10
+    return score
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    # Write your code here
+    # To print results to the standard output you can use print()
+    # Example: print("Hello world!")
+    score = 0
+    for char in str1:
+        if char in "aeioulnrst":
+            score = score + 1
+        elif char in "dg":
+            score = score + 2
+        elif char in "bcmp":
+            score = score + 3
+        elif char in "fhvwy":
+            score = score + 4
+        elif char in "k":
+            score = score + 5
+        elif char in "jx":
+            score = score + 8
+        elif char in "qz":
+            score = score + 10
+    print(score)
+    return score
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    # your code here
+    # return 0
+    # return sum([ord(i) for i in str1 if i.isalpha()])
+    return sum([ord(i) for i in str1 if i.isalpha()]) if str1 else 0
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    score = 0
+    for i in str1:
+        if i in 'aeioulnrst':
+            score += 1
+        elif i in 'dg':
+            score += 2
+        elif i in 'bcmp':
+            score += 3
+        elif i in 'fhvwy':
+            score += 4
+        elif i in 'k':
+            score += 5
+        elif i in 'jx':
+            score += 8
+        elif i in 'qz':
+            score += 10
+        else:
+            score += 0
+    return score
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    # Your code here
+    str1 = str1.upper()
+    score = 0
+    for i in str1:
+        if i in 'AEIOULNRST':
+            score += 1
+        elif i in 'DG':
+            score += 2
+        elif i in 'BCMP':
+            score += 3
+        elif i in 'FHVWY':
+            score += 4
+        elif i == 'K':
+            score += 5
+        elif i in 'JX':
+            score += 8
+        elif i in 'QZ':
+            score += 10
+    return score
+
+=======
+Suggestion 9
+
+def myfunc(str1: str):
+    str1 = str1.lower()
+    score = 0
+    for i in str1:
+        if i in 'aeioulnrst':
+            score += 1
+        elif i in 'dg':
+            score += 2
+        elif i in 'bcmp':
+            score += 3
+        elif i in 'fhvwy':
+            score += 4
+        elif i == 'k':
+            score += 5
+        elif i in 'jx':
+            score += 8
+        elif i in 'qz':
+            score += 10
+        else:
+            score += 0
+    return score
+
+=======
+Suggestion 10
+
+def myfunc(str1: str):
+    score = 0
+    for i in str1:
+        if i.lower() in "aeioulnrst":
+            score += 1
+        if i.lower() in "dg":
+            score += 2
+        if i.lower() in "bcmp":
+            score += 3
+        if i.lower() in "fhvwy":
+            score += 4
+        if i.lower() in "k":
+            score += 5
+        if i.lower() in "jx":
+            score += 8
+        if i.lower() in "qz":
+            score += 10
+    return score

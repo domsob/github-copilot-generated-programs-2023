@@ -1,0 +1,47 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, int2: int):
+    pass
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, int2: int):
+    # Your code here
+    return 0
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, int2: int):
+    return 0
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, int2: int):
+    return 0.0
+
+=======
+Suggestion 5
+
+def myfunc(int1: int, int2: int):
+    # Your code here
+    pass
+
+=======
+Suggestion 6
+
+def myfunc(int1: int, int2: int):
+    if int1 < 1 or int2 < 1:
+        return -1
+    if int1 == 1 and int2 == 1:
+        return 0.5
+    if int1 == 1:
+        return 1 / int2
+    if int2 == 1:
+        return 1
+    return int1 / (int1 + int2)

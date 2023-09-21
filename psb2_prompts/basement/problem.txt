@@ -1,0 +1,4 @@
+# Given a vector of integers, return the first
+# index such that the sum of all integers from the start of the
+# vector to that index (inclusive) is negative. 
+def myfunc(list1: list):

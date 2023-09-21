@@ -1,0 +1,170 @@
+Synthesizing 9/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    score = 0
+    for letter in str1:
+        if letter in 'aeioulnrst':
+            score += 1
+        elif letter in 'dg':
+            score += 2
+        elif letter in 'bcmp':
+            score += 3
+        elif letter in 'fhvwy':
+            score += 4
+        elif letter in 'k':
+            score += 5
+        elif letter in 'jx':
+            score += 8
+        elif letter in 'qz':
+            score += 10
+    return score
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    score = 0
+    for i in str1:
+        if i == 'a' or i == 'e' or i == 'i' or i == 'l' or i == 'n' or i == 'o' or i == 'r' or i == 's' or i == 't' or i == 'u':
+            score += 1
+        elif i == 'd' or i == 'g':
+            score += 2
+        elif i == 'b' or i == 'c' or i == 'm' or i == 'p':
+            score += 3
+        elif i == 'f' or i == 'h' or i == 'v' or i == 'w' or i == 'y':
+            score += 4
+        elif i == 'k':
+            score += 5
+        elif i == 'j' or i == 'x':
+            score += 8
+        elif i == 'q' or i == 'z':
+            score += 10
+    return score
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    str1 = str1.upper()
+    sum = 0
+    for i in str1:
+        if i == 'A' or i == 'E' or i == 'I' or i == 'L' or i == 'N' or i == 'O' or i == 'R' or i == 'S' or i == 'T' or i == 'U':
+            sum += 1
+        elif i == 'D' or i == 'G':
+            sum += 2
+        elif i == 'B' or i == 'C' or i == 'M' or i == 'P':
+            sum += 3
+        elif i == 'F' or i == 'H' or i == 'V' or i == 'W' or i == 'Y':
+            sum += 4
+        elif i == 'K':
+            sum += 5
+        elif i == 'J' or i == 'X':
+            sum += 8
+        elif i == 'Q' or i == 'Z':
+            sum += 10
+        else:
+            sum += 0
+    return sum
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    score = 0
+    for i in str1:
+        if i in 'aeioulnrst':
+            score += 1
+        elif i in 'dg':
+            score += 2
+        elif i in 'bcmp':
+            score += 3
+        elif i in 'fhvwy':
+            score += 4
+        elif i in 'k':
+            score += 5
+        elif i in 'jx':
+            score += 8
+        elif i in 'qz':
+            score += 10
+    return score
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    mydict = {'a':1, 'b':3, 'c':3, 'd':2, 'e':1, 'f':4, 'g':2, 'h':4, 'i':1, 'j':8, 'k':5, 'l':1, 'm':3, 
+    'n':1, 'o':1, 'p':3, 'q':10, 'r':1, 's':1, 't':1, 'u':1, 'v':4, 'w':4, 'x':8, 'y':4, 'z':10}
+    score = 0
+    for i in str1:
+        if i in mydict:
+            score += mydict[i]
+    return score
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    score = 0
+    for i in str1:
+        if i in "aeioulnrst":
+            score += 1
+        elif i in "dg":
+            score += 2
+        elif i in "bcmp":
+            score += 3
+        elif i in "fhvwy":
+            score += 4
+        elif i in "k":
+            score += 5
+        elif i in "jx":
+            score += 8
+        elif i in "qz":
+            score += 10
+    return score
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    score = 0
+    for char in str1:
+        if char in "aeioulnrstAEIOULNRST":
+            score += 1
+        elif char in "dgDG":
+            score += 2
+        elif char in "bcmpBCMP":
+            score += 3
+        elif char in "fhvwyFHVWY":
+            score += 4
+        elif char in "kK":
+            score += 5
+        elif char in "jxJX":
+            score += 8
+        elif char in "qzQZ":
+            score += 10
+    return score
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    score = 0
+    for char in str1:
+        if char in 'aeioulnrst':
+            score += 1
+        elif char in 'dg':
+            score += 2
+        elif char in 'bcmp':
+            score += 3
+        elif char in 'fhvwy':
+            score += 4
+        elif char == 'k':
+            score += 5
+        elif char in 'jx':
+            score += 8
+        elif char in 'qz':
+            score += 10
+    return score

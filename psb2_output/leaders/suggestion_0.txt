@@ -1,0 +1,120 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(list1: list):
+    leaders = []
+    for i in range(len(list1)):
+        if i == len(list1)-1:
+            leaders.append(list1[i])
+        elif list1[i] >= max(list1[i+1:]):
+            leaders.append(list1[i])
+    return leaders
+
+=======
+Suggestion 2
+
+def myfunc(list1: list):
+    list2 = []
+    for i in range(len(list1)):
+        if i == len(list1) - 1:
+            list2.append(list1[i])
+            break
+        if list1[i] >= max(list1[i+1:]):
+            list2.append(list1[i])
+    return list2
+
+=======
+Suggestion 3
+
+def myfunc(list1: list):
+    list2 = []
+    for i in range(len(list1)):
+        if i == len(list1)-1:
+            list2.append(list1[i])
+            break
+        elif list1[i] >= max(list1[i+1:]):
+            list2.append(list1[i])
+    return list2
+
+=======
+Suggestion 4
+
+def myfunc(list1: list):
+    list2 = []
+    for i in range(len(list1)-1):
+        if list1[i] >= list1[i+1]:
+            list2.append(list1[i])
+    list2.append(list1[-1])
+    return list2
+
+=======
+Suggestion 5
+
+def myfunc(list1: list):
+    if not list1:
+        return []
+    max = list1[-1]
+    leaders = [max]
+    for i in range(len(list1)-2, -1, -1):
+        if list1[i] >= max:
+            max = list1[i]
+            leaders.append(max)
+    return leaders
+
+=======
+Suggestion 6
+
+def myfunc(list1: list):
+    # Iterate through the list
+    for i in range(0, len(list1)):
+        # Iterate through the list again starting at the next element
+        for j in range(i+1, len(list1)):
+            # If the next element is greater than the current element, break out of the loop
+            if list1[i] < list1[j]:
+                break
+        # If the next element is greater than the current element, print the current element
+        if j == len(list1)-1:
+            print(list1[i])
+    # Print the last element
+    print(list1[len(list1)-1])
+
+=======
+Suggestion 7
+
+def myfunc(list1: list):
+    list2 = []
+    for i in range(len(list1)):
+        if i == len(list1)-1:
+            list2.append(list1[i])
+        else:
+            if list1[i] >= max(list1[i+1:]):
+                list2.append(list1[i])
+    return list2
+
+=======
+Suggestion 8
+
+def myfunc(list1: list):
+    list2 = []
+    for i in range(len(list1)):
+        if i == len(list1)-1:
+            list2.append(list1[i])
+        elif list1[i] >= max(list1[i+1:]):
+            list2.append(list1[i])
+    return list2
+
+=======
+Suggestion 9
+
+def myfunc(list1: list):
+    # list1 is the list of integers
+    # list2 is the list of leaders
+    list2 = []
+    for i in range(len(list1)):
+        if i == len(list1) - 1:
+            list2.append(list1[i])
+        elif list1[i] >= max(list1[i+1:]):
+            list2.append(list1[i])
+    return list2

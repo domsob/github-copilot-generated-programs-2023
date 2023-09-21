@@ -1,0 +1,95 @@
+Synthesizing 7/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    str1 = str1.lower()
+    str1 = str1.split()
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    i = 0
+    while i < len(str1):
+        if str1[i][0] in vowels:
+            str1[i] = str1[i] + 'ay'
+        else:
+            str1[i] = str1[i][1:] + str1[i][0] + 'ay'
+        i += 1
+    return ' '.join(str1)
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    str1 = str1.lower()
+    str2 = str1.split(' ')
+    str3 = []
+    for i in str2:
+        if i[0] in 'aeiou':
+            str3.append(i + 'ay')
+        else:
+            str3.append(i[1:] + i[0] + 'ay')
+    return ' '.join(str3)
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    str2 = ""
+    for i in str1.split():
+        if i[0].lower() in "aeiou":
+            str2 += i + "ay "
+        else:
+            str2 += i[1:] + i[0] + "ay "
+    return str2
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    str2 = ""
+    for i in str1.split():
+        if i[0] in ['a', 'e', 'i', 'o', 'u']:
+            str2 = str2 + i + "ay" + " "
+        else:
+            str2 = str2 + i[1:] + i[0] + "ay" + " "
+    return str2
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    vowels = ["a", "e", "i", "o", "u"]
+    str2 = str1.split()
+    for i in range(len(str2)):
+        if str2[i][0] in vowels:
+            str2[i] += "ay"
+        else:
+            str2[i] = str2[i][1:] + str2[i][0] + "ay"
+    return " ".join(str2)
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    words = str1.split()
+    for i in range(len(words)):
+        if words[i][0] in vowels:
+            words[i] += 'ay'
+        else:
+            words[i] = words[i][1:] + words[i][0] + 'ay'
+    return ' '.join(words)
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    str1 = str1.lower()
+    str1 = str1.split()
+    str2 = []
+    for i in str1:
+        if i[0] == 'a' or i[0] == 'e' or i[0] == 'i' or i[0] == 'o' or i[0] == 'u':
+            str2.append(i + 'ay')
+        else:
+            str2.append(i[1:] + i[0] + 'ay')
+    return ' '.join(str2)

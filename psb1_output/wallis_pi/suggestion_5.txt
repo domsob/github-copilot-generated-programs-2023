@@ -1,0 +1,162 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    from decimal import Decimal
+    from math import pi
+    pi = Decimal(pi)
+    prod = Decimal(1)
+    for i in range(1, int1+1):
+        prod = prod * Decimal((4*i**2)/(4*i**2-1))
+    return round(prod, 5)
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    x = 2
+    y = 3
+    z = 1
+    for i in range(1, int1):
+        z = z * (x/y)
+        if x == y:
+            x = x + 2
+        else:
+            y = y + 2
+    return z
+
+=======
+Suggestion 3
+
+def myfunc(int1: int):
+    temp = 2
+    for i in range(1, int1+1):
+        temp *= (4*i*i)/(4*i*i - 1)
+    return round(temp, 5)
+
+=======
+Suggestion 4
+
+def myfunc(int1: int):
+    if int1 <= 0:
+        return 0
+    else:
+        product = 1
+        for i in range(1, int1+1):
+            numerator = 2*i
+            denominator = 2*i - 1
+            product *= numerator / denominator
+        return round(product, 5)
+
+=======
+Suggestion 5
+
+def myfunc(int1: int):
+    x = 2
+    y = 3
+    z = 1
+    for i in range(int1):
+        z *= x / y
+        x += 2
+        y += 2
+    return round(z, 5)
+
+=======
+Suggestion 6
+
+def myfunc(int1: int):
+    if int1 == 1:
+        return (2/3)
+    elif int1 == 2:
+        return (2/3) * (4/3)
+    else:
+        return myfunc(int1 - 2) * myfunc(int1 - 1)
+
+=======
+Suggestion 7
+
+def myfunc(int1: int):
+    if int1 < 1:
+        return 0
+    else:
+        result = 1
+        for i in range(1, int1 + 1):
+            result *= (2 * i / (2 * i - 1)) * (2 * i / (2 * i + 1))
+        return round(result, 5)
+
+=======
+Suggestion 8
+
+def myfunc(int1: int):
+    a = 2
+    b = 3
+    c = 1
+    while c < int1:
+        a *= c * c
+        b *= c * c + 2
+        c += 1
+    return round(a / b, 5)
+
+=======
+Suggestion 9
+
+def myfunc(int1: int):
+    if int1 < 0:
+        return None
+    if int1 == 0:
+        return 1
+    if int1 == 1:
+        return 2/3
+    if int1 == 2:
+        return 2/3 * 4/3
+    if int1 == 3:
+        return 2/3 * 4/3 * 4/5
+    if int1 == 4:
+        return 2/3 * 4/3 * 4/5 * 6/5
+    if int1 == 5:
+        return 2/3 * 4/3 * 4/5 * 6/5 * 6/7
+    if int1 == 6:
+        return 2/3 * 4/3 * 4/5 * 6/5 * 6/7 * 8/7
+    if int1 == 7:
+        return 2/3 * 4/3 * 4/5 * 6/5 * 6/7 * 8/7 * 8/9
+    if int1 == 8:
+        return 2/3 * 4/3 * 4/5 * 6/5 * 6/7 * 8/7 * 8/9 * 10/9
+    if int1 == 9:
+        return 2/3 * 4/3 * 4/5 * 6/5 * 6/7 * 8/7 * 8/9 * 10/9 * 10/11
+    if int1 == 10:
+        return 2/3 * 4/3 * 4/5 * 6/5 * 6/7 * 8/7 * 8/9 * 10/9 * 10/11 * 12/11
+    if int1 == 11:
+        return 2/3 * 4/3 * 4/5 * 6/5 * 6/7 * 8/7 * 8/9 * 10/9 * 10/11 * 12/11 * 12/13
+    if int1 == 12:
+        return 2/3 * 4/3 * 4/5 * 6/5 * 6/7
+
+=======
+Suggestion 10
+
+def myfunc(int1: int):
+    if int1 == 1:
+        return 2/3
+    elif int1 == 2:
+        return 2/3 * 4/3
+    elif int1 == 3:
+        return 2/3 * 4/3 * 4/5
+    elif int1 == 4:
+        return 2/3 * 4/3 * 4/5 * 6/5
+    elif int1 == 5:
+        return 2/3 * 4/3 * 4/5 * 6/5 * 6/7
+    elif int1 == 6:
+        return 2/3 * 4/3 * 4/5 * 6/5 * 6/7 * 8/7
+    elif int1 == 7:
+        return 2/3 * 4/3 * 4/5 * 6/5 * 6/7 * 8/7 * 8/9
+    elif int1 == 8:
+        return 2/3 * 4/3 * 4/5 * 6/5 * 6/7 * 8/7 * 8/9 * 10/9
+    elif int1 == 9:
+        return 2/3 * 4/3 * 4/5 * 6/5 * 6/7 * 8/7 * 8/9 * 10/9 * 10/11
+    elif int1 == 10:
+        return 2/3 * 4/3 * 4/5 * 6/5 * 6/7 * 8/7 * 8/9 * 10/9 * 10/11 * 12/11
+    elif int1 == 11:
+        return 2/3 * 4/3 * 4/5 * 6/5 * 6/7 * 8/7 * 8/9 * 10/9 * 10/11 * 12/11 * 12/13
+    elif int1 == 12:
+        return 2/3 * 4/3 * 4/5 * 6/5 * 6/7 * 8/7 * 8/9 * 10/9 * 10/11 * 12/11

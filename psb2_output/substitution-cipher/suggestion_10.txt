@@ -1,0 +1,84 @@
+Synthesizing 9/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str, str2: str, str3: str):
+    # Write your code here
+    # To print results to the standard output you can use print()
+    # Example print("Hello world!")
+    print(str3.translate(str.maketrans(str1,str2)))
+    return str3.translate(str.maketrans(str1,str2))
+
+=======
+Suggestion 2
+
+def myfunc(str1: str, str2: str, str3: str):
+    str3 = str3.lower()
+    str1 = str1.lower()
+    str2 = str2.lower()
+    for i in range(len(str3)):
+        if str3[i] in str1:
+            str3 = str3.replace(str3[i], str2[str1.index(str3[i])])
+    return str3
+
+=======
+Suggestion 3
+
+def myfunc(str1: str, str2: str, str3: str):
+    # your code here
+    return str3.translate(str3.maketrans(str1, str2))
+
+=======
+Suggestion 4
+
+def myfunc(str1: str, str2: str, str3: str):
+    dict1 = dict(zip(str1, str2))
+    return ''.join(dict1.get(s, s) for s in str3)
+
+=======
+Suggestion 5
+
+def myfunc(str1: str, str2: str, str3: str):
+    str4 = ''
+    for i in str3:
+        str4 += str1[str2.index(i)]
+    return str4
+
+=======
+Suggestion 6
+
+def myfunc(str1: str, str2: str, str3: str):
+    return ''.join([str2[str1.find(x)] for x in str3])
+
+=======
+Suggestion 7
+
+def myfunc(str1: str, str2: str, str3: str):
+    result = ""
+    for i in str3:
+        if i in str1:
+            result += str2[str1.index(i)]
+        elif i in str2:
+            result += str1[str2.index(i)]
+        else:
+            result += i
+    return result
+
+=======
+Suggestion 8
+
+def myfunc(str1: str, str2: str, str3: str):
+    str4 = ""
+    for i in str3:
+        str4 += str2[str1.index(i)]
+    return str4
+
+=======
+Suggestion 9
+
+def myfunc(str1: str, str2: str, str3: str):
+    for i in range(len(str3)):
+        if str3[i] in str1:
+            str3 = str3.replace(str3[i], str2[str1.index(str3[i])])
+    return str3

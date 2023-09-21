@@ -1,0 +1,127 @@
+Synthesizing 9/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str, str2: str, str3: str):
+    return ''.join([str1[str2.index(c)] for c in st
+
+=======
+Suggestion 2
+
+def myfunc(str1: str, str2: str, str3: str):
+    """
+    >>> myfunc('abcd','dcba','dab')
+    'abc'
+    >>> myfunc('abcd','dcba','dabc')
+    'abcd'
+    >>> myfunc('abcd','dcba','abcd')
+    'dcba'
+    >>> myfunc('abcd','dcba','dbca')
+    'dabc'
+    >>> myfunc('abcd','dcba','abcd')
+    'dcba'
+    >>> myfunc('abcd','dcba','abcd')
+    'dcba'
+    >>> myfunc('abcd','dcba','abcd')
+    'dcba'
+    """
+    cipher = str.maketrans(str1, str2)
+    return str3.translate(cipher)
+
+=======
+Suggestion 3
+
+def myfunc(str1: str, str2: str, str3: str):
+    cipher = {}
+    for i in range(len(str1)):
+        cipher[str1[i]] = str2[i]
+    return ''.join([cipher[c] for c in str3])
+
+=======
+Suggestion 4
+
+def myfunc(str1: str, str2: str, str3: str):
+    # Write your code here
+    # To print results to the standard output you can use print()
+    # Example: print("Hello world!")
+    d = {}
+    for i in range(len(str1)):
+        d[str1[i]] = str2[i]
+    res = ""
+    for i in range(len(str3)):
+        res += d[str3[i]]
+    return res
+
+=======
+Suggestion 5
+
+def myfunc(str1: str, str2: str, str3: str):
+    dict1 = {}
+    dict2 = {}
+    for i in range(len(str1)):
+        dict1[str1[i]] = str2[i]
+        dict2[str2[i]] = str1[i]
+    result = ""
+    for i in range(len(str3)):
+        if str3[i] in dict1:
+            result += dict1[str3[i]]
+        elif str3[i] in dict2:
+            result += dict2[str3[i]]
+        else:
+            result += str3[i]
+    return result
+
+=======
+Suggestion 6
+
+def myfunc(str1: str, str2: str, str3: str):
+    res = ""
+    for i in str3:
+        res += str2[str1.index(i)]
+    return res
+
+=======
+Suggestion 7
+
+def myfunc(str1: str, str2: str, str3: str):
+    str = ""
+    for i in str3:
+        if i in str1:
+            str += str2[str1.index(i)]
+        else:
+            str += i
+    return str
+
+=======
+Suggestion 8
+
+def myfunc(str1: str, str2: str, str3: str):
+    """
+    >>> myfunc('abc', 'def', 'dbc')
+    'dec'
+    >>> myfunc('abc', 'def', 'dbcdef')
+    'decabc'
+    >>> myfunc('abc', 'def', 'defabc')
+    'abcdef'
+    """
+    # Write your code here
+    str1 = list(str1)
+    str2 = list(str2)
+    str3 = list(str3)
+    for i in range(len(str3)):
+        if str3[i] in str1:
+            str3[i] = str2[str1.index(str3[i])]
+        elif str3[i] in str2:
+            str3[i] = str1[str2.index(str3[i])]
+    return ''.join(str3)
+
+=======
+Suggestion 9
+
+def myfunc(str1: str, str2: str, str3: str):
+    """Decipher str3 using the cipher created from str1 and str2"""
+    char_list = list(str3)
+    for i in range(len(char_list)):
+        char_list[i] = str2[str1.index(char_list[i])]
+    return "".join(char_list)

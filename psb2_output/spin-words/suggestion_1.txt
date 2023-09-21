@@ -1,0 +1,122 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    str1 = str1.split(" ")
+    for i in range(len(str1)):
+        if len(str1[i]) >= 5:
+            str1[i] = str1[i][::-1]
+    return " ".join(str1)
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    str_list = str1.split(" ")
+    for i in range(len(str_list)):
+        if len(str_list[i]) >= 5:
+            str_list[i] = str_list[i][::-1]
+    return " ".join(str_list)
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    str1 = str1.split(' ')
+    for i in range(len(str1)):
+        if len(str1[i]) >= 5:
+            str1[i] = str1[i][::-1]
+    return ' '.join(str1)
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    str2 = str1.split()
+    str3 = []
+    for i in str2:
+        if len(i) >= 5:
+            str3.append(i[::-1])
+        else:
+            str3.append(i)
+    return " ".join(str3)
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    str2 = str1.split()
+    str3 = []
+    for i in str2:
+        if len(i) >= 5:
+            i = i[::-1]
+        str3.append(i)
+    return " ".join(str3)
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    str2 = str1.split()
+    for i in range(len(str2)):
+        if len(str2[i]) >= 5:
+            str2[i] = str2[i][::-1]
+    return " ".join(str2)
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    # split the string into a list of words
+    words = str1.split(' ')
+    # create a new list
+    new_words = []
+    # loop through the words
+    for word in words:
+        # if the word is 5 or more characters long
+        if len(word) >= 5:
+            # reverse the word
+            word = word[::-1]
+        # append the word to the new list
+        new_words.append(word)
+    # join the words back together
+    return ' '.join(new_words)
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    str1 = str1.split()
+    for i in range(len(str1)):
+        if len(str1[i]) >= 5:
+            str1[i] = str1[i][::-1]
+    return " ".join(str1)
+
+=======
+Suggestion 9
+
+def myfunc(str1: str):
+    # Your code here
+    new_str = ""
+    for word in str1.split():
+        if len(word) >= 5:
+            new_str += word[::-1] + ' '
+        else:
+            new_str += word + ' '
+    return new_str.strip()
+
+=======
+Suggestion 10
+
+def myfunc(str1: str):
+    str2 = ""
+    for i in str1.split():
+        if len(i) >= 5:
+            str2 += i[::-1]
+        else:
+            str2 += i
+        str2 += " "
+
+    return str2.strip()

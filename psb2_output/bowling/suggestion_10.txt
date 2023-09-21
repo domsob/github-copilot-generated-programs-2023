@@ -1,0 +1,200 @@
+Synthesizing 6/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    total = 0
+    frame = 0
+    in_first_half = True
+    for i in range(len(str1)):
+        if str1[i] == '/':
+            total += 10 - last
+        else:
+            total += get_value(str1[i])
+        if frame < 10 and get_value(str1[i]) == 10:
+            if in_first_half:
+                total += get_value(str1[i + 1])
+                total += get_value(str1[i + 2])
+            else:
+                total += get_value(str1[i + 1])
+            frame += 1
+        if not in_first_half:
+            frame += 1
+        in_first_half = not in_first_half
+        last = get_value(str1[i])
+    return total
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    # Split the string into a list of individual bowls.
+    # If the last bowl is a strike, add two more bowls to the list.
+    if str1[-1] == "X":
+        str1 = str1 + "00"
+    # If the last bowl is a spare, add one more bowl to the list.
+    elif str1[-1] == "/":
+        str1 = str1 + "0"
+    # Split the string into a list of individual bowls.
+    lst = list(str1)
+
+    # Convert the list of bowls into a list of integers.
+    for i in range(0, len(lst)):
+        # If the bowl is a strike, convert it to 10.
+        if lst[i] == "X":
+            lst[i] = 10
+        # If the bowl is a spare, convert it to 10 minus the previous bowl.
+        elif lst[i] == "/":
+            lst[i] = 10 - lst[i - 1]
+        # If the bowl is a miss, convert it to 0.
+        elif lst[i] == "-":
+            lst[i] = 0
+        # Convert the bowl to an integer.
+        else:
+            lst[i] = int(lst[i])
+
+    # Initialize the score.
+    score = 0
+    # Iterate through the list of bowls.
+    for i in range(0, len(lst)):
+        # If the bowl is a strike, add 10 plus the next two bowls to the score.
+        if lst[i] == 10:
+            score += lst[i] + lst[i + 1] + lst[i + 2]
+        # If the bowl is a spare, add 10 plus the next bowl to the score.
+        elif lst[i] + lst[i + 1] == 10:
+            score += lst[i] + lst[i + 1] + lst[i + 2]
+        # If the bowl is a miss, add the bowl to the score.
+        else:
+            score += lst[i]
+    # Return the score.
+    return score
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    # 1. Split the string into a list of chars
+    # 2. Iterate over the list of chars
+    # 3. If the char is an integer, add it to the score
+    # 4. If the char is an X, add 10 to the score
+    # 5. If the char is a /, add 10 minus the previous char to the score
+    # 6. Return the score
+    score = 0
+    for i, char in enumerate(str1):
+        if char == "X":
+            score += 10
+        elif char == "/":
+            score += 10 - int(str1[i - 1])
+        else:
+            score += int(char)
+    return score
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    str2 = str1.replace('-', '0')
+    str2 = str2.replace('X', '10')
+    str2 = str2.replace('/', '10')
+    score = 0
+    for i in range(0, len(str2), 2):
+        if str2[i] == '1':
+            score += 10
+        elif str2[i] == 'X':
+            score += 10
+            if str2[i + 2] == 'X':
+                score += 10
+            elif str2[i + 2] == '/':
+                score += 10 - int(str2[i + 1])
+            else:
+                score += int(str2[i + 1]) + int(str2[i + 2])
+        elif str2[i + 1] == '/':
+            score += 10
+            if str2[i + 2] == 'X':
+                score += 10
+            else:
+                score += int(str2[i + 2])
+        else:
+            score += int(str2[i]) + int(str2[i + 1])
+    return score
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    # Create a list to hold the scores for each frame
+    frame_scores = []
+    # Create a list to hold the individual bowl scores
+    bowl_scores = []
+    # Create a list to hold the individual bowl scores for each frame
+    frame_bowl_scores = []
+    # Create a variable to hold the score for each bowl
+    bowl_score = 0
+    # Create a variable to hold the score for each frame
+    frame_score = 0
+    # Create a variable to hold the score for the entire round
+    round_score = 0
+    # Create a variable to hold the number of bowls in the round
+    num_bowls = 0
+    # Create a variable to hold the number of frames in the round
+    num_frames = 0
+    # Create a variable to hold the number of bowls in the round
+    num_bowls = len(str1)
+    # Create a variable to hold the number of frames in the round
+    num_frames = num_bowls / 2
+    # Create a variable to hold the number of bowls in the round
+    num_bowls = len(str1)
+    # Create a variable to hold the number of frames in the round
+    num_frames = num_bowls / 2
+    # Create a variable to hold the number of bowls in the round
+    num_bowls = len(str1)
+    # Create a variable to hold the number of frames in the round
+    num_frames = num_bowls / 2
+    # Create a variable to hold the number of bowls in the round
+    num_bowls = len(str1)
+    # Create a variable to hold the number of frames in the round
+    num_frames = num_bowls / 2
+    # Create a variable to hold the number of bowls in the round
+    num_bowls = len(str1)
+    # Create a variable to hold the number of frames in the round
+    num_frames = num_bowls / 2
+    # Create a variable to hold the number of bowls in the round
+    num_bowls = len(str1)
+    # Create a variable to hold the number of frames in the round
+    num_frames = num_bowls / 2
+    # Create a variable to hold the number of bowls in the round
+    num_bowls = len(str
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    score = 0
+    i = 0
+    while i < len(str1):
+        if str1[i] == 'X':
+            score += 10
+            if i + 2 < len(str1):
+                if str1[i + 2] == 'X':
+                    score += 10
+                else:
+                    score += int(str1[i + 2])
+            if i + 1 < len(str1):
+                if str1[i + 1] == 'X':
+                    score += 10
+                else:
+                    score += int(str1[i + 1])
+            i += 1
+        elif str1[i] == '/':
+            score += 10
+            if i + 1 < len(str1):
+                if str1[i + 1] == 'X':
+                    score += 10
+                else:
+                    score += int(str1[i + 1])
+            i += 1
+        else:
+            score += int(str1[i])
+        i += 1
+    return score

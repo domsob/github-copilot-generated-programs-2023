@@ -1,0 +1,140 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    new_str = ''
+    for char in str1:
+        if char.isalpha():
+            new_str += char*2
+        elif char == '!':
+            new_str += char*3
+        else:
+            new_str += char
+    return new_str
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    new_str = ""
+    for i in str1:
+        if i.isalpha():
+            new_str += i * 2
+        elif i == "!":
+            new_str += i * 3
+        else:
+            new_str += i
+    return new_str
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    newstr = ""
+    for i in str1:
+        if i.isalpha():
+            newstr += i*2
+        elif i == "!":
+            newstr += i*3
+        else:
+            newstr += i
+    return newstr
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    # Create a new string
+    str2 = ""
+    # Iterate through the string
+    for i in str1:
+        # If the character is a letter, add it twice
+        if i.isalpha():
+            str2 += i * 2
+        # If the character is a exclamation point, add it three times
+        elif i == "!":
+            str2 += i * 3
+        # If the character is not a letter or exclamation point, add it once
+        else:
+            str2 += i
+    # Return the new string
+    return str2
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    result = ""
+    for i in range(len(str1)):
+        if str1[i].isalpha():
+            result += str1[i] * 2
+        elif str1[i] == "!":
+            result += str1[i] * 3
+        else:
+            result += str1[i]
+    return result
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    str2 = ""
+    for i in str1:
+        if i.isalpha():
+            str2 = str2 + i * 2
+        elif i == "!":
+            str2 = str2 + i * 3
+        else:
+            str2 = str2 + i
+    return str2
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    return ''.join([x * 2 if x.isalpha() else x for x in str1])
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    new_str = ''
+    for i in str1:
+        if i.isalpha() or i == '!':
+            if i == '!':
+                new_str += i * 3
+            else:
+                new_str += i * 2
+        else:
+            new_str += i
+    return new_str
+
+=======
+Suggestion 9
+
+def myfunc(str1: str):
+    str2 = ''
+    for i in str1:
+        if i.isalpha():
+            str2 = str2 + i*2
+        elif i == '!':
+            str2 = str2 + i*3
+        else:
+            str2 = str2 + i
+    return str2
+
+=======
+Suggestion 10
+
+def myfunc(str1: str):
+    result = ''
+    for i in str1:
+        if i.isalpha():
+            result += i*2
+        elif i == '!':
+            result += i*3
+        else:
+            result += i
+    return result

@@ -1,0 +1,79 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(list1: list, list2: list):
+    # your code here
+    return 0
+
+=======
+Suggestion 2
+
+def myfunc(list1: list, list2: list):
+    if len(list1) != len(list2):
+        raise ValueError("Two vectors must have same dimensions!")
+    sum = 0
+    for i in range(len(list1)):
+        sum += (list1[i] - list2[i]) ** 2
+    return sum ** 0.5
+
+=======
+Suggestion 3
+
+def myfunc(list1: list, list2: list):
+    return (sum((a - b) ** 2 for a, b in zip(list1, list2))) ** 0.5
+
+=======
+Suggestion 4
+
+def myfunc(list1: list, list2: list):
+    return sum((x - y) ** 2 for x, y in zip(list1, list2)) ** .5
+
+=======
+Suggestion 5
+
+def myfunc(list1: list, list2: list):
+    sum = 0
+    for i in range(len(list1)):
+        sum += (list1[i] - list2[i]) ** 2
+    return sum ** 0.5
+
+=======
+Suggestion 6
+
+def myfunc(list1: list, list2: list):
+    return sum([(x-y)**2 for x,y in zip(list1,list2)])**(1/2)
+
+=======
+Suggestion 7
+
+def myfunc(list1: list, list2: list):
+    if len(list1) == len(list2):
+        sum = 0
+        for i in range(0, len(list1)):
+            sum += (list1[i] - list2[i])**2
+        return sum**0.5
+    else:
+        return -1
+
+=======
+Suggestion 8
+
+def myfunc(list1: list, list2: list):
+    if len(list1) != len(list2):
+        return "The lists must be of equal length"
+    i = 0
+    sum = 0
+    while i < len(list1):
+        sum += (list1[i] - list2[i])**2
+        i += 1
+    return sum**(1/2)
+
+=======
+Suggestion 9
+
+def myfunc(list1: list, list2: list):
+    if len(list1) != len(list2):
+        return None
+    return sum((list1[i] - list2[i]) ** 2 for i in range(len(list1))) ** 0.5

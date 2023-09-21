@@ -1,0 +1,98 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    result = 1
+    for i in range(1, int1 + 1):
+        result *= (4 * (i ** 2)) / ((4 * (i ** 2)) - 1)
+    return round(result, 5)
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    result = 1
+    for i in range(1, int1+1):
+        result *= (2*i)/(2*i-1) * (2*i)/(2*i+1)
+    return round(result, 5)
+
+=======
+Suggestion 3
+
+def myfunc(int1: int):
+    product = 1
+    for i in range(1, int1):
+        product *= (2*i) / (2*i+1) * (2*i) / (2*i-1)
+    return round(product, 5)
+
+=======
+Suggestion 4
+
+def myfunc(int1: int):
+    pi = 1
+    for i in range(1, int1 + 1):
+        pi *= (2 * i / (2 * i - 1)) * (2 * i / (2 * i + 1))
+    return round(pi, 5)
+
+=======
+Suggestion 5
+
+def myfunc(int1: int):
+    if int1 == 0:
+        return 1
+    else:
+        return (2 * int1) / (2 * int1 - 1) * (2 * int1) / (2 * int1 + 1)
+
+=======
+Suggestion 6
+
+def myfunc(int1: int):
+    result = 1
+    for i in range(1, int1 + 1):
+        result *= (i * 2) / (i * 2 - 1)
+        result *= (i * 2) / (i * 2 + 1)
+    return round(result, 5)
+
+=======
+Suggestion 7
+
+def myfunc(int1: int):
+    product = 2/3
+    for i in range(2, int1):
+        if i % 2 == 0:
+            product *= (i/(i-1))
+        else:
+            product *= ((i+1)/i)
+    return round(product, 5)
+
+=======
+Suggestion 8
+
+def myfunc(int1: int):
+    result = 1
+    for i in range(1, int1):
+        result *= (2*i)/(2*i-1) * (2*i)/(2*i+1)
+    return round(result, 5)
+
+=======
+Suggestion 9
+
+def myfunc(int1: int):
+    result = 0.0
+    for i in range(1, int1 + 1):
+        if i % 2 == 0:
+            result *= (i / (i + 1))
+        else:
+            result *= ((i + 1) / i)
+    return round(result, 5)
+
+=======
+Suggestion 10
+
+def myfunc(int1: int):
+    pi = 1
+    for i in range(1, int1 + 1):
+        pi *= (4 * i * i) / (4 * i * i - 1)
+    return round(pi, 5)

@@ -1,0 +1,2 @@
+# Given 3 integers, return their median.
+def myfunc(int1: int, int2: int, int3: int):

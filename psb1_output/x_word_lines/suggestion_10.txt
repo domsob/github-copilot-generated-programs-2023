@@ -1,0 +1,176 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, str1: str):
+    str1 = str1.strip()
+    str1 = str1.split()
+    i = 0
+    count = 0
+    while i < len(str1):
+        if count == int1:
+            print()
+            count = 0
+        print(str1[i], end=" ")
+        i += 1
+        count += 1
+
+    return print()
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, str1: str):
+    list1 = str1.split()
+    list2 = []
+    for i in range(0, len(list1), int1):
+        list2.append(list1[i:i + int1])
+    for i in range(len(list2)):
+        list2[i] = ' '.join(list2[i])
+    return '\n'.join(list2)
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, str1: str):
+    # Split string into a list of words
+    words = str1.split()
+    # Create a list of lines
+    lines = []
+    # Initialize a line
+    line = ""
+    # Iterate over the words
+    for word in words:
+        # If the length of the line plus the length of the word plus 1 is greater than int1
+        if len(line) + len(word) + 1 > int1:
+            # Add the line to the list of lines
+            lines.append(line)
+            # Reset the line
+            line = ""
+        # Add the word to the line
+        line += word + " "
+    # Add the last line to the list of lines
+    lines.append(line)
+    # Return the list of lines
+    return lines
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, str1: str):
+    # split the string into a list of words
+    words = str1.split()
+    # create a list of lists of words
+    lines = []
+    while words:
+        # create a list of words for each line
+        line = words[:int1]
+        # add the line to the list of lines
+        lines.append(line)
+        # remove the words from the list of words
+        words = words[int1:]
+    # create a list of strings
+    line_strings = []
+    for line in lines:
+        # create a string of words for each line
+        line_string = ' '.join(line)
+        # add the string to the list of strings
+        line_strings.append(line_string)
+    # create a string of lines
+    str2 = '\n'.join(line_strings)
+    # return the string of lines
+    return str2
+
+=======
+Suggestion 5
+
+def myfunc(int1: int, str1: str):
+    str1 = str1.replace('\n', ' ')
+    str1 = str1.replace('\t', ' ')
+    str1 = str1.replace('  ', ' ')
+    str1 = str1.replace('  ', ' ')
+    str1 = str1.replace('  ', ' ')
+    str1 = str1.strip(' ')
+    str1 = str1.split(' ')
+    str1 = str1[:int1]
+    str1 = ' '.join(str1)
+    return str1
+
+=======
+Suggestion 6
+
+def myfunc(int1: int, str1: str):
+    str2 = str1.split()
+    str3 = []
+    str4 = []
+    for i in str2:
+        str3.append(i)
+        if len(str3) == int1:
+            str4.append(' '.join(str3))
+            str3 = []
+    if len(str3) > 0:
+        str4.append(' '.join(str3))
+    return str4
+
+=======
+Suggestion 7
+
+def myfunc(int1: int, str1: str):
+    result = ''
+    counter = 0
+    for word in str1.split():
+        if counter == 0:
+            result += word
+        elif counter % int1 == 0:
+            result += '\n' + word
+        else:
+            result += ' ' + word
+        counter += 1
+    return result
+
+=======
+Suggestion 8
+
+def myfunc(int1: int, str1: str):
+    # Write your code here
+    str1 = str1.replace("\n", " ")
+    str1 = str1.split(" ")
+    i = 0
+    str2 = ""
+    for word in str1:
+        if i == 0:
+            str2 += word
+        elif i < int1:
+            str2 += " " + word
+        else:
+            str2 += "\n" + word
+            i = 0
+        i += 1
+    return str2
+
+=======
+Suggestion 9
+
+def myfunc(int1: int, str1: str):
+    str1 = str1.replace("\n", " ")
+    words = str1.split(" ")
+    line = ""
+    for i in range(len(words)):
+        if i != 0 and i % int1 == 0:
+            line += "\n"
+        line += words[i] + " "
+    return line
+
+=======
+Suggestion 10
+
+def myfunc(int1: int, str1: str):
+    words = str1.split()
+    lines = []
+    while len(words) > 0:
+        line = []
+        while len(line) < int1 and len(words) > 0:
+            line.append(words.pop(0))
+        lines.append(line)
+    return '\n'.join([' '.join(line) for line in lines])

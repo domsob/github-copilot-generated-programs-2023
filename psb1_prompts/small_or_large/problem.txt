@@ -1,0 +1,3 @@
+# Given an integer n, return
+# "small" if n < 1000 and "large" if n >= 2000 (and nothing if 1000 <= n < 2000).
+def myfunc(int1: int):

@@ -1,0 +1,64 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, int2: int):
+    # Your code here
+    return 0
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, int2: int):
+    # Your code goes here
+    return 0.0
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, int2: int):
+    n = int1
+    m = int2
+    # print(n)
+    # print(m)
+    # print(n/m)
+    return n/m
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, int2: int):
+    # Your code here
+    pass
+
+=======
+Suggestion 5
+
+def myfunc(int1: int, int2: int):
+    pass
+
+=======
+Suggestion 6
+
+def myfunc(int1: int, int2: int):
+    # Your code here
+    return 0.0
+
+=======
+Suggestion 7
+
+def myfunc(int1: int, int2: int):
+    # Your code here
+    return 0.5
+
+=======
+Suggestion 8
+
+def myfunc(int1: int, int2: int):
+    if int1 == int2:
+        return 0.5
+    elif int1 > int2:
+        return (int1 - int2) / (int1 * int2)
+    else:
+        return (int2 - int1) / (int1 * int2)

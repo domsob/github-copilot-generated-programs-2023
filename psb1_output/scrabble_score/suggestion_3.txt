@@ -1,0 +1,173 @@
+Synthesizing 8/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    score = 0
+    for i in str1:
+        if i in "aeioulnrst":
+            score += 1
+        elif i in "dg":
+            score += 2
+        elif i in "bcmp":
+            score += 3
+        elif i in "fhvwy":
+            score += 4
+        elif i in "k":
+            score += 5
+        elif i in "jx":
+            score += 8
+        elif i in "qz":
+            score += 10
+    return score
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    score = 0
+    for i in str1:
+        if i in 'aeioulnrst':
+            score += 1
+        elif i in 'dg':
+            score += 2
+        elif i in 'bcmp':
+            score += 3
+        elif i in 'fhvwy':
+            score += 4
+        elif i in 'k':
+            score += 5
+        elif i in 'jx':
+            score += 8
+        elif i in 'qz':
+            score += 10
+    return score
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    dic = {'a':1, 'b':3, 'c':3, 'd':2, 'e':1,
+           'f':4, 'g':2, 'h':4, 'i':1, 'j':8,
+           'k':5, 'l':1, 'm':3, 'n':1, 'o':1,
+           'p':3, 'q':10, 'r':1, 's':1, 't':1,
+           'u':1, 'v':4, 'w':4, 'x':8, 'y':4,
+           'z':10}
+    score = 0
+    for i in str1:
+        if i in dic:
+            score += dic[i]
+    return score
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    score = 0
+    for i in range(len(str1)):
+        if str1[i] == "a" or str1[i] == "A":
+            score += 1
+        elif str1[i] == "b" or str1[i] == "B":
+            score += 3
+        elif str1[i] == "c" or str1[i] == "C":
+            score += 3
+        elif str1[i] == "d" or str1[i] == "D":
+            score += 2
+        elif str1[i] == "e" or str1[i] == "E":
+            score += 1
+        elif str1[i] == "f" or str1[i] == "F":
+            score += 4
+        elif str1[i] == "g" or str1[i] == "G":
+            score += 2
+        elif str1[i] == "h" or str1[i] == "H":
+            score += 4
+        elif str1[i] == "i" or str1[i] == "I":
+            score += 1
+        elif str1[i] == "j" or str1[i] == "J":
+            score += 8
+        elif str1[i] == "k" or str1[i] == "K":
+            score += 5
+        elif str1[i] == "l" or str1[i] == "L":
+            score += 1
+        elif str1[i] == "m" or str1[i] == "M":
+            score += 3
+        elif str1[i] == "n" or str1[i] == "N":
+            score += 1
+        elif str1[i] == "o" or str1[i] == "O":
+            score += 1
+        elif str1[i] == "p" or str1[i] == "P":
+            score += 3
+        elif str1[i] == "q" or str1[i] == "Q":
+            score += 10
+        elif str1[i] == "r" or str1[i] == "R":
+            score += 1
+        elif str1[i] == "s" or str1[i] == "S":
+            score += 1
+        elif str1[i] == "t
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    result = 0
+    for i in str1:
+        if i in 'aeioulnrst':
+            result += 1
+        elif i in 'dg':
+            result += 2
+        elif i in 'bcmp':
+            result += 3
+        elif i in 'fhvwy':
+            result += 4
+        elif i in 'k':
+            result += 5
+        elif i in 'jx':
+            result += 8
+        elif i in 'qz':
+            result += 10
+    return result
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    score = 0
+    for char in str1:
+        if char in "aeioulnrstAEIOULNRST":
+            score += 1
+        elif char in "dgDG":
+            score += 2
+        elif char in "bcmpBCMP":
+            score += 3
+        elif char in "fhvwyFHVWY":
+            score += 4
+        elif char in "kK":
+            score += 5
+        elif char in "jxJX":
+            score += 8
+        elif char in "qzQZ":
+            score += 10
+    return score
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    score = 0
+    for i in str1.upper():
+        if i == 'A' or i == 'E' or i == 'I' or i == 'L' or i == 'N' or i == 'O' or i == 'R' or i == 'S' or i == 'T' or i == 'U':
+            score += 1
+        elif i == 'D' or i == 'G':
+            score += 2
+        elif i == 'B' or i == 'C' or i == 'M' or i == 'P':
+            score += 3
+        elif i == 'F' or i == 'H' or i == 'V' or i == 'W' or i == 'Y':
+            score += 4
+        elif i == 'K':
+            score += 5
+        elif i == 'J' or i == 'X':
+            score += 8
+        elif i == 'Q' or i == 'Z':
+            score += 10
+    return score

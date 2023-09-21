@@ -1,0 +1,76 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    i = 1
+    while i * i < int1:
+        if i % 2 == 0:
+            print(i * i)
+        i = i + 1
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    # your code here
+    pass
+
+=======
+Suggestion 3
+
+def myfunc(int1: int):
+    mylist = []
+    for i in range(1, int1):
+        if i % 2 == 0:
+            mylist.append(i ** 2)
+    return mylist
+
+=======
+Suggestion 4
+
+def myfunc(int1: int):
+    return [i**2 for i in range(1, int1) if i**2 % 2 == 0]
+
+=======
+Suggestion 5
+
+def myfunc(int1: int):
+    squares = []
+    for i in range(1, int1):
+        if i % 2 == 0:
+            squares.append(i ** 2)
+    return squares
+
+=======
+Suggestion 6
+
+def myfunc(int1: int):
+    # write your code here
+    pass
+    # return a list of all positive even perfect squares less than n
+
+=======
+Suggestion 7
+
+def myfunc(int1: int):
+    # your code here
+    return [i**2 for i in range(1, int1) if i % 2 == 0]
+
+=======
+Suggestion 8
+
+def myfunc(int1: int):
+    return [x**2 for x in range(1, int1) if x**2 % 2 == 0]
+
+=======
+Suggestion 9
+
+def myfunc(int1: int):
+    # if int1 <= 0:
+    #     return []
+    # else:
+    #     int1 = int1 - 1
+    #     return [i**2 for i in range(int1) if i**2 % 2 == 0]
+    return [i**2 for i in range(int1-1) if i**2 % 2 == 0] if int1 > 0 else []

@@ -1,0 +1,126 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, int2: int):
+    # Write your code here
+    return 0.0
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, int2: int):
+    pass
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, int2: int):
+    total = int1 * int2
+    # create list of all possible outcomes
+    peters = []
+    colins = []
+    for i in range(1, int1 + 1):
+        for j in range(1, int2 + 1):
+            peters.append(i)
+            colins.append(j)
+    # count the number of times Peter rolls higher than Colin
+    count = 0
+    for k in range(len(peters)):
+        if peters[k] > colins[k]:
+            count += 1
+    # return the probability
+    return count / total
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, int2: int):
+    # The probability of Peter rolling strictly higher than Colin
+    # is equal to the sum of the probability of Peter rolling exactly i,
+    # where i is greater than Colin's roll, for all i from 1 to int1.
+    # The probability of Peter rolling exactly i is equal to the
+    # probability of Peter rolling at least i minus the probability of
+    # Peter rolling at least i + 1.
+    # The probability of Peter rolling at least i is equal to the
+    # sum of the probability of Peter rolling exactly j, where j is
+    # greater than or equal to i, for all j from 1 to int1.
+    # The probability of Peter rolling exactly j is equal to the
+    # probability of Peter rolling at least j minus the probability of
+    # Peter rolling at least j + 1.
+    # The probability of Peter rolling at least j is equal to the
+    # sum of the probability of Peter rolling exactly k, where k is
+    # greater than or equal to j, for all k from 1 to int1.
+    # The probability of Peter rolling exactly k is equal to the
+    # probability of Peter rolling at least k minus the probability of
+    # Peter rolling at least k + 1.
+    # The probability of Peter rolling at least k is equal to the
+    # sum of the probability of Peter rolling exactly l, where l is
+    # greater than or equal to k, for all l from 1 to int1.
+    # The probability of Peter rolling exactly l is equal to the
+    # probability of Peter rolling at least l minus the probability of
+    # Peter rolling at least l + 1.
+    # The probability of Peter rolling at least l is equal to the
+    # sum of the probability of Peter rolling exactly m, where m is
+    # greater than or equal to l, for all m from 1 to int1.
+    # The probability of Peter rolling exactly m is equal to the
+    # probability of Peter rolling at least m minus the probability of
+    # Peter rolling at least m + 1.
+    # The probability of Peter rolling at least m is equal to the
+    # sum of the probability of Peter rolling exactly n, where n is
+    # greater than or equal to m, for all n from 1 to int1.
+    # The probability of
+
+=======
+Suggestion 5
+
+def myfunc(int1: int, int2: int):
+    if int1 < 0 or int2 < 0:
+        raise ValueError("Inputs must be positive integers")
+    if int1 == 1:
+        return 1
+    if int2 == 1:
+        return 0
+    return (int1-1)/int1 * myfunc(int1, int2-1) + 1/int1 * myfunc(int1-1, int2-1)
+
+=======
+Suggestion 6
+
+def myfunc(int1: int, int2: int):
+    if int1 < 1 or int2 < 1:
+        return 'Please enter positive integers.'
+    elif int1 == 1 and int2 == 1:
+        return 'The probability is 0.'
+    elif int1 == 1:
+        return 'The probability is 1.'
+    elif int2 == 1:
+        return 'The probability is 0.'
+    elif int1 == 2:
+        return 1 / int2
+    elif int2 == 2:
+        return (int1 - 1) / int1
+    else:
+        return (int1 - 1) / int1 * (int2 - 1) / int2
+
+=======
+Suggestion 7
+
+def myfunc(int1: int, int2: int):
+    # Your code here
+    return 0
+
+=======
+Suggestion 8
+
+def myfunc(int1: int, int2: int):
+    # Peter's die
+    die1 = [i for i in range(1, int1+1)]
+    # Colin's die
+    die2 = [i for i in range(1, int2+1)]
+    # All possible outcomes
+    outcomes = [i+j for i in die1 for j in die2]
+    # All possible outcomes for Peter
+    outcomes_peter = [i for i in outcomes if i > max(die2)]
+    # Return the probability
+    return len(outcomes_peter)/len(outcomes)

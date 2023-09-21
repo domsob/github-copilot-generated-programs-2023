@@ -1,0 +1,138 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, int2: int):
+    # if int1 is larger than int2, set int1 to the larger integer
+    if int1 > int2:
+        larger = int1
+        smaller = int2
+    # otherwise, set int2 to the larger integer
+    else:
+        larger = int2
+        smaller = int1
+    # start at the larger integer and count down
+    for i in range(larger, 0, -1):
+        # if the larger integer divided by i has a remainder of 0
+        # and the smaller integer divided by i has a remainder of 0
+        # return i
+        if (larger % i == 0) and (smaller % i == 0):
+            return i
+    # if no common divisor is found, return 1
+    return 1
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, int2: int):
+    int1_factors = []
+    int2_factors = []
+    for i in range(1, int1 + 1):
+        if int1 % i == 0:
+            int1_factors.append(i)
+    for i in range(1, int2 + 1):
+        if int2 % i == 0:
+            int2_factors.append(i)
+    common_factors = []
+    for i in int1_factors:
+        if i in int2_factors:
+            common_factors.append(i)
+    return common_factors[-1]
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, int2: int):
+    # Create a list of all the common divisors of the two integers
+    common_divisors = [i for i in range(1, min(int1, int2) + 1) if int1 % i == 0 and int2 % i == 0]
+    # Return the largest integer in the list
+    return max(common_divisors)
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, int2: int):
+    if int1 > int2:
+        larger = int1
+        smaller = int2
+    else:
+        larger = int2
+        smaller = int1
+    
+    for i in range(smaller, 0, -1):
+        if larger % i == 0 and smaller % i == 0:
+            return i
+
+=======
+Suggestion 5
+
+def myfunc(int1: int, int2: int):
+    if (int1 < int2):
+        smaller = int1
+    else:
+        smaller = int2
+    for i in range(1, smaller + 1):
+        if ((int1 % i == 0) and (int2 % i == 0)):
+            hcf = i
+    return hcf
+
+=======
+Suggestion 6
+
+def myfunc(int1: int, int2: int):
+    highest = 0
+    if int1 > int2:
+        highest = int1
+    else:
+        highest = int2
+    for i in range(2, highest+1):
+        if int1 % i == 0 and int2 % i == 0:
+            return i
+    return 1
+
+=======
+Suggestion 7
+
+def myfunc(int1: int, int2: int):
+    if int1 <= int2:
+        smallest = int1
+    else:
+        smallest = int2
+    for i in range(1, smallest+1):
+        if int1 % i == 0 and int2 % i == 0:
+            largest = i
+    return largest
+
+=======
+Suggestion 8
+
+def myfunc(int1: int, int2: int):
+    if int1 < int2:
+        return int1
+    else:
+        return int2
+
+=======
+Suggestion 9
+
+def myfunc(int1: int, int2: int):
+    if int1 > int2:
+        small = int2
+    else:
+        small = int1
+    for i in range(1, small + 1):
+        if int1 % i == 0 and int2 % i == 0:
+            result = i
+    return result
+
+=======
+Suggestion 10
+
+def myfunc(int1: int, int2: int):
+    if int1 > int2:
+        return int1
+    elif int2 > int1:
+        return int2
+    else:
+        return int1

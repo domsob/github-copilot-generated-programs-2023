@@ -1,0 +1,109 @@
+Synthesizing 9/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str, str2: str, str3: str):
+    d = {}
+    for i in range(len(str1)):
+        d[str1[i]] = str2[i]
+    res = ""
+    for i in str3:
+        res += d[i]
+    return res
+
+=======
+Suggestion 2
+
+def myfunc(str1: str, str2: str, str3: str):
+    result = ""
+    for i in str3:
+        if i in str1:
+            result += str2[str1.index(i)]
+        else:
+            result += i
+    return result
+
+=======
+Suggestion 3
+
+def myfunc(str1: str, str2: str, str3: str):
+    new_str = ""
+    for i in str3:
+        if i in str1:
+            new_str += str2[str1.index(i)]
+        else:
+            new_str += i
+    return new_str
+
+=======
+Suggestion 4
+
+def myfunc(str1: str, str2: str, str3: str):
+  # Your code goes here
+  return str3.translate(str3.maketrans(str1, str2))
+
+=======
+Suggestion 5
+
+def myfunc(str1: str, str2: str, str3: str):
+    s = ''
+    for i in str3:
+        s += str1[str2.index(i)]
+    return s
+
+=======
+Suggestion 6
+
+def myfunc(str1: str, str2: str, str3: str):
+    d = {}
+    for i in range(len(str1)):
+        d[str1[i]] = str2[i]
+    result = ""
+    for c in str3:
+        result += d[c]
+    return result
+
+=======
+Suggestion 7
+
+def myfunc(str1: str, str2: str, str3: str):
+    d = {}
+    for i in range(len(str1)):
+        d[str1[i]] = str2[i]
+    result = ''
+    for i in str3:
+        result += d[i]
+    return result
+
+=======
+Suggestion 8
+
+def myfunc(str1: str, str2: str, str3: str):
+    str1 = str1.lower()
+    str2 = str2.lower()
+    str3 = str3.lower()
+    str_new = ''
+    for i in str3:
+        if i in str1:
+            str_new += str2[str1.index(i)]
+        else:
+            str_new += i
+    return str_new
+
+=======
+Suggestion 9
+
+def myfunc(str1: str, str2: str, str3: str):
+    # Write your code here
+    # To print results to the standard output you can use print()
+    # Example print("Hello world!")
+    # return "Hello world!"
+    new_str = ""
+    for i in str3:
+        if i in str1:
+            index = str1.index(i)
+            new_str += str2[index]
+        else:
+            new_str += i
+    return new_str

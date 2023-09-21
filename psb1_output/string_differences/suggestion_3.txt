@@ -1,0 +1,161 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str, str2: str):
+    if len(str1) > len(str2):
+        str1, str2 = str2, str1
+    for i, (c1, c2) in enumerate(zip(str1, str2)):
+        if c1 != c2:
+            print(i, c1, c2, sep=' ')
+    # for i in range(len(str1)):
+    #     if str1[i] != str2[i]:
+    #         print(i, str1[i], str2[i], sep=' ')
+
+=======
+Suggestion 2
+
+def myfunc(str1: str, str2: str):
+    # your code here
+    return
+
+=======
+Suggestion 3
+
+def myfunc(str1: str, str2: str):
+    # Your code here
+    return None
+
+=======
+Suggestion 4
+
+def myfunc(str1: str, str2: str):
+    # Your code here
+    pass
+
+=======
+Suggestion 5
+
+def myfunc(str1: str, str2: str):
+    str1 = str1.lower()
+    str2 = str2.lower()
+    if len(str1) > len(str2):
+        temp = str1
+        str1 = str2
+        str2 = temp
+    str1 = str1.lower()
+    str2 = str2.lower()
+    for i in range(len(str1)):
+        if str1[i] != str2[i]:
+            print(i, str1[i], str2[i])
+    return
+
+=======
+Suggestion 6
+
+def myfunc(str1: str, str2: str):
+    # YOUR CODE HERE
+    #raise NotImplementedError()
+    #print(str1)
+    #print(str2)
+    #print(len(str1))
+    #print(len(str2))
+    #print(str1[0])
+    #print(str2[0])
+    #print(str1[1])
+    #print(str2[1])
+    #print(str1[2])
+    #print(str2[2])
+    #print(str1[3])
+    #print(str2[3])
+    #print(str1[4])
+    #print(str2[4])
+    #print(str1[5])
+    #print(str2[5])
+    #print(str1[6])
+    #print(str2[6])
+    #print(str1[7])
+    #print(str2[7])
+    #print(str1[8])
+    #print(str2[8])
+    #print(str1[9])
+    #print(str2[9])
+    #print(str1[10])
+    #print(str2[10])
+    #print(str1[11])
+    #print(str2[11])
+    #print(str1[12])
+    #print(str2[12])
+    #print(str1[13])
+    #print(str2[13])
+    #print(str1[14])
+    #print(str2[14])
+    #print(str1[15])
+    #print(str2[15])
+    #print(str1[16])
+    #print(str2[16])
+    #print(str1[17])
+    #print(str2[17])
+    #print(str1[18])
+    #print(str2[18])
+    #print(str1[19])
+    #print(str2[19])
+    #print(str1[20])
+    #print(str2[20])
+    #print(str1[21])
+    #print(str2[21])
+    #print(str1[22])
+    #print(str2[22])
+    #print(str1[23])
+    #print(str2[23])
+    #print(str1[24])
+    #print(str2[24])
+    #print(str1[25])
+    #print(str2[25])
+    #print(str1[26])
+    #print(str2[26])
+    #print(str1[27])
+    #print(str2[27])
+    #print(str1[28])
+    #print(str2[
+
+=======
+Suggestion 7
+
+def myfunc(str1: str, str2: str):
+    len1 = len(str1)
+    len2 = len(str2)
+    if len1 > len2:
+        len1 = len2
+    for i in range(len1):
+        if str1[i] != str2[i]:
+            print(f"{i} {str1[i]} {str2[i]}")
+    return
+
+=======
+Suggestion 8
+
+def myfunc(str1: str, str2: str):
+    if len(str1) > len(str2):
+        str1, str2 = str2, str1
+    for i, (c1, c2) in enumerate(zip(str1, str2)):
+        if c1 != c2:
+            print(i, c1, c2)
+
+=======
+Suggestion 9
+
+def myfunc(str1: str, str2: str):
+    if len(str1) > len(str2):
+        str1, str2 = str2, str1
+    for i in range(len(str1)):
+        if str1[i] != str2[i]:
+            print(f"{i} {str1[i]} {str2[i]}")
+
+=======
+Suggestion 10
+
+def myfunc(str1: str, str2: str):
+    # your code here
+    pass

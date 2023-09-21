@@ -1,0 +1,144 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str, str2: str, str3: str):
+    cipher = {}
+    for i in range(len(str1)):
+        cipher[str1[i]] = str2[i]
+    result = ''
+    for char in str3:
+        if char in cipher:
+            result += cipher[char]
+        else:
+            result += char
+    return result
+
+=======
+Suggestion 2
+
+def myfunc(str1: str, str2: str, str3: str):
+    return "".join([str2[str1.index(i)] for i in str3])
+
+=======
+Suggestion 3
+
+def myfunc(str1: str, str2: str, str3: str):
+    mapping = dict(zip(str1, str2))
+    return ''.join([mapping[c] for c in str3])
+
+=======
+Suggestion 4
+
+def myfunc(str1: str, str2: str, str3: str):
+    return ''.join([str2[str1.index(i)] for i in str3])
+
+=======
+Suggestion 5
+
+def myfunc(str1: str, str2: str, str3: str):
+    """
+    >>> myfunc("abc", "def", "xyz")
+    'xyz'
+    >>> myfunc("abc", "def", "ayz")
+    'dyz'
+    >>> myfunc("abc", "def", "aby")
+    'dby'
+    >>> myfunc("abc", "def", "abz")
+    'dbz'
+    >>> myfunc("abc", "def", "abx")
+    'dbx'
+    >>> myfunc("abc", "def", "ab")
+    'db'
+    >>> myfunc("abc", "def", "a")
+    'd'
+    >>> myfunc("abc", "def", "")
+    ''
+    >>> myfunc("abc", "def", "abcdef")
+    'defabc'
+    >>> myfunc("abc", "def", "abcabc")
+    'defdef'
+    >>> myfunc("abc", "def", "abcab")
+    'defde'
+    >>> myfunc("abc", "def", "abc")
+    'def'
+    >>> myfunc("abc", "def", "abca")
+    'defa'
+    >>> myfunc("abc", "def", "abcb")
+    'defb'
+    >>> myfunc("abc", "def", "abcc")
+    'defc'
+    >>> myfunc("abc", "def", "abcd")
+    'defd'
+    >>> myfunc("abc", "def", "abce")
+    'defe'
+    >>> myfunc("abc", "def", "abcf")
+    'deff'
+    >>> myfunc("abc", "def", "abcg")
+    'defg'
+    >>> myfunc("abc", "def", "abch")
+    'defh'
+    >>> myfunc("abc", "def", "abci")
+    'defi'
+    >>> myfunc("abc", "def", "abcj")
+    'defj'
+    >>> myfunc("abc", "def", "abck")
+    'defk'
+    >>> myfunc("abc", "def", "abcl")
+    'defl'
+    >>> myfunc("abc", "def", "abcm")
+    'defm'
+    >>> myfunc("abc", "def", "abcn")
+    'defn'
+    >>> myfunc("abc", "def", "abco")
+    'defo'
+
+=======
+Suggestion 6
+
+def myfunc(str1: str, str2: str, str3: str):
+    # Your code here
+    pass
+
+=======
+Suggestion 7
+
+def myfunc(str1: str, str2: str, str3: str):
+    cipher = {}
+    deciphered = ''
+    for i in range(len(str1)):
+        cipher[str1[i]] = str2[i]
+    for i in str3:
+        deciphered += cipher[i]
+    return deciphered
+
+=======
+Suggestion 8
+
+def myfunc(str1: str, str2: str, str3: str):
+    return ''.join(str2[str1.index(i)] for i in str3)
+
+=======
+Suggestion 9
+
+def myfunc(str1: str, str2: str, str3: str):
+    # your code here
+    # use str1 and str2 to create a cipher
+    # use the cipher to decipher str3
+    # return the deciphered string
+    cipher = {}
+    for i in range(len(str1)):
+        cipher[str1[i]] = str2[i]
+    deciphered = ""
+    for char in str3:
+        deciphered += cipher[char]
+    return deciphered
+
+=======
+Suggestion 10
+
+def myfunc(str1: str, str2: str, str3: str):
+    """Returns deciphered message"""
+    d = dict(zip(str1, str2))
+    return ''.join([d[x] for x in str3])

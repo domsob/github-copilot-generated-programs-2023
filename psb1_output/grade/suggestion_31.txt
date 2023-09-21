@@ -1,0 +1,74 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, int2: int, int3: int, int4: int, int5: int):
+    if int5 >= int1:
+        return "A"
+    elif int5 >= int2:
+        return "B"
+    elif int5 >= int3:
+        return "C"
+    elif int5 >= int4:
+        return "D"
+    else:
+        return "F"
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, int2: int, int3: int, int4: int, int5: int):
+    """Return A, B, C, D, or F depending on the thresholds and the numeric grade."""
+    # Write your code here
+    pass
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, int2: int, int3: int, int4: int, int5: int):
+    if int5 >= int1:
+        return 'A'
+    elif int5 >= int2:
+        return 'B'
+    elif int5 >= int3:
+        return 'C'
+    elif int5 >= int4:
+        return 'D'
+    else:
+        return 'F'
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, int2: int, int3: int, int4: int, int5: int):
+    if (int5 >= int1):
+        return 'A'
+    elif (int5 >= int2):
+        return 'B'
+    elif (int5 >= int3):
+        return 'C'
+    elif (int5 >= int4):
+        return 'D'
+    else:
+        return 'F'
+
+=======
+Suggestion 5
+
+def myfunc(int1: int, int2: int, int3: int, int4: int, int5: int):
+    """Given 5 integers, the first four represent the
+    lower numeric thresholds for achieving an A, B, C, and
+    D, and will be distinct and in descending order. The
+    fifth represents the student's numeric grade. Return 
+    A, B, C, D, or F depending on the thresholds and the numeric grade."""
+    if int5 >= int1:
+        return 'A'
+    elif int5 >= int2:
+        return 'B'
+    elif int5 >= int3:
+        return 'C'
+    elif int5 >= int4:
+        return 'D'
+    else:
+        return 'F'

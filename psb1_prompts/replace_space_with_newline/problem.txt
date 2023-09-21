@@ -1,0 +1,4 @@
+# Given a string input, return the string, replacing spaces with
+# newlines. Also, return the integer count of the nonwhitespace characters. The input string will not have
+# tabs or newlines.
+def myfunc(str1: str):

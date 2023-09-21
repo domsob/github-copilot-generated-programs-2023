@@ -1,0 +1,152 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    if int1 < 0:
+        return -1
+
+    str1 = str(int1)
+    str2 = ""
+    for i in str1:
+        str2 += str(int(i) * int(i))
+    return int(str2)
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    """
+    Given a positive integer, square each digit and concatenate the squares into a returned string.
+    :param int1: int
+    :return: str
+    """
+    if int1 < 0:
+        raise ValueError("Please enter a positive integer.")
+    else:
+        return "".join([str(int(digit) ** 2) for digit in str(int1)])
+
+=======
+Suggestion 3
+
+def myfunc(int1: int):
+    """Returns a string of the squares of each digit in the input integer."""
+    # Create an empty string to hold the result.
+    result = ""
+    # Iterate through each digit in the input integer.
+    for digit in str(int1):
+        # Square the digit and concatenate it to the result string.
+        result += str(int(digit) ** 2)
+    # Return the result string.
+    return result
+
+=======
+Suggestion 4
+
+def myfunc(int1: int):
+    string = ''
+    for digit in str(int1):
+        string += str(int(digit)**2)
+    return int(string)
+
+=======
+Suggestion 5
+
+def myfunc(int1: int):
+    # Convert integer to string
+    str1 = str(int1)
+    # Initialize empty string
+    str2 = ""
+    # Iterate through each character in string
+    for ch in str1:
+        # Square each digit
+        ch = int(ch)**2
+        # Convert each digit back to string
+        ch = str(ch)
+        # Concatenate each digit to string
+        str2 = str2 + ch
+    # Return string
+    return str2
+
+=======
+Suggestion 6
+
+def myfunc(int1: int):
+    return "".join([str(int(i)**2) for i in str(int1)])
+
+=======
+Suggestion 7
+
+def myfunc(int1: int):
+    # Convert int to string
+    str1 = str(int1)
+    # Initialize empty string
+    str2 = ''
+    # Iterate through each character in the string
+    for i in str1:
+        # Square each digit and concatenate to str2
+        str2 += str(int(i) * int(i))
+    # Return concatenated string
+    return str2
+
+=======
+Suggestion 8
+
+def myfunc(int1: int):
+    """
+    Takes an integer and returns the concatenation of the squares of the digits of the integer.
+    :param int1: The integer to be squared and concatenated.
+    :return: The concatenated squares of the digits of the integer.
+    """
+    try:
+        # Check if the input is an integer
+        if not isinstance(int1, int):
+            raise TypeError("Input must be an integer.")
+
+        # Check if the input is positive
+        if int1 < 0:
+            raise ValueError("Input must be a positive integer.")
+
+        # Convert the integer to a string
+        str1 = str(int1)
+
+        # Initialize the output string
+        str2 = ""
+
+        # Loop through the digits in the input string
+        for digit in str1:
+            # Square the digit and concatenate it to the output string
+            str2 += str(int(digit) ** 2)
+
+        # Return the output string
+        return str2
+
+    # Handle exceptions
+    except TypeError as e:
+        print(e)
+        raise
+    except ValueError as e:
+        print(e)
+        raise
+
+=======
+Suggestion 9
+
+def myfunc(int1: int):
+    result = ""
+    for i in str(int1):
+        result = result + str(int(i)**2)
+    return result
+
+=======
+Suggestion 10
+
+def myfunc(int1: int):
+    int1 = str(int1)
+    int1 = list(int1)
+    int1 = [int(i) for i in int1]
+    int1 = [i ** 2 for i in int1]
+    int1 = [str(i) for i in int1]
+    int1 = ''.join(int1)
+    return int1

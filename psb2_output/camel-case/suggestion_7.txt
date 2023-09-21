@@ -1,0 +1,78 @@
+Synthesizing 7/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    new_str = str1.split('-')
+    new_str2 = []
+    for i in range(len(new_str)):
+        new_str2.append(new_str[i].capitalize())
+    return ''.join(new_str2)
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    str1 = str1.split()
+    for i in range(len(str1)):
+        str1[i] = str1[i][0].lower() + str1[i][1:]
+    str1 = ''.join(str1)
+    for i in range(len(str1)):
+        if str1[i] == '-':
+            str1 = str1[:i] + str1[i+1].upper() + str1[i+2:]
+    return str1
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    return ''.join([x.capitalize() for x in str1.split('-')])
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    str1 = str1.split("-")
+    result = []
+    for i in range(len(str1)):
+        if i > 0:
+            result.append(str1[i].capitalize())
+        else:
+            result.append(str1[i])
+    return "".join(result)
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    # Your code here
+    return str1
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    # str1 = "camel-case example-test-string"
+    str2 = ""
+    str1 = str1.split(" ")
+    # str1 = ["camel-case", "example-test-string"]
+    for i in str1:
+        # i = "camel-case"
+        i = i.split("-")
+        # i = ["camel", "case"]
+        for j in i:
+            # j = "camel"
+            str2 += j.capitalize()
+        str2 += " "
+    return str2.strip()
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    str1 = str1.split("-")
+    new_str = str1[0]
+    for i in range(1, len(str1)):
+        new_str += str1[i].capitalize()
+    return new_str

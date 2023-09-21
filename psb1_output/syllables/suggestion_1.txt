@@ -1,0 +1,57 @@
+Synthesizing 7/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    count = 0
+    vowels = set("aeiouy")
+    for letter in str1:
+        if letter in vowels:
+            count += 1
+    return count
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    vowel = "aeiouy"
+    count = 0
+    for i in str1:
+        if i in vowel:
+            count += 1
+    return count
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    count = 0
+    vowels = set("aeiouy")
+    for i in str1.lower():
+        if i in vowels:
+            count += 1
+    return count
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    count = 0
+    vowels = set("aeiouy")
+    for i in str1:
+        if i in vowels:
+            count += 1
+    return count
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    vowels = ['a', 'e', 'i', 'o', 'u', 'y']
+    str1 = str1.lower()
+    num_vowels = 0
+    for i in str1:
+        if i in vowels:
+            num_vowels += 1
+    return num_vowels

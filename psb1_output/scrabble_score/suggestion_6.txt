@@ -1,0 +1,157 @@
+Synthesizing 7/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    mydict = {
+        "a": 1,
+        "b": 3,
+        "c": 3,
+        "d": 2,
+        "e": 1,
+        "f": 4,
+        "g": 2,
+        "h": 4,
+        "i": 1,
+        "j": 8,
+        "k": 5,
+        "l": 1,
+        "m": 3,
+        "n": 1,
+        "o": 1,
+        "p": 3,
+        "q": 10,
+        "r": 1,
+        "s": 1,
+        "t": 1,
+        "u": 1,
+        "v": 4,
+        "w": 4,
+        "x": 8,
+        "y": 4,
+        "z": 10
+    }
+    total = 0
+    for i in str1.lower():
+        if i in mydict:
+            total += mydict[i]
+    return total
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    score = 0
+    dict = {
+        'a': 1,
+        'b': 3,
+        'c': 3,
+        'd': 2,
+        'e': 1,
+        'f': 4,
+        'g': 2,
+        'h': 4,
+        'i': 1,
+        'j': 8,
+        'k': 5,
+        'l': 1,
+        'm': 3,
+        'n': 1,
+        'o': 1,
+        'p': 3,
+        'q': 10,
+        'r': 1,
+        's': 1,
+        't': 1,
+        'u': 1,
+        'v': 4,
+        'w': 4,
+        'x': 8,
+        'y': 4,
+        'z': 10
+    }
+    for char in str1:
+        score += dict.get(char.lower(), 0)
+    return score
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    str1 = str1.upper()
+    scrabble_score = 0
+    for i in str1:
+        if i == 'A' or i == 'E' or i == 'I' or i == 'L' or i == 'N' or i == 'O' or i == 'R' or i == 'S' or i == 'T' or i == 'U':
+            scrabble_score += 1
+        elif i == 'D' or i == 'G':
+            scrabble_score += 2
+        elif i == 'B' or i == 'C' or i == 'M' or i == 'P':
+            scrabble_score += 3
+        elif i == 'F' or i == 'H' or i == 'V' or i == 'W' or i == 'Y':
+            scrabble_score += 4
+        elif i == 'K':
+            scrabble_score += 5
+        elif i == 'J' or i == 'X':
+            scrabble_score += 8
+        elif i == 'Q' or i == 'Z':
+            scrabble_score += 10
+    return scrabble_score
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    scrabble_score = {
+        'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1,
+        'f': 4, 'g': 2, 'h': 4, 'i': 1, 'j': 8,
+        'k': 5, 'l': 1, 'm': 3, 'n': 1, 'o': 1,
+        'p': 3, 'q': 10, 'r': 1, 's': 1, 't': 1,
+        'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4,
+        'z': 10
+    }
+    total = 0
+    for letter in str1:
+        if letter.isalpha():
+            total += scrabble_score[letter.lower()]
+    return total
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    result = 0
+    for i in str1:
+        if i == "A" or i == "E" or i == "I" or i == "L" or i == "N" or i == "O" or i == "R" or i == "S" or i == "T" or i == "U":
+            result += 1
+        elif i == "D" or i == "G":
+            result += 2
+        elif i == "B" or i == "C" or i == "M" or i == "P":
+            result += 3
+        elif i == "F" or i == "H" or i == "V" or i == "W" or i == "Y":
+            result += 4
+        elif i == "K":
+            result += 5
+        elif i == "J" or i == "X":
+            result += 8
+        elif i == "Q" or i == "Z":
+            result += 10
+    return result
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    d = {'a':1,'b':3,'c':3,'d':2,'e':1,'f':4,'g':2,'h':4,'i':1,'j':8,'k':5,'l':1,'m':3,'n':1,'o':1,'p':3,'q':10,'r':1,'s':1,'t':1,'u':1,'v':4,'w':4,'x':8,'y':4,'z':10}
+    sum = 0
+    for i in str1:
+        if i in d:
+            sum += d[i]
+    return sum
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    # Your code here
+    pass

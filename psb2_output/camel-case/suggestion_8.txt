@@ -1,0 +1,132 @@
+Synthesizing 9/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    str1 = str1.split(" ")
+    for i in range(len(str1)):
+        str1[i] = str1[i].split("-")
+        for j in range(len(str1[i])):
+            if j != 0:
+                str1[i][j] = str1[i][j].capitalize()
+        str1[i] = "".join(str1[i])
+    str1 = " ".join(str1)
+    return str1
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    str1 = str1.split()
+    str2 = []
+    for i in str1:
+        str2.append(i.replace('-',''))
+    str3 = []
+    for j in str2:
+        str3.append(j.capitalize())
+    str4 = str3[0].lower()
+    for k in str3[1:]:
+        str4 += k
+    return str4
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    str1 = str1.split(' ')
+    for i in range(len(str1)):
+        str1[i] = str1[i].split('-')
+        for j in range(len(str1[i])):
+            if j > 0:
+                str1[i][j] = str1[i][j].capitalize()
+        str1[i] = ''.join(str1[i])
+    return ' '.join(str1)
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    str2 = str1.split(" ")
+    str3 = ""
+    for i in str2:
+        str3 = str3 + i[0].upper() + i[1:]
+    str3 = str3[0].lower() + str3[1:]
+    str4 = ""
+    for i in str3:
+        if i == "-":
+            str4 = str4 + ""
+        else:
+            str4 = str4 + i
+    return str4
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    str2 = ""
+    for i in range(len(str1)):
+        if str1[i] == "-":
+            str2 += str1[i+1].upper()
+            i += 1
+        else:
+            str2 += str1[i]
+    return str2
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    str1 = str1.split("-")
+    str2 = ""
+    for i in range(len(str1)):
+        if i == 0:
+            str2 += str1[i]
+        else:
+            str2 += str1[i].capitalize()
+    return str2
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    str2 = ""
+    for i in range(len(str1)):
+        if str1[i] == "-":
+            str2 += str1[i+1].upper()
+        elif str1[i] != " ":
+            str2 += str1[i]
+    return str2
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    str1 = str1.split(" ")
+    for i in range(len(str1)):
+        str1[i] = str1[i].split("-")
+        for j in range(len(str1[i])):
+            if j > 0:
+                str1[i][j] = str1[i][j].capitalize()
+        str1[i] = "".join(str1[i])
+    return " ".join(str1)
+
+=======
+Suggestion 9
+
+def myfunc(str1: str):
+    str2 = str1.split(" ")
+    str3 = ""
+    for i in range(len(str2)):
+        str4 = str2[i].split("-")
+        str5 = ""
+        for j in range(len(str4)):
+            if j == 0:
+                str5 = str5 + str4[j]
+            else:
+                str5 = str5 + str4[j].capitalize()
+        if i == 0:
+            str3 = str3 + str5
+        else:
+            str3 = str3 + " " + str5
+    return str3

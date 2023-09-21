@@ -1,0 +1,175 @@
+Synthesizing 9/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(list1: list):
+    sum1 = 0
+    sum2 = 0
+    for i in range(len(list1)):
+        sum1 += list1[i]
+    for i in range(len(list1)):
+        sum2 += list1[i]
+        if sum2 == sum1 - sum2:
+            return list1[:i+1], list1[i+1:]
+    return list1, []
+
+=======
+Suggestion 2
+
+def myfunc(list1: list):
+    """Function to find the spot where, if you cut the vector, 
+    the number of both sides are either equal, or the difference is as small as possible.
+    Args:
+        list1 (list): input vector
+
+=======
+Suggestion 3
+
+def myfunc(list1: list):
+    if len(list1) < 3:
+        return list1
+    else:
+        for i in range(1, len(list1)-1):
+            left = sum(list1[0:i])
+            right = sum(list1[i+1:len(list1)])
+            if left == right:
+                return list1[0:i], list1[i+1:len(list1)]
+            elif left - right == 1:
+                return list1[0:i], list1[i+1:len(list1)]
+            elif right - left == 1:
+                return list1[0:i], list1[i+1:len(list1)]
+            elif left - right == 2:
+                return list1[0:i], list1[i+1:len(list1)]
+            elif right - left == 2:
+                return list1[0:i], list1[i+1:len(list1)]
+            elif left - right == 3:
+                return list1[0:i], list1[i+1:len(list1)]
+            elif right - left == 3:
+                return list1[0:i], list1[i+1:len(list1)]
+            elif left - right == 4:
+                return list1[0:i], list1[i+1:len(list1)]
+            elif right - left == 4:
+                return list1[0:i], list1[i+1:len(list1)]
+            elif left - right == 5:
+                return list1[0:i], list1[i+1:len(list1)]
+            elif right - left == 5:
+                return list1[0:i], list1[i+1:len(list1)]
+            elif left - right == 6:
+                return list1[0:i], list1[i+1:len(list1)]
+            elif right - left == 6:
+                return list1[0:i], list1[i+1:len(list1)]
+            elif left - right == 7:
+                return list1[0:i], list1[i+1:len(list1)]
+            elif right - left == 7:
+                return list1[0:i], list1[i+1:len(list1)]
+            elif left - right == 8:
+                return list1[0:i], list1[i+1:len(list1)]
+            elif right - left == 8:
+                return list1[0:i], list1[i+1:len(list1)]
+            elif left - right
+
+=======
+Suggestion 4
+
+def myfunc(list1: list):
+    list1.sort()
+    list1.reverse()
+    print(list1)
+    sum1 = 0
+    sum2 = 0
+    for i in range(0, len(list1)):
+        sum1 += list1[i]
+        sum2 = 0
+        for j in range(i+1, len(list1)):
+            sum2 += list1[j]
+        if sum1 == sum2:
+            return list1[0:i+1], list1[i+1:len(list1)]
+        elif sum1 < sum2:
+            return list1[0:i+1], list1[i+1:len(list1)]
+        else:
+            continue
+    return list1, []
+
+=======
+Suggestion 5
+
+def myfunc(list1: list):
+    if len(list1) == 0:
+        return None, None
+    if len(list1) == 1:
+        return [], list1
+    if len(list1) == 2:
+        return [list1[0]], [list1[1]]
+    if len(list1) == 3:
+        if list1[0] == list1[1]:
+            return [list1[0]], [list1[2]]
+        if list1[0] == list1[2]:
+            return [list1[0], list1[1]], []
+        if list1[1] == list1[2]:
+            return [list1[0], list1[1]], []
+    if len(list1) == 4:
+        if list1[0] == list1[1]:
+            return [list1[0]], [list1[2], list1[3]]
+        if list1[0] == list1[2]:
+            return [list1[0], list1[1]], [list1[3]]
+        if list1[0] == list1[3]:
+            return [list1[0], list1[1], list1[2]], []
+        if list1[1] == list1[2]:
+            return [list1[0], list1[1]], [list1[3]]
+        if list1[1] == list1[3]:
+            return [list1[0], list1[1], list1[2]], []
+        if list1[2] == list1[3]:
+            return [list1[0], list1[1], list1[2]], []
+    if len(list1) == 5:
+        if list1[0] == list1[1]:
+            return [list1[0]], [list1[2], list1[3], list1[4]]
+        if list1[0] == list1[2]:
+            return [list1[0], list1[1]], [list1[3], list1[4]]
+        if list1[0] == list1[3]:
+            return [list1[0], list1[1], list1[2]], [list1[4]]
+        if list1[0] == list1[4]:
+            return [list1[0], list1[1], list1[
+
+=======
+Suggestion 6
+
+def myfunc(list1: list):
+    # your code here
+    if len(list1) <= 2:
+        return list1, []
+    elif len(list1) == 3:
+        return list1[:1], list1[1:]
+    else:
+        min_diff = 999
+        min_index = 0
+        for i in range(1,len(list1)-1):
+            diff = abs(sum(list1[:i]) - sum(list1[i:]))
+            if diff < min_diff:
+                min_diff = diff
+                min_index = i
+        return list1[:min_index], list1[min_index:]
+
+=======
+Suggestion 7
+
+def myfunc(list1: list):
+    # Your code here
+    # Return the two resulting subvectors as two outputs.
+    return None, None
+
+=======
+Suggestion 8
+
+def myfunc(list1: list):
+    # your code here
+    return [list1, list2]
+
+=======
+Suggestion 9
+
+def myfunc(list1: list):
+    # Write your code here
+    # To print results to the standard output you can use print()
+    # Example: print("Hello world!")
+    pass

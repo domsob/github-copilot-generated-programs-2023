@@ -1,0 +1,2 @@
+# Given an integer n, return all of the positive even perfect squares less than n.
+def myfunc(int1: int):

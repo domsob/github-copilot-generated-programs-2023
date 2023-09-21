@@ -1,0 +1,91 @@
+Synthesizing 9/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    mylist = ['a', 'e', 'i', 'o', 'u', 'y']
+    count = 0
+    for i in str1:
+        if i in mylist:
+            count += 1
+    return count
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    count = 0
+    vowels = set("aeiouy")
+    for letter in str1:
+        if letter in vowels:
+            count += 1
+    return count
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    return sum([1 for char in str1.lower() if char in 'aeiouy'])
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    str1 = str1.lower()
+    count = 0
+    for i in str1:
+        if i in 'aeiouy':
+            count += 1
+    return count
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    vowels = ['a','e','i','o','u','y']
+    count = 0
+    for char in str1:
+        if char in vowels:
+            count += 1
+    return count
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    count = 0
+    for i in str1:
+        if i == "a" or i == "e" or i == "i" or i == "o" or i == "u" or i == "y":
+            count = count + 1
+    return count
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    return sum(1 for c in str1 if c in "aeiouy")
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    str1 = str1.lower()
+    vowels = 'aeiouy'
+    count = 0
+    for i in str1:
+        if i in vowels:
+            count += 1
+    return count
+
+=======
+Suggestion 9
+
+def myfunc(str1: str):
+    str1 = str1.lower()
+    count = 0
+    vowels = ['a', 'e', 'i', 'o', 'u', 'y']
+    for i in str1:
+        if i in vowels:
+            count += 1
+    return count

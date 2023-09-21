@@ -1,0 +1,98 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(list1: list, list2: list):
+    # your code here
+    return sum([list1[i] * (1 - list2[i] / 100) for i in range(len(list1))])
+
+=======
+Suggestion 2
+
+def myfunc(list1: list, list2: list):
+    if len(list1) != len(list2):
+        return 0
+    else:
+        total = 0
+        for i in range(len(list1)):
+            total += list1[i] * (1 - list2[i]/100)
+        return round(total, 2)
+
+=======
+Suggestion 3
+
+def myfunc(list1: list, list2: list):
+    total = 0
+    for i in range(len(list1)):
+        total += list1[i] * (1 - list2[i])
+    return total
+
+=======
+Suggestion 4
+
+def myfunc(list1: list, list2: list):
+    if not list1 or not list2:
+        return 0
+    elif len(list1) != len(list2):
+        return 0
+    else:
+        total = 0
+        for i in range(len(list1)):
+            total += list1[i] * (1 - list2[i])
+        return total
+
+=======
+Suggestion 5
+
+def myfunc(list1: list, list2: list):
+    if len(list1) != len(list2):
+        return -1
+    else:
+        total = 0
+        for i in range(len(list1)):
+            total += list1[i] * (1 - list2[i])
+        return total
+
+=======
+Suggestion 6
+
+def myfunc(list1: list, list2: list):
+    total = 0
+    for i in range(len(list1)):
+        total += list1[i] * (100 - list2[i]) / 100
+    return total
+
+=======
+Suggestion 7
+
+def myfunc(list1: list, list2: list):
+    if len(list1) != len(list2):
+        return None
+    else:
+        total = 0
+        for i in range(len(list1)):
+            total += list1[i] * (1 - list2[i] / 100)
+        return total
+
+=======
+Suggestion 8
+
+def myfunc(list1: list, list2: list):
+    return sum([x * (1 - y/100) for x, y in zip(list1, list2)])
+
+=======
+Suggestion 9
+
+def myfunc(list1: list, list2: list):
+    sum = 0
+    for i in range(0, len(list1)):
+        sum += list1[i] * (1 - (list2[i] / 100))
+    return sum
+
+=======
+Suggestion 10
+
+def myfunc(list1: list, list2: list):
+    # Your code here
+    return None

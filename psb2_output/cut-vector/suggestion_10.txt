@@ -1,0 +1,165 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(list1: list):
+    # Write your code here
+    # To print results to the standard output you can use print()
+    # Example: print("Hello world!")
+    sum1 = 0
+    sum2 = sum(list1)
+    for i in range(0,len(list1)):
+        sum1 += list1[i]
+        sum2 -= list1[i]
+        if sum1 == sum2:
+            return list1[0:i+1], list1[i+1:]
+    return list1,[]
+
+=======
+Suggestion 2
+
+def myfunc(list1: list):
+    # Your code here
+    pass
+
+=======
+Suggestion 3
+
+def myfunc(list1: list):
+    total = sum(list1)
+    half = total // 2
+    for i in range(len(list1)):
+        if sum(list1[:i]) == half:
+            return list1[:i], list1[i:]
+    return list1, []
+
+=======
+Suggestion 4
+
+def myfunc(list1: list):
+    if len(list1) < 2:
+        return None
+    if len(list1) == 2:
+        return list1[0], list1[1]
+    for i in range(1, len(list1)):
+        if sum(list1[:i]) == sum(list1[i:]):
+            return list1[:i], list1[i:]
+    return None
+
+=======
+Suggestion 5
+
+def myfunc(list1: list):
+    sum1 = sum(list1)
+    sum2 = 0
+    for i in range(len(list1)):
+        sum2 += list1[i]
+        if sum2 == sum1 - sum2:
+            return list1[:i + 1], list1[i + 1:]
+    return list1, list()
+
+=======
+Suggestion 6
+
+def myfunc(list1: list):
+    if len(list1) == 0:
+        return [], []
+    elif len(list1) == 1:
+        return [], list1
+    elif len(list1) == 2:
+        return list1[0:1], list1[1:2]
+    else:
+        for i in range(1, len(list1)):
+            if sum(list1[0:i]) == sum(list1[i:len(list1)]):
+                return list1[0:i], list1[i:len(list1)]
+            elif sum(list1[0:i]) > sum(list1[i:len(list1)]):
+                if sum(list1[0:i]) - sum(list1[i:len(list1)]) < sum(list1[0:i-1]) - sum(list1[i:len(list1)]):
+                    return list1[0:i], list1[i:len(list1)]
+                else:
+                    return list1[0:i-1], list1[i-1:len(list1)]
+            elif sum(list1[0:i]) < sum(list1[i:len(list1)]):
+                if sum(list1[i:len(list1)]) - sum(list1[0:i]) < sum(list1[i:len(list1)]) - sum(list1[0:i+1]):
+                    return list1[0:i], list1[i:len(list1)]
+                else:
+                    return list1[0:i+1], list1[i+1:len(list1)]
+        return list1[0:i], list1[i:len(list1)]
+
+=======
+Suggestion 7
+
+def myfunc(list1: list):
+    n = len(list1)
+    if n == 1:
+        return list1, []
+    if n == 2:
+        return list1[0:1], list1[1:2]
+    if n == 3:
+        return list1[0:2], list1[2:3]
+    if n == 4:
+        return list1[0:2], list1[2:4]
+    if n == 5:
+        return list1[0:3], list1[3:5]
+    if n == 6:
+        return list1[0:3], list1[3:6]
+    if n == 7:
+        return list1[0:4], list1[4:7]
+    if n == 8:
+        return list1[0:4], list1[4:8]
+    if n == 9:
+        return list1[0:5], list1[5:9]
+    if n == 10:
+        return list1[0:5], list1[5:10]
+    if n == 11:
+        return list1[0:6], list1[6:11]
+    if n == 12:
+        return list1[0:6], list1[6:12]
+    if n == 13:
+        return list1[0:7], list1[7:13]
+    if n == 14:
+        return list1[0:7], list1[7:14]
+    if n == 15:
+        return list1[0:8], list1[8:15]
+    if n == 16:
+        return list1[0:8], list1[8:16]
+    if n == 17:
+        return list1[0:9], list1[9:17]
+    if n == 18:
+        return list1[0:9], list1[9:18]
+    if n == 19:
+        return list1[0:10], list1[10:19]
+    if n == 20:
+        return list1[0:10], list1[10:20]
+    if n == 21:
+        return list1[0:11], list1[11:21]
+    if n == 22:
+        return list1[0:11], list1[
+
+=======
+Suggestion 8
+
+def myfunc(list1: list):
+    # your code here
+    pass
+
+=======
+Suggestion 9
+
+def myfunc(list1: list):
+    for i in range(1, len(list1)):
+        if sum(list1[:i]) == sum(list1[i:]):
+            return list1[:i], list1[i:]
+    return [], []
+
+=======
+Suggestion 10
+
+def myfunc(list1: list):
+    list1.sort()
+    sum1 = sum(list1)
+    sum2 = 0
+    for i in range(len(list1)):
+        sum2 += list1[i]
+        if sum2 >= sum1/2:
+            return list1[:i+1], list1[i+1:]
+    return list1, []

@@ -1,0 +1,151 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    # Write your code here
+    return 0
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    # Write your code here
+    return 0.0
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    snow_ground = float1
+    for i in range(int1):
+        snow_ground += float2
+        snow_ground -= snow_ground*float3
+    return snow_ground
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    snow = float1
+    for i in range(int1):
+        snow += float2
+        snow -= float3
+    return snow
+
+=======
+Suggestion 5
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    snow = float1
+    for i in range(int1):
+        snow += float2
+        snow *= (1 - float3)
+    return snow
+
+=======
+Suggestion 6
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    snow = float1
+    snow_fall = float2
+    snow_melt = float3
+    for i in range(0, int1):
+        snow += snow_fall
+        snow -= snow_melt
+    return snow
+
+=======
+Suggestion 7
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    snow = float1
+    for i in range(int1):
+        snow += float2
+        snow -= snow * float3
+    return snow
+
+=======
+Suggestion 8
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    # Your code goes here
+    return 0
+
+=======
+Suggestion 9
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    # hour 0
+    snow = float1
+    # hour 1
+    snow += float2
+    snow -= (snow * float3)
+    # hour 2
+    snow += float2
+    snow -= (snow * float3)
+    # hour 3
+    snow += float2
+    snow -= (snow * float3)
+    # hour 4
+    snow += float2
+    snow -= (snow * float3)
+    # hour 5
+    snow += float2
+    snow -= (snow * float3)
+    # hour 6
+    snow += float2
+    snow -= (snow * float3)
+    # hour 7
+    snow += float2
+    snow -= (snow * float3)
+    # hour 8
+    snow += float2
+    snow -= (snow * float3)
+    # hour 9
+    snow += float2
+    snow -= (snow * float3)
+    # hour 10
+    snow += float2
+    snow -= (snow * float3)
+    # hour 11
+    snow += float2
+    snow -= (snow * float3)
+    # hour 12
+    snow += float2
+    snow -= (snow * float3)
+    # hour 13
+    snow += float2
+    snow -= (snow * float3)
+    # hour 14
+    snow += float2
+    snow -= (snow * float3)
+    # hour 15
+    snow += float2
+    snow -= (snow * float3)
+    # hour 16
+    snow += float2
+    snow -= (snow * float3)
+    # hour 17
+    snow += float2
+    snow -= (snow * float3)
+    # hour 18
+    snow += float2
+    snow -= (snow * float3)
+    # hour 19
+    snow += float2
+    snow -= (snow * float3)
+    # hour 20
+    snow += float2
+    snow -= (snow * float3)
+    # hour 21
+    snow += float2
+    snow -= (snow * float3)
+    # hour 22
+    snow += float2
+    snow -= (snow * float3)
+    # hour 23
+    snow += float2
+    snow -= (snow * float3)
+    # hour

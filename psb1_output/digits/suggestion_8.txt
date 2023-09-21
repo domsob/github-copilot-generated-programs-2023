@@ -1,0 +1,109 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    # Your code goes here
+    return list(str(int1))
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    if int1 < 0:
+        int1 = -int1
+        string1 = str(int1)
+        string1 = string1[::-1]
+        string1 = '-' + string1
+    else:
+        string1 = str(int1)
+        string1 = string1[::-1]
+    return list(string1)
+
+=======
+Suggestion 3
+
+def myfunc(int1: int):
+    # Your code here
+    return 0
+
+=======
+Suggestion 4
+
+def myfunc(int1: int):
+    # Convert int to string
+    str1 = str(int1)
+    # If the last character is a negative sign
+    if str1[-1] == '-':
+        # Get the negative sign
+        neg = str1[-1]
+        # Remove the negative sign from the string
+        str1 = str1[:-1]
+        # Convert the string to a list
+        list1 = list(str1)
+        # Insert the negative sign at the beginning of the list
+        list1.insert(0, neg)
+    else:
+        # Convert the string to a list
+        list1 = list(str1)
+    # Convert the list to integers
+    list1 = [int(i) for i in list1]
+    # Return the list
+    return list1
+
+=======
+Suggestion 5
+
+def myfunc(int1: int):
+    pass
+
+=======
+Suggestion 6
+
+def myfunc(int1: int):
+    # Fill in the code here
+    return [0]
+
+=======
+Suggestion 7
+
+def myfunc(int1: int):
+    if int1 < 0:
+        return [int1] + [int(i) for i in str(-int1)][::-1]
+    else:
+        return [int(i) for i in str(int1)][::-1]
+
+=======
+Suggestion 8
+
+def myfunc(int1: int):
+    if int1 < 0:
+        int1 = str(int1)[1:]
+        int1 = int1[::-1]
+        int1 = '-' + int1
+        return [int(x) for x in str(int1)]
+    else:
+        int1 = str(int1)
+        int1 = int1[::-1]
+        return [int(x) for x in str(int1)]
+
+=======
+Suggestion 9
+
+def myfunc(int1: int):
+    int1 = str(int1)
+    if int1[0] == "-":
+        int1 = int1[1:]
+        int1 = int1[::-1]
+        int1 = "-" + int1
+    else:
+        int1 = int1[::-1]
+    return list(int1)
+
+=======
+Suggestion 10
+
+def myfunc(int1: int):
+    # Your code here
+    return

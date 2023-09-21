@@ -1,0 +1,82 @@
+Synthesizing 9/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    sum = 0
+    for c in str1:
+        sum += ord(c)
+    return chr(sum % 64 + ord(' '))
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    sum = 0
+    for i in str1:
+        sum += ord(i)
+    return chr((sum % 64) + ord(' '))
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    sum = 0
+    for i in str1:
+        sum += ord(i)
+    return chr(sum % 64 + ord(' '))
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    sum = 0
+    for i in str1:
+        sum += ord(i)
+    sum = sum % 64
+    sum += ord(' ')
+    return chr(sum)
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    """ Returns checksum character for input string.
+    """
+    # Calculate the sum of ASCII values of each character
+    # in the string.
+    sum = 0
+    for char in str1:
+        sum += ord(char)
+    # Get the checksum character by taking the sum modulo 64,
+    # adding the integer value of the space character,
+    # and converting that integer back into its corresponding
+    # character.
+    return chr((sum % 64) + ord(' '))
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    sum = 0
+    for char in str1:
+        sum += ord(char)
+    return chr(sum % 64 + ord(' '))
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    sum = 0
+    for i in str1:
+        sum += ord(i)
+    sum %= 64
+    sum += ord(' ')
+    return chr(sum)
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    return chr(sum([ord(x) for x in str1])%64+32)

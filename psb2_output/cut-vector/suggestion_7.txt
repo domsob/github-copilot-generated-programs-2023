@@ -1,0 +1,127 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(list1: list):
+    # Your code here
+    return list1[:len(list1)//2], list1[len(list1)//2:]
+
+=======
+Suggestion 2
+
+def myfunc(list1: list):
+    # your code here
+    return subvec1, subvec2
+
+=======
+Suggestion 3
+
+def myfunc(list1: list):
+    # Your code here
+    # ...
+    # ...
+    return list1, list2
+
+=======
+Suggestion 4
+
+def myfunc(list1: list):
+    total = sum(list1)
+    half = total / 2
+    diff = total
+    for i in range(len(list1)):
+        sum1 = sum(list1[0:i+1])
+        if sum1 == half:
+            return list1[0:i+1], list1[i+1:]
+        elif sum1 < half:
+            if half - sum1 < diff:
+                diff = half - sum1
+                a = i
+        else:
+            if sum1 - half < diff:
+                diff = sum1 - half
+                a = i
+    return list1[0:a+1], list1[a+1:]
+
+=======
+Suggestion 5
+
+def myfunc(list1: list):
+    if len(list1) == 1:
+        return list1, list()
+    elif len(list1) == 2:
+        return list1[0:1], list1[1:2]
+    else:
+        sum1 = sum(list1)
+        sum2 = 0
+        for i in range(len(list1)):
+            sum2 += list1[i]
+            if sum2 > sum1 / 2:
+                if abs(sum2 - sum1 / 2) < abs(sum2 - list1[i] - sum1 / 2):
+                    return list1[0:i+1], list1[i+1:]
+                else:
+                    return list1[0:i], list1[i:]
+        return list1, list()
+
+=======
+Suggestion 6
+
+def myfunc(list1: list):
+    # your code here
+    return list1
+
+=======
+Suggestion 7
+
+def myfunc(list1: list):
+    # Your code goes here
+    return list1[:len(list1)//2],list1[len(list1)//2:]
+
+=======
+Suggestion 8
+
+def myfunc(list1: list):
+    if len(list1) == 0:
+        return [], []
+    if len(list1) == 1:
+        return [], list1
+    if len(list1) == 2:
+        return [list1[0]], [list1[1]]
+    if len(list1) == 3:
+        return [list1[0]], [list1[1], list1[2]]
+    if len(list1) == 4:
+        return [list1[0], list1[1]], [list1[2], list1[3]]
+    if len(list1) == 5:
+        return [list1[0], list1[1], list1[2]], [list1[3], list1[4]]
+    if len(list1) == 6:
+        return [list1[0], list1[1], list1[2], list1[3]], [list1[4], list1[5]]
+    if len(list1) == 7:
+        return [list1[0], list1[1], list1[2], list1[3], list1[4]], [list1[5], list1[6]]
+    if len(list1) == 8:
+        return [list1[0], list1[1], list1[2], list1[3], list1[4], list1[5]], [list1[6], list1[7]]
+    if len(list1) == 9:
+        return [list1[0], list1[1], list1[2], list1[3], list1[4], list1[5], list1[6]], [list1[7], list1[8]]
+    if len(list1) == 10:
+        return [list1[0], list1[1], list1[2], list1[3], list1[4], list1[5], list1[6], list1[7]], [list1[8], list1[9]]
+    if len(list1) == 11:
+        return [list1[0], list1[1], list1[2], list1[3], list1[4], list1[5], list1[6], list1[7], list1[8]], [list1[9], list1[10]]
+    if len(list
+
+=======
+Suggestion 9
+
+def myfunc(list1: list):
+    for i in range(1, len(list1)):
+        list2 = list1[0:i]
+        list3 = list1[i:len(list1)]
+        if sum(list2) == sum(list3):
+            return list2, list3
+    return list1, list1
+
+=======
+Suggestion 10
+
+def myfunc(list1: list):
+    # your code here
+    pass

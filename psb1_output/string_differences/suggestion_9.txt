@@ -1,0 +1,110 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str, str2: str):
+    if len(str1) > len(str2):
+        str1, str2 = str2, str1
+    for i in range(len(str1)):
+        if str1[i] != str2[i]:
+            print(i, str1[i], str2[i], sep=" ")
+    return None
+
+=======
+Suggestion 2
+
+def myfunc(str1: str, str2: str):
+    if str1 == None or str2 == None:
+        return None
+    if str1 == str2:
+        return None
+    if len(str1) == 0 or len(str2) == 0:
+        return None
+    if len(str1) > len(str2):
+        str1, str2 = str2, str1
+    # len(str1) <= len(str2)
+    result = []
+    for i in range(len(str1)):
+        if str1[i] != str2[i]:
+            result.append((i, str1[i], str2[i]))
+    return result
+
+=======
+Suggestion 3
+
+def myfunc(str1: str, str2: str):
+    if len(str1) > len(str2):
+        temp = str1
+        str1 = str2
+        str2 = temp
+    for i in range(len(str1)):
+        if str1[i] != str2[i]:
+            print(f"{i} {str1[i]} {str2[i]}")
+
+=======
+Suggestion 4
+
+def myfunc(str1: str, str2: str):
+    # Write your code here
+    pass
+
+=======
+Suggestion 5
+
+def myfunc(str1: str, str2: str):
+    # Write your code here
+    min_len = min(len(str1), len(str2))
+    for i in range(min_len):
+        if str1[i] != str2[i]:
+            print(i, str1[i], str2[i])
+    return
+
+=======
+Suggestion 6
+
+def myfunc(str1: str, str2: str):
+    # Your code goes here
+    pass
+
+=======
+Suggestion 7
+
+def myfunc(str1: str, str2: str):
+    if len(str1) > len(str2):
+        str1, str2 = str2, str1
+    for i in range(len(str1)):
+        if str1[i] != str2[i]:
+            print(f"{i} {str1[i]} {str2[i]}")
+
+=======
+Suggestion 8
+
+def myfunc(str1: str, str2: str):
+    # Write your code here
+    i = 0
+    while i < len(str1) and i < len(str2):
+        if str1[i] != str2[i]:
+            print(i, str1[i], str2[i])
+        i += 1
+
+=======
+Suggestion 9
+
+def myfunc(str1: str, str2: str):
+    if len(str1) > len(str2):
+        str1, str2 = str2, str1
+    for i in range(len(str1)):
+        if str1[i] != str2[i]:
+            print(i, str1[i], str2[i], sep=' ')
+    return
+
+=======
+Suggestion 10
+
+def myfunc(str1: str, str2: str):
+    if len(str1) > len(str2):
+        str1, str2 = str2, str1
+    for i in range(len(str1)):
+        if str1[i] != str2[i]:
+            print(i, str1[i], str2[i])

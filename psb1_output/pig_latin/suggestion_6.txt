@@ -1,0 +1,107 @@
+Synthesizing 8/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    words = str1.split(" ")
+    new_words = []
+    for word in words:
+        if word[0] in vowels:
+            new_words.append(word + "ay")
+        else:
+            new_words.append(word[1:] + word[0] + "ay")
+    return " ".join(new_words)
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    str2 = ""
+    for i in str1.split():
+        if i[0] in "aeiou":
+            str2 += i + "ay "
+        else:
+            str2 += i[1:] + i[0] + "ay "
+    return str2[:-1]
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    vowels = 'aeiou'
+    str1 = str1.lower()
+    newstr = ''
+    for word in str1.split():
+        if word[0] in vowels:
+            newstr += word + 'ay '
+        else:
+            newstr += word[1:] + word[0] + 'ay '
+    return newstr.strip()
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    str1 = str1.split()
+    str2 = []
+    for i in str1:
+        if i[0] in 'aeiou':
+            str2.append(i + 'ay')
+        else:
+            str2.append(i[1:] + i[0] + 'ay')
+    return ' '.join(str2)
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    words = str1.split(' ')
+    for i in range(len(words)):
+        if words[i][0] in vowels:
+            words[i] += 'ay'
+        else:
+            words[i] = words[i][1:] + words[i][0] + 'ay'
+    return ' '.join(words)
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    str1 = str1.split()
+    str2 = []
+    for i in str1:
+        if i[0] in "aeiou":
+            str2.append(i + "ay")
+        else:
+            str2.append(i[1:] + i[0] + "ay")
+    return " ".join(str2)
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    str2 = str1.split()
+    str3 = ""
+    for i in str2:
+        if i[0] in "aeiou":
+            str3 = str3 + i + "ay" + " "
+        else:
+            str3 = str3 + i[1:] + i[0] + "ay" + " "
+    return str3
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    words = str1.split(' ')
+    result = ''
+    for word in words:
+        if word[0] in vowels:
+            result += word + 'ay '
+        else:
+            result += word[1:] + word[0] + 'ay '
+    return result[:-1]

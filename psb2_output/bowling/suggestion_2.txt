@@ -1,0 +1,118 @@
+Synthesizing 5/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    total = 0
+    for i in range(len(str1)):
+        if str1[i] == 'X':
+            total += 10
+        elif str1[i] == '/':
+            total += 10 - int(str1[i - 1])
+        elif str1[i] == '-':
+            total += 0
+        else:
+            total += int(str1[i])
+    return total
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    score = 0
+    for i in range(len(str1)):
+        if str1[i] == 'X':
+            score += 10
+            if i < len(str1) - 2:
+                score += int(str1[i + 1])
+                if str1[i + 2] == '/':
+                    score += 10 - int(str1[i + 1])
+                elif str1[i + 2] != 'X':
+                    score += int(str1[i + 2])
+            elif i == len(str1) - 2:
+                score += int(str1[i + 1])
+        elif str1[i] == '/':
+            score += 10 - int(str1[i - 1])
+            if i < len(str1) - 1:
+                score += int(str1[i + 1])
+        else:
+            score += int(str1[i])
+    return score
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    """
+    Given a string representing the individual bowls in a 10-frame round of 10 pin bowling,
+    return the score for that round.
+    :param str1: string representing the individual bowls in a 10-frame round of 10 pin bowling
+    :return: score for that round
+    """
+    score = 0
+    i = 0
+    while i < len(str1):
+        if str1[i] == 'X':
+            score += 10
+            if i < len(str1) - 2:
+                if str1[i + 2] == 'X':
+                    score += 10
+                elif str1[i + 2] == '/':
+                    score += 10 - int(str1[i + 1])
+                else:
+                    score += int(str1[i + 1]) + int(str1[i + 2])
+        elif str1[i] == '/':
+            score += 10 - int(str1[i - 1])
+            if i < len(str1) - 1:
+                if str1[i + 1] == 'X':
+                    score += 10
+                else:
+                    score += int(str1[i + 1])
+        else:
+            score += int(str1[i])
+        i += 1
+    return score
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    score = 0
+    for i in range(0, len(str1)):
+        if str1[i] == "X":
+            score += 10
+        elif str1[i] == "/":
+            score += 10 - int(str1[i - 1])
+        else:
+            score += int(str1[i])
+    return score
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    score = 0
+    str1 = str1.lower()
+    if len(str1) != 20:
+        return 'Invalid input'
+    for i in range(0, 20, 2):
+        if str1[i] == 'x':
+            if i == 18:
+                score += 10
+            elif str1[i + 2] == 'x':
+                score += 20
+            elif str1[i + 3] == '/':
+                score += 20
+            else:
+                score += 10 + int(str1[i + 2]) + int(str1[i + 3])
+        elif str1[i] == '/':
+            if i == 18:
+                score += 10
+            elif str1[i + 2] == 'x':
+                score += 20
+            else:
+                score += 10 + int(str1[i + 2])
+        else:
+            score += int(str1[i]) + int(str1[i + 1])
+    return score

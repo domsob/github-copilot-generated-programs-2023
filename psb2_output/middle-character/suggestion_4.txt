@@ -1,0 +1,56 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    if len(str1) % 2 == 0:
+        return str1[int(len(str1)/2 - 1): int(len(str1)/2 + 1)]
+    else:
+        return str1[int(len(str1)/2)]
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    if len(str1)%2 == 0:
+        return str1[int(len(str1)/2)-1:int(len(str1)/2)+1]
+    else:
+        return str1[int(len(str1)/2)]
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    if len(str1) % 2 == 0:
+        print(str1[int(len(str1)/2)-1:int(len(str1)/2)+1])
+    else:
+        print(str1[int(len(str1)/2)])
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    if len(str1) % 2 == 0:
+        return (str1[int(len(str1)/2)-1] + str1[int(len(str1)/2)])
+    else:
+        return (str1[int(len(str1)/2)])
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    if len(str1) % 2 == 0:
+        return str1[int(len(str1) / 2) - 1] + str1[int(len(str1) / 2)]
+    else:
+        return str1[int(len(str1) / 2)]
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    mid = len(str1) // 2
+    if len(str1) % 2 == 0:
+        return str1[mid - 1] + str1[mid]
+    else:
+        return str1[mid]

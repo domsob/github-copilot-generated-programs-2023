@@ -1,0 +1,113 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str, str2: str):
+    if len(str1) > len(str2):
+        str1, str2 = str2, str1
+    for i in range(len(str1)):
+        if str1[i] != str2[i]:
+            print(f"{i} {str1[i]} {str2[i]}")
+
+=======
+Suggestion 2
+
+def myfunc(str1: str, str2: str):
+    # Your code here
+    pass
+
+=======
+Suggestion 3
+
+def myfunc(str1: str, str2: str):
+    # Write your code below
+    # find the shorter length
+    length = min(len(str1), len(str2))
+    # iterate through the shorter length
+    for i in range(length):
+        # if the characters are different, print the index and the characters
+        if str1[i] != str2[i]:
+            print(i, str1[i], str2[i])
+
+=======
+Suggestion 4
+
+def myfunc(str1: str, str2: str):
+    str1 = str1.lower()
+    str2 = str2.lower()
+    shorter = min(len(str1), len(str2))
+    for i in range(shorter):
+        if str1[i] != str2[i]:
+            print(f"{i} {str1[i]} {str2[i]}")
+    return
+
+=======
+Suggestion 5
+
+def myfunc(str1: str, str2: str):
+    # Your code here
+    if len(str1) < len(str2):
+        shorter = str1
+        longer = str2
+    else:
+        shorter = str2
+        longer = str1
+    for i in range(len(shorter)):
+        if shorter[i] != longer[i]:
+            print(f"{i} {shorter[i]} {longer[i]}")
+    # End of your code
+
+=======
+Suggestion 6
+
+def myfunc(str1: str, str2: str):
+    if len(str1) > len(str2):
+        shorter = str2
+    else:
+        shorter = str1
+    for i in range(len(shorter)):
+        if str1[i] != str2[i]:
+            print(i, str1[i], str2[i])
+
+=======
+Suggestion 7
+
+def myfunc(str1: str, str2: str):
+    # Get the length of the shorter string
+    l = min(len(str1), len(str2))
+    # Loop from 0 to l-1
+    for i in range(l):
+        # If the characters are different
+        if str1[i] != str2[i]:
+            # Print the index and the characters
+            print(i, str1[i], str2[i], sep=' ')
+
+=======
+Suggestion 8
+
+def myfunc(str1: str, str2: str):
+    if len(str1) > len(str2):
+        str1, str2 = str2, str1
+    res = []
+    for i, (a, b) in enumerate(zip(str1, str2)):
+        if a != b:
+            res.append(f"{i} {a} {b}")
+    return "\n".join(res)
+
+=======
+Suggestion 9
+
+def myfunc(str1: str, str2: str):
+    i = 0
+    while i < len(str1) and i < len(str2):
+        if str1[i] != str2[i]:
+            print(i, str1[i], str2[i])
+        i = i + 1
+
+=======
+Suggestion 10
+
+def myfunc(str1: str, str2: str):
+    # your code here
+    pass

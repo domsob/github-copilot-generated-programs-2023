@@ -1,0 +1,37 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(list1: list):
+    count = 0
+    for i in list1:
+        if i % 2 != 0:
+            count += 1
+    return count
+
+=======
+Suggestion 2
+
+def myfunc(list1: list):
+    return len([x for x in list1 if x % 2 == 1])
+
+=======
+Suggestion 3
+
+def myfunc(list1: list):
+    x = 0
+    for i in list1:
+        if i % 2 != 0:
+            x += 1
+    return x
+
+=======
+Suggestion 4
+
+def myfunc(list1: list):
+    count = 0
+    for i in range(0, len(list1)):
+        if list1[i] % 2 != 0:
+            count += 1
+    return count

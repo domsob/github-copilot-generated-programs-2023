@@ -1,0 +1,146 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(str1: str, str2: str):
+    if len(str1) < len(str2):
+        return "Error: target string is longer than text string."
+    index = 0
+    result = []
+    while index < len(str1) - len(str2) + 1:
+        if str1[index:index+len(str2)] == str2:
+            result.append(index)
+            index += len(str2)
+        else:
+            index += 1
+    return result
+
+=======
+Suggestion 2
+
+def myfunc(str1: str, str2: str):
+    if str1 == "" or str2 == "":
+        return []
+    if len(str1) < len(str2):
+        return []
+    if str1 == str2:
+        return [0]
+    res = []
+    for i in range(len(str1)-len(str2)+1):
+        if str1[i:i+len(str2)] == str2:
+            res.append(i)
+    return res
+
+=======
+Suggestion 3
+
+def myfunc(str1: str, str2: str):
+    if str2 == None or str2 == '':
+        return []
+    if str1 == None or str1 == '':
+        return []
+    str1 = str1.lower()
+    str2 = str2.lower()
+    res = []
+    for i in range(len(str1)):
+        if str1[i] == str2[0]:
+            if len(str1) - i >= len(str2):
+                if str1[i:i+len(str2)] == str2:
+                    res.append(i)
+    return res
+
+=======
+Suggestion 4
+
+def myfunc(str1: str, str2: str):
+    result = []
+    for i in range(len(str1)):
+        if str1[i] == str2[0]:
+            if str1[i:i+len(str2)] == str2:
+                result.append(i)
+    return result
+
+=======
+Suggestion 5
+
+def myfunc(str1: str, str2: str):
+    result = []
+    for i in range(len(str1)):
+        if str1[i:i+len(str2)] == str2:
+            result.append(i)
+    return result
+
+=======
+Suggestion 6
+
+def myfunc(str1: str, str2: str):
+    if len(str1) < len(str2):
+        return []
+    if str1 == str2:
+        return [0]
+    i = 0
+    result = []
+    while i < len(str1):
+        if str1[i] == str2[0]:
+            j = 0
+            while j < len(str2) and i+j < len(str1) and str1[i+j] == str2[j]:
+                j += 1
+            if j == len(str2):
+                result.append(i)
+                i += j
+                continue
+        i += 1
+    return result
+
+=======
+Suggestion 7
+
+def myfunc(str1: str, str2: str):
+    # if str1 == "" or str2 == "":
+    #     return []
+    # if len(str1) < len(str2):
+    #     return []
+    # if str1 == str2:
+    #     return [0]
+    # if str2 in str1:
+    #     return [str1.index(str2)]
+    # return []
+    if not str1 or not str2:
+        return []
+    if len(str1) < len(str2):
+        return []
+    if str1 == str2:
+        return [0]
+    if str2 in str1:
+        return [str1.index(str2)]
+    return []
+
+=======
+Suggestion 8
+
+def myfunc(str1: str, str2: str):
+    if str2 == "":
+        return []
+    result = []
+    for i in range(len(str1)):
+        if str1[i] == str2[0]:
+            if str1[i:i+len(str2)] == str2:
+                result.append(i)
+    return result
+
+=======
+Suggestion 9
+
+def myfunc(str1: str, str2: str):
+    if len(str1) == 0 or len(str2) == 0:
+        return []
+    if len(str1) < len(str2):
+        return []
+    if str1 == str2:
+        return [0]
+    result = []
+    for i in range(len(str1) - len(str2) + 1):
+        if str1[i:i+len(str2)] == str2:
+            result.append(i)
+    return result

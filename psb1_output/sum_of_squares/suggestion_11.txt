@@ -1,0 +1,59 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    sum = 0
+    for i in range(1, int1 + 1):
+        sum += i ** 2
+    return sum
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    # Create a list of integers from 1 to int1.
+    list1 = list(range(1, int1+1))
+    # Create a list of integers squared.
+    list2 = [x**2 for x in list1]
+    # Return the sum of the list of integers squared.
+    return sum(list2)
+
+=======
+Suggestion 3
+
+def myfunc(int1: int):
+    sum = 0
+    for i in range(int1):
+        sum += i**2
+    return sum
+
+=======
+Suggestion 4
+
+def myfunc(int1: int):
+    sum = 0
+    for i in range(1, int1 + 1):
+        sum += i * i
+    return sum
+
+=======
+Suggestion 5
+
+def myfunc(int1: int):
+    return sum([x**2 for x in range(1, int1+1)])
+
+=======
+Suggestion 6
+
+def myfunc(int1: int):
+    # int1 = int(input("Enter an integer: "))
+    # print("The sum of squares from 1 to " + str(int1) + " is " + str(sum([i**2 for i in range(1, int1 + 1)])))
+    return sum([i**2 for i in range(1, int1 + 1)])
+
+=======
+Suggestion 7
+
+def myfunc(int1: int):
+    return sum([i**2 for i in range(1, int1+1)])

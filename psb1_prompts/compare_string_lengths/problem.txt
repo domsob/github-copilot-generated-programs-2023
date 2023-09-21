@@ -1,0 +1,2 @@
+# Given three strings n1, n2, and n3, return true if length(n1) < length(n2) < length(n3), and false otherwise.
+def myfunc(str1: str, str2: str, str3: str):

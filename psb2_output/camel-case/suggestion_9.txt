@@ -1,0 +1,104 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    return ''.join([str1.split('-')[0]] + [x.title() for x in str1.split('-')[1:]])
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    str1 = str1.split(" ")
+    str2 = []
+    for str3 in str1:
+        str3 = str3.split("-")
+        for i in range(1, len(str3)):
+            str3[i] = str3[i].capitalize()
+        str2.append("".join(str3))
+    return " ".join(str2)
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    # str1 = "camel-case example-test-string"
+    # str1 = "camelCase exampleTestString"
+    # str1 = "camelCaseExampleTestString"
+    # str1 = "camel-caseExampleTestString"
+    # str1 = "camel-caseExampleTestString"
+    # str1 = "camelCase-exampleTestString"
+    # str1 = "camelCaseExample-testString"
+    # str1 = "camelCaseExampleTest-string"
+    # str1 = "camelCaseExampleTestString-"
+    # str1 = "-camelCaseExampleTestString"
+    #
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    # Your code here
+    pass
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    # Split the string into a list of words
+    words = str1.split('-')
+    # For each word in the list, capitalize the first letter and add it to a new string
+    new_str = words[0]
+    for word in words[1:]:
+        new_str += word.capitalize()
+    # Return the new string
+    return new_str
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    # write your code here
+    return str1
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    str1 = str1.split("-")
+    for i in range(len(str1)):
+        if i == 0:
+            str1[i] = str1[i].lower()
+        else:
+            str1[i] = str1[i].capitalize()
+    return "".join(str1)
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    str1 = str1.split(' ')
+    for i in range(len(str1)):
+        str1[i] = str1[i].replace('-', ' ')
+        str1[i] = str1[i].title()
+        str1[i] = str1[i].replace(' ', '')
+    return ''.join(str1)
+
+=======
+Suggestion 9
+
+def myfunc(str1: str):
+    # Write your code here
+    pass
+
+=======
+Suggestion 10
+
+def myfunc(str1: str):
+    str1 = str1.split("-")
+    str2 = []
+    for i in range(len(str1)):
+        str2.append(str1[i].capitalize())
+    str2[0] = str2[0].lower()
+    return "".join(str2)

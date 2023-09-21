@@ -1,0 +1,125 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, int2: int, int3: int):
+    # Convert the 3 integers into a list.
+    list1 = [int1, int2, int3]
+    # Sort the list.
+    list1.sort()
+    # Return the middle element.
+    return list1[1]
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, int2: int, int3: int):
+    # Create a list of the inputs
+    int_list = [int1, int2, int3]
+    # Sort the list
+    int_list.sort()
+    # Return the middle element
+    return int_list[1]
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, int2: int, int3: int):
+    # Find the median of 3 integers
+    # Return the median
+    # Your code here
+    return 0
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, int2: int, int3: int):
+    # Create a list of the 3 integers
+    int_list = [int1, int2, int3]
+    # Sort the list
+    int_list.sort()
+    # Return the median
+    return int_list[1]
+
+=======
+Suggestion 5
+
+def myfunc(int1: int, int2: int, int3: int):
+    # Sort the integers
+    sorted_ints = sorted([int1, int2, int3])
+    # Return the middle value
+    return sorted_ints[1]
+
+=======
+Suggestion 6
+
+def myfunc(int1: int, int2: int, int3: int):
+    if int1 >= int2 and int1 <= int3:
+        return int1
+    elif int1 >= int3 and int1 <= int2:
+        return int1
+    elif int2 >= int1 and int2 <= int3:
+        return int2
+    elif int2 >= int3 and int2 <= int1:
+        return int2
+    elif int3 >= int1 and int3 <= int2:
+        return int3
+    elif int3 >= int2 and int3 <= int1:
+        return int3
+    else:
+        return "Error"
+
+=======
+Suggestion 7
+
+def myfunc(int1: int, int2: int, int3: int):
+    # Create a list with the 3 integers
+    int_list = [int1, int2, int3]
+    # Sort the list
+    int_list.sort()
+    # Return the middle value
+    return int_list[1]
+
+=======
+Suggestion 8
+
+def myfunc(int1: int, int2: int, int3: int):
+    # Create a list of the 3 integers
+    int_list = [int1, int2, int3]
+
+    # Sort the list in ascending order
+    int_list.sort()
+
+    # Return the middle value of the list
+    return int_list[1]
+
+=======
+Suggestion 9
+
+def myfunc(int1: int, int2: int, int3: int):
+    if (int1 > int2 and int1 < int3) or (int1 > int3 and int1 < int2):
+        return int1
+    elif (int2 > int1 and int2 < int3) or (int2 > int3 and int2 < int1):
+        return int2
+    else:
+        return int3
+
+=======
+Suggestion 10
+
+def myfunc(int1: int, int2: int, int3: int):
+    if int1 > int2:
+        if int1 < int3:
+            return int1
+        elif int2 > int3:
+            return int2
+        else:
+            return int3
+    else:
+        if int1 > int3:
+            return int1
+        elif int2 < int3:
+            return int2
+        else:
+            return int3

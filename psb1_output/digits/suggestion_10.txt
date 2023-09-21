@@ -1,0 +1,163 @@
+Synthesizing 9/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    if int1 < 0:
+        int1 = abs(int1)
+        return [int(i) for i in str(int1)][::-1] + ['-']
+    else:
+        return [int(i) for i in str(int1)][::-1]
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    # Check if int1 is positive or negative
+    if int1 < 0:
+        # Convert int1 to positive
+        int1 = int1 * -1
+        # Convert int1 to a string
+        str1 = str(int1)
+        # Convert str1 to a list
+        list1 = list(str1)
+        # Add negative sign to the beginning of the list
+        list1.insert(0, "-")
+        # Convert list1 to an integer
+        int1 = int("".join(list1))
+        # Return int1
+        return int1
+    else:
+        # Convert int1 to a string
+        str1 = str(int1)
+        # Convert str1 to a list
+        list1 = list(str1)
+        # Convert list1 to an integer
+        int1 = int("".join(list1))
+        # Return int1
+        return int1
+
+=======
+Suggestion 3
+
+def myfunc(int1: int):
+    # your code here
+    pass
+
+=======
+Suggestion 4
+
+def myfunc(int1: int):
+    if int1 == 0:
+        return [0]
+
+    sign = 1 if int1 >= 0 else -1
+    int1 = abs(int1)
+    result = []
+    while int1 > 0:
+        result.append(int1 % 10)
+        int1 = int1 // 10
+    return [sign * i for i in result]
+
+=======
+Suggestion 5
+
+def myfunc(int1: int):
+    # check if int1 is negative
+    if int1 < 0:
+        # if negative, convert to positive and store in temp
+        temp = -int1
+        # convert temp to string
+        temp = str(temp)
+        # convert to list
+        temp = list(temp)
+        # add negative sign to the beginning of the list
+        temp.insert(0, "-")
+        # reverse the list
+        temp.reverse()
+        # convert the list to string
+        temp = "".join(temp)
+        # convert the string to integer
+        temp = int(temp)
+        # return the integer
+        return temp
+    else:
+        # convert int1 to string
+        temp = str(int1)
+        # convert to list
+        temp = list(temp)
+        # reverse the list
+        temp.reverse()
+        # convert the list to string
+        temp = "".join(temp)
+        # convert the string to integer
+        temp = int(temp)
+        # return the integer
+        return temp
+
+=======
+Suggestion 6
+
+def myfunc(int1: int):
+    """Converts an integer to a list in reverse order."""
+    # Check if number is negative
+    negative = False
+    if int1 < 0:
+        negative = True
+        int1 = -int1
+    # Convert integer to string
+    str1 = str(int1)
+    # Convert string to list
+    list1 = list(str1)
+    # Reverse list
+    list1.reverse()
+    # Convert list to integer
+    int1 = int(''.join(list1))
+    # Check if number is negative
+    if negative:
+        int1 = -int1
+    # Return integer
+    return int1
+
+=======
+Suggestion 7
+
+def myfunc(int1: int):
+    int1 = str(int1)
+    int1 = list(int1)
+    int1.reverse()
+    if int1[-1] == '-':
+        int1.remove('-')
+        int1.insert(0, '-')
+    return int1
+
+=======
+Suggestion 8
+
+def myfunc(int1: int):
+    # your code here
+    if int1 < 0:
+        int1 = int1 * -1
+        int1 = list(str(int1))
+        int1.insert(0, '-')
+        int1 = [int(x) for x in int1]
+        return int1
+    else:
+        int1 = list(str(int1))
+        int1 = [int(x) for x in int1]
+        return int1
+
+=======
+Suggestion 9
+
+def myfunc(int1: int):
+    if int1 < 0:
+        int1 = -int1
+        int1 = str(int1)
+        int1 = int1[::-1]
+        int1 = '-' + int1
+    else:
+        int1 = str(int1)
+        int1 = int1[::-1]
+    return int1

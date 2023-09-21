@@ -1,0 +1,74 @@
+Synthesizing 9/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str, str2: str, str3: str):
+    return ''.join([str2[str1.index(c)] for c in str3])
+
+=======
+Suggestion 2
+
+def myfunc(str1: str, str2: str, str3: str):
+    str1 = str1.lower()
+    str2 = str2.lower()
+    str3 = str3.lower()
+    str4 = []
+    for i in str3:
+        str4.append(str2[str1.index(i)])
+    return ''.join(str4)
+
+=======
+Suggestion 3
+
+def myfunc(str1: str, str2: str, str3: str):
+    str3 = list(str3)
+    for i in range(len(str3)):
+        if str3[i] in str1:
+            str3[i] = str2[str1.index(str3[i])]
+    return "".join(str3)
+
+=======
+Suggestion 4
+
+def myfunc(str1: str, str2: str, str3: str):
+    # write your code here
+    # change the return value as required
+    for i in range(len(str1)):
+        str3 = str3.replace(str2[i], str1[i])
+    return str3
+
+=======
+Suggestion 5
+
+def myfunc(str1: str, str2: str, str3: str):
+    # Your code here
+    return str3.translate(str3.maketrans(str1, str2))
+
+=======
+Suggestion 6
+
+def myfunc(str1: str, str2: str, str3: str):
+    # Your code here
+    pass
+
+=======
+Suggestion 7
+
+def myfunc(str1: str, str2: str, str3: str):
+    return "".join(str2[str1.index(c)] for c in str3)
+
+=======
+Suggestion 8
+
+def myfunc(str1: str, str2: str, str3: str):
+    # Your code goes here
+    # You can also define other functions which you can call from here
+    return str3
+
+=======
+Suggestion 9
+
+def myfunc(str1: str, str2: str, str3: str):
+    d = dict(zip(str1, str2))
+    return "".join([d.get(c, c) for c in str3])

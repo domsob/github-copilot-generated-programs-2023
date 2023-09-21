@@ -1,0 +1,119 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    str1 = str1.split()
+    for i in range(len(str1)):
+        if str1[i][0] in 'aeiou':
+            str1[i] = str1[i] + 'ay'
+        else:
+            str1[i] = str1[i][1:] + str1[i][0] + 'ay'
+    return ' '.join(str1)
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    str1 = str1.split()
+    str2 = []
+    for word in str1:
+        if word[0] in 'aeiou':
+            str2.append(word + 'ay')
+        else:
+            str2.append(word[1:] + word[0] + 'ay')
+    return ' '.join(str2)
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    str1 = str1.lower()
+    str2 = ""
+    for word in str1.split():
+        if word[0] in "aeiou":
+            str2 += word + "ay "
+        else:
+            str2 += word[1:] + word[0] + "ay "
+    return str2
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    str2 = ""
+    for word in str1.split():
+        if word[0] in "aeiou":
+            str2 += word + "ay "
+        else:
+            str2 += word[1:] + word[0] + "ay "
+    return str2[:-1]
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    if str1[0] in 'aeiou':
+        return str1 + 'ay'
+    else:
+        return str1[1:] + str1[0] + 'ay'
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    str2 = ""
+    for i in str1.split():
+        if i[0] in "aeiou":
+            str2 += i + "ay "
+        else:
+            str2 += i[1:] + i[0] + "ay "
+    return str2
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    str1 = str1.lower()
+    str1 = str1.split()
+    str2 = []
+    for i in str1:
+        if i[0] in 'aeiou':
+            i = i + 'ay'
+            str2.append(i)
+        else:
+            i = i[1:] + i[0] + 'ay'
+            str2.append(i)
+    str2 = ' '.join(str2)
+    return str2
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    str2 = str1.split(" ")
+    str3 = ""
+    for i in range(len(str2)):
+        if str2[i][0] in "aeiou":
+            str2[i] = str2[i] + "ay"
+        else:
+            str2[i] = str2[i][1:] + str2[i][0] + "ay"
+    for i in range(len(str2)):
+        if i == len(str2) - 1:
+            str3 = str3 + str2[i]
+        else:
+            str3 = str3 + str2[i] + " "
+    return str3
+
+=======
+Suggestion 9
+
+def myfunc(str1: str):
+    # First letter of the string
+    first_letter = str1[0]
+    # Checking if the first letter is a vowel
+    if first_letter in 'aeiou':
+        return str1 + 'ay'
+    else:
+        return str1[1:] + first_letter + 'ay'

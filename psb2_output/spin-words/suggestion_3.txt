@@ -1,0 +1,117 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    str2 = ""
+    str3 = ""
+    str1 = str1.split()
+    for i in str1:
+        if len(i) >= 5:
+            str2 = i[::-1]
+            str3 = str3 + " " + str2
+        else:
+            str3 = str3 + " " + i
+    return str3[1:]
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    words = str1.split()
+    for i in range(len(words)):
+        if len(words[i]) >= 5:
+            words[i] = words[i][::-1]
+    return ' '.join(words)
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    str2 = str1.split()
+    str3 = []
+    for i in str2:
+        if len(i) >= 5:
+            str3.append(i[::-1])
+        else:
+            str3.append(i)
+    return str3
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    str2 = str1.split()
+    str3 = []
+    for i in str2:
+        if len(i) >= 5:
+            str3.append(i[::-1])
+        else:
+            str3.append(i)
+    return " ".join(str3)
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    str2 = ""
+    str3 = str1.split(" ")
+    for i in str3:
+        if len(i) >= 5:
+            str2 += i[::-1] + " "
+        else:
+            str2 += i + " "
+    return str2[:-1]
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    arr = str1.split(" ")
+    for i in range(len(arr)):
+        if len(arr[i]) >= 5:
+            arr[i] = arr[i][::-1]
+    return " ".join(arr)
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    str2 = str1.split()
+    for i in range(len(str2)):
+        if len(str2[i]) >= 5:
+            str2[i] = str2[i][::-1]
+    return ' '.join(str2)
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    str2 = str1.split()
+    for i in range(len(str2)):
+        if len(str2[i]) >= 5:
+            str2[i] = str2[i][::-1]
+    return " ".join(str2)
+
+=======
+Suggestion 9
+
+def myfunc(str1: str):
+    list1 = str1.split()
+    for i in range(len(list1)):
+        if len(list1[i]) >= 5:
+            list1[i] = list1[i][::-1]
+    return " ".join(list1)
+
+=======
+Suggestion 10
+
+def myfunc(str1: str):
+    str2 = ''
+    for i in str1.split():
+        if len(i) >= 5:
+            str2 += i[::-1] + ' '
+        else:
+            str2 += i + ' '
+    return str2.strip()

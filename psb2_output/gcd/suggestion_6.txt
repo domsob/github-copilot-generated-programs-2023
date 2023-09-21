@@ -1,0 +1,168 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, int2: int):
+    # Find the smaller of the two integers
+    # Start with the smaller integer and work down to 1
+    # Check if the smaller integer divides the larger integer evenly
+    # If not, check the next smaller integer
+    # If so, return the smaller integer
+    # If no integer divides the two integers evenly, return 1
+    return 1
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, int2: int):
+    if int1 > int2:
+        int1, int2 = int2, int1
+    for i in range(int1, 0, -1):
+        if int1 % i == 0 and int2 % i == 0:
+            return i
+    return 1
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, int2: int):
+    '''
+    Return the largest integer that divides
+    each of the integers evenly.
+    '''
+    # Check if the integers are equal to 0
+    if int1 == 0 and int2 == 0:
+        return 0
+    # Check if either integer is equal to 0
+    elif int1 == 0 or int2 == 0:
+        return 0
+    # Check if either integer is negative
+    elif int1 < 0 or int2 < 0:
+        return 0
+    # Check if either integer is equal to 1
+    elif int1 == 1 or int2 == 1:
+        return 1
+    # Check if either integer is equal to 2
+    elif int1 == 2 or int2 == 2:
+        return 2
+    # Check if either integer is equal to 3
+    elif int1 == 3 or int2 == 3:
+        return 3
+    # Check if either integer is equal to 4
+    elif int1 == 4 or int2 == 4:
+        return 4
+    # Check if either integer is equal to 5
+    elif int1 == 5 or int2 == 5:
+        return 5
+    # Check if either integer is equal to 6
+    elif int1 == 6 or int2 == 6:
+        return 6
+    # Check if either integer is equal to 7
+    elif int1 == 7 or int2 == 7:
+        return 7
+    # Check if either integer is equal to 8
+    elif int1 == 8 or int2 == 8:
+        return 8
+    # Check if either integer is equal to 9
+    elif int1 == 9 or int2 == 9:
+        return 9
+    # Check if either integer is equal to 10
+    elif int1 == 10 or int2 == 10:
+        return 10
+    # Check if either integer is equal to 11
+    elif int1 == 11 or int2 == 11:
+        return 11
+    # Check if either integer is equal to 12
+    elif int1 == 12 or int2 == 12:
+        return 12
+    # Check if either integer is equal to 13
+    elif int1 ==
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, int2: int):
+    if int1 > int2:
+        x = int1
+    else:
+        x = int2
+    for i in range(1, x):
+        if int1 % i == 0 and int2 % i == 0:
+            y = i
+    return y
+
+=======
+Suggestion 5
+
+def myfunc(int1: int, int2: int):
+    if int1 < int2:
+        max = int1
+    else:
+        max = int2
+    for i in range(1, max+1):
+        if int1 % i == 0 and int2 % i == 0:
+            result = i
+    return result
+
+=======
+Suggestion 6
+
+def myfunc(int1: int, int2: int):
+    if int1 >= int2:
+        for i in range(int2, 0, -1):
+            if int1 % i == 0 and int2 % i == 0:
+                return i
+    else:
+        for i in range(int1, 0, -1):
+            if int1 % i == 0 and int2 % i == 0:
+                return i
+
+=======
+Suggestion 7
+
+def myfunc(int1: int, int2: int):
+    divisors = []
+    for i in range(1, max(int1, int2) + 1):
+        if int1 % i == 0 and int2 % i == 0:
+            divisors.append(i)
+    return max(divisors)
+
+=======
+Suggestion 8
+
+def myfunc(int1: int, int2: int):
+    if int1 > int2:
+        num = int1
+    else:
+        num = int2
+    while num > 0:
+        if int1 % num == 0 and int2 % num == 0:
+            return num
+        else:
+            num -= 1
+    return num
+
+=======
+Suggestion 9
+
+def myfunc(int1: int, int2: int):
+    if int1 > int2:
+        small = int2
+    else:
+        small = int1
+    for i in range(1, small+1):
+        if((int1 % i == 0) and (int2 % i == 0)):
+            gcd = i
+    return gcd
+
+=======
+Suggestion 10
+
+def myfunc(int1: int, int2: int):
+    if int1 > int2:
+        int1, int2 = int2, int1
+    for i in range(1, int2+1):
+        if int1 % i == 0 and int2 % i == 0:
+            result = i
+    return result

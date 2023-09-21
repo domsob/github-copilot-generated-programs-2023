@@ -1,0 +1,8 @@
+# Given a string, return a list containing the number of words with n characters 
+# for n from 1 to the length of the longest word.
+# Additionally, return the number of sentences and the average sentence length.
+# A word is any string of consecutive non-whitespace characters (including 
+# sentence terminators). Every string will contain at least one sentence terminator 
+# (period, exclamation point, or question mark). The average sentence length is 
+# the number of words in the string divided by the number of sentence terminator characters.
+def myfunc(str1: str):

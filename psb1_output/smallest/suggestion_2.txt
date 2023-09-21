@@ -1,0 +1,28 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, int2: int, int3: int, int4: int):
+    return min(int1, int2, int3, int4)
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, int2: int, int3: int, int4: int):
+    """Returns the smallest of the 4 integers."""
+    return min(int1, int2, int3, int4)
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, int2: int, int3: int, int4: int):
+    """Return the smallest of the four integers."""
+    return min(int1, int2, int3, int4)
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, int2: int, int3: int, int4: int):
+    # your code here
+    return min(int1, int2, int3, int4)

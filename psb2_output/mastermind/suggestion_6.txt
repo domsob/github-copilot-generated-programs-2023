@@ -1,0 +1,156 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(list1: list, list2: list):
+    # Define white and black pegs
+    white_peg = 0
+    black_peg = 0
+    # Create copy of lists to avoid changing original lists
+    list1_copy = list1[:]
+    list2_copy = list2[:]
+    # Iterate through lists to find black pegs
+    for i in range(len(list1_copy)):
+        if list1_copy[i] == list2_copy[i]:
+            black_peg += 1
+            # Set both values to None so they aren't counted as white pegs
+            list1_copy[i] = None
+            list2_copy[i] = None
+    # Iterate through lists to find white pegs
+    for i in range(len(list1_copy)):
+        if list1_copy[i] in list2_copy:
+            white_peg += 1
+            # Set value to None so it isn't counted as white pegs
+            list2_copy[list2_copy.index(list1_copy[i])] = None
+    return white_peg, black_peg
+
+=======
+Suggestion 2
+
+def myfunc(list1: list, list2: list):
+    black = 0
+    white = 0
+    for i in range(len(list1)):
+        if list1[i] == list2[i]:
+            black += 1
+    for i in range(len(list1)):
+        for j in range(len(list2)):
+            if i != j:
+                if list1[i] == list2[j]:
+                    white += 1
+    return [black, white]
+
+=======
+Suggestion 3
+
+def myfunc(list1: list, list2: list):
+    black = 0
+    white = 0
+    for i in range(4):
+        if list1[i] == list2[i]:
+            black += 1
+        elif list1[i] in list2:
+            white += 1
+    return [black, white]
+
+=======
+Suggestion 4
+
+def myfunc(list1: list, list2: list):
+    if len(list1) != len(list2):
+        return "Error: lists are not the same length"
+    white = 0
+    black = 0
+    for i in range(len(list1)):
+        if list1[i] == list2[i]:
+            black += 1
+        elif list1[i] in list2:
+            white += 1
+    return f"white = {white}, black = {black}"
+
+=======
+Suggestion 5
+
+def myfunc(list1: list, list2: list):
+    white = 0
+    black = 0
+    for i in range(len(list1)):
+        if list1[i] == list2[i]:
+            black += 1
+        elif list1[i] in list2:
+            white += 1
+    return [white, black]
+
+=======
+Suggestion 6
+
+def myfunc(list1: list, list2: list):
+    white = 0
+    black = 0
+    for i in range(4):
+        if list1[i] == list2[i]:
+            black += 1
+        elif list1[i] in list2:
+            white += 1
+    return [white, black]
+
+=======
+Suggestion 7
+
+def myfunc(list1: list, list2: list):
+    white_pegs = 0
+    black_pegs = 0
+    for i in range(len(list1)):
+        if list1[i] == list2[i]:
+            black_pegs += 1
+        elif list1[i] in list2:
+            white_pegs += 1
+    return [white_pegs, black_pegs]
+
+=======
+Suggestion 8
+
+def myfunc(list1: list, list2: list):
+    black = 0
+    white = 0
+    for i in range(0,4):
+        if list1[i] == list2[i]:
+            black += 1
+        elif list1[i] in list2:
+            white += 1
+    return [black, white]
+
+=======
+Suggestion 9
+
+def myfunc(list1: list, list2: list):
+    white = 0
+    black = 0
+    for i in range(4):
+        if list1[i] == list2[i]:
+            black += 1
+    for j in range(4):
+        for k in range(4):
+            if list1[j] == list2[k]:
+                white += 1
+    white = white - black
+    return black, white
+
+=======
+Suggestion 10
+
+def myfunc(list1: list, list2: list):
+    # Initialize peg counts
+    white = 0
+    black = 0
+
+    # Iterate through both lists
+    for i in range(len(list1)):
+        # If the characters match, increment black peg count
+        if list1[i] == list2[i]:
+            black += 1
+        # If there is a match, but it's not in the same spot, increment white peg count
+        elif list1[i] in list2:
+            white += 1
+    return [white, black]

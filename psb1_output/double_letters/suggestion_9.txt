@@ -1,0 +1,120 @@
+Synthesizing 8/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    str2 = ''
+    for x in str1:
+        if x.isalpha():
+            str2 = str2 + x + x
+        elif x == '!':
+            str2 = str2 + x + x + x
+        elif x not in str2:
+            str2 = str2
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    temp = ""
+    for i in str1:
+        if i.isalpha():
+            temp += i*2
+        elif i == "!":
+            temp += i*3
+        else:
+            temp += i
+    return temp
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    result = ''
+    for i in str1:
+        if i.isalpha():
+            result += i*2
+        elif i == '!':
+            result += i*3
+        else:
+            result += i
+    return result
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    new_str = ''
+    for char in str1:
+        if char.isalpha():
+            new_str += char * 2
+        elif char == '!':
+            new_str += char * 3
+        else:
+            new_str += char
+    return new_str
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    new_str = ''
+    for i in str1:
+        if i.isalpha():
+            new_str += i * 2
+        elif i == '!':
+            new_str += i * 3
+        else:
+            new_str += i
+    return new_str
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    """
+    >>> myfunc('Hello World!')
+    'HHeelllloo  WWoorrlldd!!!'
+    >>> myfunc('This is a test.')
+    'TThhiiss  iiss  aa  tteesstt.'
+    >>> myfunc('I love Python!')
+    'II  lloovvee  PPythhoonn!!!'
+    """
+    new_str = ''
+    for char in str1:
+        if char.isalpha():
+            new_str += char * 2
+        elif char == '!':
+            new_str += char * 3
+        else:
+            new_str += char
+    return new_str
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    str2 = ""
+    for i in range(0, len(str1)):
+        if str1[i].isalpha():
+            str2 += str1[i] * 2
+        elif str1[i] == '!':
+            str2 += str1[i] * 3
+        else:
+            str2 += str1[i]
+    return str2
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    new_str = ""
+    for i in str1:
+        if i.isalpha():
+            new_str += i * 2
+        elif i == "!":
+            new_str += i * 3
+        else:
+            new_str += i
+    return new_str

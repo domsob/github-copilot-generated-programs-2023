@@ -1,0 +1,4 @@
+# Given a string of one or more words (seperated by spaces), 
+# reverse all of the words that are five or more letters long 
+# and return the resulting string.
+def myfunc(str1: str):

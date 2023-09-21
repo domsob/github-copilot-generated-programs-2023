@@ -1,0 +1,74 @@
+Synthesizing 9/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    sum = 0
+    for i in range(len(str1)-1):
+        if str1[i] == str1[i+1]:
+            sum = sum + int(str1[i])
+    return sum
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    sum = 0
+    for i in range(0, len(str1) - 1):
+        if str1[i] == str1[i + 1]:
+            sum += int(str1[i])
+    return sum
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    sum = 0
+    for i in range(len(str1) - 1):
+        if str1[i] == str1[i + 1]:
+            sum += int(str1[i])
+    return sum
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    sum = 0
+    for i in range(len(str1)):
+        if i == len(str1) - 1:
+            break
+        if str1[i] == str1[i+1]:
+            sum += int(str1[i])
+    return sum
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    sum1 = 0
+    for i in range(len(str1)-1):
+        if str1[i] == str1[i+1]:
+            sum1 += int(str1[i])
+    return sum1
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    total = 0
+    for i in range(len(str1)-1):
+        if str1[i] == str1[i+1]:
+            total += int(str1[i])
+    return total
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    sum = 0
+    for i in range(len(str1)):
+        if i < len(str1) - 1:
+            if str1[i] == str1[i + 1]:
+                sum += int(str1[i])
+    return sum

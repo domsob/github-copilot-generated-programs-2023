@@ -1,0 +1,2 @@
+# Given a string of digits, return the sum of the digits whose following digit is the same.
+def myfunc(str1: str):

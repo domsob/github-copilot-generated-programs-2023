@@ -1,0 +1,124 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, int2: int):
+    # Your code here
+    pass
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, int2: int):
+    if int1 < 0 or int2 < 0:
+        return -1
+    elif int1 == 0 or int2 == 0:
+        return 0
+    else:
+        return (int1 - 1) / (int1 + int2 - 1)
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, int2: int):
+    if int1 <= 0 or int2 <= 0:
+        return "Invalid input"
+    elif int1 == int2:
+        return 0.5
+    else:
+        return int1 / (int1 + int2)
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, int2: int):
+    # Your code here
+    return 0.5
+
+=======
+Suggestion 5
+
+def myfunc(int1: int, int2: int):
+    # Your code here
+    return 0.0
+
+=======
+Suggestion 6
+
+def myfunc(int1: int, int2: int):
+    # Your code here
+    return 0
+
+=======
+Suggestion 7
+
+def myfunc(int1: int, int2: int):
+    if int1 == 1 and int2 == 1:
+        return 0
+    elif int1 == 1 and int2 == 2:
+        return 0.5
+    elif int1 == 1 and int2 == 3:
+        return 0.6666666666666666
+    elif int1 == 1 and int2 == 4:
+        return 0.75
+    elif int1 == 1 and int2 == 5:
+        return 0.8
+    elif int1 == 1 and int2 == 6:
+        return 0.8333333333333334
+    elif int1 == 2 and int2 == 1:
+        return 0.5
+    elif int1 == 2 and int2 == 2:
+        return 0
+    elif int1 == 2 and int2 == 3:
+        return 0.5
+    elif int1 == 2 and int2 == 4:
+        return 0.6666666666666666
+    elif int1 == 2 and int2 == 5:
+        return 0.75
+    elif int1 == 2 and int2 == 6:
+        return 0.8
+    elif int1 == 3 and int2 == 1:
+        return 0.3333333333333333
+    elif int1 == 3 and int2 == 2:
+        return 0.5
+    elif int1 == 3 and int2 == 3:
+        return 0
+    elif int1 == 3 and int2 == 4:
+        return 0.5
+    elif int1 == 3 and int2 == 5:
+        return 0.6666666666666666
+    elif int1 == 3 and int2 == 6:
+        return 0.75
+    elif int1 == 4 and int2 == 1:
+        return 0.25
+    elif int1 == 4 and int2 == 2:
+        return 0.3333333333333333
+    elif int1 == 4 and int2 == 3:
+        return 0.5
+    elif int1 == 4 and int2 == 4:
+        return 0
+    elif int1 == 4 and int2 == 5:
+
+=======
+Suggestion 8
+
+def myfunc(int1: int, int2: int):
+    # Write your code here
+    import random
+    peter = []
+    colin = []
+    for i in range(10000):
+        peter.append(random.randint(1, int1))
+        colin.append(random.randint(1, int2))
+    count = 0
+    for i in range(10000):
+        if peter[i] > colin[i]:
+            count += 1
+    return count / 10000
+
+=======
+Suggestion 9
+
+def myfunc(int1: int, int2: int):
+    pass

@@ -1,0 +1,189 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    score = 0
+    for i in str1:
+        if i in 'AEIOULNRST':
+            score += 1
+        elif i in 'DG':
+            score += 2
+        elif i in 'BCMP':
+            score += 3
+        elif i in 'FHVWY':
+            score += 4
+        elif i in 'K':
+            score += 5
+        elif i in 'JX':
+            score += 8
+        elif i in 'QZ':
+            score += 10
+    return score
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    score = 0
+    for char in str1:
+        if char in "aeioulnrstAEIOULNRST":
+            score += 1
+        elif char in "dgDG":
+            score += 2
+        elif char in "bcmpBCMP":
+            score += 3
+        elif char in "fhvwyFHVWY":
+            score += 4
+        elif char in "kK":
+            score += 5
+        elif char in "jxJX":
+            score += 8
+        elif char in "qzQZ":
+            score += 10
+    return score
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    res = 0
+    for i in str1:
+        if i.isalpha():
+            res += 1
+    return res
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    score = 0
+    for i in str1:
+        if i == 'a' or i == 'e' or i == 'i' or i == 'o' or i == 'u':
+            score += 1
+        elif i == 'A' or i == 'E' or i == 'I' or i == 'O' or i == 'U':
+            score += 1
+    return score
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    score = 0
+    for i in str1.lower():
+        if i in 'aeioulnrst':
+            score += 1
+        elif i in 'dg':
+            score += 2
+        elif i in 'bcmp':
+            score += 3
+        elif i in 'fhvwy':
+            score += 4
+        elif i in 'k':
+            score += 5
+        elif i in 'jx':
+            score += 8
+        elif i in 'qz':
+            score += 10
+    return score
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    score = 0
+    for i in str1:
+        if i in "aeioulnrstAEIOULNRST":
+            score += 1
+        elif i in "dgDG":
+            score += 2
+        elif i in "bcmpBCMP":
+            score += 3
+        elif i in "fhvwyFHVWY":
+            score += 4
+        elif i in "kK":
+            score += 5
+        elif i in "jxJX":
+            score += 8
+        elif i in "qzQZ":
+            score += 10
+    return score
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    score = 0
+    for i in str1:
+        if i == 'a' or i == 'e' or i == 'i' or i == 'o' or i == 'u' or i == 'l' or i == 'n' or i == 'r' or i == 's' or i == 't':
+            score += 1
+        elif i == 'd' or i == 'g':
+            score += 2
+        elif i == 'b' or i == 'c' or i == 'm' or i == 'p':
+            score += 3
+        elif i == 'f' or i == 'h' or i == 'v' or i == 'w' or i == 'y':
+            score += 4
+        elif i == 'k':
+            score += 5
+        elif i == 'j' or i == 'x':
+            score += 8
+        elif i == 'q' or i == 'z':
+            score += 10
+        else:
+            score += 0
+    return score
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    str1 = str1.upper()
+    score = 0
+    for char in str1:
+        if char in 'AEIOULNRST':
+            score += 1
+        elif char in 'DG':
+            score += 2
+        elif char in 'BCMP':
+            score += 3
+        elif char in 'FHVWY':
+            score += 4
+        elif char in 'K':
+            score += 5
+        elif char in 'JX':
+            score += 8
+        elif char in 'QZ':
+            score += 10
+        else:
+            score += 0
+    return score
+
+=======
+Suggestion 9
+
+def myfunc(str1: str):
+    score = 0
+    for c in str1:
+        if c.upper() in 'AEIOULNRST':
+            score += 1
+        elif c.upper() in 'DG':
+            score += 2
+        elif c.upper() in 'BCMP':
+            score += 3
+        elif c.upper() in 'FHVWY':
+            score += 4
+        elif c.upper() in 'K':
+            score += 5
+        elif c.upper() in 'JX':
+            score += 8
+        elif c.upper() in 'QZ':
+            score += 10
+    return score
+
+=======
+Suggestion 10
+
+def myfunc(str1: str):
+    # Write the code that goes here
+    pass

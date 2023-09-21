@@ -1,0 +1,119 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, int2: int, int3: int):
+    result = []
+    if int1 < int2:
+        for i in range(int1, int2, int3):
+            result.append(i)
+    else:
+        for i in range(int1, int2, -int3):
+            result.append(i)
+    return result
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, int2: int, int3: int):
+    """
+    Returns a list of integers in a sequence.
+    """
+    return [i for i in range(int1, int2, int3)]
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, int2: int, int3: int):
+    # Create a list to store the sequence
+    seq = []
+    # Create a variable to store the current value of the sequence
+    current = int1
+    # Create a variable to store the next value of the sequence
+    next = current + int3
+    # Create a variable to store the number of values in the sequence
+    num_vals = 0
+    # Create a variable to store the sum of the values in the sequence
+    sum_vals = 0
+    # Create a variable to store the product of the values in the sequence
+    prod_vals = 1
+    # Create a variable to store the average of the values in the sequence
+    avg_vals = 0
+    # Create a variable to store the difference of the values in the sequence
+    diff_vals = 0
+    # Create a variable to store the quotient of the values in the sequence
+    quot_vals = 0
+    # Create a variable to store the remainder of the values in the sequence
+    rem_vals = 0
+    # Create a variable to store the
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, int2: int, int3: int):
+    """
+    Given 3 integer inputs
+    start, end, and step, return the integers in the sequence
+    n_0 = start
+    n_i = n_i-1 + step
+    for each n_i < end.
+    """
+    if int1 >= int2:
+        return []
+    else:
+        return [int1] + myfunc(int1 + int3, int2, int3)
+
+=======
+Suggestion 5
+
+def myfunc(int1: int, int2: int, int3: int):
+    if int1 < int2:
+        return list(range(int1, int2, int3))
+    else:
+        return list(range(int2, int1, int3))
+
+=======
+Suggestion 6
+
+def myfunc(int1: int, int2: int, int3: int):
+    mylist = []
+    i = int1
+    while i < int2:
+        mylist.append(i)
+        i += int3
+    return mylist
+
+=======
+Suggestion 7
+
+def myfunc(int1: int, int2: int, int3: int):
+    # Your code goes here
+    return "Your output here"
+
+=======
+Suggestion 8
+
+def myfunc(int1: int, int2: int, int3: int):
+    if int1 <= int2:
+        return [i for i in range(int1, int2, int3)]
+    else:
+        return [i for i in range(int2, int1, int3)]
+
+=======
+Suggestion 9
+
+def myfunc(int1: int, int2: int, int3: int):
+    if int1 < int2:
+        return [i for i in range(int1, int2, int3)]
+    else:
+        return [i for i in range(int1, int2, -int3)]
+
+=======
+Suggestion 10
+
+def myfunc(int1: int, int2: int, int3: int):
+    seq = []
+    for i in range(int1, int2, int3):
+        seq.append(i)
+    return seq

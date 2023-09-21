@@ -1,0 +1,66 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    return sum([x**2 for x in range(1, int1+1)])
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    sum = 0
+    for i in range(1, int1+1):
+        sum += i*i
+    return sum
+
+=======
+Suggestion 3
+
+def myfunc(int1: int):
+    sum = 0
+    for x in range(1, int1 + 1):
+        sum += x ** 2
+    return sum
+
+=======
+Suggestion 4
+
+def myfunc(int1: int):
+    sum = 0
+    for i in range(1, int1 + 1):
+        sum += i**2
+    return sum
+
+=======
+Suggestion 5
+
+def myfunc(int1: int):
+    # Use list comprehension to create a list of the squares of 1 to n
+    # Then use sum() to sum the list of squares
+    return sum([x**2 for x in range(1, int1+1)])
+
+=======
+Suggestion 6
+
+def myfunc(int1: int):
+    # Initialize sum.
+    sum = 0
+
+    # Iterate through range.
+    for i in range(1, int1 + 1):
+        # Add each square to sum.
+        sum += i ** 2
+
+    # Return sum.
+    return sum
+
+=======
+Suggestion 7
+
+def myfunc(int1: int):
+    total = 0
+    for i in range(1, int1 + 1):
+        total += i ** 2
+    return total

@@ -1,0 +1,177 @@
+Synthesizing 8/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    pass
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    if str1 == 'T':
+        return True
+    elif str1 == 'F':
+        return False
+    elif str1 == 'T|F':
+        return True
+    elif str1 == 'T&F':
+        return False
+    elif str1 == 'T|T':
+        return True
+    elif str1 == 'F|F':
+        return False
+    elif str1 == 'T&T':
+        return True
+    elif str1 == 'F&T':
+        return False
+    else:
+        return None
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    if len(str1) == 1:
+        return True if str1 == 'T' else False
+    if str1[0] == 'T':
+        return myfunc(str1[1:])
+    if str1[0] == 'F':
+        return not myfunc(str1[1:])
+    if str1[0] == '|':
+        return myfunc(str1[1:str1.find(')')]) or myfunc(str1[str1.find(')')+1:])
+    if str1[0] == '&':
+        return myfunc(str1[1:str1.find(')')]) and myfunc(str1[str1.find(')')+1:])
+    return False
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    if str1 == 'T':
+        return True
+    elif str1 == 'F':
+        return False
+    else:
+        str1 = str1.split('|')
+        for i in range(len(str1)):
+            str1[i] = str1[i].split('&')
+            for j in range(len(str1[i])):
+                str1[i][j] = myfunc(str1[i][j])
+            str1[i] = eval('&'.join(str(str1[i][k]) for k in range(len(str1[i]))))
+        return eval('|'.join(str(str1[l]) for l in range(len(str1))))
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    if len(str1) == 1:
+        return True if str1 == 'T' else False
+    else:
+        for i in range(0, len(str1)):
+            if str1[i] == '|':
+                left = myfunc(str1[0:i])
+                right = myfunc(str1[i+1:])
+                return left or right
+            elif str1[i] == '&':
+                left = myfunc(str1[0:i])
+                right = myfunc(str1[i+1:])
+                return left and right
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    if len(str1) == 1:
+        return str1 == "T"
+
+    if "|" in str1:
+        idx = str1.index("|")
+        return myfunc(str1[:idx]) or myfunc(str1[idx+1:])
+
+    if "&" in str1:
+        idx = str1.index("&")
+        return myfunc(str1[:idx]) and myfunc(str1[idx+1:])
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    # Write your code here
+    # return True
+    # print(str1)
+    # print(len(str1))
+    # print(str1[0])
+    # print(str1[1])
+    # print(str1[2])
+    # print(str1[3])
+    # print(str1[4])
+    # print(str1[5])
+    # print(str1[6])
+    # print(str1[7])
+    # print(str1[8])
+    # print(str1[9])
+    # print(str1[10])
+    # print(str1[11])
+    # print(str1[12])
+    # print(str1[13])
+    # print(str1[14])
+    # print(str1[15])
+    # print(str1[16])
+    # print(str1[17])
+    # print(str1[18])
+    # print(str1[19])
+    # print(str1[20])
+    # print(str1[21])
+    # print(str1[22])
+    # print(str1[23])
+    # print(str1[24])
+    # print(str1[25])
+    # print(str1[26])
+    # print(str1[27])
+    # print(str1[28])
+    # print(str1[29])
+    # print(str1[30])
+    # print(str1[31])
+    # print(str1[32])
+    # print(str1[33])
+    # print(str1[34])
+    # print(str1[35])
+    # print(str1[36])
+    # print(str1[37])
+    # print(str1[38])
+    # print(str1[39])
+    # print(str1[40])
+    # print(str1[41])
+    # print(str1[42])
+    # print(str1[43])
+    # print(str1[44])
+    # print(str1[45])
+    # print(str1[46])
+    # print(str1[47])
+    # print(str1[48])
+    # print(str1[49])
+    # print(str1[50])
+    # print(str1[51])
+    # print(str1[52])
+    # print(str1[53])
+    # print(str1[54])
+    # print(str1[55])
+    # print(str1[56])
+    # print(str1[57])
+    # print(str1[58])
+    #
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    if len(str1) == 1:
+        return True if str1 == 'T' else False
+    else:
+        for i in range(len(str1)):
+            if str1[i] == '|':
+                return myfunc(str1[:i]) or myfunc(str1[i+1:])
+            elif str1[i] == '&':
+                return myfunc(str1[:i]) and myfunc(str1[i+1:])

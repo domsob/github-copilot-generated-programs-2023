@@ -1,0 +1,58 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(list1: list, list2: list):
+    return [i + j for i, j in zip(list1, list2)]
+
+=======
+Suggestion 2
+
+def myfunc(list1: list, list2: list):
+    return [sum(x) for x in zip(list1, list2)]
+
+=======
+Suggestion 3
+
+def myfunc(list1: list, list2: list):
+    result = []
+    for i in range(len(list1)):
+        result.append(list1[i] + list2[i])
+    return result
+
+=======
+Suggestion 4
+
+def myfunc(list1: list, list2: list):
+    # Write your code here
+    if len(list1) != len(list2):
+        return
+    result = []
+    for i in range(len(list1)):
+        result.append(list1[i] + list2[i])
+    return result
+
+=======
+Suggestion 5
+
+def myfunc(list1: list, list2: list):
+    newlist = []
+    for i in range(len(list1)):
+        newlist.append(list1[i] + list2[i])
+    return newlist
+
+=======
+Suggestion 6
+
+def myfunc(list1: list, list2: list):
+    return [x + y for x, y in zip(list1, list2)]
+
+=======
+Suggestion 7
+
+def myfunc(list1: list, list2: list):
+    list3 = []
+    for i in range(len(list1)):
+        list3.append(list1[i] + list2[i])
+    return list3

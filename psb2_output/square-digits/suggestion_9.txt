@@ -1,0 +1,129 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    int1 = str(int1)
+    int1 = list(int1)
+    int1 = [int(i) for i in int1]
+    int1 = [i**2 for i in int1]
+    int1 = [str(i) for i in int1]
+    int1 = ''.join(int1)
+    return int(int1)
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    # Initialize an empty string
+    str1 = ""
+    # Convert the integer to a string
+    str2 = str(int1)
+    # Loop through the string
+    for i in str2:
+        # Square the digit
+        str3 = str(int(i)**2)
+        # Concatenate the squared digit to the empty string
+        str1 += str3
+    # Return the string
+    return str1
+
+=======
+Suggestion 3
+
+def myfunc(int1: int):
+    # convert to string
+    str1 = str(int1)
+
+    # empty string
+    str2 = ''
+
+    # loop through string
+    for i in str1:
+        # convert to int
+        int2 = int(i)
+        # square
+        int3 = int2 * int2
+        # convert back to string
+        str3 = str(int3)
+        # concatenate
+        str2 = str2 + str3
+
+    # return string
+    return str2
+
+=======
+Suggestion 4
+
+def myfunc(int1: int):
+    # Create a list of the digits in the integer.
+    digits = [int(x) for x in str(int1)]
+    # Create a list of the squares of the digits in the integer.
+    squares = [x**2 for x in digits]
+    # Create a string of the squares of the digits in the integer.
+    result = ''
+    for i in squares:
+        result += str(i)
+    # Return the string of the squares of the digits in the integer.
+    return result
+
+=======
+Suggestion 5
+
+def myfunc(int1: int):
+    '''
+    Given a positive integer, square each digit and concatenate the squares into a returned string.
+    '''
+    return ''.join([str(int(i)**2) for i in str(int1)])
+
+=======
+Suggestion 6
+
+def myfunc(int1: int):
+    return ''.join(str(int(i)**2) for i in str(int1))
+
+=======
+Suggestion 7
+
+def myfunc(int1: int):
+    # Convert int to string
+    str1 = str(int1)
+    # Split string into list
+    list1 = list(str1)
+    # Iterate through list
+    for i in range(0, len(list1)):
+        # Square each digit
+        list1[i] = int(list1[i]) ** 2
+    # Convert list to string
+    str2 = ''.join(str(e) for e in list1)
+    # Return string
+    return str2
+
+=======
+Suggestion 8
+
+def myfunc(int1: int):
+    str1 = str(int1)
+    str2 = ""
+
+    for i in range(0, len(str1)):
+        str2 += str(int(str1[i]) * int(str1[i]))
+
+    return str2
+
+=======
+Suggestion 9
+
+def myfunc(int1: int):
+    return ''.join([str(int(i) ** 2) for i in str(int1)])
+
+=======
+Suggestion 10
+
+def myfunc(int1: int):
+    str1 = str(int1)
+    str2 = ''
+    for i in str1:
+        str2 += str(int(i)**2)
+    return int(str2)

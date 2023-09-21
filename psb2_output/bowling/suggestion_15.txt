@@ -1,0 +1,134 @@
+Synthesizing 7/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    # 1. split the string into a list
+    # 2. convert each element in the list to int
+    # 3. sum the list
+    return sum([int(i) for i in str1.split(",")])
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    # Do something
+    return 0
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    score = 0
+    frame = 1
+    for i in range(0, len(str1), 2):
+        if frame < 10:
+            if str1[i] == 'X':
+                score += 10
+                if str1[i+2] == 'X':
+                    score += 10
+                else:
+                    score += int(str1[i+2])
+                if str1[i+3] == '/':
+                    score += 10 - int(str1[i+2])
+                else:
+                    score += int(str1[i+3])
+                frame += 1
+            elif str1[i+1] == '/':
+                score += 10
+                if str1[i+2] == 'X':
+                    score += 10
+                else:
+                    score += int(str1[i+2])
+                frame += 1
+            else:
+                score += int(str1[i]) + int(str1[i+1])
+                frame += 1
+        else:
+            if str1[i] == 'X':
+                score += 10
+                score += int(str1[i+1])
+                score += int(str1[i+2])
+            elif str1[i+1] == '/':
+                score += 10
+                score += int(str1[i+2])
+            else:
+                score += int(str1[i]) + int(str1[i+1])
+    return score
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    # your code here
+    return 0
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    # write your code here
+    return 0
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    # print(str1)
+    # print(len(str1))
+    total = 0
+    for i in range(len(str1)):
+        # print(str1[i])
+        if str1[i] == 'X':
+            total += 10
+            if i < len(str1) - 2:
+                if str1[i+2] == '/':
+                    total += 10
+                else:
+                    total += int(str1[i+1]) + int(str1[i+2])
+            elif i == len(str1) - 2:
+                total += int(str1[i+1])
+                # print(total)
+            else:
+                total += 0
+        elif str1[i] == '/':
+            # print(str1[i-1])
+            total += 10 - int(str1[i-1])
+            if i < len(str1) - 1:
+                total += int(str1[i+1])
+            else:
+                total += 0
+        else:
+            total += int(str1[i])
+        # print(total)
+    return total
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    score = 0
+    # split the string into a list of individual bowls
+    bowls = str1.split()
+    # iterate through the list of bowls
+    for i in range(len(bowls)):
+        # if the bowl is a strike, add 10 to the score
+        if bowls[i] == 'X':
+            score += 10
+            # if the bowl is a strike and it's not the last frame, add the next two bowls to the score
+            if i < len(bowls) - 1:
+                score += int(bowls[i + 1])
+                # if the next bowl is also a strike and it's not the last frame, add the next bowl to the score
+                if bowls[i + 1] == 'X' and i < len(bowls) - 2:
+                    score += int(bowls[i + 2])
+        # if the bowl is a spare, add 10 to the score
+        elif bowls[i] == '/':
+            score += 10
+            # if the bowl is a spare and it's not the last frame, add the next bowl to the score
+            if i < len(bowls) - 1:
+                score += int(bowls[i + 1])
+        # if the bowl is not a strike or a spare, add the bowl to the score
+        else:
+            score += int(bowls[i])
+    return score

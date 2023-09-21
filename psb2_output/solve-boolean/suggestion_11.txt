@@ -1,0 +1,139 @@
+Synthesizing 8/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    # Write your code here
+    return True
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    # Your code here
+    return None
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    str1 = str1.replace('T', 'True')
+    str1 = str1.replace('F', 'False')
+    return eval(str1)
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    # check if string is empty
+    if not str1:
+        return False
+    # check if string is 'T' or 'F'
+    if str1 == 'T':
+        return True
+    if str1 == 'F':
+        return False
+    # check if string is 'T|F' or 'F|T'
+    if str1 == 'T|F' or str1 == 'F|T':
+        return True
+    # check if string is 'T&F' or 'F&T'
+    if str1 == 'T&F' or str1 == 'F&T':
+        return False
+    # check if string is 'T|T' or 'F|F'
+    if str1 == 'T|T' or str1 == 'F|F':
+        return False
+    # check if string is 'T&T' or 'F&F'
+    if str1 == 'T&T' or str1 == 'F&F':
+        return False
+    # check if string is 'T|T|T' or 'F|F|F'
+    if str1 == 'T|
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    if str1 == 'T':
+        return True
+    elif str1 == 'F':
+        return False
+    elif str1[0] == '!':
+        return not myfunc(str1[1:])
+    elif str1[0] == '(':
+        i = 1
+        count = 1
+        while count != 0:
+            if str1[i] == '(':
+                count += 1
+            elif str1[i] == ')':
+                count -= 1
+            i += 1
+        if i == len(str1):
+            return myfunc(str1[1:-1])
+        elif str1[i] == '|':
+            return myfunc(str1[1:i]) or myfunc(str1[i+1:])
+        elif str1[i] == '&':
+            return myfunc(str1[1:i]) and myfunc(str1[i+1:])
+    elif str1[0] == 'T' or str1[0] == 'F':
+        if str1[1] == '|':
+            return myfunc(str1[0]) or myfunc(str1[2:])
+        elif str1[1] == '&':
+            return myfunc(str1[0]) and myfunc(str1[2:])
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    # Base case
+    if len(str1) == 1:
+        if str1 == 'T':
+            return True
+        else:
+            return False
+    # Recursive case
+    else:
+        # Split the string into a list
+        str_list = list(str1)
+        # Find the operator
+        for i in range(len(str_list)):
+            if str_list[i] == '&' or str_list[i] == '|':
+                operator = str_list[i]
+                break
+        # Find the left and right operands
+        left_operand = ''.join(str_list[:i])
+        right_operand = ''.join(str_list[i+1:])
+        # Recursively evaluate the left and right operands
+        left_bool = myfunc(left_operand)
+        right_bool = myfunc(right_operand)
+        # Evaluate the expression
+        if operator == '&':
+            return left_bool and right_bool
+        else:
+            return left_bool or right_bool
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    # Write your code here
+    stack = []
+    for i in str1:
+        if i == '|':
+            stack.append(i)
+        elif i == '&':
+            stack.append(i)
+        elif i == 'T' or i == 'F':
+            stack.append(i)
+        elif i == ')':
+            if stack[-1] == 'T' or stack[-1] == 'F':
+                temp = stack.pop()
+                stack.pop()
+                stack.append(temp)
+            else:
+                temp = stack.pop()
+                stack.pop()
+                stack.append(temp)
+        else:
+            continue
+    print(stack)
+    return stack.pop()

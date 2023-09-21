@@ -1,0 +1,108 @@
+Synthesizing 9/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    str1 = str1.split()
+    str2 = []
+    for word in str1:
+        if word[0] in 'aeiou':
+            str2.append(word + 'ay')
+        else:
+            str2.append(word[1:] + word[0] + 'ay')
+    return ' '.join(str2)
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    new_str = ""
+    for word in str1.split(" "):
+        if word[0] in "aeiou":
+            new_str += word + "ay "
+        else:
+            new_str += word[1:] + word[0] + "ay "
+    return new_str.strip()
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    str2 = str1.lower()
+    str3 = str2.split()
+    str4 = ""
+    for word in str3:
+        if word[0] in "aeiou":
+            str4 += word + "ay" + " "
+        else:
+            str4 += word[1:] + word[0] + "ay" + " "
+    return str4[:-1]
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    str1 = str1.split()
+    for i in range(len(str1)):
+        if str1[i][0] in "aeiou":
+            str1[i] = str1[i] + "ay"
+        else:
+            str1[i] = str1[i][1:] + str1[i][0] + "ay"
+    return " ".join(str1)
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    vowels = "aeiou"
+    words = str1.split()
+    new_words = []
+
+    for word in words:
+        if word[0] in vowels:
+            new_word = word + "ay"
+            new_words.append(new_word)
+        else:
+            new_word = word[1:] + word[0] + "ay"
+            new_words.append(new_word)
+
+    return " ".join(new_words)
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    str1 = str1.lower()
+    str2 = []
+    for i in str1.split(' '):
+        if i[0] in ['a', 'e', 'i', 'o', 'u']:
+            str2.append(i + 'ay')
+        else:
+            str2.append(i[1:] + i[0] + 'ay')
+    return ' '.join(str2)
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    newstr = ""
+    for word in str1.split():
+        if word[0] in vowels:
+            newstr = newstr + word + "ay "
+        else:
+            newstr = newstr + word[1:] + word[0] + "ay "
+    return newstr
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    new_str = ""
+    for word in str1.split():
+        if word[0] in "aeiou":
+            new_str += word + "ay "
+        else:
+            new_str += word[1:] + word[0] + "ay "
+    return new_str

@@ -1,0 +1,173 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(float1: float, float2: float, int1: int):
+    """
+    >>> myfunc(10, 0.6, 3)
+    14.8
+    >>> myfunc(10, 0.6, 0)
+    0
+    >>> myfunc(10, 0.6, -1)
+    0
+    >>> myfunc(0, 0.6, 3)
+    0.0
+    >>> myfunc(10, 0, 3)
+    0.0
+    >>> myfunc(10, 0.6, 1)
+    6.0
+    """
+    if int1 < 0:
+        return 0
+    if float1 <= 0:
+        return 0.0
+    if int1 == 0:
+        return 0
+    if float2 == 0:
+        return 0.0
+    if int1 == 1:
+        return float1
+    else:
+        return float1 + float1 * float2 + myfunc(float1 * float2, float2, int1 - 2)
+
+=======
+Suggestion 2
+
+def myfunc(float1: float, float2: float, int1: int):
+    """
+    >>> myfunc(10, 0.6, 5)
+    18.0992
+    >>> myfunc(100, 0.6, 5)
+    180.992
+    """
+    bounciness_index = float2 / float1
+    total_distance = 0
+    for i in range(int1):
+        total_distance += float1
+        float1 *= bounciness_index
+        total_distance += float1
+    return total_distance
+
+=======
+Suggestion 3
+
+def myfunc(float1: float, float2: float, int1: int):
+    if float1 <= 0 or float2 <= 0 or int1 <= 0:
+        return -1
+    if float1 < float2:
+        return -1
+    if float2 == 1:
+        return float1
+    distance = 0
+    for i in range(int1):
+        distance += float1
+        float1 *= float2
+        distance += float1
+    return distance
+
+=======
+Suggestion 4
+
+def myfunc(float1: float, float2: float, int1: int):
+    """
+    >>> myfunc(10, 0.6, 4)
+    22.956
+    """
+    total_distance = 0
+    for i in range(int1):
+        if i == 0:
+            total_distance += float1
+        else:
+            total_distance += float1 * float2 * 2
+            float1 *= float2
+    return total_distance
+
+=======
+Suggestion 5
+
+def myfunc(float1: float, float2: float, int1: int):
+    """
+    >>> myfunc(10.0, 0.6, 5)
+    29.6
+    >>> myfunc(1.0, 0.5, 3)
+    2.75
+    """
+    # Write your code here
+    bounciness_index = float2 / float1
+    height = float1
+    distance = 0
+    for i in range(int1):
+        distance += height
+        height *= bounciness_index
+        distance += height
+    return distance
+
+=======
+Suggestion 6
+
+def myfunc(float1: float, float2: float, int1: int):
+    '''Calculates the bounciness index and the distance travelled by a ball.'''
+    if float1 <= 0.0 or float2 <= 0.0 or int1 <= 0:
+        return -1
+    bounciness_index = float2 / float1
+    distance = 0
+    for i in range(int1):
+        distance += float1
+        float1 *= bounciness_index
+        distance += float1
+    return distance
+
+=======
+Suggestion 7
+
+def myfunc(float1: float, float2: float, int1: int):
+    bounciness_index = float2 / float1
+    distance = 0
+    for i in range(int1):
+        distance += float1
+        float1 *= bounciness_index
+        distance += float1
+    return distance
+
+=======
+Suggestion 8
+
+def myfunc(float1: float, float2: float, int1: int):
+    """
+    Given a starting height and a height after the first bounce of a dropped ball, 
+    calculate the bounciness index (height of first bounce / starting height). 
+    Then, given a number of bounces, use the bounciness index to
+    calculate the total distance that the ball travels across those bounces.
+    """
+    # Write your code here!
+    return 0
+
+=======
+Suggestion 9
+
+def myfunc(float1: float, float2: float, int1: int):
+    """Calculate the total distance that the ball travels across those bounces.
+    >>> myfunc(10, 0.6, 5)
+    29.84
+    >>> myfunc(10, 0.6, 1)
+    6.0
+    >>> myfunc(10, 0.6, 0)
+    0
+    """
+    if int1 == 0:
+        return 0
+    else:
+        return float1 + 2 * float1 * float2 + myfunc(float1 * float2, float2, int1 - 1)
+
+=======
+Suggestion 10
+
+def myfunc(float1: float, float2: float, int1: int):
+    bounciness_index = float2 / float1
+    total_distance = 0
+    for i in range(int1):
+        total_distance += float1
+        float1 *= bounciness_index
+        total_distance += float1
+    return total_distance

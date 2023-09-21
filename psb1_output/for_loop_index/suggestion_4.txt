@@ -1,0 +1,133 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, int2: int, int3: int):
+    """Returns the sequence of integers from int1 to int2 with step int3."""
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, int2: int, int3: int):
+    # Create a list to store the result
+    result = []
+    # Create a variable to store the current number
+    current_number = int1
+    # While the current number is less than the end number
+    while current_number < int2:
+        # Add the current number to the result list
+        result.append(current_number)
+        # Update the current number
+        current_number += int3
+    # Return the result list
+    return result
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, int2: int, int3: int):
+    # Your code here
+    return
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, int2: int, int3: int):
+    # Create an empty list to store the numbers in
+    mylist = []
+    # Create a variable to store the current number
+    currentnum = int1
+    # Create a while loop that runs while the current number is less than the end number
+    while currentnum < int2:
+        # Append the current number to the list
+        mylist.append(currentnum)
+        # Add the step number to the current number
+        currentnum += int3
+    # Return the list
+    return mylist
+
+=======
+Suggestion 5
+
+def myfunc(int1: int, int2: int, int3: int):
+    """
+    Given 3 integer inputs
+    start, end, and step, return the integers in the sequence
+    n_0 = start
+    n_i = n_i-1 + step
+    for each n_i < end.
+    """
+    return [x for x in range(int1, int2, int3)]
+
+=======
+Suggestion 6
+
+def myfunc(int1: int, int2: int, int3: int):
+    # your code here
+    return None
+
+=======
+Suggestion 7
+
+def myfunc(int1: int, int2: int, int3: int):
+    # Create an empty list to store the integers in the sequence
+    int_list = []
+    # Set the first integer in the sequence to the start value
+    int_list.append(int1)
+    # Set the current integer in the sequence to the start value
+    current_int = int1
+    # Set the next integer in the sequence to the start value plus the step value
+    next_int = int1 + int3
+    # While the next integer in the sequence is less than the end value
+    while next_int < int2:
+        # Add the next integer in the sequence to the list
+        int_list.append(next_int)
+        # Set the current integer in the sequence to the next integer in the sequence
+        current_int = next_int
+        # Set the next integer in the sequence to the current integer in the sequence plus the step value
+        next_int = current_int + int3
+    # Return the list of integers in the sequence
+    return int_list
+
+=======
+Suggestion 8
+
+def myfunc(int1: int, int2: int, int3: int):
+    # Initialize the list
+    mylist = []
+    # Add the first integer to the list
+    mylist.append(int1)
+    # Initialize the next integer
+    nextint = int1 + int3
+    # While the next integer is less than the end integer
+    while nextint < int2:
+        # Add the next integer to the list
+        mylist.append(nextint)
+        # Increment the next integer
+        nextint += int3
+    # Return the list
+    return mylist
+
+=======
+Suggestion 9
+
+def myfunc(int1: int, int2: int, int3: int):
+    mylist = []
+    for i in range(int1, int2):
+        if i % int3 == 0:
+            mylist.append(i)
+    return mylist
+
+=======
+Suggestion 10
+
+def myfunc(int1: int, int2: int, int3: int):
+    # start = int1
+    # end = int2
+    # step = int3
+    # n_0 = start
+    # n_i = n_i-1 + step
+    # for each n_i < end
+    # return n_i
+    return [i for i in range(int1, int2, int3)]

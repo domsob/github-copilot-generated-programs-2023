@@ -1,0 +1,78 @@
+Synthesizing 9/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    count = 0
+    vowel = set("aeiouy")
+    for alphabet in str1:
+        if alphabet in vowel:
+            count = count + 1
+    return count
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    vowels = ['a', 'e', 'i', 'o', 'u', 'y']
+    count = 0
+    for i in str1:
+        if i in vowels:
+            count += 1
+    return count
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    count = 0
+    vowels = ['a', 'e', 'i', 'o', 'u', 'y']
+    for x in str1:
+        if x in vowels:
+            count += 1
+    return count
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    vowels = ['a','e','i','o','u','y']
+    count = 0
+    for letter in str1:
+        if letter in vowels:
+            count += 1
+    return count
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    str1 = str1.lower()
+    vowels = 0
+    for i in str1:
+        if i == 'a' or i == 'e' or i == 'i' or i == 'o' or i == 'u' or i == 'y':
+            vowels += 1
+    return vowels
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    count = 0
+    vowels = ['a', 'e', 'i', 'o', 'u', 'y']
+    for i in str1:
+        if i in vowels:
+            count += 1
+    return count
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    count = 0
+    vowels = ['a', 'e', 'i', 'o', 'u', 'y']
+    for char in str1:
+        if char in vowels:
+            count += 1
+    return count

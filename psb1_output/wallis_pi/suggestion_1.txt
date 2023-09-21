@@ -1,0 +1,108 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    x = 2
+    y = 1
+    for i in range(int1):
+        if i % 2 == 0:
+            y = y + 2
+        else:
+            x = x + 2
+        print(x, y)
+    return x / y
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    pi = 1
+    for i in range(2, int1 + 1):
+        if i % 2 == 0:
+            pi *= i / (i - 1)
+        else:
+            pi *= (i - 1) / i
+    return round(pi * 2, 5)
+
+=======
+Suggestion 3
+
+def myfunc(int1: int):
+    result = 1
+    for i in range(1, int1+1):
+        if i % 2 == 0:
+            result *= (i+1) / i
+        else:
+            result *= i / (i+1)
+    return round(result*2, 5)
+
+=======
+Suggestion 4
+
+def myfunc(int1: int):
+    # Your code here
+    return 0
+
+=======
+Suggestion 5
+
+def myfunc(int1: int):
+    result = 1
+    for i in range(1, int1 + 1):
+        result *= (4 * i ** 2) / (4 * i ** 2 - 1)
+    return round(result * 2 / 3, 5)
+
+=======
+Suggestion 6
+
+def myfunc(int1: int):
+    if int1 == 0:
+        return 1
+    elif int1 % 2 == 0:
+        return int1 / (int1 + 1) * myfunc(int1 - 1)
+    else:
+        return (int1 + 1) / int1 * myfunc(int1 - 1)
+
+=======
+Suggestion 7
+
+def myfunc(int1: int):
+    # Write your code here
+    result = 1
+    for i in range(1, int1+1):
+        result *= (2*i)/(2*i-1) * (2*i)/(2*i+1)
+    return round(result, 5)
+
+=======
+Suggestion 8
+
+def myfunc(int1: int):
+    return 0.0
+
+=======
+Suggestion 9
+
+def myfunc(int1: int):
+    if int1 == 1:
+        return 2/3
+    elif int1 % 2 == 0:
+        return int1 / (int1 - 1) * int1 / (int1 + 1) * myfunc(int1 - 1)
+    else:
+        return (int1 + 1) / int1 * (int1 - 1) / (int1 + 1) * myfunc(int1 - 1)
+
+=======
+Suggestion 10
+
+def myfunc(int1: int):
+    count = 0
+    result = 1
+    for i in range(1, int1 + 1):
+        if i % 2 == 0:
+            result *= i / (i - 1)
+            count += 1
+        else:
+            result *= (i + 1) / i
+            count += 1
+    return round(result, 5)

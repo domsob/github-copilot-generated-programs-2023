@@ -1,0 +1,105 @@
+Synthesizing 8/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    sum = 0
+    for i in range(0, len(str1)):
+        sum += ord(str1[i])
+    return chr(sum % 64 + ord(' '))
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    # Your code goes here
+    # print(ord('A')) # 65
+    # print(ord('Z')) # 90
+    # print(ord('a')) # 97
+    # print(ord('z')) # 122
+    # print(ord(' ')) # 32
+    # print(ord('~')) # 126
+    # print(ord('!')) # 33
+    # print(ord('9')) # 57
+    # print(ord('0')) # 48
+    # print(ord('`')) # 96
+    # print(ord('~')-ord('!')) # 93
+    # print(ord('9')-ord('0')) # 9
+    # print(ord('~')-ord(' ')) # 94
+    # print(ord('z')-ord('a')) # 25
+    # print(ord('Z')-ord('A')) # 25
+    # print(ord('`')-ord('9')) # 39
+    # print(ord('9')-ord('`')) # -39
+    # print(ord('a')-ord('Z')) # 32
+    # print(ord('A')-ord('9')) # 16
+    # print(ord('9')-ord('A')) # -16
+    # print(ord('Z')-ord('0')) # 42
+    # print(ord('0')-ord('Z')) # -42
+    # print(ord('z')-ord('0')) # 74
+    # print(ord('0')-ord('z')) # -74
+    # print(ord('9')-ord('a')) # -49
+    # print(ord('a')-ord('9')) # 49
+    # print(ord('A')-ord('0')) # 17
+    # print(ord('0')-ord('A')) # -17
+    # print(ord('z')-ord('A')) # 57
+    # print(ord('A')-ord('z')) # -57
+    # print(ord('Z')-ord('a')) # -57
+    # print(ord('a')-ord('Z')) # 57
+    # print(ord('0')-ord('9')) # -9
+    # print(ord('9')-ord('0')) # 9
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    sum = 0
+    for i in range(len(str1)):
+        sum += ord(str1[i])
+    sum = sum % 64 + ord(" ")
+    return chr(sum)
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    sum = 0
+    for ch in str1:
+        sum += ord(ch)
+    sum %= 64
+    sum += ord(' ')
+    return chr(sum)
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    # Your code here
+    pass
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    sum = 0
+    for i in str1:
+        sum += ord(i)
+    return chr(sum % 64 + 32)
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    # Your code goes here
+    return sum([ord(i) for i in str1]) % 64 + ord(' ')
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    sum = 0
+    for i in str1:
+        sum += ord(i)
+    sum = sum % 64
+    sum += ord(' ')
+    return chr(sum)

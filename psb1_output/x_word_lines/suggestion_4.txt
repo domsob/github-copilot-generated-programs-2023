@@ -1,0 +1,196 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, str1: str):
+    words = str1.split()
+    result = ""
+    line = ""
+    for word in words:
+        if len(line) + len(word) > int1:
+            result += line + "\n"
+            line = ""
+        line += word + " "
+    result += line
+    return result
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, str1: str):
+    str1 = str1.replace('\n', ' ')
+    str1 = str1.split(' ')
+    str2 = ''
+    for i in range(0, len(str1), int1):
+        str2 += ' '.join(str1[i:i + int1]) + '\n'
+    return str2
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, str1: str):
+    str_list = str1.split()
+    str_final = ""
+    for i in range(len(str_list)):
+        if i % int1 == 0 and i != 0:
+            str_final += "\n"
+        str_final += str_list[i] + " "
+    return str_final
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, str1: str):
+    str1 = str1.replace('\n', ' ')
+    list1 = str1.split()
+    list2 = []
+    list3 = []
+    for i in range(len(list1)):
+        if i % int1 == 0 and i != 0:
+            list3.append(list2)
+            list2 = []
+        list2.append(list1[i])
+    list3.append(list2)
+    for i in range(len(list3)):
+        list3[i] = ' '.join(list3[i])
+    return '\n'.join(list3)
+
+=======
+Suggestion 5
+
+def myfunc(int1: int, str1: str):
+    # split string into list of words
+    str1 = str1.split()
+    # initialize a new list for the output
+    output = []
+    # initialize a new string for each line
+    line = ""
+    # iterate through each word in the list
+    for word in str1:
+        # if the length of the string is less than the integer
+        if len(line) < int1:
+            # add the word to the line
+            line += word + " "
+        # if the length of the string is greater than or equal to the integer
+        else:
+            # add the line to the output list
+            output.append(line)
+            # reset the line to the current word
+            line = word + " "
+    # add the last line to the output list
+    output.append(line)
+    # return the output list
+    return output
+
+=======
+Suggestion 6
+
+def myfunc(int1: int, str1: str):
+    str1 = str1.split()
+    str2 = []
+    while str1:
+        str2.append(str1[:int1])
+        str1 = str1[int1:]
+    return '\n'.join([' '.join(i) for i in str2])
+
+=======
+Suggestion 7
+
+def myfunc(int1: int, str1: str):
+    words = str1.split()
+    line = []
+    lines = []
+    count = 0
+    for word in words:
+        if (count + len(word) + 1) <= int1:
+            line.append(word)
+            count += len(word) + 1
+        else:
+            lines.append(line)
+            line = []
+            line.append(word)
+            count = len(word) + 1
+    lines.append(line)
+    return lines
+
+=======
+Suggestion 8
+
+def myfunc(int1: int, str1: str):
+    # Split the string into a list of words.
+    words = str1.split()
+    # Initialize a list of lines.
+    lines = []
+    # Initialize a line with an empty string.
+    line = ""
+    # Iterate through the words.
+    for word in words:
+        # If the length of the line plus the length of the word is less than or equal to the integer,
+        # add the word to the line.
+        if len(line) + len(word) <= int1:
+            line += word + " "
+        # Otherwise, add the line to the list of lines and start a new line with the word.
+        else:
+            lines.append(line)
+            line = word + " "
+    # Add the last line to the list of lines.
+    lines.append(line)
+    # Return the list of lines.
+    return lines
+
+=======
+Suggestion 9
+
+def myfunc(int1: int, str1: str):
+    # split string into list of words
+    words = str1.split()
+    # set counter to 0
+    counter = 0
+    # set empty string
+    newStr = ""
+    # iterate through words
+    for word in words:
+        # if counter is less than int1
+        if counter < int1:
+            # add word to newStr
+            newStr += word + " "
+            # increment counter
+            counter += 1
+        # else
+        else:
+            # add word to newStr
+            newStr += "\n" + word + " "
+            # reset counter to 1
+            counter = 1
+    # return newStr
+    return newStr
+
+=======
+Suggestion 10
+
+def myfunc(int1: int, str1: str):
+    # Split the string into a list of words
+    words = str1.split()
+    # Initialize a new list of lines
+    lines = []
+    # Initialize a new line
+    line = []
+    # Iterate through the words
+    for word in words:
+        # If the current line has less than X words
+        if len(line) < int1:
+            # Add the current word to the line
+            line.append(word)
+        # Otherwise, the current line has X words
+        else:
+            # Add the current line to the list of lines
+            lines.append(line)
+            # Clear the current line
+            line = []
+            # Add the current word to the new line
+            line.append(word)
+    # Add the last line to the list of lines
+    lines.append(line)
+    # Return the list of lines
+    return lines

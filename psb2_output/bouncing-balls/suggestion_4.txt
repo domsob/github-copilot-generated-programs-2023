@@ -1,0 +1,162 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(float1: float, float2: float, int1: int):
+    """
+    >>> myfunc(10.0, 0.6, 4)
+    14.84
+    >>> myfunc(1.0, 0.5, 5)
+    2.875
+    """
+    bounciness_index = float2 / float1
+    distance = 0
+    for _ in range(int1):
+        distance += float1
+        float1 *= bounciness_index
+        distance += float1
+    return round(distance, 2)
+
+=======
+Suggestion 2
+
+def myfunc(float1: float, float2: float, int1: int):
+    bounciness_index = float2 / float1
+    distance = 0
+    for i in range(int1):
+        distance += float1
+        float1 *= bounciness_index
+        distance += float1
+    return distance
+
+=======
+Suggestion 3
+
+def myfunc(float1: float, float2: float, int1: int):
+    """
+    >>> myfunc(10.0, 0.6, 3)
+    29.52
+    >>> myfunc(1.0, 0.5, 5)
+    2.875
+    """
+    bounce_index = float2 / float1
+    distance = 0
+    for i in range(int1):
+        if i == 0:
+            distance += float1
+        elif i > 0:
+            distance += 2 * bounce_index * float1
+            bounce_index *= bounce_index
+    return distance
+
+=======
+Suggestion 4
+
+def myfunc(float1: float, float2: float, int1: int):
+    '''Calculate the bounciness index and the total distance traveled'''
+    bounciness_index = float2 / float1
+    distance = 0
+    for i in range(int1):
+        distance += float1 * (bounciness_index ** i)
+    return distance
+
+=======
+Suggestion 5
+
+def myfunc(float1: float, float2: float, int1: int):
+    if float1 < 0 or float2 < 0 or int1 < 0:
+        return -1
+    elif float1 == 0:
+        return -1
+    elif float2 == 0:
+        return -1
+    elif int1 == 0:
+        return -1
+    else:
+        bounciness = float2 / float1
+        distance = 0
+        while int1 > 0:
+            distance += float1
+            float1 *= bounciness
+            distance += float1
+            int1 -= 1
+        return distance
+
+=======
+Suggestion 6
+
+def myfunc(float1: float, float2: float, int1: int):
+    if float1 < 0 or float2 < 0 or int1 < 0:
+        return -1
+    elif float1 < float2:
+        return -1
+    elif float1 == float2:
+        return float1
+    else:
+        total = 0
+        for i in range(int1):
+            if i == 0:
+                total += float1
+            else:
+                total += (float1 * pow(float2, i))
+        return total
+
+=======
+Suggestion 7
+
+def myfunc(float1: float, float2: float, int1: int):
+    """Given a starting height and a height after the first bounce of a dropped ball, 
+    calculate the bounciness index (height of first bounce / starting height). 
+    Then, given a number of bounces, use the bounciness index to
+    calculate the total distance that the ball travels across those bounces."""
+    bounce_height = float2 / float1
+    total_distance = 0
+    for i in range(int1):
+        total_distance += float1
+        float1 *= bounce_height
+        total_distance += float1
+    return total_distance
+
+=======
+Suggestion 8
+
+def myfunc(float1: float, float2: float, int1: int):
+    """Calculates the total distance that the ball travels across those bounces.
+    >>> myfunc(10, 0.6, 3)
+    29.52
+    >>> myfunc(1, 0.5, 4)
+    2.875
+    """
+    totaldistance = float1
+    mylist = []
+    mylist.append(float2)
+    for i in range(1, int1):
+        mylist.append(mylist[i - 1] * float2)
+        totaldistance += mylist[i - 1] * float2 * 2
+    return totaldistance
+
+=======
+Suggestion 9
+
+def myfunc(float1: float, float2: float, int1: int):
+    bounciness = float2 / float1
+    distance = 0
+    for i in range(int1):
+        distance += float1
+        float1 *= bounciness
+        distance += float1
+    return distance
+
+=======
+Suggestion 10
+
+def myfunc(float1: float, float2: float, int1: int):
+    """Returns the total distance that the ball travels across those bounces"""
+    total: float = 0.0
+    bounciness: float = float2 / float1
+    for _ in range(int1):
+        total += float1
+        float1 *= bounciness
+        total += float1
+    return total

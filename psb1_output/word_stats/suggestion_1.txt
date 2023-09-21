@@ -1,0 +1,154 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):)->list:
+    words = str1.split()
+    sentences = str1.count('.') + str1.count('?') + str1.count('!')
+    word_lengths = [len(word) for word in words]
+    longest = max(word_lengths)
+    lengths = []
+    for i in range(1, longest + 1):
+        lengths.append(word_lengths.count(i))
+    return [lengths, sentences, round(len(words) / sentences, 2)]
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):)->list:
+    """Given a string, return a list containing the number of words with n characters 
+    for n from 1 to the length of the longest word.
+    Additionally, return the number of sentences and the average sentence length.
+    A word is any string of consecutive non-whitespace characters (including 
+    sentence terminators). Every string will contain at least one sentence terminator 
+    (period, exclamation point, or question mark). The average sentence length is 
+    the number of words in the string divided by the number of sentence terminator characters.
+    """
+    words = str1.split()
+    num_words = len(words)
+    word_lengths = [len(word) for word in words]
+    sentence_lengths = [len(sentence) for sentence in str1.split('.') if sentence]
+    num_sentences = len(sentence_lengths)
+    avg_sentence_length = sum(sentence_lengths) / num_sentences
+    longest_word = max(word_lengths)
+    word_counts = [word_lengths.count(i) for i in range(1, longest_word + 1)]
+    return word_counts + [num_sentences, avg_sentence_length]
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):)->list:
+
+    # your code here
+    return [1,2,3,4,5,6]
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):)->list:
+    # Write your code here
+    pass
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):)-> list:
+    # Your code goes here
+    pass
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):) -> list:
+    # Write your code here
+    return
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):)-> list:
+    words = str1.split()
+    #print(words)
+    #print(len(words))
+    word_len = []
+    for word in words:
+        if word not in word_len:
+            word_len.append(len(word))
+    #print(word_len)
+    word_len.sort()
+    #print(word_len)
+    largest = word_len[-1]
+    #print(largest)
+    largest += 1
+    #print(largest)
+    word_count = []
+    for i in range(1, largest):
+        count = 0
+        for word in words:
+            if len(word) == i:
+                count += 1
+        word_count.append(count)
+    #print(word_count)
+    word_count.append(len(words))
+    #print(word_count)
+    #print(len(str1))
+    #print(str1.count('.'))
+    #print(str1.count('?'))
+    #print(str1.count('!'))
+    sentence_count = str1.count('.') + str1.count('?') + str1.count('!')
+    #print(sentence_count)
+    word_count.append(sentence_count)
+    #print(word_count)
+    average = len(words)/sentence_count
+    #print(average)
+    word_count.append(average)
+    #print(word_count)
+    return word_count
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):) -> list:
+    # Split string into list of words
+    words = str1.split()
+    # Find the longest word in the list
+    longest_word = max(words, key=len)
+    # Create an empty list
+    new_list = []
+    # Loop through the range from 1 to the length of the longest word
+    for i in range(1, len(longest_word) + 1):
+        # Create a variable to store the number of words with n characters
+        count = 0
+        # Loop through the list of words
+        for word in words:
+            # If the length of the word is equal to n
+            if len(word) == i:
+                # Increment the count
+                count += 1
+        # Append the count to the list
+        new_list.append(count)
+    # Create a variable to store the number of sentences
+    num_sentences = 0
+    # Loop through the list of words
+    for word in words:
+        # If the last character in the word is a sentence terminator
+        if word[-1] in '.!?':
+            # Increment the number of sentences
+            num_sentences += 1
+    # Create a variable to store the average sentence length
+    avg_sentence_length = len(words) / num_sentences
+    # Append the number of sentences and the average sentence length to the list
+    new_list.append(num_sentences)
+    new_list.append(avg_sentence_length)
+    # Return the list
+    return new_list
+
+=======
+Suggestion 9
+
+def myfunc(str1: str):)->list:
+    words = str1.split()
+    n = len(words)
+    print(n)
+    return n

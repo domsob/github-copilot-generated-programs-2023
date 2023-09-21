@@ -1,0 +1,132 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    count = 1
+    while int1 != 1:
+        if int1 % 2 == 0:
+            int1 = int1 // 2
+        else:
+            int1 = int1 * 3 + 1
+        count += 1
+    return count
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    count = 1
+    while int1 != 1:
+        if int1 % 2 == 0:
+            int1 = int1 // 2
+        else:
+            int1 = 3 * int1 + 1
+        count += 1
+    return count
+
+=======
+Suggestion 3
+
+def myfunc(int1: int):
+    # Your code here
+    # Return the length of the Collatz sequence starting from int1
+    # For example, if int1 is 5, then the sequence is 5, 16, 8, 4, 2, 1
+    # So the function should return 6
+    # Note that the Collatz sequence always ends at 1
+    count = 1
+    while int1 != 1:
+        if int1 % 2 == 0:
+            int1 = int1 // 2
+            count += 1
+        else:
+            int1 = int1 * 3 + 1
+            count += 1
+    return count
+
+=======
+Suggestion 4
+
+def myfunc(int1: int):
+    i = 1
+    while int1 != 1:
+        if int1 % 2 == 0:
+            int1 = int1 / 2
+        else:
+            int1 = (int1 * 3) + 1
+        i += 1
+    return i
+
+=======
+Suggestion 5
+
+def myfunc(int1: int):
+    count = 1
+    while int1 != 1:
+        if int1 % 2 == 0:
+            int1 = int1 / 2
+        else:
+            int1 = int1 * 3 + 1
+        count += 1
+    return count
+
+=======
+Suggestion 6
+
+def myfunc(int1: int):
+    count = 1
+    while int1 != 1:
+        if int1 % 2 == 0:
+            int1 = int1 / 2
+        else:
+            int1 = (int1 * 3) + 1
+        count += 1
+    return count
+
+=======
+Suggestion 7
+
+def myfunc(int1: int):
+    if int1 > 0:
+        count = 1
+        while int1 != 1:
+            if int1 % 2 == 0:
+                int1 = int1 / 2
+            else:
+                int1 = int1 * 3 + 1
+            count += 1
+        return count
+    else:
+        return "Invalid input"
+
+=======
+Suggestion 8
+
+def myfunc(int1: int):
+    count = 1
+    while int1 != 1:
+        if int1 % 2 == 0:
+            int1 = int1 // 2
+            count += 1
+        else:
+            int1 = int1 * 3 + 1
+            count += 1
+    return count
+
+=======
+Suggestion 9
+
+def myfunc(int1: int):
+    """
+    :param int1: integer
+    :return: number of terms in the Collatz (hailstone) sequence starting from that integer
+    """
+    count = 1
+    while int1 != 1:
+        if int1 % 2 == 0:
+            int1 = int1 // 2
+        else:
+            int1 = int1 * 3 + 1
+        count += 1
+    return count

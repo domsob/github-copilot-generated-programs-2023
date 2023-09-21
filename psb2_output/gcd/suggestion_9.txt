@@ -1,0 +1,113 @@
+Synthesizing 9/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, int2: int):
+    if int1 < int2:
+        smaller = int1
+    else:
+        smaller = int2
+    for i in range(1, smaller+1):
+        if (int1 % i == 0) and (int2 % i == 0):
+            gcd = i
+    return gcd
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, int2: int):
+    if int1 > int2:
+        for i in range(1, int2+1):
+            if int1 % i == 0 and int2 % i == 0:
+                return i
+    else:
+        for i in range(1, int1+1):
+            if int1 % i == 0 and int2 % i == 0:
+                return i
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, int2: int):
+    if int1 > int2:
+        smaller = int2
+    else:
+        smaller = int1
+    for i in range(1, smaller+1):
+        if((int1 % i == 0) and (int2 % i == 0)):
+            res = i
+    return res
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, int2: int):
+    for i in range(1, min(int1, int2)+1):
+        if int1 % i == 0 and int2 % i == 0:
+            gcd = i
+    return gcd
+
+=======
+Suggestion 5
+
+def myfunc(int1: int, int2: int):
+    if int1 > int2:
+        for i in range(int2, 0, -1):
+            if int2 % i == 0 and int1 % i == 0:
+                return i
+    else:
+        for i in range(int1, 0, -1):
+            if int2 % i == 0 and int1 % i == 0:
+                return i
+    return 1
+
+=======
+Suggestion 6
+
+def myfunc(int1: int, int2: int):
+    if int1 > int2:
+        for i in range(int2, 0, -1):
+            if int1 % i == 0 and int2 % i == 0:
+                return i
+    else:
+        for i in range(int1, 0, -1):
+            if int1 % i == 0 and int2 % i == 0:
+                return i
+
+=======
+Suggestion 7
+
+def myfunc(int1: int, int2: int):
+    if int1 > int2:
+        int1, int2 = int2, int1
+    for i in range(int1, 0, -1):
+        if int1 % i == 0 and int2 % i == 0:
+            return i
+    return 1
+
+=======
+Suggestion 8
+
+def myfunc(int1: int, int2: int):
+    if int1 > int2:
+        small = int2
+    else:
+        small = int1
+    for i in range(1, small+1):
+        if((int1 % i == 0) and (int2 % i == 0)):
+            gcd = i
+    return gcd
+
+=======
+Suggestion 9
+
+def myfunc(int1: int, int2: int):
+    if int1 > int2:
+        largerNum = int1
+    else:
+        largerNum = int2
+    for i in range(largerNum, 0, -1):
+        if int1 % i == 0 and int2 % i == 0:
+            return i
+    return 1

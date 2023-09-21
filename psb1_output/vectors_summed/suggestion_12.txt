@@ -1,0 +1,77 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(list1: list, list2: list):
+    result = []
+    for i in range(len(list1)):
+        result.append(list1[i] + list2[i])
+    return result
+
+=======
+Suggestion 2
+
+def myfunc(list1: list, list2: list):
+    if len(list1) != len(list2):
+        return None
+    else:
+        return [list1[i] + list2[i] for i in range(len(list1))]
+
+=======
+Suggestion 3
+
+def myfunc(list1: list, list2: list):
+    return [list1[i] + list2[i] for i in range(len(list1))]
+
+=======
+Suggestion 4
+
+def myfunc(list1: list, list2: list):
+    # list3 = []
+    # for i in range(len(list1)):
+    #     list3.append(list1[i] + list2[i])
+    # return list3
+    return [list1[i] + list2[i] for i in range(len(list1))]
+
+=======
+Suggestion 5
+
+def myfunc(list1: list, list2: list):
+    if len(list1) != len(list2):
+        raise ValueError("Lists must be equal length")
+    return [list1[i] + list2[i] for i in range(len(list1))]
+
+=======
+Suggestion 6
+
+def myfunc(list1: list, list2: list):
+    # Write your code here
+    return [a + b for a, b in zip(list1, list2)]
+
+=======
+Suggestion 7
+
+def myfunc(list1: list, list2: list):
+    if len(list1) != len(list2):
+        print("Error: lists are not the same length")
+        return
+    else:
+        # initialize empty list to hold results
+        results = []
+        # iterate through lists and sum corresponding values
+        for i in range(len(list1)):
+            results.append(list1[i] + list2[i])
+        return results
+
+=======
+Suggestion 8
+
+def myfunc(list1: list, list2: list):
+    return [sum(x) for x in zip(list1, list2)]
+
+=======
+Suggestion 9
+
+def myfunc(list1: list, list2: list):
+    return [x + y for x, y in zip(list1, list2)]

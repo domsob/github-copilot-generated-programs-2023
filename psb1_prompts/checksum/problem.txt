@@ -1,0 +1,6 @@
+# Given a string, convert each character in
+# the string into its integer ASCII value, sum them,
+# take the sum modulo 64, add the integer value of the
+# space character, and then convert that integer back
+# into its corresponding character (the checksum character). 
+def myfunc(str1: str):

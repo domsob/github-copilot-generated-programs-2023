@@ -1,0 +1,99 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(list1: list, int1: int):
+    for i in range(len(list1)):
+        for j in range(i+1, len(list1)):
+            if list1[i] + list1[j] == int1:
+                return list1[i], list1[j]
+
+=======
+Suggestion 2
+
+def myfunc(list1: list, int1: int):
+    for i in list1:
+        for j in list1:
+            if i + j == int1:
+                return [i, j]
+    return None
+
+=======
+Suggestion 3
+
+def myfunc(list1: list, int1: int):
+    for i in list1:
+        for j in list1:
+            if i + j == int1:
+                return [i, j]
+
+=======
+Suggestion 4
+
+def myfunc(list1: list, int1: int):
+    for i in range(len(list1)):
+        for j in range(len(list1)):
+            if list1[i] + list1[j] == int1:
+                return list1[i], list1[j]
+    return "No two elements sum to target integer"
+
+=======
+Suggestion 5
+
+def myfunc(list1: list, int1: int):
+    for i in range(len(list1)):
+        for j in range(i+1, len(list1)):
+            if list1[i] + list1[j] == int1:
+                return list1[i], list1[j]
+    return False
+
+=======
+Suggestion 6
+
+def myfunc(list1: list, int1: int):
+    for i in range(len(list1)):
+        for j in range(len(list1)):
+            if i == j:
+                continue
+            elif list1[i] + list1[j] == int1:
+                return [list1[i], list1[j]]
+    return []
+
+=======
+Suggestion 7
+
+def myfunc(list1: list, int1: int):
+    for i in range(len(list1)):
+        for j in range(i+1, len(list1)):
+            if list1[i] + list1[j] == int1:
+                return list1[i], list1[j]
+    return None
+
+=======
+Suggestion 8
+
+def myfunc(list1: list, int1: int):
+    # your code here
+    return (0, 0) # replace this with your result
+
+=======
+Suggestion 9
+
+def myfunc(list1: list, int1: int):
+    for i in range(0, len(list1)):
+        for j in range(i+1, len(list1)):
+            if list1[i] + list1[j] == int1:
+                return list1[i], list1[j]
+    return None
+
+=======
+Suggestion 10
+
+def myfunc(list1: list, int1: int):
+    # your code here
+    for i in list1:
+        for j in list1:
+            if i + j == int1:
+                return [i, j]
+    return None

@@ -1,0 +1,123 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    if int1 < 1:
+        return 0
+    else:
+        val1 = 2
+        val2 = 3
+        for i in range(1, int1):
+            val1 *= (2*i)
+            val2 *= (2*i+1)
+        return round(val1/val2, 5)
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    import math
+    pi = 2
+    for i in range(1, int1+1):
+        pi = pi * (4 * i**2) / (4 * i**2 - 1)
+    return round(pi, 5)
+
+=======
+Suggestion 3
+
+def myfunc(int1: int):
+    result = 1
+    for i in range(1, int1 + 1):
+        result *= (4 * i * i) / ((4 * i * i) - 1)
+    return round(result, 5)
+
+=======
+Suggestion 4
+
+def myfunc(int1: int):
+    # Write your code here
+    n = int1
+    pi = 1
+    for i in range(1,n+1):
+        pi *= (4*i*i)/(4*i*i-1)
+    return round(pi, 5)
+
+=======
+Suggestion 5
+
+def myfunc(int1: int):
+    a = 2
+    b = 3
+    c = 1
+    for i in range(1, int1):
+        c = c * (a/b)
+        if i % 2 == 0:
+            b += 2
+        else:
+            a += 2
+    return c
+
+=======
+Suggestion 6
+
+def myfunc(int1: int):
+    # your code here
+    return 0
+
+=======
+Suggestion 7
+
+def myfunc(int1: int):
+    result = 2/3
+    for i in range(1, int1):
+        result *= (4*i**2)/(4*i**2-1)
+    return round(result, 5)
+
+=======
+Suggestion 8
+
+def myfunc(int1: int):
+    # your code here
+    return 0.0
+
+=======
+Suggestion 9
+
+def myfunc(int1: int):
+    # print(int1)
+    # print(type(int1))
+    # print(int1+1)
+    # print(type(int1+1))
+    # print(int1/2)
+    # print(type(int1/2))
+    # print(int1/2+1)
+    # print(type(int1/2+1))
+    # print(int1/2+1/2)
+    # print(type(int1/2+1/2))
+    # print(int1/2+1/2+1)
+    # print(type(int1/2+1/2+1))
+    # print(int1/2+1/2+1/2)
+    # print(type(int1/2+1/2+1/2))
+    # print(int1/2+1/2+1/2+1)
+    # print(type(int1/2+1/2+1/2+1))
+    # print(int1/2+1/2+1/2+1/2)
+    # print(type(int1/2+1/2+1/2+1/2))
+    # print(int1/2+1/2+1/2+1/2+1)
+    # print(type(int1/2+1/2+1/2+1/2+1))
+    # print(int1/2+1/2+1/2+1/2+1/2)
+    # print(type(int1/2+1/2+1/2+1/2+1/2))
+    # print(int1/2+1/2+1/2+1/2+1/2+1)
+    # print(type(int1/2+1/2+1/2+1/2+1/2+1))
+    # print(int1/2+1/2+1/2+1/2+1/2+1/2)
+    # print(type(int1/2+1/2+1/2+1/2+1/2+1/2))
+    # print(int1/2+1/2+1/2+1/2+1/2+1/2+1)
+    # print(type(int1/2+1/2+1/2+1/2+1/2+1/2+1))
+
+=======
+Suggestion 10
+
+def myfunc(int1: int):
+    # Write your code here
+    return 0

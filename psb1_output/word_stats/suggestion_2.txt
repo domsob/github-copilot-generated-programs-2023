@@ -1,0 +1,97 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):)-> list:
+    str1 = str1.replace(".", " ")
+    str1 = str1.replace("!", " ")
+    str1 = str1.replace("?", " ")
+    str1 = str1.replace(",", " ")
+    str1 = str1.replace(";", " ")
+    str1 = str1.replace(":", " ")
+    str1 = str1.replace("(", " ")
+    str1 = str1.replace(")", " ")
+    str1 = str1.replace("[", " ")
+    str1 = str1.replace("]", " ")
+    str1 = str1.replace("{", " ")
+    str1 =
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):)->list:
+    # your code here
+    pass
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):)-> list:
+    # Write your code here
+    pass
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):)-> list:
+    pass
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):) -> list:
+    # your code here
+    return []
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):)-> list:
+    # your code here
+    return
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):)-> list:
+    str1 = str1.split()
+    str1 = sorted(str1, key = len, reverse = True)
+    len1 = len(str1[0])
+    len2 = len(str1)
+    len3 = len(str1)
+    len4 = 0
+    for i in range(len3):
+        if str1[i][-1] == '.' or str1[i][-1] == '!' or str1[i][-1] == '?':
+            len4 += 1
+    len5 = len4 / len3
+    out = [0] * len1
+    for i in range(len2):
+        out[len(str1[i])-1] += 1
+    out.append(len4)
+    out.append(len5)
+    return out
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):)->list:
+    str1 = str1.replace('?', '.').replace('!', '.')
+    lst = str1.split('.')
+    lst = [x for x in lst if x != '']
+    lst2 = []
+    for x in lst:
+        lst2.append(len(x.split()))
+    return lst2 + [len(lst), sum(lst2)/len(lst2)]
+
+=======
+Suggestion 9
+
+def myfunc(str1: str):)->list:
+    """
+    >>> myfunc("Hello, how are you?")
+    [3, 1, 1, 1, 0, 0]
+    >>> myfunc("This is a test.  How many words are here?  Now I am curious!")
+    [5, 2, 1, 0, 0, 0, 0, 0, 0, 0, 3]
+    """
+    # your code here

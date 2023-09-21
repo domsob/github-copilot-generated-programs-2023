@@ -1,0 +1,126 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, int2: int, int3: int):
+    if int1 > int2:
+        if int2 > int3:
+            return int2
+        if int1 > int3:
+            return int3
+        return int1
+    else:
+        if int1 > int3:
+            return int1
+        if int2 > int3:
+            return int3
+        return int2
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, int2: int, int3: int):
+    # Create a list of the 3 integers
+    list1 = [int1, int2, int3]
+    # Sort the list
+    list1.sort()
+    # Return the median
+    return list1[1]
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, int2: int, int3: int):
+    if (int1 > int2 and int1 < int3) or (int1 < int2 and int1 > int3):
+        return int1
+    elif (int2 > int1 and int2 < int3) or (int2 < int1 and int2 > int3):
+        return int2
+    else:
+        return int3
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, int2: int, int3: int):
+    if int1 < int2 < int3 or int3 < int2 < int1:
+        return int2
+    elif int2 < int1 < int3 or int3 < int1 < int2:
+        return int1
+    elif int1 < int3 < int2 or int2 < int3 < int1:
+        return int3
+    else:
+        return int1
+
+=======
+Suggestion 5
+
+def myfunc(int1: int, int2: int, int3: int):
+    # Sort the numbers.
+    list = [int1, int2, int3]
+    list.sort()
+    # Return the middle number.
+    return list[1]
+
+=======
+Suggestion 6
+
+def myfunc(int1: int, int2: int, int3: int):
+    # Sort the integers in ascending order
+    int_list = [int1, int2, int3]
+    int_list.sort()
+    # Print the median
+    print(int_list[1])
+
+=======
+Suggestion 7
+
+def myfunc(int1: int, int2: int, int3: int):
+    # Sort the ints
+    ints = [int1, int2, int3]
+    ints.sort()
+    # Return the middle int
+    return ints[1]
+
+=======
+Suggestion 8
+
+def myfunc(int1: int, int2: int, int3: int):
+    # If int1 is the median, then int2 and int3 must be on either side of int1.
+    if int1 <= int2 <= int3 or int3 <= int2 <= int1:
+        return int2
+    # If int2 is the median, then int1 and int3 must be on either side of int2.
+    elif int2 <= int1 <= int3 or int3 <= int1 <= int2:
+        return int1
+    # If int3 is the median, then int1 and int2 must be on either side of int3.
+    else:
+        return int3
+
+=======
+Suggestion 9
+
+def myfunc(int1: int, int2: int, int3: int):
+    # Sort the list
+    list1 = [int1, int2, int3]
+    list1.sort()
+    # Return the median
+    return list1[1]
+
+=======
+Suggestion 10
+
+def myfunc(int1: int, int2: int, int3: int):
+    if int1 > int2:
+        if int1 < int3:
+            return int1
+        elif int2 > int3:
+            return int2
+        else:
+            return int3
+    else:
+        if int1 > int3:
+            return int1
+        elif int2 < int3:
+            return int2
+        else:
+            return int3

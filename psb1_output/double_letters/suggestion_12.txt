@@ -1,0 +1,100 @@
+Synthesizing 9/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    str2 = ""
+    for i in str1:
+        if i.isalpha():
+            str2 = str2 + i * 2
+        elif i == "!":
+            str2 = str2 + i * 3
+        else:
+            str2 = str2 + i
+    return str2
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    new_str = ''
+    for i in str1:
+        if i.isalpha():
+            new_str += i * 2
+        elif i == '!':
+            new_str += i * 3
+        else:
+            new_str += i
+    return new_str
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    output = ""
+    for i in str1:
+        if i.isalpha():
+            output += i*2
+        elif i == "!":
+            output += i*3
+        else:
+            output += i
+    return output
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    str2 = ""
+    for i in str1:
+        if i.isalpha():
+            str2 += i*2
+        elif i == "!":
+            str2 += i*3
+        else:
+            str2 += i
+    return str2
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    new_str = ""
+    for i in str1:
+        if i.isalpha():
+            new_str += i * 2
+        elif i == "!":
+            new_str += i * 3
+        else:
+            new_str += i
+    return new_str
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    result = ''
+    for char in str1:
+        if char.isalpha():
+            result += char * 2
+        elif char == '!':
+            result += char * 3
+        else:
+            result += char
+    return result
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    str2 = ""
+    for i in str1:
+        if i.isalpha() or i == "!":
+            if i.isalpha():
+                str2 += i*2
+            else:
+                str2 += i*3
+        else:
+            str2 += i
+    return str2

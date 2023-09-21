@@ -1,0 +1,41 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(list1: list):
+    sum = 0
+    for i in list1:
+        sum += i
+    return round(sum/len(list1), 4)
+
+=======
+Suggestion 2
+
+def myfunc(list1: list):
+    return round(sum(list1)/len(list1),4)
+
+=======
+Suggestion 3
+
+def myfunc(list1: list):
+    return round(sum(list1) / len(list1), 4) if len(list1) != 0 else 0.0
+
+=======
+Suggestion 4
+
+def myfunc(list1: list):
+    if len(list1) == 0:
+        return 0.0
+    else:
+        sum = 0.0
+        for i in range(len(list1)):
+            sum += list1[i]
+        return round(sum / len(list1), 4)
+
+=======
+Suggestion 5
+
+def myfunc(list1: list):
+    # Your code here
+    return round(sum(list1)/len(list1), 4)

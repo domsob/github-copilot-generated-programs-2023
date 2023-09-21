@@ -1,0 +1,139 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(list1: list):
+    list2 = []
+    for i in range(len(list1)):
+        if i == len(list1) - 1:
+            list2.append(list1[i])
+            break
+        if list1[i] >= max(list1[i+1:]):
+            list2.append(list1[i])
+    return list2
+
+=======
+Suggestion 2
+
+def myfunc(list1: list):
+    list2 = []
+    for i in range(len(list1)):
+        if i == len(list1) - 1:
+            list2.append(list1[i])
+        elif list1[i] >= max(list1[i+1:]):
+            list2.append(list1[i])
+    return list2
+
+=======
+Suggestion 3
+
+def myfunc(list1: list):
+    result = []
+    for i in range(len(list1)):
+        if i == len(list1) - 1:
+            result.append(list1[i])
+            break
+        if list1[i] >= max(list1[i+1:]):
+            result.append(list1[i])
+    return result
+
+=======
+Suggestion 4
+
+def myfunc(list1: list):
+    """
+    >>> myfunc([1, 2, 3, 4, 5])
+    [5]
+    >>> myfunc([1, 2, 3, 4, 5, 5])
+    [5, 5]
+    >>> myfunc([1, 2, 3, 4, 5, 5, 4])
+    [5, 5, 4]
+    >>> myfunc([1, 2, 3, 4, 5, 5, 4, 3])
+    [5, 5, 4, 3]
+    >>> myfunc([1, 2, 3, 4, 5, 5, 4, 3, 2])
+    [5, 5, 4, 3, 2]
+    >>> myfunc([1, 2, 3, 4, 5, 5, 4, 3, 2, 1])
+    [5, 5, 4, 3, 2, 1]
+    >>> myfunc([1, 2, 3, 4, 5, 5, 4, 3, 2, 1, 0])
+    [5, 5, 4, 3, 2, 1, 0]
+    >>> myfunc([1, 2, 3, 4, 5, 5, 4, 3, 2, 1, 0, 1])
+    [5, 5, 4, 3, 2, 1, 1]
+    >>> myfunc([1, 2, 3, 4, 5, 5, 4, 3, 2, 1, 0, 1, 2])
+    [5, 5, 4, 3, 2, 2]
+    >>> myfunc([1, 2, 3, 4, 5, 5, 4, 3, 2, 1, 0, 1, 2, 3])
+    [5, 5, 4, 3, 3]
+    >>> myfunc([1, 2, 3, 4, 5, 5, 4
+
+=======
+Suggestion 5
+
+def myfunc(list1: list):
+    list2 = []
+    list2.append(list1[-1])
+    for i in range(2, len(list1) + 1):
+        if list1[-i] >= list2[-1]:
+            list2.append(list1[-i])
+    return list2[::-1]
+
+=======
+Suggestion 6
+
+def myfunc(list1: list):
+    if len(list1) == 0:
+        return []
+    elif len(list1) == 1:
+        return list1
+    else:
+        max_value = list1[-1]
+        leaders = [max_value]
+        for i in range(len(list1) - 2, -1, -1):
+            if list1[i] >= max_value:
+                max_value = list1[i]
+                leaders.append(max_value)
+        return leaders[::-1]
+
+=======
+Suggestion 7
+
+def myfunc(list1: list):
+    list2 = []
+    for i in range(len(list1)):
+        if i == len(list1)-1:
+            list2.append(list1[i])
+        else:
+            if list1[i] >= max(list1[i+1:]):
+                list2.append(list1[i])
+    return list2
+
+=======
+Suggestion 8
+
+def myfunc(list1: list):
+    if len(list1) == 0:
+        return []
+    if len(list1) == 1:
+        return list1
+    if len(list1) == 2:
+        if list1[0] > list1[1]:
+            return list1[0]
+        else:
+            return list1[1]
+    list2 = []
+    for i in range(0, len(list1)):
+        if i == len(list1) - 1:
+            list2.append(list1[i])
+            return list2
+        if list1[i] > max(list1[i+1:]):
+            list2.append(list1[i])
+    return list2
+
+=======
+Suggestion 9
+
+def myfunc(list1: list):
+    list2 = []
+    for i in range(len(list1)):
+        if list1[i] >= max(list1[i:]):
+            list2.append(list1[i])
+    return list2

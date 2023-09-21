@@ -1,0 +1,109 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    # Write your code here
+    # To print results to the standard output you can use print()
+    # Example: print("Hello world!")
+    return 0
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    numerator = 2
+    denominator = 3
+    result = 1
+    for i in range(int1):
+        result *= numerator / denominator
+        numerator += 2
+        denominator += 2
+    return round(result, 5)
+
+=======
+Suggestion 3
+
+def myfunc(int1: int):
+    if int1 < 1:
+        return 0
+    else:
+        x = 2
+        y = 3
+        for i in range(int1-1):
+            x = x * y
+            y = y + 2
+        return x
+
+=======
+Suggestion 4
+
+def myfunc(int1: int):
+    # your code here
+    return float1
+
+=======
+Suggestion 5
+
+def myfunc(int1: int):
+    # write code here
+    # return answer, rounded to 5 decimal places
+    return 0
+
+=======
+Suggestion 6
+
+def myfunc(int1: int):
+    # Initialize variables
+    numerator = 2
+    denominator = 3
+    result = 1
+
+    # Loop for n terms
+    for i in range(int1):
+        result = result * numerator / denominator
+        numerator += 2
+        denominator += 2
+
+    # Return result
+    return round(result, 5)
+
+=======
+Suggestion 7
+
+def myfunc(int1: int):
+    if int1 <= 0:
+        return 0
+    else:
+        result = 2/3
+        for i in range(1, int1):
+            result *= (4*i*i)/(4*i*i-1)
+        return round(result, 5)
+
+=======
+Suggestion 8
+
+def myfunc(int1: int):
+    prod = 1
+    for i in range(int1):
+        prod *= (2*i+2)/(2*i+3)
+    return round(prod, 5)
+
+=======
+Suggestion 9
+
+def myfunc(int1: int):
+    product = 1
+    for i in range(1, int1 + 1):
+        product *= (2 * i) / (2 * i - 1) * (2 * i) / (2 * i + 1)
+    return round(product, 5)
+
+=======
+Suggestion 10
+
+def myfunc(int1: int):
+    result = 1
+    for i in range(1, int1+1):
+        result *= (4*i**2)/(4*i**2-1)
+    return round(result, 5)

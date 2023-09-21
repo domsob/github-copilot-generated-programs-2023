@@ -1,0 +1,83 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(list1: list):
+    list2 = []
+    for i in list1:
+        list2.append(len(i))
+    return list2
+
+=======
+Suggestion 2
+
+def myfunc(list1: list):
+    list2 = []
+    for i in list1:
+        list2.append(len(i))
+    return list2[::-1]
+
+=======
+Suggestion 3
+
+def myfunc(list1: list):
+    return [len(x) for x in list1[::-1]]
+
+=======
+Suggestion 4
+
+def myfunc(list1: list):
+    list2 = []
+    for i in range(len(list1)):
+        list2.append(len(list1[i]))
+    return list2
+
+=======
+Suggestion 5
+
+def myfunc(list1: list):
+    list2 = []
+    for i in range(len(list1)):
+        list2.append(len(list1[-i - 1]))
+    return list2
+
+=======
+Suggestion 6
+
+def myfunc(list1: list):
+    list2 = []
+    for i in range(len(list1)):
+        list2.append(len(list1[i]))
+    return list2[::-1]
+
+=======
+Suggestion 7
+
+def myfunc(list1: list):
+    list2 = []
+    for i in range(0, len(list1)):
+        list2.append(len(list1[len(list1)-i-1]))
+    return list2
+
+=======
+Suggestion 8
+
+def myfunc(list1: list):
+    list2 = []
+    for i in range(len(list1) - 1, -1, -1):
+        list2.append(len(list1[i]))
+    return list2
+
+=======
+Suggestion 9
+
+def myfunc(list1: list):
+    # create an empty list to store the lengths of the strings
+    list2 = []
+    # loop through the list
+    for item in list1:
+        # append the length of each string to the empty list
+        list2.append(len(item))
+    # return the list of lengths
+    return list2

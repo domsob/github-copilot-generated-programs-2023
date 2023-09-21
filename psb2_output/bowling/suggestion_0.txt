@@ -1,0 +1,192 @@
+Synthesizing 9/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    # Your code here
+    pass
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    # Write your code here
+    pass
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    # Your code here
+    return 0
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    # Solution 1
+    # score = 0
+    # for i in range(0, len(str1)):
+    #     if str1[i] == 'X':
+    #         score += 10
+    #     elif str1[i] == '/':
+    #         score += 10 - int(str1[i - 1])
+    #     else:
+    #         score += int(str1[i])
+    # return score
+
+    # Solution 2
+    # score = 0
+    # for i in range(0, len(str1)):
+    #     if str1[i] == 'X':
+    #         score += 10
+    #     elif str1[i] == '/':
+    #         score += 10 - int(str1[i - 1])
+    #     elif str1[i] != '-':
+    #         score += int(str1[i])
+    # return score
+
+    # Solution 3
+    # score = 0
+    # for i in range(0, len(str1)):
+    #     if str1[i] == 'X':
+    #         score += 10
+    #     elif str1[i] == '/':
+    #         score += 10 - int(str1[i - 1])
+    #     elif str1[i] != '-' and str1[i] != '/':
+    #         score += int(str1[i])
+    # return score
+
+    # Solution 4
+    # score = 0
+    # for i in range(0, len(str1)):
+    #     if str1[i] == 'X':
+    #         score += 10
+    #     elif str1[i] == '/':
+    #         score += 10 - int(str1[i - 1])
+    #     elif str1[i] != '-' and str1[i] != '/' and str1[i] != 'X':
+    #         score += int(str1[i])
+    # return score
+
+    # Solution 5
+
+    score = 0
+    for i in range(0, len(str1)):
+        if str1[i] == 'X':
+            score += 10
+        elif str1[i] == '/':
+            score += 10 - int(str1[i - 1])
+        elif str1[i] != '-' and str1[i] != '/' and str1[i] != 'X':
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    score = 0
+    for i in range(len(str1)):
+        if str1[i] == 'X':
+            if i < 8:
+                if str1[i+2] == '/':
+                    score += 20
+                else:
+                    score += 10 + int(str1[i+1]) + int(str1[i+2])
+            elif i == 8:
+                score += 10 + int(str1[i+1]) + int(str1[i+2])
+            elif i == 9:
+                if str1[i-1] == '/':
+                    score += 10 + int(str1[i+1])
+                else:
+                    score += 10 + int(str1[i+1]) + int(str1[i+2])
+        elif str1[i] == '/':
+            if i < 8:
+                score += 10 + int(str1[i+1])
+            elif i == 8:
+                score += 10 + int(str1[i+1])
+            elif i == 9:
+                score += 10 + int(str1[i-1])
+        else:
+            score += int(str1[i])
+    return score
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    score = 0
+    for i in range(0, len(str1)):
+        if str1[i] == 'X':
+            score += 10
+        elif str1[i] == '/':
+            score += 10 - int(str1[i - 1])
+        else:
+            score += int(str1[i])
+    return score
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    score = 0
+    i = 0
+    while i < len(str1):
+        if str1[i] == 'X':
+            score += 10
+            if i + 2 < len(str1):
+                if str1[i + 2] == 'X':
+                    score += 10
+                else:
+                    score += int(str1[i + 2])
+            if i + 3 < len(str1):
+                if str1[i + 3] == 'X':
+                    score += 10
+                else:
+                    score += int(str1[i + 3])
+            i += 1
+
+        elif str1[i] == '/':
+            score += 10 - int(str1[i - 1])
+            if i + 1 < len(str1):
+                if str1[i + 1] == 'X':
+                    score += 10
+                else:
+                    score += int(str1[i + 1])
+            i += 1
+
+        else:
+            score += int(str1[i])
+        i += 1
+    return score
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    # Define the dictionary of scores for each bowl.
+    bowl_scores = {'X': 10, '/': 10, '-': 0}
+    for i in range(0, 10):
+        # If the bowl is a strike, add 10 to the score and the next two bowls.
+        if str1[i] == 'X':
+            # If the strike is in the 10th frame, add the next two bowls.
+            if i == 9:
+                return 10 + bowl_scores[str1[i+1]] + bowl_scores[str1[i+2]]
+            # Else add the next two bowls.
+            else:
+                if str1[i+2] == '/':
+                    return 10 + bowl_scores[str1[i+2]] + bowl_scores[str1[i+3]]
+                else:
+                    return 10 + bowl_scores[str1[i+1]] + bowl_scores[str1[i+2]]
+        # If the bowl is a spare, add 10 to the score and the next bowl.
+        elif str1[i] == '/':
+            # If the spare is in the 10th frame, add the next bowl.
+            if i == 9:
+                return 10 + bowl_scores[str1[i+1]]
+            # Else add the next bowl.
+            else:
+                return 10 + bowl_scores[str1[i+2]]
+        # If the bowl is a miss, add 0 to the score.
+        elif str1[i] == '-':
+            continue
+        # Else, add the bowl's score to the total.
+        else:
+            return bowl_scores[str1[i]]

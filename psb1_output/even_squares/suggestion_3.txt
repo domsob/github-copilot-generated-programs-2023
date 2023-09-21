@@ -1,0 +1,46 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    return [i**2 for i in range(1, int1) if i**2 % 2 == 0]
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    # your code here
+    return [i**2 for i in range(1,int1) if i**2%2==0]
+
+=======
+Suggestion 3
+
+def myfunc(int1: int):
+    return [x**2 for x in range(1, int1) if x**2 % 2 == 0]
+
+=======
+Suggestion 4
+
+def myfunc(int1: int):
+    int2 = 1
+    while int2 < int1:
+        if int2 % 2 == 0:
+            print(int2)
+        int2 += 1
+    return int2
+
+=======
+Suggestion 5
+
+def myfunc(int1: int):
+    # Create empty list
+    sq_list = []
+    # Iterate through range of int1
+    for i in range(int1):
+        # Check if i is even and a perfect square
+        if i % 2 == 0 and i ** 0.5 % 1 == 0:
+            # Append i to sq_list
+            sq_list.append(i)
+    # Return sq_list
+    return sq_list

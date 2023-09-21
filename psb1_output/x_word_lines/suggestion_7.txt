@@ -1,0 +1,173 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, str1: str):
+    words = str1.split()
+    lines = []
+    line = []
+    for word in words:
+        line.append(word)
+        if len(line) == int1:
+            lines.append(' '.join(line))
+            line = []
+    if line:
+        lines.append(' '.join(line))
+    return '\n'.join(lines)
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, str1: str):
+    words = str1.split()
+    lines = []
+    current_line = []
+    current_line_length = 0
+
+    for word in words:
+        if current_line_length + len(word) + 1 <= int1:
+            current_line.append(word)
+            current_line_length += len(word) + 1
+        else:
+            lines.append(current_line)
+            current_line = [word]
+            current_line_length = len(word)
+
+    if current_line:
+        lines.append(current_line)
+
+    return '\n'.join(' '.join(line) for line in lines)
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, str1: str):
+    temp = str1.split()
+    temp2 = []
+    temp3 = []
+    temp4 = []
+    temp5 = []
+    temp6 = []
+    for i in range(len(temp)):
+        if i % int1 == 0:
+            temp2.append(temp[i])
+        elif i % int1 == 1:
+            temp3.append(temp[i])
+        elif i % int1 == 2:
+            temp4.append(temp[i])
+        elif i % int1 == 3:
+            temp5.append(temp[i])
+        elif i % int1 == 4:
+            temp6.append(temp[i])
+    print(temp2)
+    print(temp3)
+    print(temp4)
+    print(temp5)
+    print(temp6)
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, str1: str):
+    str2 = str1.split()
+    str3 = []
+    str4 = []
+    for i in range(len(str2)):
+        if len(str2[i]) > int1:
+            return "ERROR"
+        elif len(str2[i]) == int1:
+            str3.append(str2[i])
+        elif len(str2[i]) < int1:
+            str3.append(str2[i])
+            if len(str3) == int1:
+                str4.append(" ".join(str3))
+                str3 = []
+    if len(str3) > 0:
+        str4.append(" ".join(str3))
+    return "\n".join(str4)
+
+=======
+Suggestion 5
+
+def myfunc(int1: int, str1: str):
+    str1 = str1.replace("\n", " ")
+    str1 = str1.replace("\t", " ")
+    str1 = str1.replace("  ", " ")
+    str1 = str1.strip()
+    list1 = str1.split(" ")
+    list2 = []
+    for i in range(0, len(list1), int1):
+        list2.append(" ".join(list1[i:i + int1]))
+    return "\n".join(list2)
+
+=======
+Suggestion 6
+
+def myfunc(int1: int, str1: str):
+    # split the string into a list of words
+    words = str1.split()
+    # initialize a new string
+    newstr = ""
+    # initialize a counter
+    counter = 0
+    # loop through the list of words
+    for word in words:
+        # if the counter is less than the integer
+        if counter < int1:
+            # add the word to the new string
+            newstr += word + " "
+            # increment the counter
+            counter += 1
+        # if the counter is equal to the integer
+        elif counter == int1:
+            # add a new line and the word to the new string
+            newstr += "\n" + word + " "
+            # reset the counter
+            counter = 1
+    # return the new string
+    return newstr
+
+=======
+Suggestion 7
+
+def myfunc(int1: int, str1: str):
+    str1 = str1.split()
+    str2 = ""
+    for i in range(len(str1)):
+        if i % int1 == 0 and i != 0:
+            str2 += "\n"
+        str2 += str1[i] + " "
+    return str2
+
+=======
+Suggestion 8
+
+def myfunc(int1: int, str1: str):
+    # Write your code here
+    # To print results to the standard output you can use print()
+    # Example print("Hello world!")
+    return
+
+=======
+Suggestion 9
+
+def myfunc(int1: int, str1: str):
+    # Split the string into a list of words
+    words = str1.split()
+    # Create a list of lines, with each line containing at most int1 words
+    lines = []
+    for i in range(0, len(words), int1):
+        lines.append(' '.join(words[i:i+int1]))
+    # Join the list of lines into a string, with each line separated by a newline
+    return '\n'.join(lines)
+
+=======
+Suggestion 10
+
+def myfunc(int1: int, str1: str):
+    str1 = str1.split()
+    list1 = []
+    for i in range(0, len(str1), int1):
+        list1.append(str1[i:i+int1])
+    return "\n".join([" ".join(i) for i in list1])

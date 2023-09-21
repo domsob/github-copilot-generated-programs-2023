@@ -1,0 +1,122 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    # Your code here
+    return (0, 0, 0, 0)
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    # Your code here
+    return 0, 0, 0, 0
+
+=======
+Suggestion 3
+
+def myfunc(int1: int):
+    # initialize variables
+    pennies = 0
+    nickels = 0
+    dimes = 0
+    quarters = 0
+    # find the number of quarters
+    quarters = int1 // 25
+    # find the remainder
+    remainder = int1 % 25
+    # find the number of dimes
+    dimes = remainder // 10
+    # find the remainder
+    remainder = remainder % 10
+    # find the number of nickels
+    nickels = remainder // 5
+    # find the remainder
+    remainder = remainder % 5
+    # find the number of pennies
+    pennies = remainder // 1
+    # return the output
+    return pennies, nickels, dimes, quarters
+
+=======
+Suggestion 4
+
+def myfunc(int1: int):
+    # Write code here
+    # return the output
+    return None
+
+=======
+Suggestion 5
+
+def myfunc(int1: int):
+    # Initialize the output list
+    output = []
+    # Initialize the coin value list
+    coin_value = [25, 10, 5, 1]
+    # Loop through each coin value
+    for i in coin_value:
+        # Append the number of coins needed to the output list
+        output.append(int1 // i)
+        # Update the number of cents left
+        int1 = int1 % i
+    # Return the output list
+    return output
+
+=======
+Suggestion 6
+
+def myfunc(int1: int):
+    # Write your code here
+    coin = [1,5,10,25]
+    coin.reverse()
+    res = [0,0,0,0]
+    for i in range(4):
+        res[i] = int1//coin[i]
+        int1 = int1%coin[i]
+    return res
+
+=======
+Suggestion 7
+
+def myfunc(int1: int):
+    coins = [25, 10, 5, 1]
+    result = [0, 0, 0, 0]
+    for i in range(4):
+        result[i] = int1 // coins[i]
+        int1 = int1 % coins[i]
+    return result
+
+=======
+Suggestion 8
+
+def myfunc(int1: int):
+    if int1 < 0:
+        return 'Please enter a positive integer'
+    if int1 == 0:
+        return 'No coins needed'
+    if int1 % 5 == 0:
+        return f'{int1 // 5} nickels'
+    else:
+        return f'{int1 // 5} nickels, {int1 % 5} pennies'
+
+=======
+Suggestion 9
+
+def myfunc(int1: int):
+    """Returns the fewest needed number of US coins 
+    (pennies, nickels, dimes, and quarters) to make that amount,
+    and return the number of each type of count as a separate output.
+    """
+    # Your code here
+    return None
+
+=======
+Suggestion 10
+
+def myfunc(int1: int):
+    # Your code here
+    # You can create helper functions if you need to
+    return 0

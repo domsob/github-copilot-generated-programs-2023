@@ -1,0 +1,139 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, int2: int):
+    if int1 == int2:
+        return int1
+    elif int1 > int2:
+        int1, int2 = int2, int1
+    for i in range(1, int1+1)
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, int2: int):
+    """
+    Given two integers, return the largest integer 
+    that divides each of the intergers evenly.
+    """
+    # Get the smallest integer
+    if int1 < int2:
+        smallest = int1
+    else:
+        smallest = int2
+    
+    # Find the largest integer
+    for i in range(1, smallest+1):
+        if int1 % i == 0 and int2 % i == 0:
+            largest = i
+    return largest
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, int2: int):
+    if int1 > int2:
+        smaller = int2
+    else:
+        smaller = int1
+    for i in range(1, smaller+1):
+        if((int1 % i == 0) and (int2 % i == 0)):
+            gcd = i
+    return gcd
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, int2: int):
+    if int1 > int2:
+        max = int1
+    else:
+        max = int2
+    for i in range(1, max+1):
+        if int1 % i == 0 and int2 % i == 0:
+            result = i
+    return result
+
+=======
+Suggestion 5
+
+def myfunc(int1: int, int2: int):
+    if int1 > int2:
+        for i in range(int2, 0, -1):
+            if int1 % i == 0 and int2 % i == 0:
+                return i
+    else:
+        for i in range(int1, 0, -1):
+            if int1 % i == 0 and int2 % i == 0:
+                return i
+
+=======
+Suggestion 6
+
+def myfunc(int1: int, int2: int):
+    if (int1 > int2):
+        smaller = int2
+    else:
+        smaller = int1
+    for i in range(1, smaller+1):
+        if((int1 % i == 0) and (int2 % i == 0)):
+            gcd = i
+    return gcd
+
+=======
+Suggestion 7
+
+def myfunc(int1: int, int2: int):
+    # Find the smaller integer
+    if int1 < int2:
+        smaller = int1
+    else:
+        smaller = int2
+    
+    # Find the largest divisor
+    for i in range(1, smaller+1):
+        if int1 % i == 0 and int2 % i == 0:
+            largest_divisor = i
+    
+    return largest_divisor
+
+=======
+Suggestion 8
+
+def myfunc(int1: int, int2: int):
+    if int1 > int2:
+        return int1
+    else:
+        return int2
+
+=======
+Suggestion 9
+
+def myfunc(int1: int, int2: int):
+    if int1 > int2:
+        larger = int1
+    else:
+        larger = int2
+    for i in range(1, larger):
+        if int1 % i == 0 and int2 % i == 0:
+            return i
+    return 1
+
+=======
+Suggestion 10
+
+def myfunc(int1: int, int2: int):
+    # find the smaller of the two integers
+    # then loop through the range of that integer
+    # if the integer divides evenly into the two
+    # given integers, return the integer
+    if int1 > int2:
+        small = int2
+    else:
+        small = int1
+    for i in range(1, small+1):
+        if int1 % i == 0 and int2 % i == 0:
+            result = i
+    return result

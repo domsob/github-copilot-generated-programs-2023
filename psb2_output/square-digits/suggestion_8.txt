@@ -1,0 +1,126 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    # Convert int to string
+    str1 = str(int1)
+
+    # Split string into list of strings
+    list1 = list(str1)
+
+    # Create empty list to hold squared integers
+    list2 = []
+
+    # Loop through list1 and square each integer
+    for i in list1:
+        list2.append(int(i)**2)
+
+    # Convert list2 to string
+    str2 = ''.join(str(e) for e in list2)
+
+    # Convert str2 to int
+    int2 = int(str2)
+
+    # Return int2
+    return int2
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    output = ""
+    for i in str(int1):
+        output += str(int(i) * int(i))
+    return int(output)
+
+=======
+Suggestion 3
+
+def myfunc(int1: int):
+    int1 = str(int1)
+    int1 = list(int1)
+    int2 = []
+    for i in int1:
+        int2.append(int(i) ** 2)
+    int2 = list(map(str, int2))
+    int2 = ''.join(int2)
+    return int2
+
+=======
+Suggestion 4
+
+def myfunc(int1: int):
+    str1 = ""
+    for i in str(int1):
+        str1 += str(int(i) ** 2)
+    return str1
+
+=======
+Suggestion 5
+
+def myfunc(int1: int):
+    # Create empty string to store the result
+    result = ""
+    # Convert the int to a string to iterate through it
+    int1 = str(int1)
+    # Iterate through the string
+    for i in int1:
+        # Square each digit and add it to the result string
+        result += str(int(i) ** 2)
+    # Return the result
+    return result
+
+=======
+Suggestion 6
+
+def myfunc(int1: int):
+    str1 = str(int1)
+    str2 = ""
+    for i in str1:
+        str2 += str(int(i)**2)
+    return str2
+
+=======
+Suggestion 7
+
+def myfunc(int1: int):
+    # Convert int1 to a string
+    str1 = str(int1)
+    # Initialize an empty string
+    str2 = ""
+    # Iterate through each character in str1
+    for char in str1:
+        # Square the integer value of the character and convert it to a string
+        str2 += str(int(char) ** 2)
+    # Return str2
+    return str2
+
+=======
+Suggestion 8
+
+def myfunc(int1: int):
+    str1 = str(int1)
+    str2 = ""
+    for i in range(0, len(str1)):
+        str2 += str(int(str1[i]) ** 2)
+    return str2
+
+=======
+Suggestion 9
+
+def myfunc(int1: int):
+    return int(''.join([str(int(x) ** 2) for x in str(int1)]))
+
+=======
+Suggestion 10
+
+def myfunc(int1: int):
+    int1 = str(int1)
+    int1 = list(int1)
+    int1 = [int(i) for i in int1]
+    int1 = [i**2 for i in int1]
+    int1 = [str(i) for i in int1]
+    int1 = ''.join(int1)
+    return int1

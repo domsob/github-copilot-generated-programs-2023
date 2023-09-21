@@ -1,0 +1,40 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, int2: int, int3: int, int4: int):
+    return min(int1, int2, int3, int4)
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, int2: int, int3: int, int4: int):
+    # Your code goes here
+    return min(int1, int2, int3, int4)
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, int2: int, int3: int, int4: int):
+    smallest = int1
+    if smallest > int2:
+        smallest = int2
+    if smallest > int3:
+        smallest = int3
+    if smallest > int4:
+        smallest = int4
+    return smallest
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, int2: int, int3: int, int4: int):
+    smallest = int1
+    if int2 < smallest:
+        smallest = int2
+    if int3 < smallest:
+        smallest = int3
+    if int4 < smallest:
+        smallest = int4
+    return smallest

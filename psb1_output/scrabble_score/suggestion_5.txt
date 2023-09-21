@@ -1,0 +1,148 @@
+Synthesizing 9/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    # Create a dictionary of letters and their corresponding values
+    letter_values = {"a": 1, "b": 3, "c": 3, "d": 2, "e": 1, "f": 4, "g": 2, 
+                     "h": 4, "i": 1, "j": 8, "k": 5, "l": 1, "m": 3, "n": 1, 
+                     "o": 1, "p": 3, "q": 10, "r": 1, "s": 1, "t": 1, "u": 1, 
+                     "v": 4, "w": 4, "x": 8, "y": 4, "z": 10}
+    # Create a variable to hold the score
+    score = 0
+    # Iterate through the string
+    for i in str1:
+        # If the character is in the dictionary, add it's value to the score
+        if i in letter_values:
+            score += letter_values[i]
+    return score
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    score = 0
+    for i in str1:
+        if i in 'aeioulnrst':
+            score += 1
+        elif i in 'dg':
+            score += 2
+        elif i in 'bcmp':
+            score += 3
+        elif i in 'fhvwy':
+            score += 4
+        elif i in 'k':
+            score += 5
+        elif i in 'jx':
+            score += 8
+        elif i in 'qz':
+            score += 10
+    return score
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    score=0
+    for char in str1:
+        if char in "aeioulnstr":
+            score=score+1
+        elif char in "dg":
+            score=score+2
+        elif char in "bcmp":
+            score=score+3
+        elif char in "fhvwy":
+            score=score+4
+        elif char in "k":
+            score=score+5
+        elif char in "jx":
+            score=score+8
+        elif char in "qz":
+            score=score+10
+    return score
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    dict = {'a':1,'b':3,'c':3,'d':2,'e':1,'f':4,'g':2,'h':4,'i':1,'j':8,'k':5,'l':1,'m':3,'n':1,
+            'o':1,'p':3,'q':10,'r':1,'s':1,'t':1,'u':1,'v':4,'w':4,'x':8,'y':4,'z':10}
+    sum = 0
+    for i in str1:
+        if i in dict:
+            sum += dict[i]
+    print(sum)
+    return sum
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    str1 = str1.lower()
+    # print(str1)
+    score = 0
+    for i in str1:
+        if i in 'aeioulnrst':
+            score += 1
+        elif i in 'dg':
+            score += 2
+        elif i in 'bcmp':
+            score += 3
+        elif i in 'fhvwy':
+            score += 4
+        elif i in 'k':
+            score += 5
+        elif i in 'jx':
+            score += 8
+        elif i in 'qz':
+            score += 10
+    return score
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    if len(str1) == 0:
+        return 0
+    else:
+        str1 = str1.upper()
+        score = 0
+        for char in str1:
+            if char == 'A' or char == 'E' or char == 'I' or char == 'O' or char == 'U' or char == 'L' or char == 'N' or char == 'R' or char == 'S' or char == 'T':
+                score += 1
+            elif char == 'D' or char == 'G':
+                score += 2
+            elif char == 'B' or char == 'C' or char == 'M' or char == 'P':
+                score += 3
+            elif char == 'F' or char == 'H' or char == 'V' or char == 'W' or char == 'Y':
+                score += 4
+            elif char == 'K':
+                score += 5
+            elif char == 'J' or char == 'X':
+                score += 8
+            elif char == 'Q' or char == 'Z':
+                score += 10
+        return score
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    score = 0
+    for char in str1:
+        if char == 'a' or char == 'e' or char == 'i' or char == 'o' or char == 'u':
+            score += 1
+    return score
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    d = {'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 
+        'f': 4, 'g': 2, 'h': 4, 'i': 1, 'j': 8, 
+        'k': 5, 'l': 1, 'm': 3, 'n': 1, 'o': 1, 
+        'p': 3, 'q': 10, 'r': 1, 's': 1, 't': 1, 
+        'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 
+        'z': 10} 
+    return sum(d[c] for c in str1.lower() if c in d)

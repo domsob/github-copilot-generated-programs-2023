@@ -1,0 +1,196 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    '''This is my function'''
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    # 1. Check if the input is a positive integer
+    if int1 <= 0:
+        print("Please enter a positive integer.")
+        return
+    # 2. Check if the input is a number
+    try:
+        int1 = int(int1)
+    except ValueError:
+        print("Please enter a number.")
+        return
+    # 3. Check if the input is an integer
+    if int1 != float(int1):
+        print("Please enter an integer.")
+        return
+    # 4. If input is valid, proceed to find the fewest needed number of US coins
+    # (pennies, nickels, dimes, and quarters) to make the amount.
+    # 5. Define variables
+    pennies = 0
+    nickels = 0
+    dimes = 0
+    quarters = 0
+    # 6. Find the fewest needed number of US coins (pennies, nickels, dimes, and quarters) to make the amount.
+    while int1 >= 25:
+        int1 -= 25
+        quarters += 1
+    while int1 >= 10:
+        int1 -= 10
+        dimes += 1
+    while int1 >= 5:
+        int1 -= 5
+        nickels += 1
+    while int1 >= 1:
+        int1 -= 1
+        pennies += 1
+    # 7. Return the number of each type of count as a separate output.
+    print("Pennies: ", pennies)
+    print("Nickels: ", nickels)
+    print("Dimes: ", dimes)
+    print("Quarters: ", quarters)
+    return
+
+=======
+Suggestion 3
+
+def myfunc(int1: int):
+    # initialize the coin counts
+    pennies = 0
+    nickels = 0
+    dimes = 0
+    quarters = 0
+
+    # while the input is greater than 0, keep subtracting the largest coin
+    while int1 > 0:
+        if int1 >= 25:
+            int1 -= 25
+            quarters += 1
+        elif int1 >= 10:
+            int1 -= 10
+            dimes += 1
+        elif int1 >= 5:
+            int1 -= 5
+            nickels += 1
+        else:
+            int1 -= 1
+            pennies += 1
+
+    # return the coin counts
+    return pennies, nickels, dimes, quarters
+
+=======
+Suggestion 4
+
+def myfunc(int1: int):
+    # initialize the dictionary
+    dict1 = {'pennies': 0, 'nickels': 0, 'dimes': 0, 'quarters': 0}
+    # check if input is valid
+    if int1 < 0:
+        return 'Invalid input'
+    # if input is valid, start to calculate
+    else:
+        # calculate the number of quarters
+        dict1['quarters'] = int1 // 25
+        # calculate the number of dimes
+        dict1['dimes'] = (int1 - dict1['quarters'] * 25) // 10
+        # calculate the number of nickels
+        dict1['nickels'] = (int1 - dict1['quarters'] * 25 - dict1['dimes'] * 10) // 5
+        # calculate the number of pennies
+        dict1['pennies'] = int1 - dict1['quarters'] * 25 - dict1['dimes'] * 10 - dict1['nickels'] * 5
+        # return the dictionary
+        return dict1
+
+=======
+Suggestion 5
+
+def myfunc(int1: int):
+    # Your code here
+    return None
+
+=======
+Suggestion 6
+
+def myfunc(int1: int):
+    # Your code goes here
+    pass
+
+=======
+Suggestion 7
+
+def myfunc(int1: int):
+    # Initialize variables
+    pennies = 0
+    nickels = 0
+    dimes = 0
+    quarters = 0
+    # Find number of quarters
+    quarters = int1 // 25
+    int1 = int1 % 25
+    # Find number of dimes
+    dimes = int1 // 10
+    int1 = int1 % 10
+    # Find number of nickels
+    nickels = int1 // 5
+    int1 = int1 % 5
+    # Find number of pennies
+    pennies = int1 // 1
+    # Return number of each type of coin
+    return pennies, nickels, dimes, quarters
+
+=======
+Suggestion 8
+
+def myfunc(int1: int):
+    if int1 < 0:
+        return "Invalid input."
+    # count is a list of the number of each type of coins
+    count = [0, 0, 0, 0]
+    # value is a list of the value of each type of coins
+    value = [25, 10, 5, 1]
+    for i in range(4):
+        count[i] = int1 // value[i]
+        int1 = int1 % value[i]
+    return count
+
+=======
+Suggestion 9
+
+def myfunc(int1: int):
+    # Initialize the number of each coin type to 0
+    p = 0
+    n = 0
+    d = 0
+    q = 0
+    # Make sure the input is valid
+    if int1 < 0:
+        print("Error: input value is negative.")
+        return
+    # Calculate the number of each coin type
+    while int1 >= 25:
+        int1 -= 25
+        q += 1
+    while int1 >= 10:
+        int1 -= 10
+        d += 1
+    while int1 >= 5:
+        int1 -= 5
+        n += 1
+    while int1 >= 1:
+        int1 -= 1
+        p += 1
+    # Print the number of each coin type
+    print(f"Quarters: {q}")
+    print(f"Dimes: {d}")
+    print(f"Nickels: {n}")
+    print(f"Pennies: {p}")
+    return
+
+=======
+Suggestion 10
+
+def myfunc(int1: int):
+    # Type your solution here
+    # Return the number of each type of coin as separate output
+    # Print the results
+    return

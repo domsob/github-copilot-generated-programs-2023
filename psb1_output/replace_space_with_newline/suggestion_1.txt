@@ -1,0 +1,64 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    str1 = str1.replace(" ", "\n")
+    return str1, len(str1.replace("\n", ""))
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    count = 0
+    for i in str1:
+        if i != " ":
+            count += 1
+    return str1.replace(" ", "\n"), count
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    count = 0
+    for i in str1:
+        if i != " ":
+            count += 1
+    str1 = str1.replace(" ", "\n")
+    return str1, count
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    return str1.replace(" ", "\n"), len(str1.replace(" ", ""))
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    count = 0
+    for char in str1:
+        if char != " ":
+            count += 1
+    return str1.replace(" ", "\n"), count
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    str2 = str1.replace(' ', '\n')
+    count = 0
+    for i in str1:
+        if i != ' ':
+            count += 1
+    return str2, count
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    """Return the string, replacing spaces with newlines. Also, return the integer count of the nonwhitespace characters. The input string will not have tabs or newlines."""
+    str1 = str1.replace(' ', '\n')
+    return str1, len(str1.replace('\n', ''))

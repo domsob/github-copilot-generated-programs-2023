@@ -1,0 +1,100 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(list1: list):
+    list2 = []
+    list2.append(list1[-1])
+    for i in range(len(list1)-1, 0, -1):
+        if list1[i-1] >= list2[-1]:
+            list2.append(list1[i-1])
+    return list2[::-1]
+
+=======
+Suggestion 2
+
+def myfunc(list1: list):
+    """Given a vector of positive integers, return a vector of the leaders in that vector. 
+    A leader is defined as a number that is greater than or equal to all the numbers to the right of it. 
+    The rightmost element is always a leader.
+    """
+    result = []
+    for i in range(len(list1)):
+        if i == len(list1) - 1:
+            result.append(list1[i])
+            break
+        if list1[i] >= max(list1[i+1:]):
+            result.append(list1[i])
+    return result
+
+=======
+Suggestion 3
+
+def myfunc(list1: list):
+    result = []
+    max = list1[-1]
+    for i in range(len(list1)-1, -1, -1):
+        if list1[i] >= max:
+            result.append(list1[i])
+            max = list1[i]
+    return result[::-1]
+
+=======
+Suggestion 4
+
+def myfunc(list1: list):
+    leader_list = []
+    for i in range(len(list1)):
+        leader = True
+        for j in range(i+1, len(list1)):
+            if list1[i] < list1[j]:
+                leader = False
+        if leader:
+            leader_list.append(list1[i])
+    return leader_list
+
+=======
+Suggestion 5
+
+def myfunc(list1: list):
+    list2 = []
+    for i in range(len(list1)):
+        if i == len(list1)-1:
+            list2.append(list1[i])
+        elif list1[i] >= max(list1[i+1:]):
+            list2.append(list1[i])
+    return list2
+
+=======
+Suggestion 6
+
+def myfunc(list1: list):
+    list2 = []
+    for i in range(len(list1)):
+        if list1[i] >= max(list1[i+1:]):
+            list2.append(list1[i])
+    return list2
+
+=======
+Suggestion 7
+
+def myfunc(list1: list):
+    # Write your code here
+    result = []
+    for i in range(len(list1)):
+        if i == len(list1) - 1:
+            result.append(list1[i])
+        elif list1[i] >= max(list1[i+1:]):
+            result.append(list1[i])
+    return result
+
+=======
+Suggestion 8
+
+def myfunc(list1: list):
+    list2 = []
+    for i in range(len(list1)):
+        if list1[i] >= max(list1[i:]):
+            list2.append(list1[i])
+    return list2

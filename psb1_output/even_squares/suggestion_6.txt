@@ -1,0 +1,105 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    result = []
+    i = 1
+    while i * i < int1:
+        if i % 2 == 0:
+            result.append(i * i)
+        i += 1
+    return result
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    return [i**2 for i in range(1, int1//2) if i**2 % 2 == 0]
+
+=======
+Suggestion 3
+
+def myfunc(int1: int):
+    # create empty list
+    list1 = []
+    # loop through range of 1 to n
+    for i in range(1, int1):
+        # if i is even and a perfect square
+        if i % 2 == 0 and (i ** 0.5).is_integer():
+            # append to list
+            list1.append(i)
+    # return list
+    return list1
+
+=======
+Suggestion 4
+
+def myfunc(int1: int):
+    return [i*i for i in range(1, int1) if i*i % 2 == 0]
+
+=======
+Suggestion 5
+
+def myfunc(int1: int):
+    # your code here
+    return [i**2 for i in range(1, int(int1**0.5)+1) if not i**2 % 2]
+
+=======
+Suggestion 6
+
+def myfunc(int1: int):
+    return [i**2 for i in range(1, int1) if i % 2 == 0]
+
+=======
+Suggestion 7
+
+def myfunc(int1: int):
+    # Create a list to store the perfect squares.
+    perfect_squares = []
+
+    # Iterate through the range of 0 to the input integer.
+    for i in range(0, int1):
+        # Create a variable to store the square of the current value.
+        square = i * i
+
+        # Check if the square is less than the input integer and if the square is even.
+        if square < int1 and square % 2 == 0:
+            # Add the square to the list.
+            perfect_squares.append(square)
+
+    # Return the list of perfect squares.
+    return perfect_squares
+
+=======
+Suggestion 8
+
+def myfunc(int1: int):
+    # create a list to store the result
+    result = []
+    # create a for loop to iterate through the range of n
+    for i in range(int1):
+        # check if the square of i is even and a perfect square
+        if i % 2 == 0 and (i ** 0.5).is_integer():
+            # if so, add it to the result list
+            result.append(i)
+    # return the result list
+    return result
+
+=======
+Suggestion 9
+
+def myfunc(int1: int):
+    # your code here
+    return [i**2 for i in range(1,int1) if (i**2)%2==0]
+
+=======
+Suggestion 10
+
+def myfunc(int1: int):
+    result = []
+    for i in range(1, int1):
+        if i % 2 == 0:
+            result.append(i * i)
+    return result

@@ -1,0 +1,62 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(list1: list):
+    return sum([x//3-2 for x in list1])
+
+=======
+Suggestion 2
+
+def myfunc(list1: list):
+    return sum([int(x/3)-2 for x in list1])
+
+=======
+Suggestion 3
+
+def myfunc(list1: list):
+    return sum([int(i/3)-2 for i in list1])
+
+=======
+Suggestion 4
+
+def myfunc(list1: list):
+    sum = 0
+    for i in list1:
+        sum += (i//3 - 2)
+    return sum
+
+=======
+Suggestion 5
+
+def myfunc(list1: list):
+    result = 0
+    for i in list1:
+        result += (i // 3) - 2
+    return result
+
+=======
+Suggestion 6
+
+def myfunc(list1: list):
+    # your code here
+    return sum([int((i/3)-2) for i in list1])
+
+=======
+Suggestion 7
+
+def myfunc(list1: list):
+    sum = 0
+    for i in list1:
+        sum += (i // 3) - 2
+    return sum
+
+=======
+Suggestion 8
+
+def myfunc(list1: list):
+    total = 0
+    for i in list1:
+        total += (i//3)-2
+    return total

@@ -1,0 +1,65 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(list1: list):
+    return sum(map(lambda x: (x//3)-2, list1))
+
+=======
+Suggestion 2
+
+def myfunc(list1: list):
+    return sum([int(x/3)-2 for x in list1])
+
+=======
+Suggestion 3
+
+def myfunc(list1: list):
+    new_list = [int(x/3)-2 for x in list1]
+    return sum(new_list)
+
+=======
+Suggestion 4
+
+def myfunc(list1: list):
+    return sum(list(map(lambda x: (x // 3) - 2, list1)))
+
+=======
+Suggestion 5
+
+def myfunc(list1: list):
+    sum = 0
+    for i in list1:
+        sum += (i//3) - 2
+    return sum
+
+=======
+Suggestion 6
+
+def myfunc(list1: list):
+    sum = 0
+    for i in list1:
+        sum += (i//3 - 2)
+    return sum
+
+=======
+Suggestion 7
+
+def myfunc(list1: list):
+    return sum([((i//3)-2) for i in list1])
+
+=======
+Suggestion 8
+
+def myfunc(list1: list):
+    sum = 0
+    for x in list1:
+        sum += (x//3) - 2
+    return sum
+
+=======
+Suggestion 9
+
+def myfunc(list1: list):
+    return sum([int(i/3)-2 for i in list1])

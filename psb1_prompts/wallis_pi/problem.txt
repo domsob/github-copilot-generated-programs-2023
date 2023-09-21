@@ -1,0 +1,5 @@
+# John Wallis gave the following infinite product that converges to pi/4:
+# 2/3 * 4/3 * 4/5 * 6/5 * 6/7 * 8/7 * 8/9 * 10/9 * ...
+# Given an integer input n, compute an approximation of this product out 
+# to n terms. Results are rounded to 5 decimal places.
+def myfunc(int1: int):

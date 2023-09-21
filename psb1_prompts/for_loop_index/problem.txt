@@ -1,0 +1,6 @@
+# Given 3 integer inputs
+# start, end, and step, return the integers in the sequence
+# n_0 = start
+# n_i = n_i-1 + step
+# for each n_i < end.
+def myfunc(int1: int, int2: int, int3: int):

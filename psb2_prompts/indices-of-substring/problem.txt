@@ -1,0 +1,5 @@
+# Given a text string and a target string, 
+# return a vector of integers of indices at which the target appears in the text. 
+# If the target string overlaps itself in the text, 
+# all indices (including those overlapping) should be returned.
+def myfunc(str1: str, str2: str):

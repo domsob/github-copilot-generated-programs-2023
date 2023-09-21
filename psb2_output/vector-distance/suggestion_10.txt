@@ -1,0 +1,83 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(list1: list, list2: list):
+    import math
+    sum = 0
+    for i in range(len(list1)):
+        sum += (list1[i] - list2[i]) ** 2
+    return math.sqrt(sum)
+
+=======
+Suggestion 2
+
+def myfunc(list1: list, list2: list):
+    '''Returns the Euclidean distance between two vectors of floats'''
+    # Your code here
+    return None
+
+=======
+Suggestion 3
+
+def myfunc(list1: list, list2: list):
+    if len(list1) != len(list2):
+        return 0
+    sum = 0
+    for i in range(len(list1)):
+        sum += (list1[i] - list2[i])**2
+    return sum**(1/2)
+
+=======
+Suggestion 4
+
+def myfunc(list1: list, list2: list):
+    sum = 0
+    for i in range(len(list1)):
+        sum += (list1[i] - list2[i])**2
+    return sum**0.5
+
+=======
+Suggestion 5
+
+def myfunc(list1: list, list2: list):
+    # your code here
+    return 0
+
+=======
+Suggestion 6
+
+def myfunc(list1: list, list2: list):
+    return sum([(x - y) ** 2 for x, y in zip(list1, list2)]) ** 0.5
+
+=======
+Suggestion 7
+
+def myfunc(list1: list, list2: list):
+    return sum((x1-x2)**2 for x1, x2 in zip(list1, list2))**0.5
+
+=======
+Suggestion 8
+
+def myfunc(list1: list, list2: list):
+    if len(list1) != len(list2):
+        return None
+    sum = 0
+    for i in range(len(list1)):
+        sum += (list1[i] - list2[i]) ** 2
+    return sum ** 0.5
+
+=======
+Suggestion 9
+
+def myfunc(list1: list, list2: list):
+    if len(list1) != len(list2):
+        return -1
+    return sum([(list1[i] - list2[i])**2 for i in range(len(list1))])**(1/2)
+
+=======
+Suggestion 10
+
+def myfunc(list1: list, list2: list):
+    return sum((a - b) ** 2 for a, b in zip(list1, list2)) ** 0.5

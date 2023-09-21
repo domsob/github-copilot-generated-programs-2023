@@ -1,0 +1,173 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(float1: float, float2: float, int1: int):
+    bounciness_index = float2 / float1
+    total_distance = 0
+    for i in range(0, int1):
+        total_distance += float1 * bounciness_index
+        float1 *= bounciness_index
+        total_distance += float1 * bounciness_index
+    return total_distance
+
+=======
+Suggestion 2
+
+def myfunc(float1: float, float2: float, int1: int):
+    """
+    >>> myfunc(10, 0.6, 5)
+    24.424
+    >>> myfunc(1, 0.5, 1)
+    1.5
+    >>> myfunc(100, 0.1, 3)
+    102.06
+    """
+    height = float1
+    bounciness = float2
+    bounces = int1
+    total_distance = 0
+    for i in range(bounces):
+        total_distance += height
+        height = height * bounciness
+        total_distance += height
+    return total_distance
+
+=======
+Suggestion 3
+
+def myfunc(float1: float, float2: float, int1: int):
+    if int1 == 0:
+        return 0
+    else:
+        return float1 + float2 + myfunc(float1, float2, int1 - 1)
+
+=======
+Suggestion 4
+
+def myfunc(float1: float, float2: float, int1: int):
+    bounciness_index = float2 / float1
+    distance = 0
+    for i in range(int1):
+        distance += 2 * float1 * bounciness_index ** (i + 1)
+    return distance
+
+=======
+Suggestion 5
+
+def myfunc(float1: float, float2: float, int1: int):
+    # Calculate the bounciness index
+    bounciness_index = float2 / float1
+    # Calculate the total distance traveled
+    total_distance = 0
+    for i in range(0, int1):
+        total_distance += 2 * float1
+        float1 *= bounciness_index
+    total_distance -= float1
+    return total_distance
+
+=======
+Suggestion 6
+
+def myfunc(float1: float, float2: float, int1: int):
+    """
+    >>> myfunc(10, 0, 1)
+    10.0
+    >>> myfunc(10, 0, 10)
+    10.0
+    >>> myfunc(10, 0, 0)
+    0.0
+    >>> myfunc(10, 0, -1)
+    0.0
+    >>> myfunc(10, 0, 2)
+    20.0
+    >>> myfunc(10, 0, 3)
+    30.0
+    >>> myfunc(10, 0, 4)
+    40.0
+    >>> myfunc(10, 0, 5)
+    50.0
+    >>> myfunc(10, 0, 6)
+    60.0
+    >>> myfunc(10, 0, 7)
+    70.0
+    >>> myfunc(10, 0, 8)
+    80.0
+    >>> myfunc(10, 0, 9)
+    90.0
+    >>> myfunc(10, 0, 10)
+    100.0
+    >>> myfunc(10, 0, 11)
+    110.0
+    >>> myfunc(10, 0, 12)
+    120.0
+    >>> myfunc(10, 0, 13)
+    130.0
+    >>> myfunc(10, 0, 14)
+    140.0
+    >>> myfunc(10, 0, 15)
+    150.0
+    >>> myfunc(10, 0, 16)
+    160.0
+    >>> myfunc(10, 0, 17)
+    170.0
+    >>> myfunc(10, 0, 18)
+    180.0
+    >>> myfunc(10, 0, 19)
+    190.0
+    >>> myfunc(10, 0, 20)
+    200.0
+    >>> myfunc(10, 0, 21)
+    210.0
+    >>> myfunc(10, 0, 22)
+    220.0
+    >>> myfunc(10, 0, 23)
+    230.0
+    >>> my
+
+=======
+Suggestion 7
+
+def myfunc(float1: float, float2: float, int1: int):
+    pass
+
+=======
+Suggestion 8
+
+def myfunc(float1: float, float2: float, int1: int):
+    if float1 < 0 or float2 < 0 or int1 < 0:
+        return -1
+    if float1 < float2:
+        return -1
+    if int1 == 0:
+        return float1
+    else:
+        return float1 + float2 + myfunc(float1 * float2, float2, int1 - 1)
+
+=======
+Suggestion 9
+
+def myfunc(float1: float, float2: float, int1: int):
+    bounciness_index = float2/float1
+    distance = 0
+    for i in range(int1):
+        if i == 0:
+            distance += float1
+        else:
+            distance += float1*bounciness_index
+            float1 *= bounciness_index
+    return distance
+
+=======
+Suggestion 10
+
+def myfunc(float1: float, float2: float, int1: int):
+    ''' takes in 2 floats and 1 int, returns a float'''
+    # calculate bounciness index
+    bounciness_index = float2 / float1
+    # calculate total distance
+    total_distance = 0
+    for i in range(int1):
+        total_distance += float1 * bounciness_index**i
+    return total_distance

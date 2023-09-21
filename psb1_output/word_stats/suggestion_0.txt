@@ -1,0 +1,85 @@
+Synthesizing 9/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):)->list:
+    # Write your code here
+    str1 = str1.strip()
+    str1 = str1.
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):)->list:
+    str1 = str1.replace("!", ".")
+    str1 = str1.replace("?", ".")
+    str1 = str1.replace(",", "")
+    str1 = str1.replace(";", "")
+    str1 = str1.replace(":", "")
+    str1 = str1.replace("-", "")
+    str1 = str1.replace("(", "")
+    str1 = str1.replace(")", "")
+    str1 = str1.replace("[", "")
+    str1 = str1.replace("]", "")
+    str1 = str1.replace("{", "")
+    str1 = str1.replace("}", "")
+    str1 = str1.replace('"', "")
+    str1 = str1.replace("'", "")
+    str1 = str1.replace("*", "")
+    str1 = str1.replace("#", "")
+    str1 = str1.replace("%", "")
+    str1 = str1.replace("$", "")
+    str1 = str1.replace("&", "")
+    str1 = str1.replace("@", "")
+    str1 = str1.replace("^", "")
+    str1 = str1.replace("`", "")
+    str1 = str1.re
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):)-> list:
+    pass
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):)-> list:
+    # Your code goes here
+    pass
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):)-> list:
+    # your code here
+    pass
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):)-> list:
+    # Write your code here
+    return []
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):)->list:
+    # Write your code here
+    pass
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):)->list:
+    """Given a string, return a list containing the number of words with n characters 
+    for n from 1 to the length of the longest word.
+    Additionally, return the number of sentences and the average sentence length.
+    A word is any string of consecutive non-whitespace characters (including 
+    sentence terminators). Every string will contain at least one sentence terminator 
+    (period, exclamation point, or question mark). The average sentence length is 
+    the number of words in the string divided by the number of sentence terminator characters."""
+    # Your code here
+    return

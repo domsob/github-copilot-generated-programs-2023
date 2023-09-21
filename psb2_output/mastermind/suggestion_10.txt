@@ -1,0 +1,131 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(list1: list, list2: list):
+    black = 0
+    white = 0
+    for i in range(len(list1)):
+        if list1[i] == list2[i]:
+            black += 1
+    for i in range(len(list1)):
+        if list1[i] != list2[i] and list1[i] in list2:
+            white += 1
+    return [white, black]
+
+=======
+Suggestion 2
+
+def myfunc(list1: list, list2: list):
+    white_pegs = 0
+    black_pegs = 0
+    for i in range(len(list1)):
+        if list1[i] == list2[i]:
+            black_pegs += 1
+        elif list1[i] in list2:
+            white_pegs += 1
+    return [white_pegs, black_pegs]
+
+=======
+Suggestion 3
+
+def myfunc(list1: list, list2: list):
+    white = 0
+    black = 0
+    # check for black pegs
+    for i in range(len(list1)):
+        if list1[i] == list2[i]:
+            black += 1
+    # check for white pegs
+    for i in range(len(list1)):
+        if list1[i] in list2 and list1[i] != list2[i]:
+            white += 1
+    return [black, white]
+
+=======
+Suggestion 4
+
+def myfunc(list1: list, list2: list):
+    white = 0
+    black = 0
+    for i in range(len(list1)):
+        if list1[i] == list2[i]:
+            black += 1
+        elif list1[i] in list2:
+            white += 1
+    return (black, white)
+
+=======
+Suggestion 5
+
+def myfunc(list1: list, list2: list):
+    white = 0
+    black = 0
+    for i in range(len(list1)):
+        if list1[i] == list2[i]:
+            black += 1
+        elif list1[i] in list2:
+            white += 1
+    return white, black
+
+=======
+Suggestion 6
+
+def myfunc(list1: list, list2: list):
+    black = 0
+    white = 0
+    for i in range(len(list1)):
+        if list1[i] == list2[i]:
+            black += 1
+        elif list1[i] in list2:
+            white += 1
+    return black, white
+
+=======
+Suggestion 7
+
+def myfunc(list1: list, list2: list):
+    # your code here
+    white = 0
+    black = 0
+    for i in range(len(list1)):
+        if list1[i] == list2[i]:
+            black += 1
+        elif list1[i] in list2:
+            white += 1
+    return [white, black]
+
+=======
+Suggestion 8
+
+def myfunc(list1: list, list2: list):
+    # Initialize variables
+    black_pegs = 0
+    white_pegs = 0
+    # Iterate through list1
+    for i in range(len(list1)):
+        # Check if the elements in the same index are equal
+        if list1[i] == list2[i]:
+            # If true, increment black_pegs
+            black_pegs += 1
+        # Check if the element is in list2
+        elif list1[i] in list2:
+            # If true, increment white_pegs
+            white_pegs += 1
+    # Return the result
+    return black_pegs, white_pegs
+
+=======
+Suggestion 9
+
+def myfunc(list1: list, list2: list):
+    # your code here
+    white = 0
+    black = 0
+    for i in range(len(list1)):
+        if list1[i] == list2[i]:
+            black += 1
+        elif list1[i] in list2:
+            white += 1
+    return [black, white]

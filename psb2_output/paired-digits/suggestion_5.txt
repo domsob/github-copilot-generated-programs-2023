@@ -1,0 +1,38 @@
+Synthesizing 8/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    sum = 0
+    for i in range(len(str1) - 1):
+        if str1[i] == str1[i+1]:
+            sum += int(str1[i])
+    return sum
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    sum = 0
+    for i in range(len(str1)):
+        if i < len(str1) - 1:
+            if str1[i] == str1[i+1]:
+                sum += int(str1[i])
+    return sum
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    # remove the last digit
+    str1 = str1[:-1]
+    # initialize the sum
+    sum = 0
+    # iterate through the string
+    for i in range(len(str1)):
+        # if the current digit is the same as the next digit, add it to the sum
+        if str1[i] == str1[i+1]:
+            sum += int(str1[i])
+    # return the sum
+    return sum

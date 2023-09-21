@@ -1,0 +1,55 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    str_len = len(str1)
+    if str_len % 2 == 0:
+        return str1[int(str_len/2)-1] + str1[int(str_len/2)]
+    else:
+        return str1[int(str_len/2)]
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    if len(str1) % 2 == 0:
+        return str1[int(len(str1)/2)-1:int(len(str1)/2)+1]
+    else:
+        return str1[int(len(str1)/2)]
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    if len(str1) % 2 == 0:
+        return str1[int(len(str1) / 2) - 1] + str1[int(len(str1) / 2)]
+    else:
+        return str1[int(len(str1) / 2)]
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    if len(str1) % 2 == 0:
+        return str1[(len(str1)//2)-1:(len(str1)//2)+1]
+    else:
+        return str1[len(str1)//2]
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    # Get length of string
+    str_len = len(str1)
+    # Get index of middle character
+    mid_index = str_len // 2
+    # If string length is odd
+    if str_len % 2 != 0:
+        # Return middle character
+        return str1[mid_index]
+    # If string length is even
+    else:
+        # Return middle two characters
+        return str1[mid_index - 1:mid_index + 1]

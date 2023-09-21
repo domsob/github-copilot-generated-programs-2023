@@ -1,0 +1,97 @@
+Synthesizing 9/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    str1 = str1.replace('T', 'True')
+    str1 = str1.replace('F', 'False')
+    return eval(str1)
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    if str1 == "T":
+        return True
+    elif str1 == "F":
+        return False
+    else:
+        str1 = str1.replace("|", "or")
+        str1 = str1.replace("&", "and")
+        return eval(str1)
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    stack = []
+    for i in range(len(str1)):
+        if str1[i] == '|':
+            if stack[-1] == 'T' or str1[i+1] == 'T':
+                stack.append('T')
+            else:
+                stack.append('F')
+        elif str1[i] == '&':
+            if stack[-1] == 'T' and str1[i+1] == 'T':
+                stack.append('T')
+            else:
+                stack.append('F')
+        elif str1[i] == 'T' or str1[i] == 'F':
+            stack.append(str1[i])
+    return stack[-1]
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    # Write your code here.
+    pass
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    if str1 == "T":
+        return True
+    elif str1 == "F":
+        return False
+    else:
+        return eval(str1)
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    # your code here
+    return True
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    # write your code here
+    pass
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    if str1 == "T":
+        return True
+    elif str1 == "F":
+        return False
+    elif str1[0] == "~":
+        return not myfunc(str1[1:])
+    elif str1[0] == "(":
+        if str1[-1] == ")":
+            return myfunc(str1[1:-1])
+        else:
+            return False
+    else:
+        if str1.find("|") > 0:
+            return myfunc(str1[:str1.find("|")]) or myfunc(str1[str1.find("|")+1:])
+        elif str1.find("&") > 0:
+            return myfunc(str1[:str1.find("&")]) and myfunc(str1[str1.find("&")+1:])
+        else:
+            return False

@@ -1,0 +1,130 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str, str2: str, str3: str):
+    """Apply the cipher to str3 and return the deciphered message.
+    >>> myfunc('abc', 'def', 'xyz')
+    'xyz'
+    >>> myfunc('abc', 'def', 'ayz')
+    'dyz'
+    >>> myfunc('abc', 'def', 'abz')
+    'dez'
+    >>> myfunc('abc', 'def', 'dzz')
+    'azz'
+    >>> myfunc('abc', 'def', 'dzz
+
+=======
+Suggestion 2
+
+def myfunc(str1: str, str2: str, str3: str):
+    str4 = ""
+    for i in str3:
+        str4 += str1[str2.index(i)]
+    return str4
+
+=======
+Suggestion 3
+
+def myfunc(str1: str, str2: str, str3: str):
+    """
+    >>> myfunc('abc', 'bcd', 'abd')
+    'bcd'
+    >>> myfunc('abc', 'bcd', 'bce')
+    'bce'
+    >>> myfunc('abc', 'bcd', 'bde')
+    'bce'
+    >>> myfunc('abc', 'bcd', 'bdf')
+    'bce'
+    >>> myfunc('abc', 'bcd', 'bdf')
+    'bce'
+    """
+    # Your code here
+    return str3.translate(str.maketrans(str1, str2))
+
+=======
+Suggestion 4
+
+def myfunc(str1: str, str2: str, str3: str):
+    # Your code here
+    return str3.translate(str3.maketrans(str1, str2))
+
+=======
+Suggestion 5
+
+def myfunc(str1: str, str2: str, str3: str):
+    # Write code here
+    result = ""
+    for i in str3:
+        result += str1[str2.index(i)]
+    return result
+
+=======
+Suggestion 6
+
+def myfunc(str1: str, str2: str, str3: str):
+    """Returns deciphered message"""
+    return "".join(str2[str1.index(c)] for c in str3)
+
+=======
+Suggestion 7
+
+def myfunc(str1: str, str2: str, str3: str):
+    str3 = list(str3)
+    for i in range(len(str3)):
+        for j in range(len(str1)):
+            if str3[i] == str1[j]:
+                str3[i] = str2[j]
+                break
+    return "".join(str3)
+
+=======
+Suggestion 8
+
+def myfunc(str1: str, str2: str, str3: str):
+    # write your code here
+    cipher = dict(zip(str1, str2))
+    decipher = []
+    for char in str3:
+        decipher.append(cipher[char])
+    return ''.join(decipher)
+
+=======
+Suggestion 9
+
+def myfunc(str1: str, str2: str, str3: str):
+    # Write your code here
+    str1 = str1.lower()
+    str2 = str2.lower()
+    str3 = str3.lower()
+    str4 = ""
+    for i in str3:
+        for j in range(len(str1)):
+            if i == str1[j]:
+                str4 = str4 + str2[j]
+                break
+    return str4
+
+=======
+Suggestion 10
+
+def myfunc(str1: str, str2: str, str3: str):
+    # Write your code here
+    str1 = str1.lower()
+    str2 = str2.lower()
+    str3 = str3.lower()
+    str1_list = list(str1)
+    str2_list = list(str2)
+    str3_list = list(str3)
+    str1_list.sort()
+    str2_list.sort()
+    str3_list.sort()
+    if str1_list == str2_list:
+        for i in range(len(str3_list)):
+            index = str2.index(str3_list[i])
+            str3_list[i] = str1[index]
+        str3 = ''.join(str3_list)
+        return str3
+    else:
+        return "Invalid mapping"

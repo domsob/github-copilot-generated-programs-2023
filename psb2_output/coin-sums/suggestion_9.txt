@@ -1,0 +1,171 @@
+Synthesizing 9/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    # 1 quarter = 25 cents
+    # 1 dime = 10 cents
+    # 1 nickel = 5 ce
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    # Initialize variables
+    cents = int1
+    quarters = 0
+    dimes = 0
+    nickels = 0
+    pennies = 0
+    # Calculate the number of quarters
+    quarters = int(cents / 25)
+    # Calculate the remainder of cents
+    cents = cents % 25
+    # Calculate the number of dimes
+    dimes = int(cents / 10)
+    # Calculate the remainder of cents
+    cents = cents % 10
+    # Calculate the number of nickels
+    nickels = int(cents / 5)
+    # Calculate the remainder of cents
+    cents = cents % 5
+    # Calculate the number of pennies
+    pennies = int(cents / 1)
+    # Print the number of each type of coin
+    print("Quarters: " + str(quarters))
+    print("Dimes: " + str(dimes))
+    print("Nickels: " + str(nickels))
+    print("Pennies: " + str(pennies))
+
+=======
+Suggestion 3
+
+def myfunc(int1: int):
+    # your code here
+    return None
+
+=======
+Suggestion 4
+
+def myfunc(int1: int):
+    # Your code here
+    # return (pennies, nickels, dimes, quarters)
+    return (0, 0, 0, 0)
+
+=======
+Suggestion 5
+
+def myfunc(int1: int):
+    # 1. find the number of quarters
+    quarters = int1 // 25
+    # 2. find the remaining amount
+    remaining = int1 % 25
+    # 3. find the number of dimes
+    dimes = remaining // 10
+    # 4. find the remaining amount
+    remaining = remaining % 10
+    # 5. find the number of nickels
+    nickels = remaining // 5
+    # 6. find the remaining amount
+    remaining = remaining % 5
+    # 7. find the number of pennies
+    pennies = remaining // 1
+    # 8. return the result
+    return quarters, dimes, nickels, pennies
+
+=======
+Suggestion 6
+
+def myfunc(int1: int):
+    # Write your code here
+    # To print results to the standard output please use print("") function
+    # Example: print("Hello world!")
+    pass
+
+=======
+Suggestion 7
+
+def myfunc(int1: int):
+    """
+    Given a number of cents, find the fewest needed number of US coins 
+    (pennies, nickels, dimes, and quarters) to make that amount,
+    and return the number of each type of count as a separate output.
+    """
+    if int1 < 0:
+        raise ValueError('Input must be non-negative')
+    if type(int1) != int:
+        raise TypeError('Input must be an integer')
+    if int1 == 0:
+        return 0, 0, 0, 0
+    if int1 == 1:
+        return 1, 0, 0, 0
+    if int1 == 2:
+        return 0, 1, 0, 0
+    if int1 == 3:
+        return 1, 1, 0, 0
+    if int1 == 4:
+        return 0, 0, 1, 0
+    if int1 == 5:
+        return 1, 0, 1, 0
+    if int1 == 6:
+        return 0, 1, 1, 0
+    if int1 == 7:
+        return 1, 1, 1, 0
+    if int1 == 8:
+        return 0, 0, 0, 1
+    if int1 == 9:
+        return 1, 0, 0, 1
+    if int1 == 10:
+        return 0, 1, 0, 1
+    if int1 == 11:
+        return 1, 1, 0, 1
+    if int1 == 12:
+        return 0, 0, 1, 1
+    if int1 == 13:
+        return 1, 0, 1, 1
+    if int1 == 14:
+        return 0, 1, 1, 1
+    if int1 == 15:
+        return 1, 1, 1, 1
+    if int1 == 16:
+        return 0, 0, 0, 2
+    if int1 == 17:
+        return 1, 0, 0, 2
+    if int1 == 18:
+        return
+
+=======
+Suggestion 8
+
+def myfunc(int1: int):
+    if int1 < 0:
+        print("Input must be positive")
+        return
+    if int1 == 0:
+        print("0 0 0 0")
+        return
+    int1 = int(int1)
+    quarters = int1 // 25
+    int1 = int1 % 25
+    dimes = int1 // 10
+    int1 = int1 % 10
+    nickels = int1 // 5
+    int1 = int1 % 5
+    print(f"{quarters} {dimes} {nickels} {int1}")
+
+=======
+Suggestion 9
+
+def myfunc(int1: int):
+    if int1 < 0:
+        return False
+    else:
+        quarters = int1 // 25
+        int1 = int1 % 25
+        dimes = int1 // 10
+        int1 = int1 % 10
+        nickels = int1 // 5
+        int1 = int1 % 5
+        pennies = int1
+        return quarters, dimes, nickels, pennies

@@ -1,0 +1,111 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    # split string into list of words
+    # iterate through list and reverse contents of words with 5+ chars
+    # join list
+    # return string
+    str1_list = str1.split()
+    for i in range(len(str1_list)):
+        if len(str1_list[i]) >= 5:
+            str1_list[i] = str1_list[i][::-1]
+    return ' '.join(str1_list)
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    str2 = str1.split()
+    for i in range(len(str2)):
+        if len(str2[i]) >= 5:
+            str2[i] = str2[i][::-1]
+    return ' '.join(str2)
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    # print(str1)
+    str2 = str1.split()
+    # print(str2)
+    str3 = []
+    for i in str2:
+        if len(i) >= 5:
+            str3.append(i[::-1])
+        else:
+            str3.append(i)
+    # print(str3)
+    return ' '.join(str3)
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    str2 = str1.split()
+    for i in range(len(str2)):
+        if len(str2[i]) >= 5:
+            str2[i] = str2[i][::-1]
+    return " ".join(str2)
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    str1 = str1.split()
+    new_str = []
+    for word in str1:
+        if len(word) >= 5:
+            new_str.append(word[::-1])
+        else:
+            new_str.append(word)
+    return ' '.join(new_str)
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    str1 = str1.split()
+    for i in range(len(str1)):
+        if len(str1[i]) >= 5:
+            str1[i] = str1[i][::-1]
+    return " ".join(str1)
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    # Split the string into words
+    words = str1.split(' ')
+    # Loop through the words
+    for i in range(len(words)):
+        # If the word is 5 or more letters long
+        if len(words[i]) >= 5:
+            # Reverse the word
+            words[i] = words[i][::-1]
+    # Return the joined words
+    return ' '.join(words)
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    result = ""
+    for word in str1.split(" "):
+        if len(word) >= 5:
+            result += word[::-1] + " "
+        else:
+            result += word + " "
+    return result[:-1]
+
+=======
+Suggestion 9
+
+def myfunc(str1: str):
+    str1 = str1.split()
+    for i in range(len(str1)):
+        if len(str1[i]) >= 5:
+            str1[i] = str1[i][::-1]
+    return ' '.join(str1)

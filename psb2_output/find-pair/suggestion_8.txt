@@ -1,0 +1,102 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(list1: list, int1: int):
+    for i in range(len(list1)):
+        for j in range(i + 1, len(list1)):
+            if list1[i] + list1[j] == int1:
+                return list1[i], list1[j]
+    return None
+
+=======
+Suggestion 2
+
+def myfunc(list1: list, int1: int):
+    for i in list1:
+        for j in list1:
+            if i + j == int1:
+                return [i,j]
+    return False
+
+=======
+Suggestion 3
+
+def myfunc(list1: list, int1: int):
+    for i in range(len(list1)):
+        for j in range(i + 1, len(list1)):
+            if list1[i] + list1[j] == int1:
+                return list1[i], list1[j]
+
+=======
+Suggestion 4
+
+def myfunc(list1: list, int1: int):
+    # Check if list is empty
+    if not list1:
+        return None
+    # Check if list has one element
+    if len(list1) == 1:
+        if list1[0] == int1:
+            return list1
+        else:
+            return None
+    # Check if list has two elements
+    if len(list1) == 2:
+        if list1[0] + list1[1] == int1:
+            return list1
+        else:
+            return None
+    # Check if list has more than two elements
+    if len(list1) > 2:
+        # Loop through list
+        for i in range(len(list1)):
+            # Check if integer is in list
+            if int1 - list1[i] in list1:
+                # Check if integer is not itself
+                if list1[i] != int1 - list1[i]:
+                    return [list1[i], int1 - list1[i]]
+                # Check if integer is itself
+                else:
+                    # Check if integer is in list more than once
+                    if list1.count(list1[i]) > 1:
+                        return [list1[i], int1 - list1[i]]
+                    else:
+                        return None
+        return None
+
+=======
+Suggestion 5
+
+def myfunc(list1: list, int1: int):
+    return [i for i in list1 if int1-i in list1]
+
+=======
+Suggestion 6
+
+def myfunc(list1: list, int1: int):
+    for i in list1:
+        if int1 - i in list1:
+            return (i, int1-i)
+    return None
+
+=======
+Suggestion 7
+
+def myfunc(list1: list, int1: int):
+    list1.sort()
+    for i in range(len(list1)):
+        for j in range(i+1, len(list1)):
+            if list1[i] + list1[j] == int1:
+                return list1[i], list1[j]
+    return None
+
+=======
+Suggestion 8
+
+def myfunc(list1: list, int1: int):
+    for i in list1:
+        if int1 - i in list1:
+            return [i, int1 - i]
+    return None

@@ -1,0 +1,93 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    for i in range(int1):
+        float1 += float2
+        float1 -= float1 * float3
+    return float1
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    return int1 * (float1 + float2 - float3)
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    snow = float1
+    for i in range(0, int1):
+        snow = snow + float2 - (snow * float3)
+    return snow
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    snow = 0
+    for i in range(int1):
+        snow += float1
+        snow -= snow*float2
+    return snow
+
+=======
+Suggestion 5
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    snow = float1
+    for i in range(int1):
+        snow = snow + float2 - float3
+    return snow
+
+=======
+Suggestion 6
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    snow = float1
+    for i in range(int1):
+        snow = snow + float2 - float3 * snow
+    return snow
+
+=======
+Suggestion 7
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    amount_of_snow = float1
+    for i in range(int1):
+        amount_of_snow += float2
+        amount_of_snow -= amount_of_snow * float3
+    return amount_of_snow
+
+=======
+Suggestion 8
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    snow = float1
+    for i in range(int1):
+        snow = snow + float2 - (snow * float3)
+    return snow
+
+=======
+Suggestion 9
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    # your code here
+    return float1 * int1 + (float2 - float3) * int1
+
+=======
+Suggestion 10
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    # int1 = hours
+    # float1 = snow on ground
+    # float2 = rate of snow fall
+    # float3 = proportion of snow melting per hour
+    # return snow on ground after hours
+    for i in range(int1):
+        float1 += float2
+        float1 -= float1 * float3
+    return float1

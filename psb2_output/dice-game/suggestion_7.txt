@@ -1,0 +1,64 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, int2: int):
+    # Your code here
+    pass
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, int2: int):
+    pass
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, int2: int):
+    # Your code here
+    return 0
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, int2: int):
+    # To be implemented by the student
+    pass
+
+=======
+Suggestion 5
+
+def myfunc(int1: int, int2: int):
+    # Write your code here
+    pass
+
+=======
+Suggestion 6
+
+def myfunc(int1: int, int2: int):
+    # Your code here
+    return 0.0
+
+=======
+Suggestion 7
+
+def myfunc(int1: int, int2: int):
+    # Your code here
+    return
+
+=======
+Suggestion 8
+
+def myfunc(int1: int, int2: int):
+    """
+    >>> myfunc(4, 4)
+    0.5
+    >>> myfunc(4, 6)
+    0.5833333333333334
+    >>> myfunc(6, 4)
+    0.4166666666666667
+    """
+    # Your code here
+    return 0.0

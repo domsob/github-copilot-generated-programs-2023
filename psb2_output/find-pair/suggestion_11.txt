@@ -1,0 +1,85 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(list1: list, int1: int):
+    for i in range(len(list1)):
+        for j in range(i+1, len(list1)):
+            if list1[i] + list1[j] == int1:
+                return list1[i], list1[j]
+    return None
+
+=======
+Suggestion 2
+
+def myfunc(list1: list, int1: int):
+    for i in range(len(list1)):
+        for j in range(i + 1, len(list1)):
+            if list1[i] + list1[j] == int1:
+                return (list1[i], list1[j])
+
+=======
+Suggestion 3
+
+def myfunc(list1: list, int1: int):
+    for i in list1:
+        for j in list1:
+            if i + j == int1:
+                return [i, j]
+    return []
+
+=======
+Suggestion 4
+
+def myfunc(list1: list, int1: int):
+    for i in range(len(list1)):
+        for j in range(i+1, len(list1)):
+            if list1[i] + list1[j] == int1:
+                return [list1[i], list1[j]]
+    return "No match"
+
+=======
+Suggestion 5
+
+def myfunc(list1: list, int1: int):
+    for i in range(len(list1)):
+        for j in range(i+1, len(list1)):
+            if list1[i] + list1[j] == int1:
+                return [list1[i], list1[j]]
+    return None
+
+=======
+Suggestion 6
+
+def myfunc(list1: list, int1: int):
+    # for each element in the list
+    for i in list1:
+        # for each element in the list
+        for j in list1:
+            # if the sum of the two elements is equal to the target integer
+            if i + j == int1:
+                # return the two elements
+                return i, j
+    # if there is no solution
+    return 'no solution'
+
+=======
+Suggestion 7
+
+def myfunc(list1: list, int1: int):
+    for i in list1:
+        for j in list1:
+            if i + j == int1:
+                return i, j
+    return 'No match found'
+
+=======
+Suggestion 8
+
+def myfunc(list1: list, int1: int):
+    for i in range(len(list1)):
+        for j in range(len(list1)):
+            if i != j and list1[i] + list1[j] == int1:
+                return list1[i], list1[j]
+    return -1, -1

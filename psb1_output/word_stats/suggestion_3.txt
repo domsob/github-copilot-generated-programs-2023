@@ -1,0 +1,104 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):)->list:
+    str1 = str1.strip()
+    str1 = str1.replace('!','.')
+    s
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):)-> list:
+    str1 = str1.replace("."," ")
+    str1 = str1.replace("?"," ")
+    str1 = str1.replace("!"," ")
+    str1 = str1.replace(","," ")
+    str1 = str1.replace(";"," ")
+    str1 = str1.replace(":"," ")
+    str1 = str1.replace("-"," ")
+    str1 = str1.replace("_"," ")
+    str1 = str1.replace("("," ")
+    str1 = str1.replace(")"," ")
+    str1 = str1.replace("["," ")
+    str1 = str1.replace("]"," ")
+    str1 = str1.replace("{"," ")
+    str1 = str1.replace("}"," ")
+    str1 = str1.replace("/"," ")
+    str1 = str1.replace("\\"," ")
+    str1 = str1.replace("|"," ")
+    str1 = str1.replace("\'"," ")
+    str1 = str1.replace("\""," ")
+    str1 = str1.replace("*"," ")
+    str1 = str1.replace("&"," ")
+    str1 = str1.replace("^"," ")
+    str1 = str1.replace("%"," ")
+    str1 = str1.replace
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):)->list:
+    # Write your code here
+    pass
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):) -> list:
+    # Your code here
+    pass
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):) -> list:
+    # your code here
+    return
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):)->list:
+    # Your code here
+    return [1,2,3,4,5]
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):) -> list:
+    str2 = str1.replace('!', '.').replace('?', '.')
+    str3 = str2.split('.')
+    str4 = []
+    for i in str3:
+        str4.append(i.split())
+    str5 = []
+    for i in str4:
+        str5.append(len(i))
+    str6 = []
+    for i in range(1, max(str5) + 1):
+        str6.append(str5.count(i))
+    str7 = sum(str5) / len(str5)
+    return str6 + [str7]
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):) -> list:
+    pass
+
+=======
+Suggestion 9
+
+def myfunc(str1: str):)-> List[int]:
+    # Write your code here
+    return []
+
+=======
+Suggestion 10
+
+def myfunc(str1: str):) -> list:
+    # YOUR CODE HERE
+    return [0, 0, 0]

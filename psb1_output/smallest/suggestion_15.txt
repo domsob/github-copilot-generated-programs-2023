@@ -1,0 +1,73 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, int2: int, int3: int, int4: int):
+    # Your code here
+    pass
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, int2: int, int3: int, int4: int):
+    if int1 <= int2 and int1 <= int3 and int1 <= int4:
+        return int1
+    elif int2 <= int1 and int2 <= int3 and int2 <= int4:
+        return int2
+    elif int3 <= int1 and int3 <= int2 and int3 <= int4:
+        return int3
+    else:
+        return int4
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, int2: int, int3: int, int4: int):
+    if int1 < int2 and int1 < int3 and int1 < int4:
+        return int1
+    elif int2 < int1 and int2 < int3 and int2 < int4:
+        return int2
+    elif int3 < int1 and int3 < int2 and int3 < int4:
+        return int3
+    else:
+        return int4
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, int2: int, int3: int, int4: int):
+    int1 = int(input("Enter int1: "))
+    int2 = int(input("Enter int2: "))
+    int3 = int(input("Enter int3: "))
+    int4 = int(input("Enter int4: "))
+    if int1 < int2 and int1 < int3 and int1 < int4:
+        print("The smallest number is: ", int1)
+    elif int2 < int1 and int2 < int3 and int2 < int4:
+        print("The smallest number is: ", int2)
+    elif int3 < int1 and int3 < int2 and int3 < int4:
+        print("The smallest number is: ", int3)
+    elif int4 < int1 and int4 < int2 and int4 < int3:
+        print("The smallest number is: ", int4)
+    else:
+        print("The smallest number is: ", int1)
+
+=======
+Suggestion 5
+
+def myfunc(int1: int, int2: int, int3: int, int4: int):
+    return min(int1, int2, int3, int4)
+
+=======
+Suggestion 6
+
+def myfunc(int1: int, int2: int, int3: int, int4: int):
+    """Returns the smallest of 4 integers."""
+    if int1 < int2 and int1 < int3 and int1 < int4:
+        return int1
+    elif int2 < int3 and int2 < int4:
+        return int2
+    elif int3 < int4:
+        return int3
+    else:
+        return int4

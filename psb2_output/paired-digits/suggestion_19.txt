@@ -1,0 +1,27 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    sum = 0
+    for i in range(len(str1)-1):
+        if str1[i] == str1[i+1]:
+            sum += int(str1[i])
+    return sum
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    return sum([int(str1[i]) for i in range(len(str1)-1) if str1[i] == str1[i+1]])
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    sum = 0
+    for i in range(len(str1)):
+        if i < len(str1) - 1 and str1[i] == str1[i + 1]:
+            sum += int(str1[i])
+    return sum

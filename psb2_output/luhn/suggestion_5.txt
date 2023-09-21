@@ -1,0 +1,163 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(list1: list):
+    # double every other digit starting with the second digit
+    # If any of the results are over 9, substract 9 from them. 
+    list2 = []
+    for i in range(len(list1)):
+        if i % 2 == 0:
+            list2.append(list1[i])
+        else:
+            list2.append(list1[i]*2)
+    list3 = []
+    for i in range(len(list2)):
+        if list2[i] > 9:
+            list3.append(list2[i]-9)
+        else:
+            list3.append(list2[i])
+    return sum(list3)
+
+=======
+Suggestion 2
+
+def myfunc(list1: list):
+    list1 = [int(i) for i in list1]
+    list2 = []
+    for i in range(len(list1)):
+        if i % 2 != 0:
+            x = list1[i] * 2
+            if x > 9:
+                x = x - 9
+                list2.append(x)
+            else:
+                list2.append(x)
+        else:
+            list2.append(list1[i])
+    return sum(list2)
+
+=======
+Suggestion 3
+
+def myfunc(list1: list):
+    list2 = []
+    for i in range(len(list1)):
+        if i % 2 == 0:
+            list2.append(list1[i]*2)
+        else:
+            list2.append(list1[i])
+    for i in range(len(list2)):
+        if list2[i] > 9:
+            list2[i] -= 9
+    return sum(list2)
+
+=======
+Suggestion 4
+
+def myfunc(list1: list):
+    # your code here
+    sum1 = 0
+    for i in range(len(list1)):
+        if i % 2 != 0:
+            list1[i] = list1[i] * 2
+            if list1[i] > 9:
+                list1[i] = list1[i] - 9
+        sum1 = sum1 + list1[i]
+    return sum1
+
+=======
+Suggestion 5
+
+def myfunc(list1: list):
+    list2 = []
+    list3 = []
+    list4 = []
+    for i in range(len(list1)):
+        if i%2 == 0:
+            list2.append(list1[i])
+        else:
+            list3.append(list1[i])
+    for i in range(len(list2)):
+        if list2[i]*2 > 9:
+            list4.append(list2[i]*2-9)
+        else:
+            list4.append(list2[i]*2)
+    print(sum(list3)+sum(list4))
+
+=======
+Suggestion 6
+
+def myfunc(list1: list):
+    sum = 0
+    for i in range(0, len(list1)):
+        if i % 2 != 0:
+            list1[i] = list1[i] * 2
+            if list1[i] > 9:
+                list1[i] = list1[i] - 9
+        sum = sum + list1[i]
+    return sum
+
+=======
+Suggestion 7
+
+def myfunc(list1: list):
+    sum = 0
+    for i in range(len(list1)):
+        if i % 2 != 0:
+            if list1[i] * 2 > 9:
+                sum += (list1[i] * 2) - 9
+            else:
+                sum += list1[i] * 2
+        else:
+            sum += list1[i]
+    return sum
+
+=======
+Suggestion 8
+
+def myfunc(list1: list):
+    list2 = []
+    for i in range(0, len(list1)):
+        if i % 2 == 0:
+            list2.append(list1[i])
+        else:
+            list2.append(list1[i] * 2)
+    list3 = []
+    for i in range(0, len(list2)):
+        if list2[i] > 9:
+            list3.append(list2[i] - 9)
+        else:
+            list3.append(list2[i])
+    return sum(list3)
+
+=======
+Suggestion 9
+
+def myfunc(list1: list):
+    sum1 = 0
+    for i in range(len(list1)):
+        if i % 2 == 0:
+            sum1 += list1[i]
+        else:
+            sum1 += list1[i] * 2
+    return sum1
+
+=======
+Suggestion 10
+
+def myfunc(list1: list):
+    new_list = []
+    for i in range(len(list1)):
+        if i%2 == 0:
+            new_list.append(list1[i])
+        else:
+            new_list.append(list1[i]*2)
+    sum1 = 0
+    for i in new_list:
+        if i > 9:
+            sum1 += i-9
+        else:
+            sum1 += i
+    return sum1

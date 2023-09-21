@@ -1,0 +1,89 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, int2: int, int3: int):
+    # Sort the 3 integers
+    sorted_list = sorted([int1, int2, int3])
+    # Return the middle integer
+    return sorted_list[1]
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, int2: int, int3: int):
+    if int1 > int2:
+        if int1 < int3:
+            return int1
+        elif int2 > int3:
+            return int2
+        else:
+            return int3
+    else:
+        if int1 > int3:
+            return int1
+        elif int2 < int3:
+            return int2
+        else:
+            return int3
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, int2: int, int3: int):
+    # Sort the integers
+    int_list = [int1, int2, int3]
+    int_list.sort()
+    # Return the middle value
+    return int_list[1]
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, int2: int, int3: int):
+    """Return median of 3 integers."""
+    # Put all 3 integers in a list.
+    mylist = [int1, int2, int3]
+    # Sort the list.
+    mylist.sort()
+    # Return the middle item of the list.
+    return mylist[1]
+
+=======
+Suggestion 5
+
+def myfunc(int1: int, int2: int, int3: int):
+    if int1 > int2:
+        if int2 > int3:
+            return int2
+        elif int1 > int3:
+            return int3
+        else:
+            return int1
+    else:
+        if int1 > int3:
+            return int1
+        elif int2 > int3:
+            return int3
+        else:
+            return int2
+
+=======
+Suggestion 6
+
+def myfunc(int1: int, int2: int, int3: int):
+    # your code here
+    return int1
+
+=======
+Suggestion 7
+
+def myfunc(int1: int, int2: int, int3: int):
+    # Create a list with the 3 integers
+    nums = [int1, int2, int3]
+    # Sort the list
+    nums.sort()
+    # Return the middle value
+    return nums[1]
+    # End of function

@@ -1,0 +1,172 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):)->list:
+    str1=str1.replace('!','.')
+    str1=str1.replace('?','.')
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):)-> list:
+    # Your code here
+    return
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):) -> List[int]:
+    """Given a string, return a list containing the number of words with n characters
+    for n from 1 to the length of the longest word.
+    Additionally, return the number of sentences and the average sentence length.
+    A word is any string of consecutive non-whitespace characters (including
+    sentence terminators). Every string will contain at least one sentence terminator
+    (period, exclamation point, or question mark). The average sentence length is
+    the number of words in the string divided by the number of sentence terminator characters.
+    """
+    # Your code here
+    return None
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):) -> List[int]:
+    # Your code here
+    pass
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):)-> list:
+    # initialize variables
+    word_count = 0
+    word_length = 0
+    sentence_count = 0
+    sentence_length = 0
+    # initialize list to store word count
+    word_count_list = [0]
+    
+    # loop through the string
+    for char in str1:
+        # if the character is a whitespace character
+        if char.isspace():
+            # if the word length is greater than zero
+            if word_length > 0:
+                # increment the word count
+                word_count += 1
+                # if the word count is greater than the length of the word count list
+                if word_count > len(word_count_list):
+                    # append a zero to the word count list
+                    word_count_list.append(0)
+                # increment the word count list at the index of the word length
+                word_count_list[word_length] += 1
+                # reset the word length
+                word_length = 0
+        # else if the character is a sentence terminator
+        elif char in ['.', '!', '?']:
+            # if the word length is greater than zero
+            if word_length > 0:
+                # increment the word count
+                word_count += 1
+                # if the word count is greater than the length of the word count list
+                if word_count > len(word_count_list):
+                    # append a zero to the word count list
+                    word_count_list.append(0)
+                # increment the word count list at the index of the word length
+                word_count_list[word_length] += 1
+                # reset the word length
+                word_length = 0
+            # increment the sentence count
+            sentence_count += 1
+        # else
+        else:
+            # increment the word length
+            word_length += 1
+    # if the word length is greater than zero
+    if word_length > 0:
+        # increment the word count
+        word_count += 1
+        # if the word count is greater than the length of the word count list
+        if word_count > len(word_count_list):
+            # append a zero to the word count list
+            word_count_list.append(0)
+        # increment the word count list at the index of the word length
+        word_count_list[word_length] += 1
+    # calculate the sentence length
+    sentence_length = word_count / sentence_count
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):) -> list:
+    # your code here
+    pass
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):) -> list:
+    # your code here
+    return [0,0,0]
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):)-> list:
+    # Write your code here
+    pass
+
+=======
+Suggestion 9
+
+def myfunc(str1: str):)->list:
+    if len(str1) == 0:
+        return []
+    str1 = str1.replace('?', '.')
+    str1 = str1.replace('!', '.')
+    str1 = str1.replace('..', '.')
+    str1 = str1.replace('...', '.')
+    str1 = str1.replace('....', '.')
+    str1 = str1.replace('.....', '.')
+    str1 = str1.replace('......', '.')
+    str1 = str1.replace('.......', '.')
+    str1 = str1.replace('........', '.')
+    str1 = str1.replace('.........', '.')
+    str1 = str1.replace('..........', '.')
+    str1 = str1.replace('...........', '.')
+    str1 = str1.replace('............', '.')
+    str1 = str1.replace('.............', '.')
+    str1 = str1.replace('..............', '.')
+    str1 = str1.replace('...............', '.')
+    str1 = str1.replace('................', '.')
+    str1 = str1.replace('.................', '.')
+    str1 = str1.replace('..................', '.')
+    str1 = str1.replace('...................', '.')
+    str1 = str1.replace('....................', '.')
+    str1 = str1.replace('.....................', '.')
+    str1 = str1.replace('......................', '.')
+    str1 = str1.replace('.......................', '.')
+    str1 = str1.replace('........................', '.')
+    str1 = str1.replace('.........................', '.')
+    str1 = str1.replace('..........................', '.')
+    str1 = str1.replace('...........................', '.')
+    str1 = str1.replace('............................', '.')
+    str1 = str1.replace('.............................', '.')
+    str1 = str1.replace('..............................', '.')
+    str1 = str1.replace('...............................', '.')
+    str1 = str1.replace('................................', '.')
+    str1 = str1.replace('.................................', '.')
+    str1 = str1.replace('..................................', '.')
+    str1 = str1.replace('...................................', '.')
+    str1 = str1.replace('....................................', '.')
+    str1 = str1.replace('.....................................', '.')
+    str1 = str1.replace('......................................
+
+=======
+Suggestion 10
+
+def myfunc(str1: str):) -> list:
+    # Write your code here.
+    return [0]

@@ -1,0 +1,155 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str, str2: str):
+    if len(str1) > len(str2):
+        return False
+    str1 = list(str1)
+    str2 = list(str2)
+    for i in str1:
+        if i in str2:
+            str2.remove(i)
+        else:
+            return False
+    return True
+
+=======
+Suggestion 2
+
+def myfunc(str1: str, str2: str):
+    # Check if str1 is a substring of str2
+    if str1 in str2:
+        return True
+    else:
+        return False
+
+=======
+Suggestion 3
+
+def myfunc(str1: str, str2: str):
+    str1 = str1.lower()
+    str2 = str2.lower()
+    str1 = str1.replace(" ", "")
+    str2 = str2.replace(" ", "")
+    str1 = ''.join(sorted(str1))
+    str2 = ''.join(sorted(str2))
+    if str1 in str2:
+        return True
+    else:
+        return False
+
+=======
+Suggestion 4
+
+def myfunc(str1: str, str2: str):
+    if len(str1) > len(str2):
+        return False
+    str1_dict = {}
+    str2_dict = {}
+    for i in str1:
+        if i in str1_dict:
+            str1_dict[i] += 1
+        else:
+            str1_dict[i] = 1
+    for i in str2:
+        if i in str2_dict:
+            str2_dict[i] += 1
+        else:
+            str2_dict[i] = 1
+    for i in str1_dict:
+        if i not in str2_dict or str2_dict[i] < str1_dict[i]:
+            return False
+    return True
+
+=======
+Suggestion 5
+
+def myfunc(str1: str, str2: str):
+    return sorted(str1) == sorted(str2)
+
+=======
+Suggestion 6
+
+def myfunc(str1: str, str2: str):
+    # Write your code here
+    # 1. Check if str1 is a substring of str2
+    # 2. Check if str1 and str2 have the same length
+    # 3. Check if str1 and str2 have the same number of each character
+    # 4. If all above are true, return True. Otherwise, return False
+    if str1 in str2:
+        if len(str1) == len(str2):
+            if len(set(str1)) == len(set(str2)):
+                return True
+            else:
+                return False
+        else:
+            return False
+    else:
+        return False
+
+=======
+Suggestion 7
+
+def myfunc(str1: str, str2: str):
+    # convert to set to remove duplicates
+    # convert to list to use .count()
+    # iterate through set and count each character
+    # if the count of each character in str1 is >= count of each character in str2, return true
+    # else return false
+    # 1. convert to set to remove duplicates
+    # 2. convert to list to use .count()
+    # 3. iterate through set and count each character
+    # 4. if the count of each character in str1 is >= count of each character in str2, return true
+    # 5. else return false
+    str1 = set(list(str1))
+    str2 = set(list(str2))
+    for char in str1:
+        if str1.count(char) >= str2.count(char):
+            return True
+        else:
+            return False
+
+=======
+Suggestion 8
+
+def myfunc(str1: str, str2: str):
+    for i in str1:
+        if i not in str2:
+            return False
+        else:
+            if str1.count(i) > str2.count(i):
+                return False
+    return True
+
+=======
+Suggestion 9
+
+def myfunc(str1: str, str2: str):
+    # Write your code here
+    if len(str1) > len(str2):
+        return False
+    else:
+        for i in str1:
+            if i not in str2:
+                return False
+            elif str1.count(i) > str2.count(i):
+                return False
+    return True
+
+=======
+Suggestion 10
+
+def myfunc(str1: str, str2: str):
+    # Write your code here
+    str1 = str1.lower()
+    str2 = str2.lower()
+    str1 = ''.join(sorted(str1))
+    str2 = ''.join(sorted(str2))
+    print(str1)
+    print(str2)
+    if str1 in str2:
+        return True
+    else:
+        return False

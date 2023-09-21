@@ -1,0 +1,140 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    if int1 < 0:
+        int1 = abs(int1)
+        int1 = str(int1)
+        int1 = list(int1)
+        int1 = list(map(int, int1))
+        int1.insert(0, '-')
+    else:
+        int1 = str(int1)
+        int1 = list(int1)
+        int1 = list(map(int, int1))
+    return int1
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    if int1 == 0:
+        return [0]
+    lst = []
+    if int1 < 0:
+        lst.append('-')
+        int1 *= -1
+    while int1 > 0:
+        lst.append(int1 % 10)
+        int1 //= 10
+    return lst
+
+=======
+Suggestion 3
+
+def myfunc(int1: int):
+    int1 = str(int1)
+    int1 = list(int1)
+    if int1[0] == '-':
+        int1[0], int1[-1] = int1[-1], int1[0]
+    int1 = [int(x) for x in int1]
+    return int1
+
+=======
+Suggestion 4
+
+def myfunc(int1: int):
+    if int1 < 0:
+        int1 = -int1
+        int1 = str(int1)
+        int1 = int1[::-1]
+        int1 = '-' + int1
+        return list(int1)
+    else:
+        int1 = str(int1)
+        int1 = int1[::-1]
+        return list(int1)
+
+=======
+Suggestion 5
+
+def myfunc(int1: int):
+    if int1 == 0:
+        return [0]
+    else:
+        list1 = []
+        if int1 < 0:
+            list1.append('-')
+            int1 = abs(int1)
+        while int1 > 0:
+            list1.append(int1 % 10)
+            int1 = int1 // 10
+        return list1
+
+=======
+Suggestion 6
+
+def myfunc(int1: int):
+    if int1 == 0:
+        return [0]
+    negative = False
+    if int1 < 0:
+        negative = True
+        int1 = -int1
+    result = []
+    while int1 > 0:
+        result.append(int1 % 10)
+        int1 = int1 // 10
+    if negative:
+        result.append("-")
+    return result[::-1]
+
+=======
+Suggestion 7
+
+def myfunc(int1: int):
+    if int1 < 0:
+        int1 = -int1
+        sign = "-"
+    else:
+        sign = ""
+    return [int(sign + i) for i in str(int1)[::-1]]
+
+=======
+Suggestion 8
+
+def myfunc(int1: int):
+    # YOUR CODE HERE
+    return None
+
+=======
+Suggestion 9
+
+def myfunc(int1: int):
+    int1 = str(int1)
+    if int1[0] == "-":
+        int1 = int1[1:]
+        int1 = int1[::-1]
+        int1 = "-" + int1
+        int1 = int(int1)
+        int1 = str(int1)
+        int1 = list(int1)
+        int1 = [int(i) for i in int1]
+        return int1
+    else:
+        int1 = int1[::-1]
+        int1 = list(int1)
+        int1 = [int(i) for i in int1]
+        return int1
+
+=======
+Suggestion 10
+
+def myfunc(int1: int):
+    int1 = str(int1)
+    if int1[0] == '-':
+        return [int(int1[0] + int1[-i]) for i in range(1,len(int1))]
+    else:
+        return [int(int1[-i]) for i in range(1,len(int1)+1)]

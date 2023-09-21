@@ -1,0 +1,160 @@
+Synthesizing 6/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    # get the length of the string
+    length = len(str1)
+    # create a list to store the score for each frame
+    score = []
+    # create
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    score = 0
+    for i in range(len(str1)):
+        if str1[i] == 'X':
+            score += 10
+            if i < len(str1) - 2:
+                if str1[i + 2] == '/':
+                    score += 10 - int(str1[i + 1])
+                else:
+                    score += int(str1[i + 1]) + int(str1[i + 2])
+            elif i < len(str1) - 1:
+                score += int(str1[i + 1])
+        elif str1[i] == '/':
+            score += 10 - int(str1[i - 1])
+            if i < len(str1) - 1:
+                score += int(str1[i + 1])
+        else:
+            score += int(str1[i])
+    return score
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    # your code here
+    return 0
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    score = 0
+    for i in range(len(str1)):
+        if str1[i] == "X":
+            if i == 9:
+                score += 10
+            else:
+                if str1[i + 1] == "X":
+                    if str1[i + 2] == "X":
+                        score += 30
+                    else:
+                        score += 20 + int(str1[i + 2])
+                else:
+                    if str1[i + 2] == "/":
+                        score += 20
+                    elif str1[i + 2] == "X":
+                        score += 20
+                    else:
+                        score += 10 + int(str1[i + 1]) + int(str1[i + 2])
+        elif str1[i] == "/":
+            if i == 9:
+                score += 10
+            else:
+                if str1[i + 1] == "X":
+                    score += 20
+                else:
+                    score += 10 + int(str1[i + 1])
+        else:
+            score += int(str1[i])
+    return score
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    score = 0
+    for i in range(len(str1)):
+        if str1[i] == 'X':
+            score += 10
+            if str1[i + 2] == 'X':
+                score += 10
+            else:
+                score += int(str1[i + 2])
+            if str1[i + 1] == 'X':
+                score += 10
+            else:
+                score += int(str1[i + 1])
+        elif str1[i] == '/':
+            score += 10
+            if str1[i + 1] == 'X':
+                score += 10
+            else:
+                score += int(str1[i + 1])
+        elif str1[i] == '-':
+            continue
+        else:
+            score += int(str1[i])
+    return score
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    # Initialize variables
+    score = 0
+    frame = 1
+    bowl = 1
+    bonus = 0
+    # Iterate through each bowl in the round
+    for char in str1:
+        # If the bowl is a strike, add 10 to the score and add 2 to the bowl count
+        if char == 'X':
+            score += 10
+            bowl += 2
+            # If the next bowl is also a strike, add 10 to the score and add 2 to the bowl count
+            if str1[bowl] == 'X':
+                score += 10
+                bowl += 2
+            # If the next bowl is not a strike, add the value of the next bowl to the score
+            else:
+                score += int(str1[bowl])
+                bowl += 1
+            # If the bowl is a spare, add 10 to the score and add 1 to the bowl count
+        elif char == '/':
+            score += 10
+            bowl += 1
+            # If the next bowl is a strike, add 10 to the score and add 2 to the bowl count
+            if str1[bowl] == 'X':
+                score += 10
+                bowl += 2
+            # If the next bowl is not a strike, add the value of the next bowl to the score
+            else:
+                score += int(str1[bowl])
+                bowl += 1
+        # If the bowl is not a strike or spare, add the value of the bowl to the score
+        else:
+            score += int(char)
+            bowl += 1
+        # If the frame is 10, add the bonus to the score and end the loop
+        if frame == 10:
+            score += bonus
+            break
+        # If the bowl is 21, add the bonus to the score and end the loop
+        if bowl == 21:
+            score += bonus
+            break
+        # If the bowl is 19, add the bonus to the score and end the loop
+        if bowl == 19:
+            score += bonus
+            break
+        # If the bowl is 20, add the bonus to the score and end the loop
+        if bowl == 20:
+            score += bonus
+            break
+        # If the bowl is 17, add the bonus to the

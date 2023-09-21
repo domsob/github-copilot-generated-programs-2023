@@ -1,0 +1,2 @@
+# Given 4 integers, return the smallest of them.
+def myfunc(int1: int, int2: int, int3: int, int4: int):

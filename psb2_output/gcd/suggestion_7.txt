@@ -1,0 +1,145 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, int2: int):
+    if int1 > int2:
+        int1, int2 = int2, int1
+    for i in range(int1, 0, -1):
+        if int1 % i == 0 and int2 % i == 0:
+            return i
+    return 1
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, int2: int):
+    # find the smallest integer
+    if int1 > int2:
+        small = int2
+    else:
+        small = int1
+    # find the largest integer
+    for i in range(1, small + 1):
+        if int1 % i == 0 and int2 % i == 0:
+            large = i
+    return large
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, int2: int):
+    if int1 > int2:
+        return int1
+    else:
+        return int2
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, int2: int):
+    if int1 > int2:
+        max = int1
+    else:
+        max = int2
+
+    for i in range(1, max):
+        if int1 % i == 0 and int2 % i == 0:
+            max = i
+    return max
+
+=======
+Suggestion 5
+
+def myfunc(int1: int, int2: int):
+    # Check if the two integers are equal
+    if int1 == int2:
+        return int1
+    # Check if the first integer is larger than the second
+    elif int1 > int2:
+        # Check if the first integer is divisible by the second
+        if int1 % int2 == 0:
+            return int2
+        # Check if the second integer is divisible by the first
+        elif int2 % int1 == 0:
+            return int1
+        # If neither of the above, return 1
+        else:
+            return 1
+    # Check if the second integer is larger than the first
+    elif int2 > int1:
+        # Check if the second integer is divisible by the first
+        if int2 % int1 == 0:
+            return int1
+        # Check if the first integer is divisible by the second
+        elif int1 % int2 == 0:
+            return int2
+        # If neither of the above, return 1
+        else:
+            return 1
+
+=======
+Suggestion 6
+
+def myfunc(int1: int, int2: int):
+    if int1 > int2:
+        largest = int1
+    else:
+        largest = int2
+    while(True):
+        if((largest % int1 == 0) and (largest % int2 == 0)):
+            myfunc = largest
+            break
+        largest += 1
+    return myfunc
+
+=======
+Suggestion 7
+
+def myfunc(int1: int, int2: int):
+    # find the smaller number
+    if int1 < int2:
+        smaller = int1
+    else:
+        smaller = int2
+    # loop from smaller to 1
+    for i in range(smaller, 0, -1):
+        # check if divisible
+        if int1 % i == 0 and int2 % i == 0:
+            return i
+
+=======
+Suggestion 8
+
+def myfunc(int1: int, int2: int):
+    if int1 > int2:
+        small = int2
+    else:
+        small = int1
+    for i in range(1, small+1):
+        if (int1 % i == 0) and (int2 % i == 0):
+            gcd = i
+    return gcd
+
+=======
+Suggestion 9
+
+def myfunc(int1: int, int2: int):
+    # Replace this with your code
+    return 0
+
+=======
+Suggestion 10
+
+def myfunc(int1: int, int2: int):
+    if int1 == int2:
+        return int1
+    elif int1 > int2:
+        for i in range(int2, 0, -1):
+            if int1 % i == 0 and int2 % i == 0:
+                return i
+    else:
+        for i in range(int1, 0, -1):
+            if int1 % i == 0 and int2 % i == 0:
+                return i

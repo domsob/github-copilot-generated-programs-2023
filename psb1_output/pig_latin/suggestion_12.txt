@@ -1,0 +1,107 @@
+Synthesizing 8/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    str2 = str1.split()
+    str3 = []
+    for i in str2:
+        if i[0] in 'aeiou':
+            str3.append(i + 'ay')
+        else:
+            str3.append(i[1:] + i[0] + 'ay')
+    return ' '.join(str3)
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    str1 = str1.split()
+    for i in range(len(str1)):
+        if str1[i][0] in 'aeiou':
+            str1[i] = str1[i] + 'ay'
+        else:
+            str1[i] = str1[i][1:] + str1[i][0] + 'ay'
+    return ' '.join(str1)
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    """
+    Given a string containing lowercase words separated by single spaces, return the string with
+    each word translated to pig Latin. Specifically, if a word starts with a vowel, it should have "ay" added to
+    its end; otherwise, the first letter is moved to the end of the word, followed by "ay".
+    :param str1: string
+    :return: string
+    """
+    vowels = "aeiou"
+    str2 = str1.split()
+    str3 = ""
+    for x in str2:
+        if x[0] in vowels:
+            str3 += x + "ay "
+        else:
+            str3 += x[1:] + x[0] + "ay "
+    return str3.strip()
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    new_str = ""
+    for word in str1.split():
+        if word[0] in "aeiou":
+            new_str += word + "ay "
+        else:
+            new_str += word[1:] + word[0] + "ay "
+    return new_str
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    str2 = str1.split()
+    str3 = []
+    for i in str2:
+        if i[0] in 'aeiou':
+            str3.append(i + "ay")
+        else:
+            str3.append(i[1:] + i[0] + "ay")
+    return " ".join(str3)
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    str2 = ""
+    for i in str1.split():
+        if i[0] in "aeiou":
+            str2 += i + "ay "
+        else:
+            str2 += i[1:] + i[0] + "ay "
+    return str2
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    str1 = str1.split()
+    str2 = []
+    for x in str1:
+        if x[0] in 'aeiou':
+            str2.append(x+'ay')
+        else:
+            str2.append(x[1:]+x[0]+'ay')
+    return ' '.join(str2)
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    str1 = str1.lower()
+    str1 = str1.split()
+    str1 = [i + "ay" if i[0] in "aeiou" else i[1:] + i[0] + "ay" for i in str1]
+    str1 = " ".join(str1)
+    return str1

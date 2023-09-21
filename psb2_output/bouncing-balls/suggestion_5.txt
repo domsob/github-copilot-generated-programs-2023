@@ -1,0 +1,166 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(float1: float, float2: float, int1: int):
+    """
+    >>> myfunc(10, 0.6, 3)
+    29.52
+    >>> myfunc(10, 0.6, 10)
+    336.14
+    """
+    total = 0
+    for i in range(int1):
+        total += float1
+        float1 *= float2
+        total += float1
+    return total
+
+=======
+Suggestion 2
+
+def myfunc(float1: float, float2: float, int1: int):
+    if (float1 > 0 and float2 > 0 and int1 > 0):
+        bounciness_index = float2 / float1
+        distance = float1
+        for i in range(0, int1):
+            distance += float1 * bounciness_index
+            float1 *= bounciness_index
+        return distance
+    else:
+        return 0
+
+=======
+Suggestion 3
+
+def myfunc(float1: float, float2: float, int1: int):
+    '''Calculate the total distance that the ball travels across those bounces'''
+    if float1 < 0 or float2 < 0 or int1 < 0:
+        return -1
+    elif float1 == 0 or float2 == 0 or int1 == 0:
+        return -1
+    else:
+        return (float2 / float1) ** int1 * float1
+
+=======
+Suggestion 4
+
+def myfunc(float1: float, float2: float, int1: int):
+    '''
+    >>> myfunc(10, 0.6, 5)
+    29.580000000000002
+    >>> myfunc(10, 0.6, 1)
+    16.0
+    >>> myfunc(10, 0.6, 0)
+    10.0
+    '''
+    # calculate the bounciness index
+    bounciness_index = float2 / float1
+    # calculate the total distance
+    total_distance = 0
+    for i in range(int1):
+        total_distance += float1
+        float1 *= bounciness_index
+        total_distance += float1
+    return total_distance
+
+=======
+Suggestion 5
+
+def myfunc(float1: float, float2: float, int1: int):
+    """
+    Return the total distance that the ball travels across those bounces.
+    >>> myfunc(10,0.6,5)
+    29.444
+    """
+    assert float1 > 0 and float2 > 0 and int1 > 0
+    bounciness_index = float2/float1
+    distance = 0
+    for i in range(int1):
+        distance += 2 * float1 * bounciness_index ** i
+    return distance
+
+=======
+Suggestion 6
+
+def myfunc(float1: float, float2: float, int1: int):
+    bounciness = float2/float1
+    distance = 0
+    for i in range(int1):
+        distance += float1
+        float1 *= bounciness
+        distance += float1
+    return distance
+
+=======
+Suggestion 7
+
+def myfunc(float1: float, float2: float, int1: int):
+    """Calculates the total distance that the ball travels across those bounces.
+    
+    Args:
+        float1 (float): Starting height
+        float2 (float): Height after the first bounce
+        int1 (int): Number of bounces
+    
+    Returns:
+        float: Total distance that the ball travels across those bounces
+    """
+    # your code here
+    return 0.0
+
+=======
+Suggestion 8
+
+def myfunc(float1: float, float2: float, int1: int):
+    """Function that calculates the total distance that a ball travels across a given number of bounces."""
+    height = float1
+    bounciness_index = float2
+    bounce_count = int1
+    distance = 0
+    while bounce_count > 0:
+        distance += height
+        height *= bounciness_index
+        distance += height
+        bounce_count -= 1
+    return distance
+
+=======
+Suggestion 9
+
+def myfunc(float1: float, float2: float, int1: int):
+    """
+    >>> myfunc(1.0, 0.6, 5)
+    2.244
+    """
+    bounciness_index = float2 / float1
+    distance = 0
+    for i in range(int1):
+        distance += float1
+        float1 *= bounciness_index
+        distance += float1
+    return round(distance, 3)
+
+=======
+Suggestion 10
+
+def myfunc(float1: float, float2: float, int1: int):
+    """
+    >>> myfunc(10, 0.6, 5)
+    18.099999999999998
+    >>> myfunc(10, 0.6, 1)
+    6.0
+    >>> myfunc(10, 0.6, 0)
+    10.0
+    """
+    # your code here
+    bounciness_index = float2/float1
+    height = float1
+    total_distance = 0
+    while int1 > 0:
+        total_distance += height
+        height = height * bounciness_index
+        total_distance += height
+        int1 -= 1
+    return total_distance

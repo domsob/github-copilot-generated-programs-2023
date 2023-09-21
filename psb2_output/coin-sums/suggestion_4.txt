@@ -1,0 +1,148 @@
+Synthesizing 9/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    # Declare variables for each coin type
+    quarters = 0
+    dimes = 0
+    nickels = 0
+    pennies = 0
+    # While loop to go through each coin type
+    while int1 > 0:
+        if int1 >= 25:
+            quarters = int1 // 25
+            int1 = int1 % 25
+        elif int1 >= 10:
+            dimes = int1 // 10
+            int1 = int1 % 10
+        elif int1 >= 5:
+            nickels = int1 // 5
+            int1 = int1 % 5
+        else:
+            pennies = int1
+            int1 = 0
+    # Return the number of each coin type
+    return quarters, dimes, nickels, pennies
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    if int1 < 0:
+        return "Error: negative input"
+    if int1 == 0:
+        return "0 quarters, 0 dimes, 0 nickels, 0 pennies"
+    quarters = int1 // 25
+    dimes = (int1 % 25) // 10
+    nickels = ((int1 % 25) % 10) // 5
+    pennies = ((int1 % 25) % 10) % 5
+    return f"{quarters} quarters, {dimes} dimes, {nickels} nickels, {pennies} pennies"
+
+=======
+Suggestion 3
+
+def myfunc(int1: int):
+    # Initialize the output list
+    output = [0, 0, 0, 0]
+    # Initialize the coin values
+    coin_values = [25, 10, 5, 1]
+    # Iterate through the coin values
+    for i in range(len(coin_values)):
+        # Add the number of coins to the output list
+        output[i] = int1 // coin_values[i]
+        # Update the number of cents left
+        int1 = int1 % coin_values[i]
+    # Return the output list
+    return output
+
+=======
+Suggestion 4
+
+def myfunc(int1: int):
+    """Given a number of cents, find the fewest needed number of US coins
+    (pennies, nickels, dimes, and quarters) to make that amount,
+    and return the number of each type of count as a separate output.
+
+    Args:
+        int1 (int): number of cents
+
+=======
+Suggestion 5
+
+def myfunc(int1: int):
+    """Returns the fewest needed number of US coins to make the amount of cents given as input."""
+    # Initialize the number of each type of coin.
+    quarters = dimes = nickels = pennies = 0
+    # Convert cents to quarters, dimes, nickels, and pennies.
+    quarters = int1 // 25
+    int1 %= 25
+    dimes = int1 // 10
+    int1 %= 10
+    nickels = int1 // 5
+    int1 %= 5
+    pennies = int1
+    # Return the number of each type of coin.
+    return quarters, dimes, nickels, pennies
+
+=======
+Suggestion 6
+
+def myfunc(int1: int):
+    # Write your code here
+    return int1
+
+=======
+Suggestion 7
+
+def myfunc(int1: int):
+    if int1 <= 0:
+        return "Invalid input"
+    else:
+        quarters = int1 // 25
+        dimes = (int1 % 25) // 10
+        nickels = ((int1 % 25) % 10) // 5
+        pennies = ((int1 % 25) % 10) % 5
+        return quarters, dimes, nickels, pennies
+
+=======
+Suggestion 8
+
+def myfunc(int1: int):
+    # initialize the output
+    output = [0, 0, 0, 0]
+    # if the input is negative, return None
+    if int1 < 0:
+        return None
+    # if the input is zero, return [0, 0, 0, 0]
+    elif int1 == 0:
+        return output
+    # if the input is positive, do the following
+    else:
+        # divide the input by 25, and store the quotient in output[3]
+        output[3] = int(int1 / 25)
+        # get the remainder, and store it in a new variable
+        int1 = int1 % 25
+        # divide the remainder by 10, and store the quotient in output[2]
+        output[2] = int(int1 / 10)
+        # get the remainder, and store it in a new variable
+        int1 = int1 % 10
+        # divide the remainder by 5, and store the quotient in output[1]
+        output[1] = int(int1 / 5)
+        # get the remainder, and store it in a new variable
+        int1 = int1 % 5
+        # the remainder is the number of pennies, and store it in output[0]
+        output[0] = int1
+        # return the output
+        return output
+
+=======
+Suggestion 9
+
+def myfunc(int1: int):
+    pennies = int1 % 5
+    dimes = int1 // 10
+    nickels = (int1 - (dimes * 10) - pennies) // 5
+    quarters = int1 // 25
+    return pennies, nickels, dimes, quarters

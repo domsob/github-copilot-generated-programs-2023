@@ -1,0 +1,4 @@
+# Peter has an n sided die and Colin has an m sided die.
+# If the both roll either dice at the same time, 
+# return the probability that Peter rolls strictly higher than Colin.
+def myfunc(int1: int, int2: int):

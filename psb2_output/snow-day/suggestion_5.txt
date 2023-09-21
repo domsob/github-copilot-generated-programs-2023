@@ -1,0 +1,66 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    # Your code here
+    return float1
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    snow = float1
+    for i in range(int1):
+        snow += float2
+        snow *= float3
+    return snow
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    snow = float1
+    for i in range(int1):
+        snow += float2
+        snow -= float3
+    return snow
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    if int1 < 0:
+        return "Invalid input"
+    elif float1 < 0:
+        return "Invalid input"
+    elif float2 < 0:
+        return "Invalid input"
+    elif float3 < 0:
+        return "Invalid input"
+    else:
+        for i in range(int1):
+            float1 += float2
+            float1 -= float1 * float3
+        return float1
+
+=======
+Suggestion 5
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    snow = float1
+    for i in range(int1):
+        snow += float2
+        snow -= snow * float3
+    return snow
+
+=======
+Suggestion 6
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    snow = 0
+    for i in range(int1):
+        snow += float1
+        snow -= snow * float3
+    return snow

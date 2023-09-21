@@ -1,0 +1,95 @@
+Synthesizing 6/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    if str1 == "":
+        return 0
+    else:
+        str1 = str1.replace("-", "0")
+        str1 = str1.replace("X", "10")
+        str1 = str1.replace("/", "10")
+        str1 = str1.replace(" ", "")
+        str1 = list(str1)
+        score = 0
+        for i in range(0, len(str1)):
+            if str1[i] == "X":
+                score += 10
+                if str1[i+2] == "/":
+                    score += 10
+                else:
+                    score += int(str1[i+1])
+                    score += int(str1[i+2])
+            elif str1[i] == "/":
+                score += 10 - int(str1[i-1])
+                if str1[i+1] == "X"
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    total = 0
+    for i in range(0, len(str1)):
+        if str1[i] == "X":
+            total += 10
+        elif str1[i] == "/":
+            total += 10 - int(str1[i - 1])
+        else:
+            total += int(str1[i])
+    return total
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    # YOUR CODE HERE
+    return 0
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    score = 0
+    for i in range(len(str1)):
+        if str1[i] == 'X':
+            score += 10
+        elif str1[i] == '/':
+            score += 10 - int(str1[i - 1])
+        else:
+            score += int(str1[i])
+    return score
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    """
+    Given a string representing the individual bowls in a 10-frame round of 10 pin bowling,
+    return the score for that round.
+    :param str1: String representing the individual bowls in a 10-frame round of 10 pin bowling
+    :return: Score for that round
+    """
+    score = 0
+    for i in range(len(str1)):
+        if str1[i] == "X":
+            score += 10
+        elif str1[i] == "/":
+            score += 10 - int(str1[i - 1])
+        else:
+            score += int(str1[i])
+    return score
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    total = 0
+    for i in range(len(str1)):
+        if str1[i] == 'X':
+            total += 10
+        elif str1[i] == '/':
+            total += 10 - int(str1[i - 1])
+        else:
+            total += int(str1[i])
+    return total

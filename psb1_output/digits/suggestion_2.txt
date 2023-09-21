@@ -1,0 +1,156 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    # Your code here
+    return
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    int1 = str(int1)
+    int1 = list(int1)
+    int1 = int1[::-1]
+    for i in range(len(int1)):
+        if int1[i] == '-':
+            int1.remove('-')
+            int1.append('-')
+    return int1
+
+=======
+Suggestion 3
+
+def myfunc(int1: int):
+    if int1 == 0:
+        return [0]
+    int1 = str(int1)
+    int1 = int1[::-1]
+    int1 = int(int1)
+    int1 = str(int1)
+    int1 = [int(x) for x in int1]
+    return int1
+
+=======
+Suggestion 4
+
+def myfunc(int1: int):
+    # your code goes here
+    pass
+
+=======
+Suggestion 5
+
+def myfunc(int1: int):
+    if int1 == 0:
+        return [0]
+    negative = False
+    if int1 < 0:
+        negative = True
+        int1 = abs(int1)
+    digits = []
+    while int1 > 0:
+        digits.append(int1 % 10)
+        int1 = int1 // 10
+    if negative:
+        digits.append('-')
+    return digits[::-1]
+
+=======
+Suggestion 6
+
+def myfunc(int1: int):
+    list1 = []
+    if int1 < 0:
+        list1.append(int1)
+        int1 = abs(int1)
+    while int1 > 0:
+        list1.append(int1 % 10)
+        int1 = int1 // 10
+    return list1
+
+=======
+Suggestion 7
+
+def myfunc(int1: int):
+    # Check if int1 is negative
+    if int1 < 0:
+        # Convert int1 to a string and remove the negative sign
+        str1 = str(int1)[1:]
+        # Convert str1 to a list and reverse it
+        list1 = list(reversed(str1))
+        # Add the negative sign to the list
+        list1.insert(0, '-')
+        # Convert the list to a string
+        str1 = ''.join(list1)
+        # Convert the string to an integer
+        int1 = int(str1)
+    else:
+        # Convert int1 to a string and reverse it
+        str1 = list(reversed(str(int1)))
+        # Convert the string to an integer
+        int1 = int(''.join(str1))
+    return int1
+
+=======
+Suggestion 8
+
+def myfunc(int1: int):
+    list1 = []
+    if int1 == 0:
+        list1.append(0)
+        return list1
+    if int1 < 0:
+        list1.append('-')
+        int1 = -int1
+    while int1 > 0:
+        list1.append(int1 % 10)
+        int1 = int1 // 10
+    return list1
+
+=======
+Suggestion 9
+
+def myfunc(int1: int):
+    # Convert int to string
+    str1 = str(int1)
+    # Create a list
+    lst1 = []
+    # Check if the integer is negative
+    if int1 < 0:
+        # If it is, add the negative sign to the list
+        lst1.append('-')
+        # Remove the negative sign from the string
+        str1 = str1[1:]
+    # Add each digit to the list
+    for digit in str1:
+        lst1.append(digit)
+    # Return the list
+    return lst1
+
+=======
+Suggestion 10
+
+def myfunc(int1: int):
+    # Convert the integer to a string
+    str1 = str(int1)
+    # Initialize a list
+    list1 = []
+    # Initialize a counter
+    counter = 0
+    # If the integer is negative
+    if int1 < 0:
+        # Add the negative sign to the list
+        list1.append('-')
+        # Increment the counter
+        counter += 1
+    # Iterate over the string
+    for i in range(len(str1)):
+        # Add the digit to the list
+        list1.append(str1[i])
+        # Increment the counter
+        counter += 1
+    # Return the list
+    return list1

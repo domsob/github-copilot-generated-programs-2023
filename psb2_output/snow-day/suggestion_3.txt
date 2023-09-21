@@ -1,0 +1,102 @@
+Synthesizing 9/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    pass
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    snow = float1
+    for i in range(int1):
+        snow += float2
+        snow -= float3*snow
+    return snow
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    # Your code goes here
+    pass
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    snow = float1
+    for i in range(int1):
+        snow = snow + float2 - snow * float3
+    return snow
+
+=======
+Suggestion 5
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    """
+    >>> myfunc(1, 4.0, 2.0, 0.5)
+    5.0
+    >>> myfunc(2, 4.0, 2.0, 0.5)
+    6.0
+    >>> myfunc(3, 4.0, 2.0, 0.5)
+    7.0
+    >>> myfunc(4, 4.0, 2.0, 0.5)
+    8.0
+    >>> myfunc(5, 4.0, 2.0, 0.5)
+    9.0
+    >>> myfunc(6, 4.0, 2.0, 0.5)
+    10.0
+    >>> myfunc(7, 4.0, 2.0, 0.5)
+    11.0
+    >>> myfunc(8, 4.0, 2.0, 0.5)
+    12.0
+    >>> myfunc(9, 4.0, 2.0, 0.5)
+    13.0
+    >>> myfunc(10, 4.0, 2.0, 0.5)
+    14.0
+    >>> myfunc(11, 4.0, 2.0, 0.5)
+    15.0
+    >>> myfunc(12, 4.0, 2.0, 0.5)
+    16.0
+    >>> myfunc(13, 4.0, 2.0, 0.5)
+    17.0
+    >>> myfunc(14, 4.0, 2.0, 0.5)
+    18.0
+    >>> myfunc(15, 4.0, 2.0, 0.5)
+    19.0
+    >>> myfunc(16, 4.0, 2.0, 0.5)
+    20.0
+    >>> myfunc(17, 4.0, 2.0, 0.5)
+    21.0
+    >>> myfunc(18, 4.0, 2.0, 0.5
+
+=======
+Suggestion 6
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    snow = float1
+    for i in range(1, int1):
+        snow += float2 - float3
+    return snow
+
+=======
+Suggestion 7
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    # Write your code here
+    # To print results to the standard output you can use print()
+    # Example print("Hello world!")
+    pass
+
+=======
+Suggestion 8
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    total = float1
+    for i in range(int1):
+        total += float2
+        total -= total * float3
+    return total

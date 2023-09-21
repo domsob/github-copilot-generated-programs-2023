@@ -1,0 +1,77 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(list1: list):
+    if(list1 == None):
+        return -1
+    for i in range(len(list1) - 1, -1, -1):
+        if(list1[i] == 0):
+            return i
+    return -1
+
+=======
+Suggestion 2
+
+def myfunc(list1: list):
+    i = len(list1) - 1
+    while i >= 0:
+        if list1[i] == 0:
+            return i
+        i -= 1
+    return -1
+
+=======
+Suggestion 3
+
+def myfunc(list1: list):
+    for i in range(len(list1) - 1, -1, -1):
+        if list1[i] == 0:
+            return i
+    return None
+
+=======
+Suggestion 4
+
+def myfunc(list1: list):
+    for i in range(len(list1) - 1, -1, -1):
+        if list1[i] == 0:
+            return i
+
+=======
+Suggestion 5
+
+def myfunc(list1: list):
+    # Write your code here
+    for i in range(len(list1)-1, -1, -1):
+        if list1[i] == 0:
+            return i
+    return -1
+
+=======
+Suggestion 6
+
+def myfunc(list1: list):
+    return len(list1) - list1[::-1].index(0) - 1
+
+=======
+Suggestion 7
+
+def myfunc(list1: list):
+    if len(list1) == 0:
+        return -1
+    else:
+        for i in range(len(list1) - 1, -1, -1):
+            if list1[i] == 0:
+                return i
+        return -1
+
+=======
+Suggestion 8
+
+def myfunc(list1: list):
+    for i in range(len(list1)):
+        if list1[i] == 0:
+            return i
+    return -1

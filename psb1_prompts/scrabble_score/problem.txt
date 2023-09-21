@@ -1,0 +1,3 @@
+# Given a string of visible ASCII characters, return the Scrabble score for that string. 
+# Each letter has a corresponding value according to normal Scrabble rules, and non-letter characters are worth zero.
+def myfunc(str1: str):

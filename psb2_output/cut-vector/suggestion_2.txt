@@ -1,0 +1,163 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(list1: list):
+    # write your code here
+    # return two subvectors as two outputs
+    return sub1, sub2
+
+=======
+Suggestion 2
+
+def myfunc(list1: list):
+    # Create a list of all possible cuts
+    cut_list = [i for i in range(1,len(list1))]
+    # Create a list of all possible sublists
+    sub_list = []
+    for i in cut_list:
+        sub_list.append([list1[:i],list1[i:]])
+    # Calculate the difference between the sum of each sublist
+    diff_list = []
+    for i in sub_list:
+        diff_list.append(abs(sum(i[0])-sum(i[1])))
+    # Find the index of the minimum difference
+    min_index = diff_list.index(min(diff_list))
+    # Return the two sublists
+    return sub_list[min_index]
+
+=======
+Suggestion 3
+
+def myfunc(list1: list):
+    # your code here
+    return list2, list3
+
+=======
+Suggestion 4
+
+def myfunc(list1: list):
+    # calculate the sum of the whole vector
+    sum1 = 0
+    for i in range(len(list1)):
+        sum1 += list1[i]
+    # find the spot
+    sum2 = 0
+    for i in range(len(list1)):
+        sum2 += list1[i]
+        if sum2 >= sum1/2:
+            if abs(sum1 - 2*sum2) < abs(sum1 - 2*(sum2 - list1[i])):
+                return list1[:i+1], list1[i+1:]
+            else:
+                return list1[:i], list1[i:]
+    return [], []
+
+=======
+Suggestion 5
+
+def myfunc(list1: list):
+    if len(list1) == 0:
+        return [], []
+    if len(list1) == 1:
+        return [], list1
+    if len(list1) == 2:
+        return list1[0:1], list1[1:2]
+    if len(list1) == 3:
+        return list1[0:1], list1[1:3]
+    if len(list1) == 4:
+        return list1[0:2], list1[2:4]
+    if len(list1) == 5:
+        return list1[0:2], list1[3:5]
+    if len(list1) == 6:
+        return list1[0:3], list1[3:6]
+    if len(list1) == 7:
+        return list1[0:3], list1[4:7]
+    if len(list1) == 8:
+        return list1[0:4], list1[4:8]
+    if len(list1) == 9:
+        return list1[0:4], list1[5:9]
+    if len(list1) == 10:
+        return list1[0:5], list1[5:10]
+    if len(list1) == 11:
+        return list1[0:5], list1[6:11]
+    if len(list1) == 12:
+        return list1[0:6], list1[6:12]
+    if len(list1) == 13:
+        return list1[0:6], list1[7:13]
+    if len(list1) == 14:
+        return list1[0:7], list1[7:14]
+    if len(list1) == 15:
+        return list1[0:7], list1[8:15]
+    if len(list1) == 16:
+        return list1[0:8], list1[8:16]
+    if len(list1) == 17:
+        return list1[0:8], list1[9:17]
+    if len(list1) == 18:
+        return list1[0:9], list1[9:18]
+    if len(list1) == 19:
+        return list1[0:9], list1[10:19]
+
+=======
+Suggestion 6
+
+def myfunc(list1: list):
+    # Your code here
+    return list1
+
+=======
+Suggestion 7
+
+def myfunc(list1: list):
+    # your code goes here
+    # return (list1, list2)
+    pass
+
+=======
+Suggestion 8
+
+def myfunc(list1: list):
+    sum1, sum2 = 0, sum(list1)
+    for i in range(len(list1)):
+        sum1 += list1[i]
+        sum2 -= list1[i]
+        if sum1 == sum2:
+            return list1[:i+1], list1[i+1:]
+    return None, None
+
+=======
+Suggestion 9
+
+def myfunc(list1: list):
+    if len(list1) == 0:
+        return [], []
+    elif len(list1) == 1:
+        return [], list1
+    else:
+        list1.sort()
+        middle = len(list1)//2
+        if len(list1)%2 == 0:
+            return list1[:middle], list1[middle:]
+        else:
+            return list1[:middle], list1[middle+1:]
+
+=======
+Suggestion 10
+
+def myfunc(list1: list):
+    list2 = []
+    list3 = []
+    list4 = []
+    list5 = []
+    for i in range(len(list1)):
+        list2.append(list1[i])
+        list3.append(list1[i])
+        for j in range(i + 1, len(list1)):
+            list2.append(list1[j])
+            list3.append(list1[j])
+            if abs(sum(list2) - sum(list3)) < abs(sum(list4) - sum(list5)):
+                list4 = list2.copy()
+                list5 = list3.copy()
+        list2 = []
+        list3 = []
+    return list4, list5

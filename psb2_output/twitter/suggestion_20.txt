@@ -1,0 +1,34 @@
+Synthesizing 9/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    if len(str1) > 140:
+        return "Too many characters"
+    elif len(str1) == 0:
+        return "You didn't type anything"
+    else:
+        return "Your tweet has {} characters".format(len(str1))
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    if len(str1) > 140:
+        return "Too many characters"
+    elif len(str1) == 0:
+        return "You didn't type anything"
+    else:
+        return "Your tweet has " + str(len(str1)) + " characters"
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    if len(str1) > 140:
+        return "Too many characters"
+    elif len(str1) == 0:
+        return "You didn't type anything"
+    else:
+        return f"Your tweet has {len(str1)} characters"

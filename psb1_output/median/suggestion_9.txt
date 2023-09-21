@@ -1,0 +1,140 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, int2: int, int3: int):
+    a = [int1, int2, int3]
+    a.sort()
+    return a[1]
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, int2: int, int3: int):
+    if int1 > int2:
+        if int1 > int3:
+            if int2 > int3:
+                return int2
+            else:
+                return int3
+        else:
+            return int1
+    else:
+        if int2 > int3:
+            if int1 > int3:
+                return int1
+            else:
+                return int3
+        else:
+            return int2
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, int2: int, int3: int):
+    # If int1 is the median, return it.
+    if int1 > int2 and int1 < int3:
+        return int1
+    elif int1 > int3 and int1 < int2:
+        return int1
+    # If int2 is the median, return it.
+    elif int2 > int1 and int2 < int3:
+        return int2
+    elif int2 > int3 and int2 < int1:
+        return int2
+    # If int3 is the median, return it.
+    elif int3 > int1 and int3 < int2:
+        return int3
+    elif int3 > int2 and int3 < int1:
+        return int3
+    # If all else fails, return 0.
+    else:
+        return 0
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, int2: int, int3: int):
+    # 1. Sort the integers
+    int_list = [int1, int2, int3]
+    int_list.sort()
+
+    # 2. Return the middle integer
+    return int_list[1]
+
+=======
+Suggestion 5
+
+def myfunc(int1: int, int2: int, int3: int):
+    # Sort the integers into a list.
+    intlist = [int1, int2, int3]
+    intlist.sort()
+    # Return the median.
+    return intlist[1]
+
+=======
+Suggestion 6
+
+def myfunc(int1: int, int2: int, int3: int):
+    if int1 > int2:
+        if int2 > int3:
+            return int2
+        elif int1 > int3:
+            return int3
+        else:
+            return int1
+    else:
+        if int1 > int3:
+            return int1
+        elif int2 > int3:
+            return int3
+        else:
+            return int2
+
+=======
+Suggestion 7
+
+def myfunc(int1: int, int2: int, int3: int):
+    list1 = [int1, int2, int3]
+    list1.sort()
+    return list1[1]
+
+=======
+Suggestion 8
+
+def myfunc(int1: int, int2: int, int3: int):
+    if int1 > int2:
+        if int1 < int3:
+            return int1
+        else:
+            if int2 > int3:
+                return int2
+            else:
+                return int3
+    else:
+        if int2 < int3:
+            return int2
+        else:
+            if int1 > int3:
+                return int1
+            else:
+                return int3
+
+=======
+Suggestion 9
+
+def myfunc(int1: int, int2: int, int3: int):
+    if int1 < int2:
+        if int2 < int3:
+            return int2
+        elif int1 < int3:
+            return int3
+        else:
+            return int1
+    elif int1 < int3:
+        return int1
+    elif int2 < int3:
+        return int3
+    else:
+        return int2

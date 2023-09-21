@@ -1,0 +1,106 @@
+Synthesizing 9/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    str1 = str1.split("-")
+    str1 = [s[0].upper() + s[1:] for s in str1]
+    str1 = "".join(str1)
+    return str1
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    str1 = str1.split('-')
+    for i in range(len(str1)):
+        if i == 0:
+            str1[i] = str1[i].lower()
+        else:
+            str1[i] = str1[i].capitalize()
+    return ''.join(str1)
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    l = str1.split()
+    for i in range(len(l)):
+        l[i] = l[i].replace("-", "")
+    return l[0] + "".join([x.title() for x in l[1:]])
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    str1 = str1.split()
+    str2 = []
+    for i in str1:
+        str2.append(i.split('-'))
+    for i in range(len(str2)):
+        for j in range(len(str2[i])):
+            if j == 0:
+                str2[i][j] = str2[i][j]
+            else:
+                str2[i][j] = str2[i][j].capitalize()
+    for i in range(len(str2)):
+        str2[i] = ''.join(str2[i])
+    str2 = ' '.join(str2)
+    return str2
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    str1 = str1.split("-")
+    str2 = [str1[0]]
+    for i in range(1, len(str1)):
+        str2.append(str1[i].capitalize())
+    str2 = "".join(str2)
+    return str2
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    str1 = str1.replace('-', ' ')
+    str1 = str1.split()
+    for i in range(1, len(str1)):
+        str1[i] = str1[i].capitalize()
+    str1 = ''.join(str1)
+    return str1
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    str_list = str1.split(" ")
+    str_list2 = []
+    for item in str_list:
+        str_list2.append(item.replace("-", " ").title().replace(" ", ""))
+    return " ".join(str_list2)
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    str1 = str1.split("-")
+    str1 = [s.capitalize() for s in str1]
+    str1[0] = str1[0].lower()
+    return "".join(str1)
+
+=======
+Suggestion 9
+
+def myfunc(str1: str):
+    str2 = ""
+    str3 = ""
+    for i in range(len(str1)):
+        if str1[i] == '-':
+            str2 = str1[i+1].upper()
+            str3 = str3 + str2
+        else:
+            str3 = str3 + str1[i]
+    str3 = str3.replace("-", "")
+    return str3

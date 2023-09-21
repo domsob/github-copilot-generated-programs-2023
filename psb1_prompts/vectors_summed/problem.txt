@@ -1,0 +1,3 @@
+# Given two equal-sized vectors of integers, return a vector of integers 
+# that contains the sum of the input vectors at each index.
+def myfunc(list1: list, list2: list):

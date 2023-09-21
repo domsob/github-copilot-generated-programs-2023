@@ -1,0 +1,50 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(list1: list):
+    if not list1:
+        return 0
+    else:
+        return round(sum(list1)/len(list1), 4)
+
+=======
+Suggestion 2
+
+def myfunc(list1: list):
+    return round(sum(list1)/len(list1),4)
+
+=======
+Suggestion 3
+
+def myfunc(list1: list):
+    # your code here
+    return round(sum(list1)/len(list1), 4)
+
+=======
+Suggestion 4
+
+def myfunc(list1: list):
+    # your code here
+    avg = sum(list1) / len(list1)
+    return round(avg, 4)
+
+=======
+Suggestion 5
+
+def myfunc(list1: list):
+    sum = 0
+    for i in list1:
+        sum += i
+    return round(sum/len(list1), 4)
+
+=======
+Suggestion 6
+
+def myfunc(list1: list):
+    sum = 0
+    for i in list1:
+        sum = sum + i
+    avg = sum/len(list1)
+    return round(avg,4)

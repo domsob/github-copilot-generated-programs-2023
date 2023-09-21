@@ -1,0 +1,235 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    # Your code here
+    return 0
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    str1 = str1.upper()
+    score = 0
+    for char in str1:
+        if char in "AEIOULNRST":
+            score += 1
+        elif char in "DG":
+            score += 2
+        elif char in "BCMP":
+            score += 3
+        elif char in "FHVWY":
+            score += 4
+        elif char in "K":
+            score += 5
+        elif char in "JX":
+            score += 8
+        elif char in "QZ":
+            score += 10
+        else:
+            score += 0
+    return score
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    str1 = str1.lower()
+    score = 0
+    for i in str1:
+        if i in "aeioulnrst":
+            score += 1
+        elif i in "dg":
+            score += 2
+        elif i in "bcmp":
+            score += 3
+        elif i in "fhvwy":
+            score += 4
+        elif i in "k":
+            score += 5
+        elif i in "jx":
+            score += 8
+        elif i in "qz":
+            score += 10
+    return score
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    # your code here
+    return 0
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    # 1. Create a dictionary with key-value pairs
+    # 2. Iterate through the string and add the value of each letter to a variable
+    # 3. Return the variable
+    # 4. Edge cases: empty string, non-letter characters
+    # 5. Test cases: "hello", "123", "HELLO"
+    mydict = {"A": 1, "B": 3, "C": 3, "D": 2, "E": 1, 
+              "F": 4, "G": 2, "H": 4, "I": 1, "J": 8, 
+              "K": 5, "L": 1, "M": 3, "N": 1, "O": 1, 
+              "P": 3, "Q": 10, "R": 1, "S": 1, "T": 1, 
+              "U": 1, "V": 4, "W": 4, "X": 8, "Y": 4, 
+              "Z": 10}
+    score = 0
+    for i in str1:
+        if i.isalpha():
+            score += mydict[i.upper()]
+    return score
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    str1 = str1.upper()
+    sum = 0
+    for i in str1:
+        if i == 'A' or i == 'E' or i == 'I' or i == 'L' or i == 'N' or i == 'O' or i == 'R' or i == 'S' or i == 'T' or i == 'U':
+            sum += 1
+        elif i == 'D' or i == 'G':
+            sum += 2
+        elif i == 'B' or i == 'C' or i == 'M' or i == 'P':
+            sum += 3
+        elif i == 'F' or i == 'H' or i == 'V' or i == 'W' or i == 'Y':
+            sum += 4
+        elif i == 'K':
+            sum += 5
+        elif i == 'J' or i == 'X':
+            sum += 8
+        elif i == 'Q' or i == 'Z':
+            sum += 10
+        else:
+            sum += 0
+    return sum
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    score = 0
+    for i in str1:
+        if i in 'aeioulnstr':
+            score += 1
+        elif i in 'dg':
+            score += 2
+        elif i in 'bcmp':
+            score += 3
+        elif i in 'fhvwy':
+            score += 4
+        elif i in 'k':
+            score += 5
+        elif i in 'jx':
+            score += 8
+        elif i in 'qz':
+            score += 10
+    return score
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    str1 = str1.upper()
+    score = 0
+    for i in str1:
+        if i == "A" or i == "E" or i == "I" or i == "O" or i == "U" or i == "L" or i == "N" or i == "R" or i == "S" or i == "T":
+            score += 1
+        elif i == "D" or i == "G":
+            score += 2
+        elif i == "B" or i == "C" or i == "M" or i == "P":
+            score += 3
+        elif i == "F" or i == "H" or i == "V" or i == "W" or i == "Y":
+            score += 4
+        elif i == "K":
+            score += 5
+        elif i == "J" or i == "X":
+            score += 8
+        elif i == "Q" or i == "Z":
+            score += 10
+    return score
+
+=======
+Suggestion 9
+
+def myfunc(str1: str):
+    score = 0
+    for i in str1:
+        if i == 'A':
+            score += 1
+        elif i == 'B':
+            score += 3
+        elif i == 'C':
+            score += 3
+        elif i == 'D':
+            score += 2
+        elif i == 'E':
+            score += 1
+        elif i == 'F':
+            score += 4
+        elif i == 'G':
+            score += 2
+        elif i == 'H':
+            score += 4
+        elif i == 'I':
+            score += 1
+        elif i == 'J':
+            score += 8
+        elif i == 'K':
+            score += 5
+        elif i == 'L':
+            score += 1
+        elif i == 'M':
+            score += 3
+        elif i == 'N':
+            score += 1
+        elif i == 'O':
+            score += 1
+        elif i == 'P':
+            score += 3
+        elif i == 'Q':
+            score += 10
+        elif i == 'R':
+            score += 1
+        elif i == 'S':
+            score += 1
+        elif i == 'T':
+            score += 1
+        elif i == 'U':
+            score += 1
+        elif i == 'V':
+            score += 4
+        elif i == 'W':
+            score += 4
+        elif i == 'X':
+            score += 8
+        elif i == 'Y':
+            score += 4
+        elif i == 'Z':
+            score += 10
+        else:
+            score += 0
+    return score
+
+=======
+Suggestion 10
+
+def myfunc(str1: str):
+    str1 = str1.lower()
+    scores = {
+        'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1,
+        'f': 4, 'g': 2, 'h': 4, 'i': 1, 'j': 8,
+        'k': 5, 'l': 1, 'm': 3, 'n': 1, 'o': 1,
+        'p': 3, 'q': 10, 'r': 1, 's': 1, 't': 1,
+        'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4,
+        'z': 10
+    }
+    score = 0
+    for i in str1:
+        if i in scores:
+            score += scores[i]
+    return score

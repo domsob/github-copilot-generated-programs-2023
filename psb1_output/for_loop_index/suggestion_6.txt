@@ -1,0 +1,151 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, int2: int, int3: int):
+    """
+    :param int1: start
+    :param int2: end
+    :param int3: step
+    :return: list of integers
+    """
+    if int1 > int2:
+        return []
+    else:
+        return [int1] + myfunc(int1 + int3, int2, int3)
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, int2: int, int3: int):
+    # Initialize variables
+    output = []
+    i = 0
+    n = int1
+    # Loop through sequence
+    while n < int2:
+        output.append(n)
+        n = n + int3
+        i += 1
+    # Return output
+    return output
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, int2: int, int3: int):
+    return list(range(int1, int2, int3))
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, int2: int, int3: int):
+    """
+    Given 3 integer inputs
+    start, end, and step, return the integers in the sequence
+    n_0 = start
+    n_i = n_i-1 + step
+    for each n_i < end.
+    :param int1: start
+    :param int2: end
+    :param int3: step
+    :return: list of ints
+    """
+    # initialize list
+    mylist = []
+    # initialize i
+    i = int1
+    # while i < int2
+    while i < int2:
+        # append i to list
+        mylist.append(i)
+        # increment i by int3
+        i += int3
+    # return list
+    return mylist
+
+=======
+Suggestion 5
+
+def myfunc(int1: int, int2: int, int3: int):
+    # create a list to store the integers
+    list1 = []
+    # create a variable to store the initial integer
+    int4 = int1
+    # create a variable to store the step
+    int5 = int3
+    # create a variable to store the end integer
+    int6 = int2
+    # create a variable to store the current integer
+    int7 = int4
+    # create a while loop to add integers to the list
+    while int7 < int6:
+        # add the current integer to the list
+        list1.append(int7)
+        # increase the current integer by the step
+        int7 += int5
+    # return the list of integers
+    return list1
+
+=======
+Suggestion 6
+
+def myfunc(int1: int, int2: int, int3: int):
+    # initialize an empty list
+    my_list = []
+    # iterate from start to end, incrementing by step
+    for i in range(int1, int2, int3):
+        # append each value to the list
+        my_list.append(i)
+    # return the list
+    return my_list
+
+=======
+Suggestion 7
+
+def myfunc(int1: int, int2: int, int3: int):
+    # Create a list with the first value
+    mylist = [int1]
+    # Create a while loop that checks if the last value is less than the end value
+    while mylist[-1] < int2:
+        # Append the last value + the step value
+        mylist.append(mylist[-1] + int3)
+    # Return the list
+    return mylist
+
+=======
+Suggestion 8
+
+def myfunc(int1: int, int2: int, int3: int):
+    i = int1
+    while i < int2:
+        print(i)
+        i += int3
+    return
+
+=======
+Suggestion 9
+
+def myfunc(int1: int, int2: int, int3: int):
+    if (int1 >= int2):
+        return []
+    else:
+        return [int1] + myfunc(int1 + int3, int2, int3)
+
+=======
+Suggestion 10
+
+def myfunc(int1: int, int2: int, int3: int):
+    """
+    Given 3 integer inputs
+    start, end, and step, return the integers in the sequence
+    n_0 = start
+    n_i = n_i-1 + step
+    for each n_i < end.
+    """
+    mylist = []
+    mylist.append(int1)
+    while mylist[-1] < int2:
+        mylist.append(mylist[-1] + int3)
+    return mylist[:-1]

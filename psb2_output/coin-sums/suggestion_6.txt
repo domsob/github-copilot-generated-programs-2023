@@ -1,0 +1,181 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    int1 = int(int1)
+    if int1 < 0:
+        return None
+    if int1 == 0:
+        return [0, 0, 0, 0]
+    if int1 > 0:
+        q = int(int1 / 25)
+        d = int((int1 - 25 * q) / 10)
+        n = int((int1 - 25 * q - 10 * d) / 5)
+        p = int(int1 - 25 * q - 10 * d - 5 * n)
+        return [q, d, n, p]
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    if int1 < 0:
+        raise ValueError('Cannot have negative amount of cents')
+    if int1 == 0:
+        return 0,0,0,0
+    if int1 == 1:
+        return 1,0,0,0
+    if int1 == 5:
+        return 0,1,0,0
+    if int1 == 10:
+        return 0,0,1,0
+    if int1 == 25:
+        return 0,0,0,1
+
+    quarters = int1 // 25
+    int1 = int1 % 25
+    dimes = int1 // 10
+    int1 = int1 % 10
+    nickels = int1 // 5
+    int1 = int1 % 5
+    pennies = int1 // 1
+
+    return pennies, nickels, dimes, quarters
+
+=======
+Suggestion 3
+
+def myfunc(int1: int):
+    if int1 < 0:
+        return 'Invalid Input'
+    else:
+        quarter = int1 // 25
+        dimes = (int1 % 25) // 10
+        nickels = ((int1 % 25) % 10) // 5
+        pennies = ((int1 % 25) % 10) % 5
+        return quarter, dimes, nickels, pennies
+
+=======
+Suggestion 4
+
+def myfunc(int1: int):
+    # Your code here
+    return None
+
+=======
+Suggestion 5
+
+def myfunc(int1: int):
+    # your code here
+    return (0, 0, 0, 0)
+
+=======
+Suggestion 6
+
+def myfunc(int1: int):
+    """Given a number of cents, find the fewest needed number of US coins 
+    (pennies, nickels, dimes, and quarters) to make that amount,
+    and return the number of each type of count as a separate output.
+    """
+    if int1 <= 0:
+        return 0, 0, 0, 0
+    else:
+        quarter = int1 // 25
+        dime = (int1 - quarter * 25) // 10
+        nickel = (int1 - quarter * 25 - dime * 10) // 5
+        penny = (int1 - quarter * 25 - dime * 10 - nickel * 5) // 1
+        return quarter, dime, nickel, penny
+
+=======
+Suggestion 7
+
+def myfunc(int1: int):
+    # Check if input is a positive integer
+    if int1 < 0:
+        print("Please enter a positive integer.")
+        return
+    # Initialize output variables
+    count_quarters = 0
+    count_dimes = 0
+    count_nickels = 0
+    count_pennies = 0
+    # Calculate number of each US coin type
+    count_quarters = int(int1 / 25)
+    int1 = int1 % 25
+    count_dimes = int(int1 / 10)
+    int1 = int1 % 10
+    count_nickels = int(int1 / 5)
+    int1 = int1 % 5
+    count_pennies = int(int1 / 1)
+    int1 = int1 % 1
+    # Print output
+    print("Quarters: ", count_quarters)
+    print("Dimes: ", count_dimes)
+    print("Nickels: ", count_nickels)
+    print("Pennies: ", count_pennies)
+    return
+
+=======
+Suggestion 8
+
+def myfunc(int1: int):
+    # check if input is valid
+    if int1 < 0 or int1 > 99:
+        print("Invalid input")
+        return
+    # initialize counters for each type of coin
+    pennies = 0
+    nickels = 0
+    dimes = 0
+    quarters = 0
+    # calculate number of each type of coin
+    while int1 >= 25:
+        quarters += 1
+        int1 -= 25
+    while int1 >= 10:
+        dimes += 1
+        int1 -= 10
+    while int1 >= 5:
+        nickels += 1
+        int1 -= 5
+    while int1 >= 1:
+        pennies += 1
+        int1 -= 1
+    # return number of each type of coin
+    return pennies, nickels, dimes, quarters
+
+=======
+Suggestion 9
+
+def myfunc(int1: int):
+    # your code goes here
+    return 0
+
+=======
+Suggestion 10
+
+def myfunc(int1: int):
+    # Check if input is a positive integer
+    if type(int1) is not int or int1 < 0:
+        return "Please enter a positive integer."
+    # Check if input is zero
+    elif int1 == 0:
+        return "Zero cents."
+    else:
+        # Initialize output dictionary
+        output = {"quarter(s)": 0, "dime(s)": 0, "nickel(s)": 0, "penny(ies)": 0}
+        # Initialize coin values
+        values = {"quarter(s)": 25, "dime(s)": 10, "nickel(s)": 5, "penny(ies)": 1}
+        # Loop through the coin values
+        for coin in values:
+            # Check if the input is greater than the coin value
+            if int1 >= values[coin]:
+                # Get the number of coins needed
+                num_coins = int(int1 / values[coin])
+                # Update the output dictionary
+                output[coin] = num_coins
+                # Update the input value
+                int1 = int1 - num_coins * values[coin]
+        # Return the output dictionary
+        return output

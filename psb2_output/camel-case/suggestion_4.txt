@@ -1,0 +1,100 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    str1 = str1.split("-")
+    str2 = []
+    for i in str1:
+        if i != str1[0]:
+            str2.append(i.capitalize())
+        else:
+            str2.append(i)
+    return "".join(str2)
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    return ''.join([str1[i-1:i].upper() if str1[i-1:i] == '-' else str1[i:i+1] for i in range(len(str1)) if str1[i] != ' ' and (i == 0 or str1[i-1] == ' ')])
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    # your code here
+    pass
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    str1 = str1.split('-')
+    str1 = [x.title() for x in str1]
+    str1 = ''.join(str1)
+    str1 = str1[0].lower() + str1[1:]
+    return str1
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    # Write your code here
+    str1 = str1.split()
+    str2 = ""
+    for i in range(len(str1)):
+        str1[i] = str1[i].replace("-", " ").title().replace(" ", "")
+        if i == 0:
+            str2 += str1[i].lower()
+        else:
+            str2 += str1[i]
+    return str2
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    # split the string by space
+    # then split each word by "-"
+    # then convert the first letter of each word to upper case
+    # then join all the words with no space
+    return ''.join([word.title() for word in str1.split('-')])
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    str1 = str1.split()
+    str2 = []
+    for i in str1:
+        str2.append(i.split('-'))
+    str3 = []
+    for i in str2:
+        str4 = []
+        for j in i:
+            str4.append(j.capitalize())
+        str3.append(''.join(str4))
+    return ' '.join(str3)
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    return ''.join(x.capitalize() for x in str1.split('-'))
+
+=======
+Suggestion 9
+
+def myfunc(str1: str):
+    return str1.title().replace('-', '')
+
+=======
+Suggestion 10
+
+def myfunc(str1: str):
+    str2 = str1.split()
+    str3 = []
+    for i in str2:
+        str3.append(i.replace('-', ' ').title().replace(' ', ''))
+    return str3

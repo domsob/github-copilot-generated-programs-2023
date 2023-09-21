@@ -1,0 +1,106 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    snow = float1
+    for i in range(int1):
+        snow += float2
+        snow *= float3
+    return snow
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    snow = 0
+    for i in range(int1):
+        snow += float1
+        snow -= snow * float3
+    return snow
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    snow = float1
+    for i in range(int1):
+        snow += float2
+        snow -= snow * float3
+    return snow
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    # 1 hour = 1 discrete event
+    # 1st hour: snow on ground + snow fall - snow melt
+    # 2nd hour: snow on ground + snow fall - snow melt
+    # 3rd hour: snow on ground + snow fall - snow melt
+    # ...
+    # nth hour: snow on ground + snow fall - snow melt
+    # return snow on ground after nth hour
+    snow_on_ground = 0.0
+    for i in range(int1):
+        snow_on_ground = snow_on_ground + float1 - (snow_on_ground * float3)
+    return snow_on_ground
+
+=======
+Suggestion 5
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    snow = float1
+    for i in range(int1):
+        snow = snow + float2 - float3
+    return snow
+
+=======
+Suggestion 6
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    if int1 == 0:
+        return float1
+    else:
+        return myfunc(int1-1, float1 + float2, float2, float3) * (1-float3)
+
+=======
+Suggestion 7
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    # your code here
+    # return the amount of snow on the ground after the amount of hours given
+    # each hour is considered a discrete event of adding snow and then melting, not a continuous process
+    # given an integer representing a number of hours
+    # 3 floats representing how much snow is on the ground, the rate of snow fall, and the proportion of snow melting per hour
+    # return the amount of snow on the ground after the amount of hours given
+    # each hour is considered a discrete event of adding snow and then melting, not a continuous process
+    # given an integer representing a number of hours
+    # 3 floats representing how much snow is on the ground, the rate of snow fall, and the proportion of snow melting per hour
+    # return the amount of snow on the ground after the amount of hours given
+    # each hour is considered a discrete event of adding snow and then melting, not a continuous process
+    # given an integer representing a number of hours
+    # 3 floats representing how much snow is on the ground, the rate of snow fall, and the proportion of snow melting per hour
+    # return the amount of snow on the ground after the amount of hours given
+    # each hour is considered a discrete event of adding snow and then melting, not a continuous process
+    # given an integer representing a number of hours
+    # 3 floats representing how much snow is on the ground, the rate of snow fall, and the proportion of snow melting per hour
+    # return the amount of snow on the ground after the amount of hours given
+    # each hour is considered a discrete event of adding snow and then melting, not a continuous process
+    # given an integer representing a number of hours
+    # 3 floats representing how much snow is on the ground, the rate of snow fall, and the proportion of snow melting per hour
+    # return the amount of snow on the ground after the amount of hours given
+    # each hour is considered a discrete event of adding snow and then melting, not a continuous process
+    # given an integer representing a number of hours
+    # 3 floats representing how much snow is on the ground, the rate of snow fall, and the proportion of snow melting per hour
+    # return the amount of snow on the ground after the amount of hours given
+    # each hour is considered a discrete
+
+=======
+Suggestion 8
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    snow = float1
+    for i in range(int1):
+        snow = snow + float2 - (snow * float3)
+    return snow

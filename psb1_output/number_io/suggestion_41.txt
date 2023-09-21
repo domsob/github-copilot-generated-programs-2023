@@ -1,0 +1,22 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, float1: float):
+    """Returns the sum of an integer and a float
+
+    Args:
+        int1 (int): An integer
+        float1 (float): A float
+
+    Returns:
+        float: The sum of the integer and float
+    """
+    return int1 + float1
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, float1: float):
+    return int1 + float1

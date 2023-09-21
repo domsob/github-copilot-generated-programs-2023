@@ -1,0 +1,31 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    if int1 % 3 == 0 and int1 % 5 == 0:
+        return "FizzBuzz"
+    elif int1 % 3 == 0:
+        return "Fizz"
+    elif int1 % 5 == 0:
+        return "Buzz"
+    else:
+        return str(int1)
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    # Check if int1 is divisible by 3 and 5
+    if int1 % 3 == 0 and int1 % 5 == 0:
+        return "FizzBuzz"
+    # Check if int1 is divisible by 3
+    elif int1 % 3 == 0:
+        return "Fizz"
+    # Check if int1 is divisible by 5
+    elif int1 % 5 == 0:
+        return "Buzz"
+    # If none of the above hold, return a string version of int1
+    else:
+        return str(int1)

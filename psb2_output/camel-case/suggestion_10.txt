@@ -1,0 +1,84 @@
+Synthesizing 9/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    str2 = str1.split()
+    str3 = ""
+    for i in range(len(str2)):
+        str3 = str3 + str2[i].lower().capitalize()
+    return str3
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    arr = str1.split(" ")
+    for i in range(len(arr)):
+        arr[i] = arr[i].replace("-", " ").title().replace(" ", "")
+    return arr
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    words = str1.split(" ")
+    result = ""
+    for word in words:
+        result += word[0].upper() + word[1:]
+    return result
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    return ''.join([word.title() for word in str1.split('-')])
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    str2 = str1.split(" ")
+    str3 = ""
+    for i in range(len(str2)):
+        str2[i] = str2[i].split("-")
+        for j in range(len(str2[i])):
+            if j == 0:
+                str3 += str2[i][j]
+            else:
+                str3 += str2[i][j].capitalize()
+        str3 += " "
+    return str3
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    str1 = str1.split('-')
+    str2 = []
+    for i in str1:
+        str2.append(i[0].upper()+i[1:])
+    return ''.join(str2)
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    str2 = ""
+    for i in str1.split():
+        str2 += i[0].upper() + i[1:]
+    return str2[0].lower() + str2[1:]
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    words = str1.split("-")
+    camelCase = ""
+    for index, word in enumerate(words):
+        if index == 0:
+            camelCase += word
+        else:
+            camelCase += word[0].upper() + word[1:]
+    return camelCase

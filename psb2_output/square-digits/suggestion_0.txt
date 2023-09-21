@@ -1,0 +1,125 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    int1 = str(int1)
+    int2 = ""
+    for i in int1:
+        int2 += str(int(i) ** 2)
+    return int(int2)
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    x = str(int1)
+    y = ""
+    for i in x:
+        y += str(int(i) ** 2)
+    return y
+
+=======
+Suggestion 3
+
+def myfunc(int1: int):
+    # Convert int to string
+    str1 = str(int1)
+
+    # Create empty string
+    str2 = ""
+
+    # Iterate through each character in str1
+    for i in range(0, len(str1)):
+        # Convert character to integer
+        int2 = int(str1[i])
+
+        # Square integer
+        int3 = int2 * int2
+
+        # Convert integer to string
+        str3 = str(int3)
+
+        # Concatenate string to str2
+        str2 = str2 + str3
+
+    # Convert str2 to integer
+    int4 = int(str2)
+
+    # Return integer
+    return int4
+
+=======
+Suggestion 4
+
+def myfunc(int1: int):
+    # Convert int to string
+    int1 = str(int1)
+    # Create empty string to store the result
+    result = ''
+    # Iterate through the string
+    for i in int1:
+        # Square the integer
+        i = int(i)**2
+        # Convert the integer to a string
+        i = str(i)
+        # Concatenate the string to the result
+        result += i
+    # Convert the result to an integer
+    result = int(result)
+    # Return the result
+    return result
+
+=======
+Suggestion 5
+
+def myfunc(int1: int):
+    return "".join([str(int(i) ** 2) for i in str(int1)])
+
+=======
+Suggestion 6
+
+def myfunc(int1: int):
+    return ''.join(str(int(i) ** 2) for i in str(int1))
+
+=======
+Suggestion 7
+
+def myfunc(int1: int):
+    int1 = str(int1)
+    str1 = ""
+    for i in int1:
+        str1 += str(int(i) ** 2)
+    return int(str1)
+
+=======
+Suggestion 8
+
+def myfunc(int1: int):
+    # store the string version of the integer
+    str1 = str(int1)
+    # create empty list to store the squared digits
+    list1 = []
+    # iterate through each digit in the string
+    for digit in str1:
+        # convert the digit back into an integer
+        digit = int(digit)
+        # square the integer
+        digit = digit ** 2
+        # append the squared integer to the list
+        list1.append(digit)
+    # convert the list into a string
+    str2 = ''.join(str(x) for x in list1)
+    # return the string
+    return str2
+
+=======
+Suggestion 9
+
+def myfunc(int1: int):
+    int1 = str(int1)
+    new_int = ''
+    for i in int1:
+        new_int += str(int(i) ** 2)
+    return int(new_int)

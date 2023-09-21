@@ -1,0 +1,31 @@
+Synthesizing 9/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(str1: str, str2: str, str3: str):
+    return len(str1) < len(str2) < len(
+
+=======
+Suggestion 2
+
+def myfunc(str1: str, str2: str, str3: str):
+    if len(str1) < len(str2) < len(str3):
+        return True
+    else:
+        re
+
+=======
+Suggestion 3
+
+def myfunc(str1: str, str2: str, str3: str):
+    if len(str1) < len(str2) < len(str3):
+        return True
+    else:
+        return False
+
+=======
+Suggestion 4
+
+def myfunc(str1: str, str2: str, str3: str):
+    return len(str1) < len(str2) < len(str3)

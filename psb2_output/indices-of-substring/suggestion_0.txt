@@ -1,0 +1,122 @@
+Synthesizing 8/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str, str2: str):
+    # check input
+    if not str1 or not str2:
+        return []
+    if len(str1) < len(str2):
+        return []
+    # find all indices
+    res = []
+    for i in range(len(str1) - len(str2) + 1):
+        if str1[i: i + len(str2)] == str2:
+            res.append(i)
+    return res
+
+=======
+Suggestion 2
+
+def myfunc(str1: str, str2: str):
+    length = len(str2)
+    result = []
+    for i in range(len(str1)-length+1):
+        if str1[i:i+length] == str2:
+            result.append(i)
+    return result
+
+=======
+Suggestion 3
+
+def myfunc(str1: str, str2: str):
+    # Write your code here
+    res = []
+    if not str1 or not str2:
+        return res
+    i = 0
+    while i < len(str1):
+        if str1[i] == str2[0]:
+            j = 1
+            while j < len(str2):
+                if str1[i+j] != str2[j]:
+                    break
+                j += 1
+            if j == len(str2):
+                res.append(i)
+                i += j
+                continue
+        i += 1
+    return res
+
+=======
+Suggestion 4
+
+def myfunc(str1: str, str2: str):
+    if str1 == '' or str2 == '':
+        return []
+    if str1 == str2:
+        return [0]
+    if len(str1) < len(str2):
+        return []
+    result = []
+    for i in range(len(str1) - len(str2) + 1):
+        if str1[i:i+len(str2)] == str2:
+            result.append(i)
+    return result
+
+=======
+Suggestion 5
+
+def myfunc(str1: str, str2: str):
+    if (str1 == "" or str2 == ""):
+        return []
+    result = []
+    for i in range(len(str1)):
+        if str1[i] == str2[0]:
+            if str1[i:i+len(str2)] == str2:
+                result.append(i)
+    return result
+
+=======
+Suggestion 6
+
+def myfunc(str1: str, str2: str):
+    res = []
+    for i in range(len(str1)):
+        if str1[i:i+len(str2)] == str2:
+            res.append(i)
+    return res
+
+=======
+Suggestion 7
+
+def myfunc(str1: str, str2: str):
+    n = len(str1)
+    m = len(str2)
+    if n < m:
+        return []
+    if n == m:
+        if str1 == str2:
+            return [0]
+        else:
+            return []
+    res = []
+    for i in range(n-m+1):
+        if str1[i:i+m] == str2:
+            res.append(i)
+    return res
+
+=======
+Suggestion 8
+
+def myfunc(str1: str, str2: str):
+    result = []
+    if len(str1) < len(str2):
+        return result
+    for i in range(len(str1)):
+        if str1[i] == str2[0]:
+            if str1[i:i+len(str2)] == str2:
+                result.append(i)
+    return result

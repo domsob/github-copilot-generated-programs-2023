@@ -1,0 +1,173 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str, str2: str):
+    if len(str1) > len(str2):
+        return False
+    for i in str1:
+        if i not in str2:
+            return False
+        else:
+            str2 = str2.replace(i, '', 1)
+
+=======
+Suggestion 2
+
+def myfunc(str1: str, str2: str):
+    if len(str1) > len(str2):
+        return False
+
+    str1_dict = {}
+    for char in str1:
+        str1_dict[char] = str1_dict.get(char, 0) + 1
+
+    str2_dict = {}
+    for char in str2:
+        str2_dict[char] = str2_dict.get(char, 0) + 1
+
+    for char in str1_dict.keys():
+        if char not in str2_dict.keys():
+            return False
+        elif str1_dict[char] > str2_dict[char]:
+            return False
+
+    return True
+
+=======
+Suggestion 3
+
+def myfunc(str1: str, str2: str):
+    # Solution 1
+    # for char in str1:
+    #     if char not in str2:
+    #         return False
+    # return True
+
+    # Solution 2
+    # return all(char in str2 for char in str1)
+
+    # Solution 3
+    return set(str1).issubset(set(str2))
+
+=======
+Suggestion 4
+
+def myfunc(str1: str, str2: str):
+    if len(str1) > len(str2):
+        return False
+    for char in str1:
+        if char not in str2:
+            return False
+        if str1.count(char) > str2.count(char):
+            return False
+    return True
+
+=======
+Suggestion 5
+
+def myfunc(str1: str, str2: str):
+    str1 = str1.lower()
+    str2 = str2.lower()
+    for i in str1:
+        if i not in str2:
+            return False
+        if str1.count(i) > str2.count(i):
+            return False
+    return True
+
+=======
+Suggestion 6
+
+def myfunc(str1: str, str2: str):
+    return all(str1.count(c) <= str2.count(c) for c in str1)
+
+=======
+Suggestion 7
+
+def myfunc(str1: str, str2: str):
+    # Get count of all characters in str1
+    count = dict()
+    for char in str1:
+        if char in count:
+            count[char] += 1
+        else:
+            count[char] = 1
+
+    # Check if all characters in str2 are in str1
+    for char in str2:
+        if char not in count:
+            return False
+        else:
+            count[char] -= 1
+
+    # Check that all characters in str1 appeared in str2 at least once
+    for char in count:
+        if count[char] > 0:
+            return False
+
+    return True
+
+=======
+Suggestion 8
+
+def myfunc(str1: str, str2: str):
+    for char in str1:
+        if char not in str2:
+            return False
+        if str1.count(char) > str2.count(char):
+            return False
+    return True
+
+=======
+Suggestion 9
+
+def myfunc(str1: str, str2: str):
+    # if str2 contains all the characters in str1
+    # and the count of each character in str2 is >= the count of each character in str1
+    # then str2 is a super anagram of str1
+    # else str2 is not a super anagram of str1
+    # return true if str2 is a super anagram of str1
+    # else return false
+    # if str2 contains all the characters in str1
+    # and the count of each character in str2 is >= the count of each character in str1
+    # then str2 is a super anagram of str1
+    # else str2 is not a super anagram of str1
+    # return true if str2 is a super anagram of str1
+    # else return false
+    # if str2 contains all the characters in str1
+    # and the count of each character in str2 is >= the count of each character in str1
+    # then str2 is a super anagram of str1
+    # else str2 is not a super anagram of str1
+    # return true if str2 is a super anagram of str1
+    # else return false
+    # if str2 contains all the characters in str1
+    # and the count of each character in str2 is >= the count of each character in str1
+    # then str2 is a super anagram of str1
+    # else str2 is not a super anagram of str1
+    # return true if str2 is a super anagram of str1
+    # else return false
+    # if str2 contains all the characters in str1
+    # and the count of each character in str2 is >= the count of each character in str1
+    # then str2 is a super anagram of str1
+    # else str2 is not a super anagram of str1
+    # return true if str2 is a super anagram of str1
+    # else return false
+    # if str2 contains all the characters in str1
+    # and the count of each character in str2 is >= the count of each character in str1
+    # then str2 is a super anagram of str1
+    # else str2 is not a super anagram of str1
+    # return true if
+
+=======
+Suggestion 10
+
+def myfunc(str1: str, str2: str):
+    # check if str1 is a substring of str2
+    # check if each char in str1 is in str2
+    # check if each char in str1 has at least as many copies in str2
+    if str1 in str2:
+        return True
+    else:
+        return False

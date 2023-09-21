@@ -1,0 +1,27 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    if int1 % 3 == 0 and int1 % 5 == 0:
+        return "FizzBuzz"
+    elif int1 % 3 == 0:
+        return "Fizz"
+    elif int1 % 5 == 0:
+        return "Buzz"
+    else:
+        return str(int1)
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    if (int1 % 3 == 0 and int1 % 5 == 0):
+        return "FizzBuzz"
+    elif (int1 % 3 == 0):
+        return "Fizz"
+    elif (int1 % 5 == 0):
+        return "Buzz"
+    else:
+        return str(int1)

@@ -1,0 +1,8 @@
+# Given 2 strings (without whitespace) as input, find the indices at which the
+# strings have different characters, stopping at the end
+# of the shorter one. For each such index, return a line
+# containing the index as well as the character in each
+# string. For example, if the strings are "dealer" and
+# "dollars", the program should return:
+# 1 e o\n2 a l\n4 e a
+def myfunc(str1: str, str2: str):

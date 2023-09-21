@@ -1,0 +1,163 @@
+Synthesizing 9/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    score = 0
+    for i in str1:
+        if i in ['a', 'e', 'i', 'o', 'u', 'l', 'n', 'r', 's', 't']:
+            score += 1
+        elif i in ['d', 'g']:
+            score += 2
+        elif i in ['b', 'c', 'm', 'p']:
+            score += 3
+        elif i in ['f', 'h', 'v', 'w', 'y']:
+            score += 4
+        elif i == 'k':
+            score += 5
+        elif i in ['j', 'x']:
+            score += 8
+        elif i in ['q', 'z']:
+            score += 10
+    return score
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    score = 0
+    for i in str1:
+        if i == 'A' or i == 'E' or i == 'I' or i == 'O' or i == 'U' or i == 'L' or i == 'N' or i == 'R' or i == 'S' or i == 'T':
+            score += 1
+        elif i == 'D' or i == 'G':
+            score += 2
+        elif i == 'B' or i == 'C' or i == 'M' or i == 'P':
+            score += 3
+        elif i == 'F' or i == 'H' or i == 'V' or i == 'W' or i == 'Y':
+            score += 4
+        elif i == 'K':
+            score += 5
+        elif i == 'J' or i == 'X':
+            score += 8
+        elif i == 'Q' or i == 'Z':
+            score += 10
+        else:
+            score += 0
+    return score
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    score = 0
+    for i in str1:
+        if i == "a" or i == "e" or i == "i" or i == "l" or i == "n" or i == "o" or i == "r" or i == "s" or i == "t" or i == "u":
+            score += 1
+        elif i == "d" or i == "g":
+            score += 2
+        elif i == "b" or i == "c" or i == "m" or i == "p":
+            score += 3
+        elif i == "f" or i == "h" or i == "v" or i == "w" or i == "y":
+            score += 4
+        elif i == "k":
+            score += 5
+        elif i == "j" or i == "x":
+            score += 8
+        elif i == "q" or i == "z":
+            score += 10
+    return score
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    score = 0
+    for i in str1:
+        if i.lower() == 'a' or i.lower() == 'e' or i.lower() == 'i' or i.lower() == 'o' or i.lower() == 'u' or i.lower() == 'l' or i.lower() == 'n' or i.lower() == 's' or i.lower() == 't' or i.lower() == 'r':
+            score += 1
+        elif i.lower() == 'd' or i.lower() == 'g':
+            score += 2
+        elif i.lower() == 'b' or i.lower() == 'c' or i.lower() == 'm' or i.lower() == 'p':
+            score += 3
+        elif i.lower() == 'f' or i.lower() == 'h' or i.lower() == 'v' or i.lower() == 'w' or i.lower() == 'y':
+            score += 4
+        elif i.lower() == 'k':
+            score += 5
+        elif i.lower() == 'j' or i.lower() == 'x':
+            score += 8
+        elif i.lower() == 'q' or i.lower() == 'z':
+            score += 10
+    return score
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    # your code here
+    pass
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    str1 = str1.lower()
+    score = 0
+    for i in str1:
+        if i.isalpha():
+            if i in 'aeioulnrst':
+                score += 1
+            elif i in 'dg':
+                score += 2
+            elif i in 'bcmp':
+                score += 3
+            elif i in 'fhvwy':
+                score += 4
+            elif i in 'k':
+                score += 5
+            elif i in 'jx':
+                score += 8
+            elif i in 'qz':
+                score += 10
+    return score
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    # Your code here
+    pass
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    score = 0
+    for i in str1:
+        if i.lower() in "aeioulnstr":
+            score += 1
+        elif i.lower() in "dg":
+            score += 2
+        elif i.lower() in "bcmp":
+            score += 3
+        elif i.lower() in "fhvwy":
+            score += 4
+        elif i.lower() in "k":
+            score += 5
+        elif i.lower() in "jx":
+            score += 8
+        elif i.lower() in "qz":
+            score += 10
+    return score
+
+=======
+Suggestion 9
+
+def myfunc(str1: str):
+    mydict = {'a':1, 'b':3, 'c':3, 'd':2, 'e':1, 'f':4, 'g':2, 'h':4, 'i':1, 'j':8, 'k':5, 'l':1, 'm':3, 
+              'n':1, 'o':1, 'p':3, 'q':10, 'r':1, 's':1, 't':1, 'u':1, 'v':4, 'w':4, 'x':8, 'y':4, 'z':10}
+    sum = 0
+    for char in str1:
+        if char in mydict:
+            sum += mydict[char]
+    return sum

@@ -1,0 +1,215 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    if str1 == "T":
+        return True
+    elif str1 == "F":
+        return False
+    elif str1 == "|":
+        return "or"
+    elif str1 == "&":
+        return "and"
+    else:
+        return str1
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    stack = []
+    for i in range(len(str1)):
+        if str1[i] == 'T' or str1[i] == 'F':
+            stack.append(str1[i])
+        elif str1[i] == '|':
+            stack.append(str1[i])
+        elif str1[i] == '&':
+            stack.append(str1[i])
+        else:
+            if str1[i-1] == 'T' or str1[i-1] == 'F':
+                temp = stack.pop()
+                if temp == 'T':
+                    stack.append('F')
+                else:
+                    stack.append('T')
+            else:
+                temp1 = stack.pop()
+                temp2 = stack.pop()
+                if temp1 == 'T' and temp2 == 'T':
+                    stack.append('T')
+                else:
+                    stack.append('F')
+    return stack.pop()
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    str1 = str1.replace(" ", "")
+    str1 = str1.replace("T", "True")
+    str1 = str1.replace("F", "False")
+    return eval(str1)
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    stack = []
+    for i in str1:
+        if i == '|':
+            stack.append('|')
+        elif i == '&':
+            stack.append('&')
+        elif i == 'T' or i == 'F':
+            stack.append(i)
+        else:
+            if stack[-1] == '|':
+                stack.pop()
+                stack.append('T')
+            elif stack[-1] == '&':
+                stack.pop()
+                stack.append('F')
+            stack.pop()
+    return stack[0]
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    if str1 == 'T':
+        return True
+    elif str1 == 'F':
+        return False
+    else:
+        if str1[0] == '(' and str1[-1] == ')':
+            str1 = str1[1:-1]
+        for i in range(len(str1)):
+            if str1[i] == '|':
+                return myfunc(str1[:i]) or myfunc(str1[i+1:])
+            elif str1[i] == '&':
+                return myfunc(str1[:i]) and myfunc(str1[i+1:])
+        return myfunc(str1)
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    if len(str1) == 1:
+        return str1 == 'T'
+    if str1[0] == 'T' and str1[1] == '|':
+        return True
+    if str1[0] == 'F' and str1[1] == '|':
+        return myfunc(str1[2:])
+    if str1[0] == 'T' and str1[1] == '&':
+        return myfunc(str1[2:])
+    if str1[0] == 'F' and str1[1] == '&':
+        return False
+    if str1[0] == 'F' and str1[1] == '|':
+        return myfunc(str1[2:])
+    if str1[0] == 'T' and str1[1] == '|':
+        return True
+    if str1[0] == 'F' and str1[1] == '&':
+        return False
+    if str1[0] == 'T' and str1[1] == '&':
+        return myfunc(str1[2:])
+    if str1[0] == 'T' and str1[1] == '&':
+        return myfunc(str1[2:])
+    if str1[0] == 'F' and str1[1] == '|':
+        return myfunc(str1[2:])
+    if str1[0] == 'T' and str1[1] == '|':
+        return True
+    if str1[0] == 'F' and str1[1] == '&':
+        return False
+    if str1[0] == 'T' and str1[1] == '&':
+        return myfunc(str1[2:])
+    if str1[0] == 'T' and str1[1] == '&':
+        return myfunc(str1[2:])
+    if str1[0] == 'F' and str1[1] == '|':
+        return myfunc(str1[2:])
+    if str1[0] == 'T' and str1[1] == '|':
+        return True
+    if str1[0] == 'F' and str1[1] == '&':
+        return False
+    if str1[0] == 'T' and str1[1] == '&':
+        return myfunc(str1[2
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    if len(str1) == 1:
+        return str1 == 'T'
+    if len(str1) == 3:
+        return str1[0] == 'T' if str1[1] == '|' else str1[0] == 'T' and str1[2] == 'T'
+    if len(str1) == 5:
+        return myfunc(str1[:3]) if str1[3] == '&' else myfunc(str1[:3]) or myfunc(str1[4:])
+    return myfunc(str1[:5]) and myfunc(str1[6:])
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    if str1 == "T":
+        return True
+    elif str1 == "F":
+        return False
+    elif str1[0] == "!":
+        return not myfunc(str1[1:])
+    elif str1[1] == "|":
+        return myfunc(str1[0]) or myfunc(str1[2:])
+    elif str1[1] == "&":
+        return myfunc(str1[0]) and myfunc(str1[2:])
+    else:
+        raise ValueError("Invalid string")
+
+=======
+Suggestion 9
+
+def myfunc(str1: str):
+    if len(str1) == 1:
+        return str1 == 'T'
+    if str1[0] == 'T':
+        return myfunc(str1[1:])
+    if str1[0] == 'F':
+        return not myfunc(str1[1:])
+    if str1[0] == '(':
+        i = 1
+        while str1[i] != ')':
+            i += 1
+        return myfunc(str1[1:i]) or myfunc(str1[i+2:])
+    if str1[0] == '!':
+        return not myfunc(str1[1:])
+    if str1[0] == '&':
+        i = 1
+        while str1[i] != ')':
+            i += 1
+        return myfunc(str1[1:i]) and myfunc(str1[i+2:])
+    if str1[0] == '|':
+        i = 1
+        while str1[i] != ')':
+            i += 1
+        return myfunc(str1[1:i]) or myfunc(str1[i+2:])
+    return False
+
+=======
+Suggestion 10
+
+def myfunc(str1: str):
+    # Write your code here
+    stack = []
+    for i in str1:
+        if i == 'T' or i == 'F':
+            stack.append(i)
+        elif i == '&':
+            if stack.pop() == 'T' and stack.pop() == 'T':
+                stack.append('T')
+            else:
+                stack.append('F')
+        elif i == '|':
+            if stack.pop() == 'T' or stack.pop() == 'T':
+                stack.append('T')
+            else:
+                stack.append('F')
+    return stack.pop()

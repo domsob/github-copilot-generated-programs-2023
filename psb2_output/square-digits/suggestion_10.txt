@@ -1,0 +1,105 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    # convert int to str
+    str1 = str(int1)
+    # initialize empty list
+    list1 = []
+    # iterate through str1
+    for i in str1:
+        # square each digit and append to list
+        list1.append(str(int(i)**2))
+    # join list to string
+    str2 = ''.join(list1)
+    # return str2
+    return str2
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    """
+    >>> myfunc(9119)
+    '811181'
+    >>> myfunc(0)
+    '0'
+    >>> myfunc(1111)
+    '1111'
+    >>> myfunc(1234)
+    '14916'
+    """
+    int1 = str(int1)
+    int2 = ""
+    for i in int1:
+        int2 = int2 + str(int(i) * int(i))
+    return int2
+
+=======
+Suggestion 3
+
+def myfunc(int1: int):
+    str1 = str(int1)
+    str2 = ""
+    for i in range(0, len(str1)):
+        str2 += str(int(str1[i]) ** 2)
+    return str2
+
+=======
+Suggestion 4
+
+def myfunc(int1: int):
+    return "".join([str(int(i)**2) for i in str(int1)])
+
+=======
+Suggestion 5
+
+def myfunc(int1: int):
+    int1 = str(int1)
+    new_str = ""
+    for i in int1:
+        new_str += str(int(i)**2)
+    return new_str
+
+=======
+Suggestion 6
+
+def myfunc(int1: int):
+    return "".join([str(int(x) ** 2) for x in str(int1)])
+
+=======
+Suggestion 7
+
+def myfunc(int1: int):
+    result = ''
+    for i in str(int1):
+        result += str(int(i) ** 2)
+    return int(result)
+
+=======
+Suggestion 8
+
+def myfunc(int1: int):
+    return "".join(str(int(i) ** 2) for i in str(int1))
+
+=======
+Suggestion 9
+
+def myfunc(int1: int):
+    int1 = str(int1)
+    int2 = ''
+    for i in int1:
+        int2 += str(int(i)**2)
+    return int(int2)
+
+=======
+Suggestion 10
+
+def myfunc(int1: int):
+    int1 = str(int1)
+    int2 = ""
+    for i in int1:
+        int2 += str(int(i) ** 2)
+    return int(int2)

@@ -1,0 +1,83 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    str1 = str1.replace(" ", "\n")
+    return str1, len(str1.replace("\n", ""))
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    count = 0
+    for i in str1:
+        if i != ' ':
+            count += 1
+    return str1.replace(' ', '\n'), count
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    return str1.replace(' ', '\n'), len(str1.replace(' ', ''))
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    count = 0
+    for i in str1:
+        if i != " ":
+            count += 1
+    return str1.replace(" ", "\n"), count
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    return str1.replace(" ", "\n"), len(str1.replace(" ", ""))
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    str2 = str1.replace(" ", "\n")
+    str3 = str1.replace(" ", "")
+    return str2, len(str3)
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    # Replace spaces with newlines
+    str1 = str1.replace(" ", "\n")
+    # Count the nonwhitespace characters
+    count = len(str1) - str1.count(" ")
+    return str1, count
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    str1 = str1.replace(" ", "\n")
+    return str1, len(str1) - str1.count("\n")
+
+=======
+Suggestion 9
+
+def myfunc(str1: str):
+    str2 = str1.replace(" ", "\n")
+    count = 0
+    for i in range(len(str1)):
+        if str1[i] != " ":
+            count += 1
+    return str2, count
+
+=======
+Suggestion 10
+
+def myfunc(str1: str):
+    str2 = str1.replace(' ', '\n')
+    return str2, len(str1) - str1.count(' ')

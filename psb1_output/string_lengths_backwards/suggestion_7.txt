@@ -1,0 +1,58 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(list1: list):
+    return [len(x) for x in list1[::-1]]
+
+=======
+Suggestion 2
+
+def myfunc(list1: list):
+    list2 = []
+    for i in range(len(list1)):
+        list2.append(len(list1[i]))
+    return list2
+
+=======
+Suggestion 3
+
+def myfunc(list1: list):
+    new_list = []
+    for i in list1:
+        new_list.append(len(i))
+    return new_list[::-1]
+
+=======
+Suggestion 4
+
+def myfunc(list1: list):
+    list2 = []
+    for i in list1:
+        list2.append(len(i))
+    return list2[::-1]
+
+=======
+Suggestion 5
+
+def myfunc(list1: list):
+    list2 = []
+    for i in range(len(list1)):
+        list2.append(len(list1[i]))
+    return list2[::-1]
+
+=======
+Suggestion 6
+
+def myfunc(list1: list):
+    return [len(x) for x in list1]
+
+=======
+Suggestion 7
+
+def myfunc(list1: list):
+    list2 = []
+    for i in list1:
+        list2.append(len(i))
+    return list2

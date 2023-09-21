@@ -1,0 +1,58 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(list1: list):
+    list2 = []
+    for i in list1:
+        if i < 0:
+            list2.append(0)
+        else:
+            list2.append(i)
+    return list2
+
+=======
+Suggestion 2
+
+def myfunc(list1: list):
+    for i in range(len(list1)):
+        if list1[i] < 0:
+            list1[i] = 0
+    return list1
+
+=======
+Suggestion 3
+
+def myfunc(list1: list):
+    return [i if i > 0 else 0 for i in list1]
+
+=======
+Suggestion 4
+
+def myfunc(list1: list):
+    new_list = []
+    for i in range(len(list1)):
+        if list1[i] < 0:
+            new_list.append(0)
+        else:
+            new_list.append(list1[i])
+    return new_list
+
+=======
+Suggestion 5
+
+def myfunc(list1: list):
+    new_list = []
+    for i in list1:
+        if i < 0:
+            new_list.append(0)
+        else:
+            new_list.append(i)
+    return new_list
+
+=======
+Suggestion 6
+
+def myfunc(list1: list):
+    return [0 if x < 0 else x for x in list1]

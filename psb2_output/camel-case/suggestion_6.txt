@@ -1,0 +1,89 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    words = str1.split("-")
+    result = words[0]
+    for i in range(1, len(words)):
+        result = result + words[i].capitalize()
+    return result
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    pass
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    return ''.join([word.capitalize() for word in str1.split('-')])
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    str2 = str1.split()
+    str3 = ""
+    for i in str2:
+        str3 += i[0].upper() + i[1:]
+    print(str3)
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    str2 = str1.split(" ")
+    str3 = ""
+    for i in str2:
+        str3 += i.capitalize()
+    return str3[0].lower() + str3[1:]
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    newstr = ''
+    for i in range(len(str1)):
+        if str1[i] == '-':
+            newstr += str1[i + 1].upper()
+        elif str1[i - 1] != '-':
+            newstr += str1[i]
+    return newstr
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    return ''.join([word.title() for word in str1.split('-')])
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    words = str1.split(" ")
+    for i in range(len(words)):
+        words[i] = words[i].replace("-", " ").title().replace(" ", "")
+    return "".join(words)
+
+=======
+Suggestion 9
+
+def myfunc(str1: str):
+    str1 = str1.split(" ")
+    for i in range(len(str1)):
+        str1[i] = str1[i].replace("-", " ").title().replace(" ", "")
+    return str1
+
+=======
+Suggestion 10
+
+def myfunc(str1: str):
+    words = str1.split("-")
+    result = words[0]
+    for i in range(1, len(words)):
+        result += words[i].capitalize()
+    return result

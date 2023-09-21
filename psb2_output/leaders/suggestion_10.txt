@@ -1,0 +1,95 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(list1: list):
+    list2 = []
+    list2.append(list1[-1])
+    for i in range(len(list1)-1, -1, -1):
+        if list1[i] >= list2[-1]:
+            list2.append(list1[i])
+    return list2[::-1]
+
+=======
+Suggestion 2
+
+def myfunc(list1: list):
+    list2 = []
+    for i in range(len(list1)):
+        if i == len(list1)-1:
+            list2.append(list1[i])
+            break
+        if list1[i] >= max(list1[i+1:]):
+            list2.append(list1[i])
+    return list2
+
+=======
+Suggestion 3
+
+def myfunc(list1: list):
+    new_list = []
+    for i in range(len(list1)):
+        if i == len(list1) - 1:
+            new_list.append(list1[i])
+        elif list1[i] >= max(list1[i+1:]):
+            new_list.append(list1[i])
+    return new_list
+
+=======
+Suggestion 4
+
+def myfunc(list1: list):
+    leaders = []
+    max = list1[-1]
+    for i in range(len(list1)-1,-1,-1):
+        if list1[i] >= max:
+            leaders.append(list1[i])
+            max = list1[i]
+    return leaders[::-1]
+
+=======
+Suggestion 5
+
+def myfunc(list1: list):
+    list2 = []
+    for i in range(len(list1)):
+        if i == len(list1)-1:
+            list2.append(list1[i])
+        elif list1[i] >= max(list1[i+1:]):
+            list2.append(list1[i])
+    return list2
+
+=======
+Suggestion 6
+
+def myfunc(list1: list):
+    # Write your code here
+    list2 = []
+    for i in range(len(list1)):
+        if i == len(list1)-1:
+            list2.append(list1[i])
+        elif list1[i] >= max(list1[i+1:]):
+            list2.append(list1[i])
+    return list2
+
+=======
+Suggestion 7
+
+def myfunc(list1: list):
+    result = []
+    for i in range(len(list1)-1):
+        if list1[i] >= max(list1[i+1:]):
+            result.append(list1[i])
+    result.append(list1[-1])
+    return result
+
+=======
+Suggestion 8
+
+def myfunc(list1: list):
+    list2 = []
+    for i in range(len(list1)):
+        if list1[i] >= max(list1[i+1:]):
+            list2.append(list1[i])
+    return list2

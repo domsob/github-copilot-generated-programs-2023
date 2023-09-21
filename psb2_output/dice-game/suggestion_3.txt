@@ -1,0 +1,84 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, int2: int):
+    if int1 == 0 or int2 == 0:
+        return 0
+    elif int1 == 1:
+        return 1/int2
+    elif int2 == 1:
+        return 0
+    elif int1 == int2:
+        return 1/2
+    elif int1 > int2:
+        return (int1 - int2)/int1
+    else:
+        return 1 - (int2 - int1)/int2
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, int2: int):
+    # Your code here
+    return
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, int2: int):
+    """
+    >>> myfunc(2, 2)
+    0.5
+    >>> myfunc(3, 2)
+    0.6666666666666666
+    >>> myfunc(4, 2)
+    0.75
+    >>> myfunc(4, 3)
+    0.5833333333333334
+    >>> myfunc(6, 6)
+    0.5
+    """
+    return 0.5
+    pass
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, int2: int):
+    # Your code here
+    return 0
+
+=======
+Suggestion 5
+
+def myfunc(int1: int, int2: int):
+    # Your code here
+    return 0.0
+
+=======
+Suggestion 6
+
+def myfunc(int1: int, int2: int):
+    # Your code here
+    pass
+
+=======
+Suggestion 7
+
+def myfunc(int1: int, int2: int):
+    # Write your code here
+    return 0.0
+
+=======
+Suggestion 8
+
+def myfunc(int1: int, int2: int):
+    if int1 < 1 or int2 < 1:
+        raise ValueError("Invalid input")
+    if int1 == 1:
+        return 1
+    if int2 == 1:
+        return 0
+    return int1 / (int1 + int2)

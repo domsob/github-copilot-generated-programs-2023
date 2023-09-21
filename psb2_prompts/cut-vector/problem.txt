@@ -1,0 +1,4 @@
+# Given a vector of positive integers, find the spot where, if you cut the vector, 
+# the number of both sides are either equal, or the difference is as small as possible.
+# Return the two resulting subvectors as two outputs.
+def myfunc(list1: list):

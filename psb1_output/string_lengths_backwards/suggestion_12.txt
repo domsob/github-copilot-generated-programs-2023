@@ -1,0 +1,53 @@
+Synthesizing 9/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(list1: list):
+    list2 = []
+    for i in range(len(list1)):
+        list2.append(len(list1[i]))
+    return list2
+
+=======
+Suggestion 2
+
+def myfunc(list1: list):
+    list2 = []
+    for i in range(len(list1) - 1, -1, -1):
+        list2.append(len(list1[i]))
+    return list2
+
+=======
+Suggestion 3
+
+def myfunc(list1: list):
+    list2 = []
+    for i in range(len(list1)):
+        list2.append(len(list1[i]))
+    return list2[::-1]
+
+=======
+Suggestion 4
+
+def myfunc(list1: list):
+    # Create an empty list to hold the string lengths.
+    list2 = []
+    # Loop through the list of strings.
+    for i in range(len(list1)):
+        # Get the length of the string and append it to the list.
+        list2.append(len(list1[i]))
+    # Return the list of string lengths.
+    return list2
+
+=======
+Suggestion 5
+
+def myfunc(list1: list):
+    return list(map(lambda x: len(x), list1[::-1]))
+
+=======
+Suggestion 6
+
+def myfunc(list1: list):
+    return [len(i) for i in list1][::-1]

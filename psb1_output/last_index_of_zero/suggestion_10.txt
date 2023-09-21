@@ -1,0 +1,76 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(list1: list):
+    # loop through list backwards
+    for i in range(len(list1)-1, -1, -1):
+        # check if element is 0
+        if list1[i] == 0:
+            # return index
+            return i
+    # return None if no 0 is found
+    return None
+
+=======
+Suggestion 2
+
+def myfunc(list1: list):
+    for i in range(len(list1)-1, -1, -1):
+        if list1[i] == 0:
+            return i
+    return None
+
+=======
+Suggestion 3
+
+def myfunc(list1: list):
+    if 0 not in list1:
+        return -1
+    else:
+        return len(list1) - list1[::-1].index(0) - 1
+
+=======
+Suggestion 4
+
+def myfunc(list1: list):
+    for i in range(len(list1)):
+        if list1[i] == 0:
+            return i
+    return -1
+
+=======
+Suggestion 5
+
+def myfunc(list1: list):
+    for i in range(len(list1)-1, -1, -1):
+        if list1[i] == 0:
+            return i
+    # return list1.index(0) if list1.count(0) > 0 else None
+
+=======
+Suggestion 6
+
+def myfunc(list1: list):
+    for i in range(len(list1)):
+        if list1[i] == 0:
+            return i
+
+=======
+Suggestion 7
+
+def myfunc(list1: list):
+    for i in range(len(list1)-1, -1, -1):
+        if list1[i] == 0:
+            return i
+
+=======
+Suggestion 8
+
+def myfunc(list1: list):
+    index = 0
+    for i in range(len(list1)):
+        if list1[i] == 0:
+            index = i
+    return index

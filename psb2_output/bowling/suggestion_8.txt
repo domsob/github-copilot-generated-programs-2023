@@ -1,0 +1,172 @@
+Synthesizing 9/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    str1 = str1.replace('-', '0')
+    str1 = str1.replace('X', '10')
+    str1 = str1.replace('/', '10')
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    score = 0
+    frame = 0
+    in_first_half = True
+    for i in range(len(str1)):
+        if str1[i] == 'X':
+            score += 10
+            if frame < 9:
+                score += 10 + (10 if str1[i+2] == 'X' else int(str1[i+2]))
+                if str1[i+4] == 'X':
+                    score += 10
+                else:
+                    score += int(str1[i+4])
+        elif str1[i] == '/':
+            score += 10 - int(str1[i-1])
+            if frame < 9:
+                score += (10 if str1[i+1] == 'X' else int(str1[i+1]))
+        else:
+            score += int(str1[i])
+        if not in_first_half:
+            frame += 1
+        in_first_half = not in_first_half
+    return score
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    # Your code goes here
+    return 0
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    # your code here
+    score = 0
+    for i in range(len(str1)):
+        if str1[i] == 'X':
+            score += 10
+            if i < 18:
+                if str1[i + 2] == '/':
+                    score += 10
+                else:
+                    score += int(str1[i + 1]) + int(str1[i + 2])
+        elif str1[i] == '/':
+            score += 10
+            if i < 18:
+                score += int(str1[i + 2])
+        else:
+            score += int(str1[i])
+    return score
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    score = 0
+    frame = 0
+    in_first_half = True
+
+    for i in range(len(str1)):
+        if str1[i] == '/':
+            score += 10 - last
+        else:
+            score += get_value(str1[i])
+
+        if frame < 9 and get_value(str1[i]) == 10:
+            if str1[i] == '/':
+                score += get_value(str1[i+1])
+            elif str1[i] == 'X' or str1[i] == 'x':
+                score += get_value(str1[i+1])
+                if str1[i+2] == '/':
+                    score += 10 - get_value(str1[i+1])
+                else:
+                    score += get_value(str1[i+2])
+
+        last = get_value(str1[i])
+        if not in_first_half:
+            frame += 1
+        in_first_half = not in_first_half
+
+    return score
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    score = 0
+    for i in range(len(str1)):
+        if str1[i] == 'X':
+            score += 10
+        elif str1[i] == '/':
+            score += 10 - int(str1[i-1])
+        else:
+            score += int(str1[i])
+    return score
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    pass
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    score = 0
+    for i in range(len(str1)):
+        if str1[i] == 'X':
+            score += 10
+            if i < len(str1) - 2:
+                if str1[i + 2] == '/':
+                    score += 10
+                else:
+                    score += int(str1[i + 1]) + int(str1[i + 2])
+            elif i < len(str1) - 1:
+                score += int(str1[i + 1])
+        elif str1[i] == '/':
+            score += 10
+            if i < len(str1) - 1:
+                score += int(str1[i + 1])
+        else:
+            score += int(str1[i])
+    return score
+
+=======
+Suggestion 9
+
+def myfunc(str1: str):
+    score = 0
+    i = 0
+    while i < len(str1):
+        if str1[i] == 'X':
+            score += 10
+            if i + 2 < len(str1):
+                if str1[i + 2] == '/':
+                    score += 10
+                elif str1[i + 1] == '/':
+                    score += 10 - int(str1[i + 2])
+                else:
+                    score += int(str1[i + 1]) + int(str1[i + 2])
+            elif i + 1 < len(str1):
+                if str1[i + 1] == '/':
+                    score += 10
+                else:
+                    score += int(str1[i + 1])
+        elif str1[i] == '/':
+            score += 10 - int(str1[i - 1])
+            if i + 1 < len(str1):
+                if str1[i + 1] == 'X':
+                    score += 10
+                else:
+                    score += int(str1[i + 1])
+        else:
+            score += int(str1[i])
+        i += 1
+    return score

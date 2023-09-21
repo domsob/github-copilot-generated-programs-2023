@@ -1,0 +1,199 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    # Initialize variables
+    pennies = 0
+    nickels = 0
+    dimes = 0
+    quarters = 0
+    # Calculate the number of quarters
+    quarters = int1 // 25
+    # Calculate the number of dimes
+    dimes = (int1 - quarters * 25) // 10
+    # Calculate the number of nickels
+    nickels = (int1 - quarters * 25 - dimes * 10) // 5
+    # Calculate the number of pennies
+    pennies = (int1 - quarters * 25 - dimes * 10 - nickels * 5) // 1
+    # Return the number of each type of count as a separate output
+    return pennies, nickels, dimes, quarters
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    """Given a number of cents, find the fewest needed number of US coins 
+    (pennies, nickels, dimes, and quarters) to make that amount,
+    and return the number of each type of count as a separate output.
+    """
+    if int1 <= 0:
+        return 0, 0, 0, 0
+    elif int1 < 5:
+        return int1, 0, 0, 0
+    elif int1 < 10:
+        return int1 % 5, int1 // 5, 0, 0
+    elif int1 < 25:
+        return int1 % 10 % 5, int1 % 10 // 5, int1 // 10, 0
+    else:
+        return int1 % 25 % 10 % 5, int1 % 25 % 10 // 5, int1 % 25 // 10, int1 // 25
+
+=======
+Suggestion 3
+
+def myfunc(int1: int):
+    '''
+    >>> myfunc(1)
+    (0, 0, 0, 1)
+    >>> myfunc(6)
+    (1, 0, 1, 0)
+    >>> myfunc(49)
+    (4, 0, 2, 0)
+    >>> myfunc(99)
+    (4, 1, 2, 3)
+    '''
+    quarters = int1 // 25
+    dimes = int1 % 25 // 10
+    nickels = int1 % 25 % 10 // 5
+    pennies = int1 % 25 % 10 % 5
+    return (quarters, dimes, nickels, pennies)
+
+=======
+Suggestion 4
+
+def myfunc(int1: int):
+    # set up a list of the coins
+    coins = [25, 10, 5, 1]
+    # set up a list of the coin names
+    coin_names = ['quarter', 'dime', 'nickel', 'penny']
+    # set up a list of the counts of each coin
+    counts = [0, 0, 0, 0]
+    # use a loop to count how many of each coin is needed
+    for i in range(len(coins)):
+        # use integer division to get the current coin count
+        counts[i] = int1 // coins[i]
+        # update the input to be the remainder
+        int1 = int1 % coins[i]
+    # print the coin name and count for each coin
+    for i in range(len(counts)):
+        print(f'{counts[i]} {coin_names[i]}{"s" if counts[i] != 1 else ""}')
+
+=======
+Suggestion 5
+
+def myfunc(int1: int):
+    if int1 <= 0:
+        return 'invalid input'
+    else:
+        quarter = int1 // 25
+        dime = (int1 % 25) // 10
+        nickel = ((int1 % 25) % 10) // 5
+        penny = ((int1 % 25) % 10) % 5
+        return quarter, dime, nickel, penny
+
+=======
+Suggestion 6
+
+def myfunc(int1: int):
+    # initialize variables
+    quarters = 0
+    dimes = 0
+    nickels = 0
+    pennies = 0
+    # loop through each type of coin
+    while int1 != 0:
+        if int1 >= 25:
+            quarters += 1
+            int1 -= 25
+        elif int1 >= 10:
+            dimes += 1
+            int1 -= 10
+        elif int1 >= 5:
+            nickels += 1
+            int1 -= 5
+        elif int1 >= 1:
+            pennies += 1
+            int1 -= 1
+    return quarters, dimes, nickels, pennies
+
+=======
+Suggestion 7
+
+def myfunc(int1: int):
+    # Check if input is a number
+    if isinstance(int1, int) == False:
+        raise TypeError("Input is not a number")
+    # Check if input is a positive number
+    if int1 < 0:
+        raise ValueError("Input is not a positive number")
+    # Check if input is divisible by 1 cent
+    if int1 % 1 != 0:
+        raise ValueError("Input is not divisible by 1 cent")
+    # Check if input is 0
+    if int1 == 0:
+        raise ValueError("Input is 0")
+    # Check if input is more than 99 cents
+    if int1 > 99:
+        raise ValueError("Input is more than 99 cents")
+    # Find the number of quarters, dimes, nickels, and pennies
+    quarters = int1 // 25
+    dimes = (int1 % 25) // 10
+    nickels = ((int1 % 25) % 10) // 5
+    pennies = ((int1 % 25) % 10) % 5
+    # Return the number of quarters, dimes, nickels, and pennies
+    return quarters, dimes, nickels, pennies
+
+=======
+Suggestion 8
+
+def myfunc(int1: int):
+    if int1 < 0:
+        return "Invalid Input"
+    else:
+        quarters = int1 // 25
+        dimes = (int1 % 25) // 10
+        nickels = ((int1 % 25) % 10) // 5
+        pennies = ((int1 % 25) % 10) % 5
+        return quarters, dimes, nickels, pennies
+
+=======
+Suggestion 9
+
+def myfunc(int1: int):
+    cents = int1
+    # 25 cents
+    quarters = cents // 25
+    cents = cents % 25
+    # 10 cents
+    dimes = cents // 10
+    cents = cents % 10
+    # 5 cents
+    nickels = cents // 5
+    cents = cents % 5
+    # 1 cent
+    pennies = cents // 1
+    cents = cents % 1
+    return quarters, dimes, nickels, pennies
+
+=======
+Suggestion 10
+
+def myfunc(int1: int):
+    """ Given a number of cents, find the fewest needed number of US coins 
+    (pennies, nickels, dimes, and quarters) to make that amount,
+    and return the number of each type of count as a separate output.
+    """
+    if int1 < 0:
+        print("Negative number is not allowed.")
+        return
+    elif int1 == 0:
+        print("0")
+        return
+    else:
+        quarters = int1 // 25
+        dimes = (int1 - quarters * 25) // 10
+        nickels = (int1 - quarters * 25 - dimes * 10) // 5
+        pennies = int1 - quarters * 25 - dimes * 10 - nickels * 5
+        print("{0} quarters, {1} dimes, {2} nickels, {3} pennies".format(quarters, dimes, nickels, pennies))
+        return

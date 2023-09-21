@@ -1,0 +1,93 @@
+Synthesizing 9/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    if int1 < 0:
+        int1 = abs(int1)
+        return [-int(ch) for ch in str(int1)[::-1]]
+    return [int(ch) for ch in str(int1)[::-1]]
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    # your code here
+    return None
+
+=======
+Suggestion 3
+
+def myfunc(int1: int):
+    if int1 < 0:
+        int1 = int1 * -1
+        int1 = str(int1)
+        int1 = int1[::-1]
+        int1 = '-' + int1
+        return int1
+    else:
+        int1 = str(int1)
+        int1 = int1[::-1]
+        return int1
+
+=======
+Suggestion 4
+
+def myfunc(int1: int):
+    # Your code here
+    pass
+
+=======
+Suggestion 5
+
+def myfunc(int1: int):
+    # Convert the int to a string
+    str1 = str(int1)
+    # Create a list of the string
+    list1 = list(str1)
+    # Reverse the list
+    list1.reverse()
+    # Convert the list back to a string
+    str2 = ''.join(list1)
+    # Convert the string back to a int
+    int2 = int(str2)
+    # Return the int
+    return int2
+
+=======
+Suggestion 6
+
+def myfunc(int1: int):
+    x = str(int1)
+    if int1 < 0:
+        return [int(x[0])] + [int(i) for i in x[1:][::-1]]
+    else:
+        return [int(i) for i in x[::-1]]
+
+=======
+Suggestion 7
+
+def myfunc(int1: int):
+    # YOUR CODE HERE
+    return None
+
+=======
+Suggestion 8
+
+def myfunc(int1: int):
+    if int1 < 0:
+        int1 = -int1
+        return [-int(x) for x in str(int1)[::-1]]
+    else:
+        return [int(x) for x in str(int1)[::-1]]
+
+=======
+Suggestion 9
+
+def myfunc(int1: int):
+    int1 = str(int1)
+    int1 = int1[::-1]
+    int1 = list(int1)
+    int1 = [int(i) for i in int1]
+    return int1

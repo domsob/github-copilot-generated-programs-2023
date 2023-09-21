@@ -1,0 +1,194 @@
+Synthesizing 8/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):)-> list:
+    # str1 = "This is a sentence. This is another sentence. This is a third sentence."
+    # str1 = "The quick brown fox jumps over the lazy dog."
+    # str1 = "The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog."
+    # str1 = "The quick brown fox jumps over the lazy dog. "
+    # str1 = "The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog."
+    # str1 = "The quick brown fox
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):)->list:
+    # split string into list of words
+    # split string into list of sentences
+    # get length of longest word
+    # get number of sentences
+    # get average sentence length
+    # return list of number of words with n characters
+    pass
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):)-> list:
+    # 1. split str1 by whitespace to get list of words
+    # 2. iterate through list of words to get length of each word
+    # 3. create a dictionary with key as length of word and value as count of words
+    # 4. get the max length of word
+    # 5. iterate through dictionary and get the count of words for each length from 1 to max length
+    # 6. get the count of sentence terminators
+    # 7. calculate average sentence length
+    # 8. return the list of counts of words for each length, count of sentence terminators and average sentence length
+    pass
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):)-> list:
+    # split the string into words
+    words = str1.split()
+    # list of words with n characters
+    list1 = []
+    # list of number of words with n characters
+    list2 = []
+    # list of sentence terminators
+    list3 = []
+    # number of sentences
+    count = 0
+    # length of the longest word
+    max_len = 0
+    # number of words with n characters
+    num = 0
+    # number of sentence terminator characters
+    num1 = 0
+    # number of words in the string
+    num2 = 0
+    # average sentence length
+    avg = 0
+    # iterate through the words
+    for word in words:
+        # iterate through each character of the word
+        for char in word:
+            # if the character is a sentence terminator
+            if char in ".!?":
+                # increment the number of sentence terminators
+                num1 += 1
+                # increment the number of sentences
+                count += 1
+        # if the length of the word is greater than the length of the longest word
+        if len(word) > max_len:
+            # update the length of the longest word
+            max_len = len(word)
+        # append the word to the list of words with n characters
+        list1.append(word)
+    # iterate through the list of words with n characters
+    for word in list1:
+        # iterate through each character of the word
+        for char in word:
+            # if the character is a sentence terminator
+            if char in ".!?":
+                # increment the number of sentence terminators
+                num1 += 1
+                # increment the number of sentences
+                count += 1
+        # if the length of the word is greater than the length of the longest word
+        if len(word) > max_len:
+            # update the length of the longest word
+            max_len = len(word)
+        # append the word to the list of words with n characters
+        list1.append(word)
+    # iterate through the list of words with n characters
+    for word in list1:
+        # if the length of the word is equal to the length of the longest word
+        if len(word) == max_len:
+            # increment the number of words with n characters
+            num += 1
+        # append
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):)-> list:
+    # Write your code here
+    pass
+    return [1,2,3,4,5,6,7,8]
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):)-> list:
+    """Return a list containing the number of words with n characters 
+    for n from 1 to the length of the longest word.
+    Additionally, return the number of sentences and the average sentence length.
+    """
+    # Split string into sentences
+    sentences = str1.split(".")
+    # Split each sentence into words
+    words = []
+    for sentence in sentences:
+        words.append(sentence.split())
+    # Get the number of words with n characters for n from 1 to the length of the longest word
+    # Additionally, get the number of sentences and the average sentence length
+    num_words = [0] * len(max(words, key=len))
+    num_sentences = 0
+    num_sentence_terminators = 0
+    for sentence in words:
+        num_sentences += 1
+        num_sentence_terminators += 1
+        for word in sentence:
+            num_words[len(word) - 1] += 1
+    return [num_words, num_sentences, num_sentence_terminators/num_sentences]
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):) -> list:
+    words = str1.split()
+    word_len = []
+    for word in words:
+        if word != '.' or word != '?' or word != '!':
+            word_len.append(len(word))
+    print(word_len)
+    return word_len
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):)-> list:
+    str1 = str1.strip()
+    str1 = str1.replace('!', '.')
+    str1 = str1.replace('?', '.')
+    str1 = str1.replace('..', '.')
+    str1 = str1.replace('...', '.')
+    str1 = str1.replace('....', '.')
+    str1 = str1.replace('.....', '.')
+    str1 = str1.replace('......', '.')
+    str1 = str1.replace('.......', '.')
+    str1 = str1.replace('........', '.')
+    str1 = str1.replace('.........', '.')
+    str1 = str1.replace('..........', '.')
+    str1 = str1.replace('...........', '.')
+    str1 = str1.replace('............', '.')
+    str1 = str1.replace('.............', '.')
+    str1 = str1.replace('..............', '.')
+    str1 = str1.replace('...............', '.')
+    str1 = str1.replace('................', '.')
+    str1 = str1.replace('.................', '.')
+    str1 = str1.replace('..................', '.')
+    str1 = str1.replace('...................', '.')
+    str1 = str1.replace('....................', '.')
+    str1 = str1.replace('.....................', '.')
+    str1 = str1.replace('......................', '.')
+    str1 = str1.replace('.......................', '.')
+    str1 = str1.replace('........................', '.')
+    str1 = str1.replace('.........................', '.')
+    str1 = str1.replace('..........................', '.')
+    str1 = str1.replace('...........................', '.')
+    str1 = str1.replace('............................', '.')
+    str1 = str1.replace('.............................', '.')
+    str1 = str1.replace('..............................', '.')
+    str1 = str1.replace('...............................', '.')
+    str1 = str1.replace('................................', '.')
+    str1 = str1.replace('.................................', '.')
+    str1 = str1.replace('..................................', '.')
+    str1 = str1.replace('...................................', '.')
+    str1 = str1.replace('....................................', '.')
+    str1 = str1.replace('.....................................', '.')
+    str1 = str1.replace('......................................', '.')
+    str

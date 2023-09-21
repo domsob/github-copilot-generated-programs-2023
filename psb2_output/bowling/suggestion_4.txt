@@ -1,0 +1,80 @@
+Synthesizing 6/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    str1 = str1.replace('-', '0')
+    str1 = str1.replace('X', '10')
+    str1 = str1.replace('/', '10')
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    pass
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    score = 0
+    for i in range(len(str1)):
+        if str1[i] == 'X':
+            score += 10
+        elif str1[i] == '/':
+            score += 10 - int(str1[i - 1])
+        else:
+            score += int(str1[i])
+    return score
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    score = 0
+    frame = 1
+    for i in range(0, len(str1)):
+        if frame == 10:
+            score += int(str1[i])
+        elif str1[i] == 'X':
+            score += 10 + bonus(str1, i, 2)
+        elif str1[i] == '/':
+            score += 10 + bonus(str1, i, 1)
+        else:
+            score += int(str1[i])
+        if str1[i] == 'X' or str1[i] == '/':
+            frame += 1
+    return score
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    score = 0
+    # split the string into individual bowls
+    bowls = list(str1)
+    # loop through each bowl, adding the score for each bowl
+    for i in range(len(bowls)):
+        if bowls[i] == 'X':
+            # strike
+            score += 10
+            # add the next two bowls to the score
+            score += int(bowls[i+1])
+            score += int(bowls[i+2])
+        elif bowls[i] == '/':
+            # spare
+            score += 10
+            # add the next bowl to the score
+            score += int(bowls[i+1])
+        else:
+            # normal bowl
+            score += int(bowls[i])
+    return score
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    # Your code here
+    return 0

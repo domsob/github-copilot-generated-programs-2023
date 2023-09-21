@@ -1,0 +1,106 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    str1 = str1.replace(" ", "\n")
+    return str1, len(str1.replace("\n", ""))
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    str2 = ""
+    count = 0
+    for i in str1:
+        if i == " ":
+            str2 += "\n"
+        else:
+            str2 += i
+            count += 1
+    return str2, count
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    newstr = ""
+    count = 0
+    for i in str1:
+        if i == " ":
+            newstr += "\n"
+        else:
+            newstr += i
+            count += 1
+    return (newstr, count)
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    newstr = ""
+    count = 0
+    for i in str1:
+        if i == " ":
+            newstr = newstr + "\n"
+        else:
+            newstr = newstr + i
+            count = count + 1
+    return newstr, count
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    count = 0
+    for i in str1:
+        if i != ' ':
+            count += 1
+    return str1.replace(' ', '\n'), count
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    print(str1.replace(' ', '\n'))
+    return len(str1) - str1.count(' ')
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    str2 = str1.replace(" ", "\n")
+    count = 0
+    for i in str1:
+        if i != " ":
+            count += 1
+    return str2, count
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    count = 0
+    newstr = ""
+    for i in str1:
+        if i != " ":
+            count += 1
+            newstr += i
+        else:
+            newstr += "\n"
+    return newstr, count
+
+=======
+Suggestion 9
+
+def myfunc(str1: str):
+    str2 = str1.replace(" ", "\n")
+    str3 = str1.replace(" ", "")
+    return str2, len(str3)
+
+=======
+Suggestion 10
+
+def myfunc(str1: str):
+    return str1.replace(" ", "\n"), len(str1) - str1.count(" ")

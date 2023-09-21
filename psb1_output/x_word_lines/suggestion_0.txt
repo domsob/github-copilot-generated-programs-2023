@@ -1,0 +1,210 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, str1: str):
+    # Write your code here
+    return
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, str1: str):
+    # split the string into a list of words
+    words = str1.split()
+    # initialize a counter
+    counter = 0
+    # initialize a string
+    new_string = ""
+    # loop through the list of words
+    for word in words:
+        # if the counter is less than the integer
+        if counter < int1:
+            # add the word and a space to the string
+            new_string += word + " "
+            # increment the counter
+            counter += 1
+        # if the counter is equal to the integer
+        elif counter == int1:
+            # add the word and a newline to the string
+            new_string += word + "\n"
+            # set the counter to 0
+            counter = 0
+    # return the string
+    return new_string
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, str1: str):
+    str1 = str1.replace("\n", " ")
+    str1 = str1.split(" ")
+    result = ""
+    count = 0
+    for i in str1:
+        if count == int1:
+            result += "\n"
+            count = 0
+        result += i + " "
+        count += 1
+    return result
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, str1: str):
+    words = str1.split()
+    lines = []
+    while len(words) > int1:
+        line = words[0:int1]
+        lines.append(line)
+        words = words[int1:]
+    lines.append(words)
+    return lines
+
+=======
+Suggestion 5
+
+def myfunc(int1: int, str1: str):
+    str1 = str1.replace(" ", "")
+    str1 = str1.replace("\n", "")
+    str1 = str1.replace("\t", "")
+    str1 = str1.replace("\r", "")
+    str1 = str1.replace("\v", "")
+    str1 = str1.replace("\f", "")
+    str1 = str1.replace("\b", "")
+    str1 = str1.replace("\a", "")
+    str1 = str1.replace("\0", "")
+    str1 = str1.replace("\1", "")
+    str1 = str1.replace("\2", "")
+    str1 = str1.replace("\3", "")
+    str1 = str1.replace("\4", "")
+    str1 = str1.replace("\5", "")
+    str1 = str1.replace("\6", "")
+    str1 = str1.replace("\7", "")
+    str1 = str1.replace("\8", "")
+    str1 = str1.replace("\9", "")
+    str1 = str1.replace("\10", "")
+    str1 = str1.replace("\11", "")
+    str1 = str1.replace("\12", "")
+    str1 = str1.replace("\13", "")
+    str1 = str1.replace("\14", "")
+    str1 = str1.replace("\15", "")
+    str1 = str1.replace("\16", "")
+    str1 = str1.replace("\17", "")
+    str1 = str1.replace("\18", "")
+    str1 = str1.replace("\19", "")
+    str1 = str1.replace("\20", "")
+    str1 = str1.replace("\21", "")
+    str1 = str1.replace("\22", "")
+    str1 = str1.replace("\23", "")
+    str1 = str1.replace("\24", "")
+    str1 = str1.replace("\25", "")
+    str1 = str1.replace("\26", "")
+    str1 = str1.replace("\27", "")
+    str1 = str1.replace("\28", "")
+    str1 = str1.replace("\29", "")
+    str1 = str1.replace("\30", "")
+    str1 = str1.replace("\31", "")
+    str1 = str1.replace("\32", "")
+    str1 = str1.replace("\33", "")
+    str1 = str1.replace("\34", "")
+    str1 = str1.replace("\35", "")
+    str1 = str1.replace("\36", "")
+    str1 = str
+
+=======
+Suggestion 6
+
+def myfunc(int1: int, str1: str):
+    str1 = str1.split()
+    str2 = ""
+    for i in range(len(str1)):
+        if i % int1 == 0 and i != 0:
+            str2 += "\n"
+        str2 += str1[i] + " "
+    return str2
+
+=======
+Suggestion 7
+
+def myfunc(int1: int, str1: str):
+    str2 = str1.split()
+    str3 = ""
+    count = 0
+    for i in str2:
+        if count < int1:
+            str3 = str3 + i + " "
+            count += 1
+        else:
+            str3 = str3 + "\n" + i + " "
+            count = 1
+    return str3
+
+=======
+Suggestion 8
+
+def myfunc(int1: int, str1: str):
+    # Write your code here
+    l = []
+    str1 = str1.split()
+    i = 0
+    while i < len(str1):
+        l.append(" ".join(str1[i:i + int1]))
+        i += int1
+    return l
+
+=======
+Suggestion 9
+
+def myfunc(int1: int, str1: str):
+    # split string into list of words
+    words = str1.split()
+    # create empty list to hold final output
+    output = []
+    # create empty string to hold current line
+    line = ""
+    # loop through words in list
+    for word in words:
+        # if the current line has fewer than int1 words
+        if len(line.split()) < int1:
+            # add current word to line
+            line += word + " "
+        # otherwise
+        else:
+            # add current line to output
+            output.append(line)
+            # reset current line to current word
+            line = word + " "
+    # add last line to output
+    output.append(line)
+    # return output joined with newline characters
+    return "\n".join(output)
+
+=======
+Suggestion 10
+
+def myfunc(int1: int, str1: str):
+    # Split string into a list of words
+    words = str1.split()
+    # Create a list of lines
+    lines = []
+    # Create a string
+    line = ""
+    # Iterate through words
+    for word in words:
+        # Check if the length of the line + the length of the word + 1 is greater than or equal to int1
+        if len(line) + len(word) + 1 >= int1:
+            # Append the line to the list of lines
+            lines.append(line)
+            # Reset the line to the current word
+            line = word
+        # Otherwise
+        else:
+            # Add the word to the line
+            line += " " + word
+    # Append the line to the list of lines
+    lines.append(line)
+    # Return the list of lines
+    return lines

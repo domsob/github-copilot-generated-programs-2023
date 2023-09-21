@@ -1,0 +1,103 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    # write code here
+    return str1
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    # Write your code here
+    pass
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    # Your code here
+
+    return str1
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    str1 = str1.replace("-", " ")
+    str1 = str1.split()
+    for i in range(len(str1)):
+        str1[i] = str1[i].capitalize()
+    str1 = "".join(str1)
+    str1 = str1[0].lower() + str1[1:]
+    return str1
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    # Write code here
+    return str1
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    # Convert string to list
+    str1 = str1.split(" ")
+    # Loop through list
+    for i in range(len(str1)):
+        # Convert each word to list
+        str1[i] = str1[i].split("-")
+        # Loop through each word list
+        for j in range(len(str1[i])):
+            # Convert first letter to uppercase
+            str1[i][j] = str1[i][j].capitalize()
+        # Join each word list back to a string
+        str1[i] = "".join(str1[i])
+    # Join the list back to a string
+    str1 = " ".join(str1)
+    # Return the string
+    return str1
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    # your code here
+    return str1
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    return ''.join([str1.split('-')[0]] + [x.title() for x in str1.split('-')[1:]])
+
+=======
+Suggestion 9
+
+def myfunc(str1: str):
+    str1 = str1.split('-')
+    for i in range(len(str1)):
+        str1[i] = str1[i].capitalize()
+    return ''.join(str1)
+
+=======
+Suggestion 10
+
+def myfunc(str1: str):
+    str2 = str1.split()
+    str3 = []
+    for i in str2:
+        str3.append(i.split('-'))
+    str4 = ''
+    for j in str3:
+        for k in range(len(j)):
+            if k == 0:
+                str4 += j[k]
+            else:
+                str4 += j[k].capitalize()
+        str4 += ' '
+    return str4[:-1]

@@ -1,0 +1,110 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    snow = float1
+    for i in range(int1):
+        snow += float2
+        snow -= float3
+    return snow
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    result = 0
+    for i in range(int1):
+        result += float1
+        result -= float3
+        float1 *= float2
+    return result
+
+=======
+Suggestion 3
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    snow = 0.0
+    for i in range(int1):
+        snow += float1
+        snow -= float3
+        if snow < 0:
+            snow = 0
+        float1 += float2
+    return snow
+
+=======
+Suggestion 4
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    current_snow = float1
+    for i in range(int1):
+        current_snow += float2
+        current_snow -= current_snow * float3
+    return current_snow
+
+=======
+Suggestion 5
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    snow = float1
+    for i in range(int1):
+        snow += float2
+        snow *= 1 - float3
+    return snow
+
+=======
+Suggestion 6
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    # Your code goes here
+    return 0
+
+=======
+Suggestion 7
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    # Your code here
+    pass
+
+=======
+Suggestion 8
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    hour = int1
+    snow = float1
+    rate = float2
+    melt = float3
+    while hour > 0:
+        snow += rate
+        snow -= snow * melt
+        hour -= 1
+    return snow
+
+=======
+Suggestion 9
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    if int1 < 0:
+        return -1
+    if float1 < 0:
+        return -1
+    if float2 < 0:
+        return -1
+    if float3 < 0:
+        return -1
+    if float3 > 1:
+        return -1
+    snow = float1
+    for i in range(int1):
+        snow = snow + float2
+        snow = snow * (1 - float3)
+    return snow
+
+=======
+Suggestion 10
+
+def myfunc(int1: int, float1: float, float2: float, float3: float):
+    # Write your code here
+    pass

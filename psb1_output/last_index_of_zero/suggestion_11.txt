@@ -1,0 +1,81 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(list1: list):
+    return list1.index(0)
+
+=======
+Suggestion 2
+
+def myfunc(list1: list):
+    for i in range(len(list1)-1, -1, -1):
+        if list1[i] == 0:
+            return i
+    return None
+
+=======
+Suggestion 3
+
+def myfunc(list1: list):
+    return list1[::-1].index(0)
+
+=======
+Suggestion 4
+
+def myfunc(list1: list):
+    for i in range(len(list1)):
+        if list1[i] == 0:
+            return i
+    return None
+
+=======
+Suggestion 5
+
+def myfunc(list1: list):
+    for i in range(len(list1)-1, -1, -1):
+        if list1[i] == 0:
+            return i
+    return -1
+
+=======
+Suggestion 6
+
+def myfunc(list1: list):
+    if not list1:
+        return -1
+    for i in range(len(list1) - 1, -1, -1):
+        if list1[i] == 0:
+            return i
+    return -1
+
+=======
+Suggestion 7
+
+def myfunc(list1: list):
+    for i in range(len(list1)-1, -1, -1):
+        if list1[i] == 0:
+            return i
+
+=======
+Suggestion 8
+
+def myfunc(list1: list):
+    # list1 is a vector of integers
+    # list1 contains at least one 0
+    # return the index of the last occurrence of 0 in list1
+    # if list1 = [1,2,3,0,4,5,6,7,0,8,9,0,10], return 11
+    # if list1 = [1,2,3,4,5,6,7,8,9,10], return -1
+    # if list1 = [0], return 0
+    # if list1 = [1,0], return 1
+    # if list1 = [1,2,3,0], return 3
+    # if list1 = [1,2,3,4,5,6,7,8,9,10,0], return 10
+    # if list1 = [1,2,3,4,5,6,7,8,9,10,0,0,0], return 12
+    # if list1 = [1,2,3,4,5,6,7,8,9,10,0,0,0,0], return 13
+    # if list1 = [1,2,3,4,5,6,7,8,9,10,0,0,0,0,0], return 14
+    # if list1 = [1,2,3,4,5,6,7,8,9,10,0,0,0,0,0,0], return 15
+    # if list1 = [1,2,3,4,5,6,7,8,9,10,0,0,0,0,0,0,0], return 16
+    # if list1 = [1,2,3,4,5,6,7,8,9,10,0,0,0,0,0,0,0,0], return 17
+    # if list1 = [1,2,3,4,5,6,7,8,9,10,0,0,0,0,0,0,0,0,0], return 18
+    # if list1 = [1,2,3,

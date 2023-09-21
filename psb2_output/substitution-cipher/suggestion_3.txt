@@ -1,0 +1,93 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str, str2: str, str3: str):
+    # Your Code Here
+    return str3.translate(str3.maketrans(str1,str2))
+
+=======
+Suggestion 2
+
+def myfunc(str1: str, str2: str, str3: str):
+    # Write your code here
+    # To print results to the standard output you can use print()
+    # Example: print("Hello world!")
+    cipher = dict(zip(str1, str2))
+    decipher = ''.join(cipher.get(c, c) for c in str3)
+    print(decipher)
+
+=======
+Suggestion 3
+
+def myfunc(str1: str, str2: str, str3: str):
+    # Your code here
+    return str3.translate(str3.maketrans(str1, str2))
+
+=======
+Suggestion 4
+
+def myfunc(str1: str, str2: str, str3: str):
+    # Your code here
+    # str1 = "abcdefghijklmnopqrstuvwxyz"
+    # str2 = "etaoinshrdlucmfwypvbgkjqxz"
+    # str3 = "tqccwnnqgwdcvnntqwpfgcvn"
+    # str4 = ""
+    for i in str3:
+        str4 = str4 + str1[str2.index(i)]
+    return str4
+
+=======
+Suggestion 5
+
+def myfunc(str1: str, str2: str, str3: str):
+    return ''.join([str2[str1.index(c)] for c in str3])
+
+=======
+Suggestion 6
+
+def myfunc(str1: str, str2: str, str3: str):
+    cipher = dict(zip(str1, str2))
+    return ''.join(cipher.get(c, c) for c in str3)
+
+=======
+Suggestion 7
+
+def myfunc(str1: str, str2: str, str3: str):
+    return ''.join(str2[str1.index(i)] for i in str3)
+
+=======
+Suggestion 8
+
+def myfunc(str1: str, str2: str, str3: str):
+    print(str1)
+    print(str2)
+    print(str3)
+    print()
+    result = ""
+    for i in str3:
+        index = str1.find(i)
+        result += str2[index]
+    return result
+
+=======
+Suggestion 9
+
+def myfunc(str1: str, str2: str, str3: str):
+    result = ""
+    for char in str3:
+        result += str1[str2.index(char)]
+    return result
+
+=======
+Suggestion 10
+
+def myfunc(str1: str, str2: str, str3: str):
+    res = ""
+    for i in str3:
+        if i in str1:
+            res += str2[str1.index(i)]
+        else:
+            res += i
+    return res

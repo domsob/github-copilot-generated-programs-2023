@@ -1,0 +1,24 @@
+Synthesizing 3/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    if len(str1) == 0:
+        return 0
+    else:
+        return 0
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    # YOUR CODE HERE
+    return -1
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    # Write code here
+    pass

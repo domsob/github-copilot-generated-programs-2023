@@ -1,0 +1,79 @@
+Synthesizing 6/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    """
+    >>> myfunc("Hello World!")
+    'HHeelllloo  WWoorrlldd!!!'
+    >>> myfunc("It is lovely weather we are having.")
+    'IItt  iiss  lloovveellyy  wweeaatthheerr  wwee  aarree  hhaavviinngg.'
+    >>> myfunc("This is a test.")
+    'TThhiiss  iiss  aa  tteesstt.'
+    """
+    new_str = ""
+    for i in str1:
+        if i.isalpha():
+            new_str += i * 2
+        elif i == "!":
+            new_str += i * 3
+        else:
+            new_str += i
+    return new_str
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    str2 = ""
+    for i in str1:
+        if i.isalpha():
+            str2 += i * 2
+        elif i == "!":
+            str2 += i * 3
+        else:
+            str2 += i
+    return str2
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    new_str = ""
+    for char in str1:
+        if char.isalpha():
+            new_str += char*2
+        elif char == "!":
+            new_str += char*3
+        else:
+            new_str += char
+    return new_str
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    str2 = ""
+    for i in str1:
+        if i.isalpha():
+            str2 = str2 + i * 2
+        elif i == "!":
+            str2 = str2 + i * 3
+        else:
+            str2 = str2 + i
+    return str2
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    new_str = ''
+    for i in str1:
+        if i.isalpha():
+            new_str += i*2
+        elif i == '!':
+            new_str += i*3
+        else:
+            new_str += i
+    return new_str

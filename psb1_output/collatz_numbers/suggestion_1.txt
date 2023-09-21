@@ -1,0 +1,119 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    count = 1
+    while int1 != 1:
+        if int1 % 2 == 0:
+            int1 = int1 // 2
+        else:
+            int1 = int1 * 3 + 1
+        count += 1
+    return count
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    int1 = int(int1)
+    count = 0
+    while int1 != 1:
+        if int1 % 2 == 0:
+            int1 = int1 / 2
+            count += 1
+        else:
+            int1 = int1 * 3 + 1
+            count += 1
+    return count
+
+=======
+Suggestion 3
+
+def myfunc(int1: int):
+    count = 1
+    while int1 != 1:
+        if int1 % 2 == 0:
+            int1 = int1 // 2
+        else:
+            int1 = 3 * int1 + 1
+        count += 1
+    return count
+
+=======
+Suggestion 4
+
+def myfunc(int1: int):
+    # Your code here
+    return 0
+
+=======
+Suggestion 5
+
+def myfunc(int1: int):
+    count = 1
+    while int1 != 1:
+        if int1 % 2 == 0:
+            int1 = int1 / 2
+            count += 1
+        else:
+            int1 = (3 * int1) + 1
+            count += 1
+    return count
+
+=======
+Suggestion 6
+
+def myfunc(int1: int):
+    counter = 1
+    while int1 != 1:
+        if int1 % 2 == 0:
+            int1 = int1 // 2
+            counter += 1
+        else:
+            int1 = int1 * 3 + 1
+            counter += 1
+    return counter
+
+=======
+Suggestion 7
+
+def myfunc(int1: int):
+    count = 1
+    while int1 != 1:
+        if int1 % 2 == 0:
+            int1 = int1 / 2
+        else:
+            int1 = int1 * 3 + 1
+        count += 1
+    return count
+
+=======
+Suggestion 8
+
+def myfunc(int1: int):
+    # Write your code here
+    count = 1
+    if int1 == 1:
+        return count
+    while int1 != 1:
+        count += 1
+        if int1 % 2 == 0:
+            int1 = int1 / 2
+        else:
+            int1 = int1 * 3 + 1
+    return count
+
+=======
+Suggestion 9
+
+def myfunc(int1: int):
+    count = 0
+    while int1 != 1:
+        if int1 % 2 == 0:
+            int1 = int1 / 2
+        else:
+            int1 = int1 * 3 + 1
+        count += 1
+    return count

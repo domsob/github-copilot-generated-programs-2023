@@ -1,0 +1,144 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(int1: int):
+    # Your code here
+    return 0, 0, 0, 0
+
+=======
+Suggestion 2
+
+def myfunc(int1: int):
+    # Find the number of quarters
+    quarters = int1 // 25
+    # Find the remainder
+    remainder = int1 % 25
+    # Find the number of dimes
+    dimes = remainder // 10
+    # Find the remainder
+    remainder = remainder % 10
+    # Find the number of nickels
+    nickels = remainder // 5
+    # Find the remainder
+    remainder = remainder % 5
+    # Find the number of pennies
+    pennies = remainder // 1
+    # Return the number of each type of coin
+    return quarters, dimes, nickels, pennies
+
+=======
+Suggestion 3
+
+def myfunc(int1: int):
+    # Your code here
+    return int1
+
+=======
+Suggestion 4
+
+def myfunc(int1: int):
+    # Initialize variables
+    quarters = 0
+    dimes = 0
+    nickels = 0
+    pennies = 0
+    
+    # Determine the number of quarters
+    quarters = int1 // 25
+    # Determine the number of dimes
+    dimes = (int1 % 25) // 10
+    # Determine the number of nickels
+    nickels = ((int1 % 25) % 10) // 5
+    # Determine the number of pennies
+    pennies = ((int1 % 25) % 10) % 5
+    
+    return quarters, dimes, nickels, pennies
+
+=======
+Suggestion 5
+
+def myfunc(int1: int):
+    # initiate a dictionary to store the coin count
+    coin_count = {}
+    # calculate the number of quarters
+    coin_count['quarters'], remainder = divmod(int1, 25)
+    # calculate the number of dimes
+    coin_count['dimes'], remainder = divmod(remainder, 10)
+    # calculate the number of nickels
+    coin_count['nickels'], remainder = divmod(remainder, 5)
+    # calculate the number of pennies
+    coin_count['pennies'] = remainder
+    # return the coin count
+    return coin_count
+
+=======
+Suggestion 6
+
+def myfunc(int1: int):
+    quarters = int1 // 25
+    dimes = (int1 % 25) // 10
+    nickels = ((int1 % 25) % 10) // 5
+    pennies = ((int1 % 25) % 10) % 5
+    return quarters, dimes, nickels, pennies
+
+=======
+Suggestion 7
+
+def myfunc(int1: int):
+    # create a list of coin values
+    coin_values = [25, 10, 5, 1]
+    # create a list of coin names
+    coin_names = ["quarter", "dime", "nickel", "penny"]
+    # create a list of coin counts
+    coin_counts = []
+    # for each coin value
+    for coin_value in coin_values:
+        # append the number of that coin into the coin counts list
+        coin_counts.append(int1 // coin_value)
+        # set the int1 to the remainder of the division
+        int1 %= coin_value
+    # for each coin name and coin count
+    for coin_name, coin_count in zip(coin_names, coin_counts):
+        # print the coin name and coin count
+        print(coin_name, coin_count)
+
+=======
+Suggestion 8
+
+def myfunc(int1: int):
+    if int1 < 0:
+        return "Invalid Input"
+    else:
+        quarters = int1 // 25
+        dimes = (int1 % 25) // 10
+        nickels = ((int1 % 25) % 10) // 5
+        pennies = ((int1 % 25) % 10) % 5
+        return quarters, dimes, nickels, pennies
+
+=======
+Suggestion 9
+
+def myfunc(int1: int):
+    if int1 < 0:
+        return "Invalid input"
+    else:
+        quarter = int1 // 25
+        dimes = (int1 - quarter * 25) // 10
+        nickels = (int1 - quarter * 25 - dimes * 10) // 5
+        pennies = int1 - quarter * 25 - dimes * 10 - nickels * 5
+        return (quarter, dimes, nickels, pennies)
+
+=======
+Suggestion 10
+
+def myfunc(int1: int):
+    if int1 <= 0:
+        return "Input must be greater than 0"
+    else:
+        num_quarters = int1 // 25
+        num_dimes = (int1 - num_quarters*25) // 10
+        num_nickels = (int1 - num_quarters*25 - num_dimes*10) // 5
+        num_pennies = int1 - num_quarters*25 - num_dimes*10 - num_nickels*5
+        return f"Quarters: {num_quarters}, Dimes: {num_dimes}, Nickels: {num_nickels}, Pennies: {num_pennies}"

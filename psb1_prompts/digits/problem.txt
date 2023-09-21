@@ -1,0 +1,5 @@
+# Given an integer, convert this integer to a list 
+# starting with the least significant digit. 
+# A negative integer should have the negative
+# sign before the most significant digit.
+def myfunc(int1: int):

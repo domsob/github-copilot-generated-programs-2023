@@ -1,0 +1,4 @@
+# Given a string containing symbols, spaces,
+# digits, and lowercase letters, count the number of occurrences of 
+# vowels (a, e, i, o, u, y) in the string and return that number.
+def myfunc(str1: str):

@@ -1,0 +1,75 @@
+Synthesizing 7/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    sum = 0
+    for i in str1:
+        sum += ord(i)
+    sum = sum % 64
+    sum += ord(' ')
+    return chr(sum)
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    sum = 0
+    for i in str1:
+        sum += ord(i)
+    return chr((sum % 64) + ord(' '))
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    sum = 0
+    for i in str1:
+        sum = sum + ord(i)
+    sum = sum % 64
+    sum = sum + ord(' ')
+    sum = chr(sum)
+    return sum
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    sum = 0
+    for i in str1:
+        sum += ord(i)
+    return chr(sum % 64 + 32)
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    sum = 0
+    for char in str1:
+        sum += ord(char)
+    sum = sum % 64
+    sum += ord(' ')
+    return chr(sum)
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    sum = 0
+    for ch in str1:
+        sum += ord(ch)
+    sum = sum % 64
+    sum += ord(' ')
+    return chr(sum)
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    sum = 0
+    for i in str1:
+        sum += ord(i)
+    sum = sum % 64
+    sum = sum + ord(' ')
+    return chr(sum)

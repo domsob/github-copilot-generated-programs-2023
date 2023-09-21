@@ -1,0 +1,98 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(list1: list, list2: list):
+    # list1: prices of goods
+    # list2: percent of discount
+    # return: total price after discount
+    total = 0
+    for i in range(len(list1)):
+        total += list1[i] * (1 - list2[i] / 100)
+    return total
+
+=======
+Suggestion 2
+
+def myfunc(list1: list, list2: list):
+    total = 0
+    for i in range(len(list1)):
+        total += (list1[i] * (100 - list2[i])) / 100
+    return total
+
+=======
+Suggestion 3
+
+def myfunc(list1: list, list2: list):
+    # Your code here
+    return sum([i * (1 - j/100) for i, j in zip(list1, list2)])
+
+=======
+Suggestion 4
+
+def myfunc(list1: list, list2: list):
+    total = 0
+    for i in range(len(list1)):
+        discount = list1[i] * (list2[i]/100)
+        total += list1[i] - discount
+    return total
+
+=======
+Suggestion 5
+
+def myfunc(list1: list, list2: list):
+    total = 0
+    for i in range(len(list1)):
+        total += list1[i] * (1 - list2[i] / 100)
+    return total
+
+=======
+Suggestion 6
+
+def myfunc(list1: list, list2: list):
+    """
+    >>> myfunc([1.0, 2.0, 3.0], [0.1, 0.2, 0.3])
+    5.4
+    >>> myfunc([1.0, 2.0, 3.0], [0.3, 0.2, 0.1])
+    5.4
+    >>> myfunc([1.0, 2.0, 3.0], [0.3, 0.2])
+    6.0
+    >>> myfunc([1.0, 2.0, 3.0], [0.1, 0.2, 0.3, 0.4])
+    5.4
+    >>> myfunc([1.0, 2.0, 3.0], [0.1, 0.2])
+    6.0
+    >>> myfunc([1.0, 2.0, 3.0], [0.1])
+    6.0
+    >>> myfunc([1.0, 2.0, 3.0], [0.1, 0.2, 0.3, 0.4, 0.5])
+    5.4
+    >>> myfunc([1.0, 2.0, 3.0], [0.1, 0.2, 0.3, 0.4, 0.5, 0.6])
+    5.4
+    >>> myfunc([1.0, 2.0, 3.0], [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7])
+    5.4
+    >>> myfunc([1.0, 2.0, 3.0], [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8])
+    5.4
+    >>> myfunc([1.0, 2.0, 3.0], [0.1, 0.2, 0.3, 0.4, 0.
+
+=======
+Suggestion 7
+
+def myfunc(list1: list, list2: list):
+    if len(list1) != len(list2):
+        return 0.0
+    total = 0.0
+    for i in range(len(list1)):
+        total += list1[i] * (1 - list2[i] / 100)
+    return total
+
+=======
+Suggestion 8
+
+def myfunc(list1: list, list2: list):
+    if len(list1) != len(list2):
+        return None
+    else:
+        total = 0
+        for i in range(len(list1)):
+            total += list1[i] - (list1[i] * list2[i])
+        return total

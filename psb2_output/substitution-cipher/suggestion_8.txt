@@ -1,0 +1,94 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str, str2: str, str3: str):
+    # Your code here
+    return str3.translate(str3.maketrans(str1, str2))
+
+=======
+Suggestion 2
+
+def myfunc(str1: str, str2: str, str3: str):
+    result = ""
+    for ch in str3:
+        result += str1[str2.index(ch)]
+    return result
+
+=======
+Suggestion 3
+
+def myfunc(str1: str, str2: str, str3: str):
+    return ''.join([str2[str1.index(x)] for x in str3])
+
+=======
+Suggestion 4
+
+def myfunc(str1: str, str2: str, str3: str):
+    result = ""
+    for c in str3:
+        result += str1[str2.find(c)]
+    return result
+
+=======
+Suggestion 5
+
+def myfunc(str1: str, str2: str, str3: str):
+    s = ""
+    for i in str3:
+        if i in str1:
+            s += str2[str1.index(i)]
+        else:
+            s += i
+    return s
+
+=======
+Suggestion 6
+
+def myfunc(str1: str, str2: str, str3: str):
+    # Your code here
+    return ""
+
+=======
+Suggestion 7
+
+def myfunc(str1: str, str2: str, str3: str):
+    """Returns the deciphered message.
+    
+    Arguments:
+        str1 {str} -- the first string.
+        str2 {str} -- the second string.
+        str3 {str} -- the third string.
+    
+    Returns:
+        str -- the deciphered message.
+    """
+    return ''.join([str2[str1.index(i)] for i in str3])
+
+=======
+Suggestion 8
+
+def myfunc(str1: str, str2: str, str3: str):
+    # create a dictionary for cipher
+    cip = {}
+    for i in range(len(str1)):
+        cip[str1[i]] = str2[i]
+    # decipher the message
+    res = ""
+    for i in range(len(str3)):
+        res += cip[str3[i]]
+    return res
+
+=======
+Suggestion 9
+
+def myfunc(str1: str, str2: str, str3: str):
+    mydict = dict(zip(str1, str2))
+    return ''.join([mydict[c] for c in str3])
+
+=======
+Suggestion 10
+
+def myfunc(str1: str, str2: str, str3: str):
+    return ''.join([str2[str1.index(i)] for i in str3])

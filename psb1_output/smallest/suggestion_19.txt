@@ -1,0 +1,15 @@
+Synthesizing 10/10 solutions (Duplicates hidden)
+
+=======
+Suggestion 1
+
+def myfunc(int1: int, int2: int, int3: int, int4: int):
+    return min(int1, int2, int3, int4)
+
+=======
+Suggestion 2
+
+def myfunc(int1: int, int2: int, int3: int, int4: int):
+    # Your code here
+    # You can use the variables int1, int2, int3, int4
+    return min(int1, int2, int3, int4)

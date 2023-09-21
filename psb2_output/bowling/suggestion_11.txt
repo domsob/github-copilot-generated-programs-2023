@@ -1,0 +1,295 @@
+Synthesizing 9/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str):
+    score = 0
+    frame = 1
+    for i in range(len(str1)):
+        if frame > 10:
+            return score
+        if str1[i] == "X":
+            score += 10
+            if str1[i+2] == "/":
+                score += 10
+            elif str1[i+2] != "X":
+                score += int(str1[i+1]) + int(str1[i+2])
+            else:
+                score += 10
+            frame += 1
+        elif str1[i] == "/":
+            score += 10 - int(str1[i-1])
+            if str1[i+1] == "X":
+                score += 10
+            else:
+                score += int(str1[i+1])
+            frame += 1
+        else:
+            score += int(str1[i])
+    return score
+
+=======
+Suggestion 2
+
+def myfunc(str1: str):
+    score = 0
+    for i in range(0, len(str1)):
+        if str1[i] == 'X':
+            score += 10
+            if i < len(str1) - 2:
+                if str1[i + 2] == '/':
+                    score += 10
+                else:
+                    score += int(str1[i + 1]) + int(str1[i + 2])
+            elif i == len(str1) - 2:
+                score += int(str1[i + 1])
+        elif str1[i] == '/':
+            score += 10 - int(str1[i - 1])
+            if i < len(str1) - 1:
+                score += int(str1[i + 1])
+        else:
+            score += int(str1[i])
+    return score
+
+=======
+Suggestion 3
+
+def myfunc(str1: str):
+    score = 0
+    for i in range(len(str1)):
+        if str1[i] == 'X':
+            if i+2 < len(str1):
+                score += 10
+                if str1[i+2] == '/':
+                    score += 10
+                else:
+                    score += int(str1[i+1]) + int(str1[i+2])
+            if i+1 < len(str1):
+                score += 10
+                if str1[i+1] == '/':
+                    score += 10
+                else:
+                    score += int(str1[i+1])
+        elif str1[i] == '/':
+            if i+1 < len(str1):
+                score += 10
+                if str1[i+1] == 'X':
+                    score += 10
+                else:
+                    score += int(str1[i+1])
+        else:
+            score += int(str1[i])
+    return score
+
+=======
+Suggestion 4
+
+def myfunc(str1: str):
+    score = 0
+    for i in range(0, len(str1)):
+        if str1[i] == "X":
+            score += 10
+            if i < len(str1) - 2:
+                if str1[i + 2] == "/":
+                    score += 10
+                else:
+                    score += int(str1[i + 1])
+                    score += int(str1[i + 2])
+            elif i < len(str1) - 1:
+                score += int(str1[i + 1])
+        elif str1[i] == "/":
+            score += 10
+            if i < len(str1) - 1:
+                score += int(str1[i + 1])
+        else:
+            score += int(str1[i])
+    return score
+
+=======
+Suggestion 5
+
+def myfunc(str1: str):
+    # Create a list of the individual bowls
+    lst = list(str1)
+    # Create a dictionary to store the score for each bowl
+    d = {}
+    # Create a variable to store the score
+    score = 0
+    # Create a variable to store the index of the current bowl
+    i = 1
+    # Create a variable to store the number of bowls
+    n = len(lst)
+    # Create a variable to store the index of the previous bowl
+    j = 0
+    # Create a variable to store the index of the previous bowl
+    k = 0
+    # Create a variable to store the index of the previous bowl
+    l = 0
+    # Create a variable to store the index of the previous bowl
+    m = 0
+    # Create a variable to store the index of the previous bowl
+    n = 0
+    # Create a variable to store the index of the previous bowl
+    o = 0
+    # Create a variable to store the index of the previous bowl
+    p = 0
+    # Create a variable to store the index of the previous bowl
+    q = 0
+    # Create a variable to store the index of the previous bowl
+    r = 0
+    # Create a variable to store the index of the previous bowl
+    s = 0
+    # Create a variable to store the index of the previous bowl
+    t = 0
+    # Create a variable to store the index of the previous bowl
+    u = 0
+    # Create a variable to store the index of the previous bowl
+    v = 0
+    # Create a variable to store the index of the previous bowl
+    w = 0
+    # Create a variable to store the index of the previous bowl
+    x = 0
+    # Create a variable to store the index of the previous bowl
+    y = 0
+    # Create a variable to store the index of the previous bowl
+    z = 0
+    # Create a variable to store the index of the previous bowl
+    a = 0
+    # Create a variable to store the index of the previous bowl
+    b = 0
+    # Create a variable to store the index of the previous bowl
+    c = 0
+    # Create a variable to store the index of the
+
+=======
+Suggestion 6
+
+def myfunc(str1: str):
+    score = 0
+    if len(str1) != 20:
+        return -1
+    for i in range(0, 20, 2):
+        if str1[i] == 'X':
+            score += 10
+            if i < 16:
+                if str1[i + 2] == 'X':
+                    score += 10
+                elif str1[i + 2] == '/':
+                    score += 10 - int(str1[i + 1])
+                else:
+                    score += int(str1[i + 1]) + int(str1[i + 2])
+            else:
+                score += int(str1[i + 1]) + int(str1[i + 2])
+        elif str1[i] == '/':
+            score += 10 - int(str1[i - 1])
+            if i < 16:
+                if str1[i + 2] == 'X':
+                    score += 10
+                elif str1[i + 2] == '/':
+                    score += 10 - int(str1[i + 1])
+                else:
+                    score += int(str1[i + 1]) + int(str1[i + 2])
+            else:
+                score += int(str1[i + 1]) + int(str1[i + 2])
+        else:
+            score += int(str1[i]) + int(str1[i + 1])
+    return score
+
+=======
+Suggestion 7
+
+def myfunc(str1: str):
+    mylist = []
+    for i in str1:
+        if i == 'X':
+            mylist.append(10)
+        elif i == '/':
+            mylist.append(10 - mylist[-1])
+        elif i == '-':
+            mylist.append(0)
+        else:
+            mylist.append(int(i))
+    return sum(mylist)
+
+=======
+Suggestion 8
+
+def myfunc(str1: str):
+    score = 0
+    for i in range(len(str1)):
+        if str1[i] == 'X':
+            score += 10
+        elif str1[i] == '/':
+            score += 10 - int(str1[i - 1])
+        else:
+            score += int(str1[i])
+    return score
+
+=======
+Suggestion 9
+
+def myfunc(str1: str):
+    # Write your code here
+    # return 0
+    # print(str1)
+    # print(len(str1))
+    # print(str1[0])
+    # print(str1[1])
+    # print(str1[2])
+    # print(str1[3])
+    # print(str1[4])
+    # print(str1[5])
+    # print(str1[6])
+    # print(str1[7])
+    # print(str1[8])
+    # print(str1[9])
+    # print(str1[10])
+    # print(str1[11])
+    # print(str1[12])
+    # print(str1[13])
+    # print(str1[14])
+    # print(str1[15])
+    # print(str1[16])
+    # print(str1[17])
+    # print(str1[18])
+    # print(str1[19])
+    # print(str1[20])
+    # print(str1[21])
+    # print(str1[22])
+    # print(str1[23])
+    # print(str1[24])
+    # print(str1[25])
+    # print(str1[26])
+    # print(str1[27])
+    # print(str1[28])
+    # print(str1[29])
+    # print(str1[30])
+    # print(str1[31])
+    # print(str1[32])
+    # print(str1[33])
+    # print(str1[34])
+    # print(str1[35])
+    # print(str1[36])
+    # print(str1[37])
+    # print(str1[38])
+    # print(str1[39])
+    # print(str1[40])
+    # print(str1[41])
+    # print(str1[42])
+    # print(str1[43])
+    # print(str1[44])
+    # print(str1[45])
+    # print(str1[46])
+    # print(str1[47])
+    # print(str1[48])
+    # print(str1[49])
+    # print(str1[50])
+    # print(str1[51])
+    # print(str1[52])
+    # print(str1[53])
+    # print(str1[54])
+    # print(str1[55])
+    # print(str1[56])
+    # print(str1[57])
+    # print(str1[58])

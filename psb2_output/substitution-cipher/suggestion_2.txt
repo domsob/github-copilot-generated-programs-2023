@@ -1,0 +1,163 @@
+Synthesizing 10/10 solutions
+
+=======
+Suggestion 1
+
+def myfunc(str1: str, str2: str, str3: str):
+    # Your code goes here
+    # Return the deciphered message
+    pass
+
+=======
+Suggestion 2
+
+def myfunc(str1: str, str2: str, str3: str):
+    """
+    >>> myfunc('abcd', 'efgh', 'hged')
+    'efgh'
+    >>> myfunc('abcd', 'efgh', 'hgef')
+    'efgh'
+    >>> myfunc('abcd', 'efgh', 'hgef')
+    'efgh'
+    """
+    res = ""
+    for i in range(len(str3)):
+        res += str2[str1.index(str3[i])]
+    return res
+
+=======
+Suggestion 3
+
+def myfunc(str1: str, str2: str, str3: str):
+    str1 = str1.lower()
+    str2 = str2.lower()
+    str3 = str3.lower()
+    str4 = ""
+    for i in str3:
+        if i in str1:
+            str4 += str2[str1.index(i)]
+        else:
+            str4 += i
+    return str4
+
+=======
+Suggestion 4
+
+def myfunc(str1: str, str2: str, str3: str):
+    # Your code here
+    return str3.translate(str3.maketrans(str1, str2))
+
+=======
+Suggestion 5
+
+def myfunc(str1: str, str2: str, str3: str):
+    return "".join([str2[str1.index(i)] for i in str3])
+
+=======
+Suggestion 6
+
+def myfunc(str1: str, str2: str, str3: str):
+    # Write your code here
+    # To print results to the standard output you can use print()
+    # Example print("Hello world!")
+    cipher = {}
+    for i in range(len(str1)):
+        cipher[str1[i]] = str2[i]
+    res = ""
+    for i in str3:
+        res += cipher[i]
+    return res
+
+=======
+Suggestion 7
+
+def myfunc(str1: str, str2: str, str3: str):
+    # Write your code here
+    map = {}
+    for i in range(len(str1)):
+        map[str1[i]] = str2[i]
+    result = ""
+    for i in range(len(str3)):
+        if str3[i] in map:
+            result += map[str3[i]]
+        else:
+            result += str3[i]
+    return result
+
+=======
+Suggestion 8
+
+def myfunc(str1: str, str2: str, str3: str):
+    for i in range(len(str3)):
+        for j in range(len(str1)):
+            if str3[i] == str1[j]:
+                str3 = str3[:i] + str2[j] + str3[i+1:]
+                break
+    return str3
+
+=======
+Suggestion 9
+
+def myfunc(str1: str, str2: str, str3: str):
+    """
+    >>> myfunc('abc', 'def', 'abd')
+    'def'
+    >>> myfunc('abc', 'def', 'dce')
+    'bfe'
+    >>> myfunc('abc', 'def', 'a')
+    'd'
+    >>> myfunc('abc', 'def', 'ab')
+    'de'
+    >>> myfunc('abc', 'def', 'abc')
+    'def'
+    >>> myfunc('abc', 'def', 'abcd')
+    'defd'
+    >>> myfunc('abc', 'def', 'abce')
+    'defe'
+    >>> myfunc('abc', 'def', 'abcf')
+    'deff'
+    >>> myfunc('abc', 'def', 'abcdef')
+    'defdef'
+    >>> myfunc('abc', 'def', 'abcdefg')
+    'defdefg'
+    >>> myfunc('abc', 'def', 'abcdefgh')
+    'defdefgh'
+    >>> myfunc('abc', 'def', 'abcdefghi')
+    'defdefghi'
+    >>> myfunc('abc', 'def', 'abcdefghij')
+    'defdefghij'
+    >>> myfunc('abc', 'def', 'abcdefghijk')
+    'defdefghijk'
+    >>> myfunc('abc', 'def', 'abcdefghijkl')
+    'defdefghijkl'
+    >>> myfunc('abc', 'def', 'abcdefghijklm')
+    'defdefghijklm'
+    >>> myfunc('abc', 'def', 'abcdefghijklmn')
+    'defdefghijklmn'
+    >>> myfunc('abc', 'def', 'abcdefghijklmno')
+    'defdefghijklmno'
+    >>> myfunc('abc', 'def', 'abcdefghijklmnop')
+    'defdefghijklmnop'
+    >>> myfunc('abc', 'def', 'abcdefghijklmnopq')
+    'defdefghijklmnopq'
+    >>> myfunc('abc', 'def', 'abcdefghijklmnopqr')
+    'defdefghijklmnopqr'
+    >>> myfunc('abc', 'def', 'abcdefghijklmnopqrs')
+    'defdefghijklmnopqrs'
+    >>> myfunc('abc', 'def', 'abcdefghijklmnopqrst')
+    'defdefghijklmnopqrst'
+    >>> myfunc('abc', 'def', 'abcdefghijklmnopqrstu')
+    'defdefghijklmnopqrstu'
+    >>> myfunc('abc',
+
+=======
+Suggestion 10
+
+def myfunc(str1: str, str2: str, str3: str):
+    d = {}
+    for i in range(len(str1)):
+        d[str1[i]] = str2[i]
+    res = ""
+    for i in str3:
+        res += d[i]
+    return res
